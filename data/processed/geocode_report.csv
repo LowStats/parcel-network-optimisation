@@ -1,19 +1,15 @@
-name,query,score,matched,check
-SF Locker Smithfield,71-77 Smithfield Road,81.25,71 SMITHFIELD SMITHFIELD TERRACE,False
-SF Locker Cayman Rise,Cayman Rise 29 Ka Wai Man Road Kennedy Town,91.0,29 KA WAI MAN ROAD CAYMAN RISE,False
-SF Locker Luen Gay Apartments,9 Davis Street Kennedy Town,65.03,LUEN GAY APARTMENTS 9C DAVIS STREET,False
-SF Locker Sunglow Building,Sunglow Building Belcher's Street Kennedy Town,74.93,SUNGLOW BUILDING 1L BELCHER'S STREET,False
-SF Locker Han Yu Building (No.2),Han Yu Building 45-55 Cadogan Street Kennedy Town,82.0,HANG YU BUILDING 45 CADOGAN STREET,False
-Cainiao Kennedy Town Belcher's Street Station,147 Belcher's Street Kennedy Town,66.48,KAM TONG BUILDING 147 BELCHER'S STREET,False
-Cainiao Sai Wan Third Street Station,106 Third Street Sai Ying Pun,61.06,TRUE LIGHT BUILDING 106 THIRD STREET,False
-Cainiao Sai Wan Hong Kong Plaza Station,363 Des Voeux Road West Sai Wan,97.69,LUN FUNG COURT 363 DES VOEUX ROAD WEST,False
-JD Service Station Kuk Fung Building,60 Catchick Street Kennedy Town,88.75,KUK FUNG BUILDING 60 CATCHICK STREET,False
-JD Service Station Kwan Yick Building,343 Des Voeux Road West Sai Wan,97.69,343 DES VOEUX ROAD WEST KWAN YICK BUILDING,False
-Cainiao Kennedy Town Luen On Building Station (Z22),51 Smithfield Road,88.75,LUEN ON APARTMENTS 51 SMITHFIELD,False
-Cainiao Kennedy Town Kwan Yick Phase 1 Station,Kwan Yick Building Phase 1 430 Des Voeux Road West,87.28,430 DES VOEUX ROAD WEST KWAN YICK BUILDING,False
-Cainiao Kennedy Town Kam Bo Shopping Arcade Station,28 Belcher's Street,88.75,TREASURE COURT 28 BELCHER'S STREET,False
-Cainiao Kennedy Town North Street Station,7 North Street,88.75,7 NORTH STREET,False
-Cainiao Kennedy Town Belcher's Street 133 Station,133 Belcher's Street Kennedy Town,67.24,133 BELCHER'S STREET,False
-Cainiao Sai Wan First Street Station,77 First Street Sai Ying Pun,75.58,77 FIRST STREET,False
-Cainiao Sai Ying Pun Queen's Road West Station,193 Queen's Road West,85.87,193 QUEEN'S ROAD WEST,False
-SF Store Shun Cheong Building,28 Hau Wo Street,88.75,SHUN CHEONG BUILDING 28 HAU WO STREET,False
+source,name,query,score,matched,check
+SF store PDF,SF Store 852TBL,"Wah On House, Wah Fu (I) Estate, 18 Wah Fu Road, Aberdeen",91.0,WAH ON HSE 18 WAH FU ROAD WAH FU (I) ESTATE,False
+SF store PDF,SF Store 852TAL,"9/F, Fullagar Industrial Building, 234 Aberdeen Main Road, Aberdeen",91.0,FULLAGAR INDUSTRIAL BUILDING 234 ABERDEEN MAIN ROAD,False
+SF store PDF,SF Store 852TCL,"Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street, Ap Lei Chau",82.0,FORTUNE MANSION 57 MAIN ST AP LEI CHAU,False
+SF store PDF,SF Store 852PCL,"5/F, Trend Centre, 29 Cheung Lee Street, Chai Wan",91.0,TREND CENTRE 29 CHEUNG LEE STREET,False
+SF store PDF,SF Store 852PB,"Yiko Industrial Building, No. 10 Ka Yip Street, Chai Wan",91.0,YIKO INDUSTRIAL BUILDING 10 KA YIP STREET,False
+SF store PDF,SF Store 852PDL,"2/F, Olympia Plaza, 255 King's Road, North Point",91.0,OLYMPIA PLAZA 255 KING'S ROAD,False
+SF store PDF,SF Store 852NPTM,"Fung Full Plaza, 480 King's Road, North Point",66.59,480 KING'S ROAD KING'S TOWERS,False
+SF store PDF,SF Store 852MCL,"Belcher Court, 2 Sai Cheung Street, Sai Wan",91.0,2 SAI CHEUNG STREET BELCHER COURT,False
+SF store PDF,SF Store 852MAL,"Shun Cheong Building, 28 Hau Wo Street, Kennedy Town, Sai Wan",91.0,SHUN CHEONG BUILDING 28 HAU WO STREET,False
+SF store PDF,SF Store 852PGL,"28-36 Hing Man Street, Sai Wan Ho",74.39,WAH SING BUILDING 30 SAI WAN HO STREET,True
+SF store PDF,SF Store 852PAL,"1/F, Smiling Shaukeiwan Plaza, 17 Nam Hong Street, Shau Kei Wan,",89.57,SMILING SHAUKEIWAN PLAZA 17 NAM HONG STREET SHAUKEIWAN PLAZA,False
+SF store PDF,SF Store 852Z552,"Island Resort Mall, 28 Siu Sai Wan Road, Siu Sai Wan",98.24,ISLAND RESORT MALL 28 SIU SAI WAN ROAD ISLAND RESORT,False
+SF store PDF,SF Store 852Z551,"Mayson Garden Building, Nos. 2A-2E Wing Hing Street",76.67,MAYSON GARDEN BUILDING 2A WING HING STREET,False
+SF store PDF,SF Store 852Z101,"Level 3, The Lohas, No.1 Lohas Park Road, Tseung Kwan O, N.T. Hong Kong",98.24,THE LOHAS 1 LOHAS PARK ROAD LOHAS PARK,False

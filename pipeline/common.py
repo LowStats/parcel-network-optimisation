@@ -1,4 +1,4 @@
-"""Shared paths, constants and helpers for the Kennedy Town parcel-locker data pipeline."""
+"""Shared paths, constants and helpers for the Central & Western parcel-locker data pipeline."""
 from __future__ import annotations
 
 import json
@@ -21,15 +21,19 @@ HK1980 = "EPSG:2326"  # Hong Kong 1980 Grid (metres) - use for all distance/area
 
 # Bounding box used for raw downloads (generous: study area + buffer for edge effects)
 # (south, west, north, east)
-FETCH_BBOX = (22.268, 114.108, 22.296, 114.150)
+# Central & Western District extent is 22.252-22.291 N, 114.111-114.168 E; +~600 m on each side.
+FETCH_BBOX = (22.246, 114.104, 22.297, 114.174)
 
 # ---------------------------------------------------------------------------------------------
 # Study design parameters (state these in the methodology)
 # ---------------------------------------------------------------------------------------------
-# Study area = union of these 2021-Census Tertiary Planning Units. TPU 111 = Kennedy Town &
-# Mount Davis (contains The Merton, The Belcher's, Kwun Lung Lau, Sai Wan Estate, KET MTR).
-# Add "116" to extend east towards Shek Tong Tsui.
-STUDY_TPUS = ["111"]
+# Study area = a 2021-Census District Council District (official C&SD boundary). All census Small
+# Subunit Groups (SSGs) inside it supply the demand. Mainland part only (Green Island and Little
+# Green Island are uninhabited).
+STUDY_DISTRICT = "Central and Western"
+# Optional override: restrict to these Tertiary Planning Units instead, e.g. ["111"] for the
+# original Kennedy Town & Mount Davis study. None = whole district.
+STUDY_TPUS: list[str] | None = None
 
 # Supply sites (existing + candidate) are searched up to this far OUTSIDE the boundary, so that
 # residents near the edge can be served by lockers just across it (avoids edge-effect bias).
@@ -43,6 +47,14 @@ CLUSTER_MAX_DIAMETER_M = 150
 # ...and clusters with fewer households than this are merged into the nearest cluster of the
 # same SSG (prevents dozens of near-empty nodes from scattered village houses on Mount Davis).
 MIN_NODE_HOUSEHOLDS = 50
+
+# Operators whose public sites form the "existing network" baseline (the study's scope).
+# JD Logistics points are kept in the data for reference but not in the baseline.
+BASELINE_OPERATORS = {"SF Express", "Cainiao", "Hongkong Post (iPostal)"}
+
+# Walking distances beyond this are not needed for coverage models (max radius 500 m); pairs
+# further apart are stored as missing to keep the matrix computation fast.
+MAX_PAIR_DISTANCE_M = 2000
 
 # Candidate sites closer than this to a higher-priority site are treated as duplicates.
 CANDIDATE_DEDUP_M = 25
@@ -80,6 +92,8 @@ CSDI_DATASETS = {
     "census2021_ssg": ("censtatd_rcd_1635933365202_19171", "csdi:SSUG_21C"),
     # iPostal Station information (Hongkong Post)
     "ipostal_stations": ("hkpo_rcd_1639010988627_23643", "csdi:IPOST"),
+    # 2021 Population Census - statistics & boundaries of District Council Districts (C&SD)
+    "census2021_dcd": ("censtatd_rcd_1635932856094_19982", "csdi:DC_21C"),
     # Lands Department building footprints (official): names, storeys, base/top height
     "landsd_buildings": ("landsd_rcd_1637211194312_35158", "csdi:Building"),
 }

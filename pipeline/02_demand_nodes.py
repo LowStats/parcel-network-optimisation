@@ -1,8 +1,9 @@
 """Step 2 - study boundary + demand nodes (i in I) with demand weights h_i.
 
 Method
-  1. Study boundary = dissolve of 2021 Census Small Subunit Groups (SSGs) in STUDY_TPUS
-     (mainland part only - offshore islets dropped).
+  1. Study boundary = official 2021-Census District Council District polygon (STUDY_DISTRICT;
+     or the union of STUDY_TPUS if set), mainland part only - offshore islets dropped. Demand
+     comes from every census Small Subunit Group (SSG) inside it.
   2. Residential towers (Lands Department building layer: official footprints and storeys; OSM
      used only to exclude non-residential uses) are assigned to the SSG containing them.
      Gross floor area (GFA) proxy = footprint area x storeys. Missing storeys are estimated from
@@ -31,7 +32,7 @@ import pandas as pd
 from scipy.cluster.hierarchy import fcluster, linkage
 
 from common import (CLUSTER_MAX_DIAMETER_M, MIN_NODE_HOUSEHOLDS, HK1980, PARCELS_PER_HOUSEHOLD_PER_DAY, PROCESSED, RAW,
-                    STUDY_TPUS, SUPPLY_BUFFER_M, WGS84)
+                    STUDY_DISTRICT, STUDY_TPUS, SUPPLY_BUFFER_M, WGS84)
 
 RESIDENTIAL = {"apartments", "residential", "house", "dormitory", "terrace", "detached",
                "semidetached_house", "yes"}
@@ -39,19 +40,41 @@ RESIDENTIAL = {"apartments", "residential", "house", "dormitory", "terrace", "de
 NON_RESIDENTIAL_NAME = re.compile(
     r"office|complex|depot|station|school|college|market|reservoir|social centre|community|church|"
     r"temple|clinic|hospital|library|police|fire|ambulance|sports|pumping|substation|toilet|"
-    r"government|services building|museum|kindergarten", re.I)
+    r"government|services building|museum|kindergarten|refuse|consulate|arts centre|"
+    r"exchange square|car ?park|electricity|ventilation|telephone exchange|cathedral|mosque|"
+    r"synagogue|barracks|courthouse|court of|legislative|headquarters", re.I)
 DORMITORY_NAME = re.compile(r"\bhall\b|hostel|dormitory|home for the elderly|care home|宿舍|舍堂|護理安老院|老人院", re.I)
 STOREY_HEIGHT_M = 3.43  # median (TopHeight-BaseHeight)/Storeys of LandsD towers in the bbox
 NON_RESIDENTIAL_HINTS = {"school", "university", "hospital", "industrial", "warehouse", "service",
                          "roof", "commercial", "retail", "office", "church", "temple", "garage"}
 
 
-def load_ssg() -> gpd.GeoDataFrame:
+def load_district() -> gpd.GeoDataFrame:
+    """Official 2021-Census District Council District polygon + published totals."""
+    d = gpd.read_file(RAW / "census2021_dcd.geojson").to_crs(HK1980)
+    d = d[d["dc_eng"] == STUDY_DISTRICT].copy()
+    if d.empty:
+        raise SystemExit(f"District {STUDY_DISTRICT!r} not found in census2021_dcd")
+    d["households"] = pd.to_numeric(d["dh"], errors="coerce")
+    d["population"] = d[["born_hk", "born_chi", "born_else"]].apply(pd.to_numeric).sum(axis=1)
+    return d[["dc_eng", "households", "population", "geometry"]]
+
+
+def mainland(geom):
+    """Largest polygon only: drops uninhabited islets (Green Island, Little Green Island)."""
+    geom = geom.buffer(0)
+    return max(geom.geoms, key=lambda g: g.area) if geom.geom_type == "MultiPolygon" else geom
+
+
+def load_ssg(district: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     g = gpd.read_file(RAW / "census2021_ssg.geojson").to_crs(HK1980)
     g["tpu"] = g["ssbg_eng"].str[:3]
     for c in ("dh", "oq", "t_pop"):
         g[c] = pd.to_numeric(g[c], errors="coerce").fillna(0)
-    g = g[g["tpu"].isin(STUDY_TPUS)].copy()
+    inside = g.representative_point().within(district.geometry.iloc[0])
+    g = g[inside].copy()
+    if STUDY_TPUS:
+        g = g[g["tpu"].isin(STUDY_TPUS)].copy()
     g = g.rename(columns={"ssbg_eng": "ssg", "dh": "households", "t_pop": "population"})
     return g[["ssg", "tpu", "households", "population", "geometry"]].reset_index(drop=True)
 
@@ -179,13 +202,13 @@ def build_nodes(ssg: gpd.GeoDataFrame, bld: gpd.GeoDataFrame):
 
 
 if __name__ == "__main__":
-    ssg = load_ssg()
-    # TPU 111 also contains Green Island & Little Green Island (uninhabited offshore islets);
-    # keep only the mainland polygon so the boundary/buffer is not stretched into the harbour.
-    union = ssg.union_all().buffer(0)
-    if union.geom_type == "MultiPolygon":
-        union = max(union.geoms, key=lambda g: g.area)
-    boundary = gpd.GeoDataFrame({"tpus": [",".join(STUDY_TPUS)]}, geometry=[union], crs=HK1980)
+    district = load_district()
+    ssg = load_ssg(district)
+    # Boundary = official district polygon (or the selected TPUs), mainland part only, so the
+    # boundary/buffer is not stretched into the harbour by the uninhabited islets.
+    union = mainland(ssg.union_all() if STUDY_TPUS else district.geometry.iloc[0])
+    label = f"{STUDY_DISTRICT}" + (f" / TPU {','.join(STUDY_TPUS)}" if STUDY_TPUS else "")
+    boundary = gpd.GeoDataFrame({"study_area": [label]}, geometry=[union], crs=HK1980)
     ssg["geometry"] = ssg.intersection(union)  # islet buildings get no households
     buffer = gpd.GeoDataFrame({"buffer_m": [SUPPLY_BUFFER_M]},
                               geometry=boundary.buffer(SUPPLY_BUFFER_M), crs=HK1980)
@@ -205,7 +228,11 @@ if __name__ == "__main__":
     nodes[cols].round({"households": 1, "population": 1, "daily_parcels": 2, "gfa_m2": 0}) \
         .to_csv(PROCESSED / "demand_nodes.csv", index=False)
 
-    print(f"Study area: TPU {STUDY_TPUS}, {len(ssg)} SSGs, "
+    if not STUDY_TPUS:
+        print(f"District check: SSG totals {ssg.households.sum():,.0f} households / "
+              f"{ssg.population.sum():,.0f} residents vs official district "
+              f"{district.households.iloc[0]:,.0f} / {district.population.iloc[0]:,.0f}")
+    print(f"Study area: {label}, {len(ssg)} SSGs in {ssg.tpu.nunique()} TPUs, "
           f"{boundary.area.iloc[0] / 1e6:.2f} km2")
     print(f"Residential buildings used: {len(bld_alloc)} "
           f"(storeys source: {bld_alloc['storeys_source'].value_counts().to_dict()})")

@@ -8,6 +8,8 @@ Sources
   * OpenStreetMap POIs that can host a locker (MTR exits, markets, malls, convenience stores, ...)
   * OpenStreetMap pedestrian network (OSMnx, network_type="walk": includes steps, footbridges, lifts)
   * Lands Department 5 m Digital Terrain Model (clipped to the study bbox)
+  * C&SD 2021 Census District Council District boundaries (study boundary + official totals)
+  * Operator pick-up point lists (SF / JD / Cainiao, with coordinates) and SF's store list
 
 Run:  .venv/bin/python pipeline/01_fetch_raw.py [--force]
 """
@@ -101,6 +103,34 @@ def fetch_walk_network() -> None:
     print(f"[ok]   {out.name}: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 
+# Operator pick-up point lists. hillmalaya.com.hk publishes machine-readable lists compiled from
+# the operators' own sites (SF, JD, Cainiao; last_verified noted in each file header), with
+# coordinates. SF *stores* are not in that list, so SF's own store PDF is used for them.
+OPERATOR_FILES = {
+    "pickup-points-sf.js": "https://hillmalaya.com.hk/cdn/shop/t/107/assets/pickup-points-sf.js",
+    "pickup-points-jd.js": "https://hillmalaya.com.hk/cdn/shop/t/107/assets/pickup-points-jd.js",
+    "pickup-points-cainiao.js":
+        "https://hillmalaya.com.hk/cdn/shop/t/107/assets/pickup-points-cainiao.js",
+    "sf_store_hk_island_20261029.pdf":
+        "https://www.birkenstock.com/on/demandware.static/-/Library-Sites-birkenstock-apac/default/"
+        "dw3b57c9ec/documents/drop-off-points/20261029-SF-Store-Locations-Hong-Kong-Island.pdf",
+}
+
+
+def fetch_operator_lists() -> None:
+    d = RAW / "operators"
+    d.mkdir(exist_ok=True)
+    for name, url in OPERATOR_FILES.items():
+        out = d / name
+        if out.exists() and not FORCE:
+            print(f"[skip] operators/{name}")
+            continue
+        r = requests.get(url, headers=HTTP_HEADERS, timeout=180)
+        r.raise_for_status()
+        out.write_bytes(r.content)
+        print(f"[ok]   operators/{name}: {len(r.content) / 1e3:.0f} kB")
+
+
 DTM_URL = "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip"
 
 
@@ -111,7 +141,7 @@ def fetch_dtm() -> None:
     from pyproj import Transformer
     from rasterio.windows import from_bounds
 
-    out = RAW / "dtm" / "dtm_5m_kennedy_town.tif"
+    out = RAW / "dtm" / "dtm_5m_study_bbox.tif"
     if out.exists() and not FORCE:
         print(f"[skip] {out.name}")
         return
@@ -144,6 +174,7 @@ if __name__ == "__main__":
 
     fetch_csdi("census2021_ssg", bbox=True)
     fetch_csdi("ipostal_stations", bbox=False)  # territory-wide; filtered spatially later
+    fetch_csdi("census2021_dcd", bbox=False)    # 18 districts: study boundary + official totals
     fetch_csdi("landsd_buildings", bbox=True)
 
     fetch_osm_features("osm_buildings", {"building": True})
@@ -158,3 +189,4 @@ if __name__ == "__main__":
     })
     fetch_walk_network()
     fetch_dtm()
+    fetch_operator_lists()

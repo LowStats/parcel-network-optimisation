@@ -39,3 +39,219 @@ D037,111/39,1,22.282262,114.131758,667.0,2063.0,233.45,6,50192.0,building_neares
 D038,111/44 and 111/46-49,1,22.27312,114.121073,185.0,629.0,64.75,13,35508.0,building_nearest_gfa_centroid,On Lee Block C-E; On Lee Block A-B; Vista Mount Davis
 D039,111/45,1,22.27485,114.128024,155.0,603.0,54.25,13,25750.0,building_nearest_gfa_centroid,Four Winds; FOUR WINDS; Mount Davis Village A4
 D040,111/50,1,22.281079,114.125896,621.0,2010.0,217.35,8,49922.0,building_nearest_gfa_centroid,East Terrace; Central Terrace; South Terrace
+D041,"112/01, 112/07, 112/48 and 112/54-56",1,22.288048,114.143256,450.8,968.8,157.76,26,32748.0,building_nearest_gfa_centroid,The Connaught; Tak Tung House; Koosing Building
+D042,"112/01, 112/07, 112/48 and 112/54-56",2,22.286928,114.136223,138.2,297.2,48.39,8,10044.0,building_nearest_gfa_centroid,SAINT BARNABAS' SOCIETY AND HOME; Lun Fung Court
+D043,112/02,1,22.287374,114.136724,379.0,1317.0,132.65,5,52291.0,building_nearest_gfa_centroid,Western Harbour Centre; Kong Chian Tower Tower 2; Kong Chian Tower Tower 1
+D044,112/03,1,22.287592,114.13808,956.0,2650.0,334.6,12,46195.0,building_nearest_gfa_centroid,FUNG SHING BUILDING; Kwan Yick Building Phase II Block D; Fung Shing Building
+D045,112/04 and 112/10,1,22.287731,114.139145,385.0,946.0,134.75,5,21416.0,building_nearest_gfa_centroid,Merit Court; Liang Ga Building; Viking Court
+D046,112/05,1,22.288175,114.140218,1018.0,2415.0,356.3,6,58512.0,building_nearest_gfa_centroid,CHEUNG LING MANSION; Kwan Yick Building Phase III Block B; Kwan Yick Building Phase III Block A
+D047,112/06,1,22.288401,114.141587,1047.0,2335.0,366.45,24,58887.0,building_nearest_gfa_centroid,Tone Hing Building; Richwealth Mansion; Bank Building
+D048,112/08,1,22.286035,114.1362,1478.0,3133.0,517.3,31,66061.0,building_nearest_gfa_centroid,Sang Cheong Building; Kam Ling Court; 屈地大廈
+D049,112/09,1,22.286681,114.137204,555.0,1396.8,194.25,11,27147.0,building_nearest_gfa_centroid,Orlins Court; Lucky Building; Tung Tat Building
+D050,112/09,2,22.286681,114.138299,1684.0,4238.2,589.4,20,82371.0,building_nearest_gfa_centroid,Standard Mansion; The Henry; Tung Lee Mansion
+D051,112/11,1,22.286963,114.139127,194.0,430.0,67.9,4,10098.0,building_nearest_gfa_centroid,Rockson Mansion; Lai On Building
+D052,112/12,1,22.287177,114.139703,180.0,441.0,63.0,11,13419.0,building_nearest_gfa_centroid,Chiu Kwong Mansion; Wing Shing Building; Siu Cheung Building
+D053,112/13-14,1,22.287485,114.141118,429.0,1056.0,150.15,22,36947.0,building_nearest_gfa_centroid,Ching Tak Building; Denon Tower; Ming Hing Building
+D054,112/17-19,1,22.287261,114.142874,685.0,1343.0,239.75,28,42327.0,building_nearest_gfa_centroid,Cheong Kwai Building; Mui Fong Apartments; Wai Tak Building
+D055,112/20 and 112/29,1,22.286739,114.14313,266.6,591.1,93.3,20,18140.0,building_nearest_gfa_centroid,Tai Yick House; On Lok House; Hing Yip Building
+D056,112/20 and 112/29,2,22.287509,114.143617,211.4,468.9,74.0,9,14389.0,building_nearest_gfa_centroid,Empire Building; Luen Tak Building; WE hotel
+D057,112/21,1,22.285581,114.135573,442.0,1048.0,154.7,4,15557.0,building_nearest_gfa_centroid,Wing Hing House; Sun On Building; Graceful Court
+D058,112/22,1,22.285551,114.136541,426.0,480.0,149.1,2,25492.0,building_nearest_gfa_centroid,Novum West; St. Anthony's House
+D059,112/23,1,22.285399,114.138102,735.0,1753.0,257.25,10,48500.0,building_nearest_gfa_centroid,Emerald House; Lee Wai Building; Fung Yu Building
+D060,112/24,1,22.286188,114.138897,580.0,1633.0,203.0,9,34393.0,building_nearest_gfa_centroid,Hong Yue Court; Koon Wah Building; Johnson Mansion
+D061,112/25,1,22.285472,114.138983,190.0,453.0,66.5,10,17688.0,building_nearest_gfa_centroid,Kwong Tak Building; Fung Lam Building; Kui Yan Court
+D062,112/26-27 and 112/30,1,22.286504,114.140039,539.0,1292.0,188.65,39,41099.0,building_nearest_gfa_centroid,Wing To Building; Nam Cheong House; Wah Po Building
+D063,112/28,1,22.286825,114.141713,478.0,1071.0,167.3,29,23899.0,building_nearest_gfa_centroid,Chun Kwan Building; Grand City Hotel; Federate Building
+D064,112/31,1,22.286473,114.141239,463.0,1229.0,162.05,7,29706.0,building_nearest_gfa_centroid,Ivy Tower; Evergreen Tower
+D065,112/32,1,22.286373,114.142677,529.0,1659.0,185.15,3,42456.0,building_nearest_gfa_centroid,Island Crest Tower 2; Island Crest Tower 1; Elite Court
+D066,112/33,1,22.285875,114.139514,284.0,675.0,99.4,7,14444.0,building_nearest_gfa_centroid,Hoi Sing Building; Borita Building; Fung Sing Mansion
+D067,112/34,1,22.28595,114.140269,319.0,686.0,111.65,10,22418.0,building_nearest_gfa_centroid,Hang Hing Court; Altro; Hang Fai Building
+D068,112/35,1,22.286016,114.141524,494.0,1259.0,172.9,22,28310.0,building_nearest_gfa_centroid,Second Street Public Bathhouse; Hong Kong Resource Centre for Heritage; Yee Fung Court
+D069,112/36,1,22.286057,114.143043,279.0,857.0,97.65,22,13462.0,building_nearest_gfa_centroid,Golder Court; 金殿閣; Topworth Court
+D070,112/37,1,22.285667,114.139362,214.0,537.0,74.89,7,14146.0,building_nearest_gfa_centroid,Pan View Court; Yen Shin Mansion; Lai King Court
+D071,112/37,2,22.285535,114.140321,314.0,788.0,109.91,13,20761.0,building_nearest_gfa_centroid,One Eleven; True Light Building; Wing Cheung Building
+D072,112/38,1,22.28544,114.141711,524.0,1070.0,183.4,15,35997.0,building_nearest_gfa_centroid,Yin Tak Building; Zion Court; The Nova
+D073,112/39,1,22.285345,114.143156,502.0,1033.0,175.7,26,30898.0,building_nearest_gfa_centroid,High House; Ko Chun Court; Ko Nga Court
+D074,112/40,1,22.284855,114.136564,356.0,875.0,124.6,7,20381.0,building_nearest_gfa_centroid,Lok Po House; High West; Wing Fu Lau
+D075,112/41,1,22.284428,114.136439,406.0,741.0,142.1,14,23722.0,building_nearest_gfa_centroid,昌寶大樓; Good Luck Mansion; Fortune Villa
+D076,112/42,1,22.285036,114.13788,169.0,527.0,59.15,2,15925.0,building_nearest_gfa_centroid,Kingsfield Tower Block B; Kingsfield Tower Block A
+D077,112/43,1,22.284484,114.139532,388.4,1042.4,135.95,9,41117.0,building_nearest_gfa_centroid,The Summa Tower 1; The SummaTower 2; Hing Hon Building
+D078,112/43,2,22.285012,114.140333,145.6,390.6,50.95,2,15409.0,building_nearest_gfa_centroid,Silver Court; Kensington Hill
+D079,112/44,1,22.284905,114.141302,683.0,1839.0,239.05,13,52258.0,building_nearest_gfa_centroid,King's Hill; Lai Yin Court; Good View Court
+D080,112/45,1,22.284724,114.14277,607.0,1625.0,212.45,17,46131.0,building_nearest_gfa_centroid,Sun Luen Building; Kam Ning Mansion; KA FU BUILDING
+D081,112/46,1,22.283941,114.136518,214.0,654.0,74.9,7,16296.0,building_nearest_gfa_centroid,Rose Villas; Eivissa Crest; Tsui On Court
+D082,112/52,1,22.287577,114.141984,242.0,508.0,84.7,17,14418.0,building_nearest_gfa_centroid,Hing Fat Mansion; Yuen Fai Court; Kwai Cheong Building
+D083,112/53,1,22.287254,114.141756,278.0,526.0,97.3,12,16989.0,building_nearest_gfa_centroid,Kiu Shing Building; Andes Plaza; Artisan House
+D084,113/02,1,22.287506,114.146232,449.0,1173.0,157.15,20,47097.0,building_nearest_gfa_centroid,Moetown; Yick Fung Building; On Wah Building
+D085,113/03-04 and 113/26,1,22.287887,114.148601,87.0,213.5,30.47,4,13166.0,building_nearest_gfa_centroid,Kai Fat Building; Talon Tower; Cheong Loong Building
+D086,113/03-04 and 113/26,2,22.287335,114.149417,505.0,1238.5,176.73,17,76375.0,building_nearest_gfa_centroid,Hang Fat Building; Hang Lok Building; NAM WO HONG BUILDING
+D087,113/05,1,22.287329,114.145069,382.2,926.9,133.78,25,34811.0,building_nearest_gfa_centroid,庾黃淑靈紀念樓; HCL Building; Elite's Place
+D088,113/05,2,22.286599,114.1464,835.8,2026.8,292.54,10,76121.0,building_nearest_gfa_centroid,Lop Po Building; Kiu Fat Building; One Pacific Heights
+D089,113/05,3,22.287172,114.147093,551.9,1338.4,193.18,4,50265.0,building_nearest_gfa_centroid,Sing Po Building; Queen's Terrace Tower 1; Queen's Terrace Tower 2
+D090,113/06,1,22.28706,114.147659,301.0,719.0,105.35,2,22457.0,building_nearest_gfa_centroid,Wing Shun Building; Queen's Terrace Tower 3
+D091,113/07,1,22.286867,114.148929,351.0,696.0,122.85,8,18772.0,building_nearest_gfa_centroid,iclub Sheung Wan II Hotel; Kiu Kwong Mansion; Lam Kee Building
+D092,"113/08, 113/14 and 113/17",1,22.286631,114.150638,205.3,438.0,71.85,14,38037.0,building_nearest_gfa_centroid,Chun Yin House; Harmony Court; Kai Wah Building
+D093,"113/08, 113/14 and 113/17",2,22.285709,114.150477,199.7,426.0,69.9,22,37002.0,building_nearest_gfa_centroid,Shun Loong Mansion; Hing Lung Commercial Building; Greenland Building
+D094,113/09,1,22.286745,114.144104,144.3,303.7,50.51,11,10325.0,building_nearest_gfa_centroid,Fulful Building; KAM SHEK HSE; Wah Lee Building
+D095,113/09,2,22.286757,114.145052,174.3,366.8,61.01,9,12471.0,building_nearest_gfa_centroid,Fu Tai Mansion; Teen Wo Building; Kin Hing Building
+D096,113/09,3,22.286141,114.146066,180.4,379.6,63.13,9,12905.0,building_nearest_gfa_centroid,Chartered Bank Building; Marco Garden; Cupford House
+D097,113/10,1,22.285905,114.146878,242.0,464.0,84.7,24,18613.0,building_nearest_gfa_centroid,Wai Yue Building; Tung Hing Court; Universal Building
+D098,113/11,1,22.286569,114.147633,284.0,780.0,99.4,25,15950.0,building_nearest_gfa_centroid,Medal Court; Lai Yan Lau; Smart Power Gallery
+D099,113/12-13,1,22.286671,114.14857,276.0,619.0,96.6,15,27495.0,building_nearest_gfa_centroid,BONHAM COMMERCIAL CENTRE; Hiang Kie House; Tai Wong Building
+D100,113/15,1,22.285564,114.148878,445.0,954.0,155.75,19,28302.0,building_nearest_gfa_centroid,Luen Yick Building; Tai Hing Building; Pong Fai Building
+D101,113/16,1,22.285955,114.148906,225.0,674.0,78.75,4,26129.0,building_nearest_gfa_centroid,Fook Sing Court; Welland Building
+D102,113/18,1,22.285094,114.145947,289.6,545.0,101.37,11,11856.0,building_nearest_gfa_centroid,Chung Yin Court; Centre Place
+D103,113/18,2,22.283836,114.14641,234.4,441.0,82.03,4,9594.0,building_nearest_gfa_centroid,Bonham Ville; Bonanza Court; Cartwright Gardens
+D104,113/19,1,22.28495,114.148607,288.3,540.3,100.92,36,25225.0,building_nearest_gfa_centroid,Hollywood Building; Ming Fat House; Meehan House
+D105,113/19,2,22.28541,114.147668,139.7,261.7,48.88,5,12219.0,building_nearest_gfa_centroid,Kee On Building; Tai Ping Mansion; Hollywood Hill
+D106,113/20,1,22.284789,114.14992,672.0,1255.0,235.2,15,48180.0,building_nearest_gfa_centroid,Tai Wing House; WAH KOON BUILDING; 太盛樓
+D107,113/21,1,22.284703,114.148178,170.0,384.0,59.49,15,9716.0,building_nearest_gfa_centroid,Tai On Building; View Villa; Tai Shan House
+D108,113/21,2,22.284943,114.147186,397.0,897.0,138.96,6,22698.0,building_nearest_gfa_centroid,Hong Ning House; Fook Chak House; Tower 125
+D109,113/22,1,22.284367,114.149234,412.0,960.0,144.2,37,31308.0,building_nearest_gfa_centroid,48 Mansion; 東成樓; Holly Court
+D110,113/23,1,22.284149,114.150969,560.0,1527.0,196.0,9,63565.0,building_nearest_gfa_centroid,Centre Hollywood; 福禮大廈; Central Mansion
+D111,113/24,1,22.284288,114.146909,466.5,1039.1,163.28,16,51477.0,building_nearest_gfa_centroid,Mier; Po Hing Mansion; Wing Wa Mansion
+D112,113/24,2,22.283753,114.148294,87.5,194.9,30.62,3,9654.0,building_nearest_gfa_centroid,Silver Jubilee Mansion
+D113,113/25,1,22.283642,114.148887,200.0,423.0,70.0,7,13244.0,building_nearest_gfa_centroid,Cherry Crest; The Bellevue Place; CHERRY CREST
+D114,113/28,1,22.287482,114.144452,257.0,740.0,89.95,36,24793.0,building_nearest_gfa_centroid,Wai Lee Building; Western House; Tak Yan Building
+D115,"114/03-10, 114/14-16, 114/20 and 114/32-34",1,22.28564,114.151636,68.3,123.3,23.89,58,68187.0,building_nearest_gfa_centroid,開僑樓; Wing Fat House; Sen Fat Building
+D116,"114/03-10, 114/14-16, 114/20 and 114/32-34",2,22.284672,114.154409,212.4,383.8,74.34,34,212138.0,building_nearest_gfa_centroid,Kam Bong Bldg; Tin Chak Building; On Building
+D117,"114/03-10, 114/14-16, 114/20 and 114/32-34",3,22.286691,114.152986,126.6,228.8,44.31,13,126453.0,building_nearest_gfa_centroid,Ngan House; Lloyds Commercial Centre; Foo Sang Building
+D118,"114/03-10, 114/14-16, 114/20 and 114/32-34",4,22.285103,114.15557,94.7,171.1,33.15,8,94609.0,building_nearest_gfa_centroid,Far East Consortium Building; Dah Sing Life Building; United Building
+D119,114/17-18,1,22.284927,114.152359,62.5,174.7,21.86,7,4540.0,building_nearest_gfa_centroid,Foundation Building; On Yip Lau; Hang Shing Lau
+D120,114/17-18,2,22.284908,114.151083,178.5,499.3,62.49,12,12977.0,building_nearest_gfa_centroid,樹本善堂大廈; 統生商業大廈; Vastkin House
+D121,114/19 and 114/21,1,22.284453,114.152654,214.3,456.8,75.01,58,43938.0,building_nearest_gfa_centroid,The Yuen Yuen Institute Mansion; 文利樓; Hang Lung House
+D122,114/19 and 114/21,2,22.28465,114.152093,74.7,159.2,26.14,14,15314.0,building_nearest_gfa_centroid,安樂樓; DOR FOOK MANSION; Winbase Centre
+D123,"114/22, 114/25-26 and 114/31",1,22.283772,114.153225,431.0,823.0,150.85,47,38832.0,building_nearest_gfa_centroid,Tsang Chiu Ho Building; Kar Ho Building; Cling Serviced Apartments
+D124,114/23-24,1,22.283711,114.150527,318.4,503.0,111.43,9,26246.0,building_nearest_gfa_centroid,CentreStage Tower 2; Como Como; Tung Shing Terrace
+D125,114/23-24,2,22.283808,114.151378,194.6,614.0,68.12,10,32043.0,building_nearest_gfa_centroid,CentreStage Tower 1; Kam Hing Mansion; Hollywood
+D126,114/27,1,22.283036,114.149822,321.0,769.7,112.33,7,25841.0,building_nearest_gfa_centroid,Golden Valley Mansion; Women's Welfare Club Western District; SUNNY SKY EDUCATION CENTRE
+D127,114/27,2,22.283208,114.150481,307.0,736.3,107.47,16,24722.0,building_nearest_gfa_centroid,Kam Kin Mansion; Grandview Garden Tower 2; KAM KIN MANSION
+D128,114/28,1,22.282868,114.151153,509.0,1083.0,178.15,31,55755.0,building_nearest_gfa_centroid,Centre Point; 順滿樓; Koon Nam House
+D129,114/29,1,22.283111,114.152255,262.0,609.0,91.7,15,24835.0,building_nearest_gfa_centroid,Kingearn Building; Wing Wood Lou; Tai Lee Building
+D130,114/30,1,22.282558,114.152678,264.0,536.0,92.4,21,32176.0,building_nearest_gfa_centroid,Wai Yuen Building; KAM HEI MANSION; 金禧樓
+D131,115/01-02,1,22.28806,114.144511,240.9,503.2,84.31,11,22290.0,building_nearest_gfa_centroid,CHI Residences; Po Fung Mansion; Wah Ming Building
+D132,115/01-02,2,22.288257,114.145731,176.1,367.8,61.64,3,16295.0,building_nearest_gfa_centroid,Guangdong Finance Building; Sze Yap Building; Chiu Chow Association Building
+D133,115/03-04 and 115/06-07,1,22.28819,114.146623,315.6,794.3,110.46,21,52004.0,building_nearest_gfa_centroid,Ka Yue Building; Chi Cheung Building; Kam Chuen Mansion
+D134,115/03-04 and 115/06-07,2,22.290001,114.144422,96.4,242.7,33.74,2,15887.0,building_nearest_gfa_centroid,Sun Yat Sen Memorial Park Swimming Pool; SUN YAT SEN MEMORIAL PARK
+D135,116/01 and 116/07-08,1,22.285365,114.132002,828.0,2139.0,289.8,5,40048.0,building_nearest_gfa_centroid,Belcher Court Block B; Belcher Court Block A; Yick Fung Garden Block B
+D136,116/02,1,22.286299,114.132415,470.0,1249.0,164.5,4,33572.0,building_nearest_gfa_centroid,Sum Way Mansion; Chester Court; Sunglow Building
+D137,116/03,1,22.286737,114.133304,865.5,2260.0,302.91,11,50802.0,building_nearest_gfa_centroid,Mei Shing Mansion; King's Building; Bic Wah Court
+D138,116/03,2,22.286357,114.134744,1344.5,3511.0,470.59,4,78926.0,building_nearest_gfa_centroid,Yip Cheong Building; Kwan Yick Building Phase I; Dragonfair Garden Block 2
+D139,116/04,1,22.285994,114.134089,383.0,940.0,134.05,5,28452.0,building_nearest_gfa_centroid,Fu Ga Building; Pak Hoo Mansion; Po Tak Building
+D140,116/05,1,22.286,114.134732,668.0,1743.0,233.8,9,48300.0,building_nearest_gfa_centroid,LUEN WAH MANSION; Luen Wah Mansion; Joy Fat Mansion
+D141,116/06,1,22.284145,114.133275,119.5,703.0,41.83,9,37736.0,building_nearest_gfa_centroid,Starr Hall; Ho Tim Hall; Ricci Hall
+D142,116/06,2,22.285147,114.135315,319.5,379.0,111.82,6,20348.0,building_nearest_gfa_centroid,Hillview Garden Block 5-8; Hillview Garden Block 1-4; Nam Cheong Building
+D143,121/02-17 and 121/19-21,1,22.285115,114.156951,102.9,183.9,36.0,29,352310.0,building_nearest_gfa_centroid,Nexxus Building; Wing On House; Hung Kei Mansion
+D144,121/02-17 and 121/19-21,2,22.282142,114.156633,71.8,128.3,25.12,58,245819.0,building_nearest_gfa_centroid,LHT Tower; Sun Lee Building; China Building
+D145,121/02-17 and 121/19-21,3,22.285299,114.159278,94.4,168.8,33.03,1,323255.0,building_nearest_gfa_centroid,Two International Finance Centre
+D146,122/01-03,1,22.282163,114.15195,411.0,939.0,143.85,17,19937.0,building_nearest_gfa_centroid,Kwong Fook Building; Kwan Fat House; Ming Hing House
+D147,122/04-06,1,22.281527,114.152052,237.9,500.2,83.27,33,32436.0,building_nearest_gfa_centroid,Honor Villa; Fat Lee Mansion; 宜昌樓
+D148,122/04-06,2,22.281954,114.152948,231.1,485.8,80.88,27,31502.0,building_nearest_gfa_centroid,Wing On Building; Chui  Man House; 財利樓
+D149,122/07-10,1,22.283412,114.154335,122.5,271.8,42.86,11,13076.0,building_nearest_gfa_centroid,光源樓; Welley Building; Won Hing Building
+D150,122/07-10,2,22.282454,114.153538,119.5,265.2,41.84,17,12763.0,building_nearest_gfa_centroid,On Lok House; C Wisdom Centre; Cheung Fai Building
+D151,122/11-14 and 122/18-21,1,22.281259,114.154927,102.1,232.2,35.73,27,55798.0,building_nearest_gfa_centroid,Ablutions Block; Yung Kee Building; Luen On House
+D152,122/11-14 and 122/18-21,2,22.282728,114.154628,127.9,266.8,44.77,39,64106.0,building_nearest_gfa_centroid,ICBC Asia Building; Ming Fat Building; Welland House
+D153,122/15-17,1,22.281745,114.153551,136.1,294.4,47.64,15,12047.0,building_nearest_gfa_centroid,Al-Aqmar House; Winning House; Lilian Court
+D154,122/15-17,2,22.280998,114.152923,268.9,581.6,94.11,17,23794.0,building_nearest_gfa_centroid,HOPSON MANSION; Cheong Ngar Court; Ho Shing House
+D155,122/22-23,1,22.279811,114.154379,162.1,400.6,56.73,5,17107.0,building_nearest_gfa_centroid,Bel Mount Garden; Cordial Mansion; Yuen Ming Building
+D156,122/22-23,2,22.280448,114.153572,221.9,548.4,77.67,12,23424.0,building_nearest_gfa_centroid,Avon Court; Tung Yuen Building; 寶苑
+D157,122/24 and 123/01-23,1,22.281889,114.160209,86.1,155.5,30.13,18,167446.0,building_nearest_gfa_centroid,City Hall; Mandarin Oriental Hotel; AIA Central
+D158,122/24 and 123/01-23,2,22.280497,114.157071,175.9,311.5,61.57,59,335432.0,building_nearest_gfa_centroid,Dina House; Club Lusitano; Printing House
+D159,"124/01, 124/05-06 and 124/08-16",1,22.278453,114.160532,105.9,258.7,37.07,20,225085.0,building_nearest_gfa_centroid,THE HELENA MAY; The Royal Court; Hong Kong Park Education Centre
+D160,"124/01, 124/05-06 and 124/08-16",2,22.278069,114.163221,72.3,175.8,25.3,26,152953.0,building_nearest_gfa_centroid,Regent On The Park; British Trade Commission; The British Council
+D161,"124/01, 124/05-06 and 124/08-16",3,22.282042,114.164609,59.8,145.4,20.93,15,126502.0,building_nearest_gfa_centroid,Blake Block; Fairmont House; Chinese People's Liberation Army Forces Hong Kong Building
+D162,141/01-03,1,22.280524,114.132101,68.3,241.6,23.91,13,20986.0,building_nearest_gfa_centroid,Aw Boon Haw Wing; Wong Chik Ting Hall; Marden Wing
+D163,141/01-03,2,22.279708,114.131664,72.7,195.4,25.44,8,16979.0,building_nearest_gfa_centroid,Fulham Garden Block A; Fulham Garden Block B; Fulham Garden Block D
+D164,141/04 and 141/16,1,22.283021,114.139409,101.0,510.0,35.35,23,50739.0,building_nearest_gfa_centroid,Stone House; The University of Hong Kong University Lodge; The University of Hong Kong T. T. Tsui Building
+D165,141/05 and 141/08,1,22.2836,114.140729,113.0,528.0,39.55,5,27830.0,building_nearest_gfa_centroid,Emmanuel House; Bonham Towers; Honiton Mansion
+D166,141/06,1,22.284472,114.141231,185.0,832.0,64.75,1,31947.0,building_nearest_gfa_centroid,Ning Yeung Terrace
+D167,141/07,1,22.284081,114.14138,640.0,2115.0,224.0,15,56339.0,building_nearest_gfa_centroid,Ihong Mansion; Kei Villa; Cheery Garden
+D168,141/09,1,22.283698,114.142514,340.9,1012.4,119.32,9,38776.0,building_nearest_gfa_centroid,Hoover Mansion Block C-D; Hoover Mansion Block A-B; Hing Wah Mansion Block M
+D169,141/09,2,22.283418,114.141314,420.1,1247.6,147.03,3,47784.0,building_nearest_gfa_centroid,Scholastic Garden; Babington House; Glory Heights
+D170,141/10 and 141/13,1,22.28325,114.144852,251.0,1126.0,87.85,6,40349.0,building_nearest_gfa_centroid,Park View Court Block A; Park View Court Block B; Beauty Court
+D171,141/11,1,22.284433,114.145482,876.0,2366.8,306.61,11,85879.0,building_nearest_gfa_centroid,2 Park Road; Bonham Residence; Euston Court Tower 2
+D172,141/11,2,22.283671,114.146058,261.2,705.8,91.43,4,25610.0,building_nearest_gfa_centroid,All Fit Garden; Ying Piu Mansion; Bonham Court
+D173,141/11,3,22.283973,114.144085,206.6,558.2,72.31,6,20253.0,building_nearest_gfa_centroid,Bonham Crest; Parksdale; Namning Mansion
+D174,141/11,4,22.284169,114.143194,289.2,781.2,101.2,6,28347.0,building_nearest_gfa_centroid,Yee Ga Court; Skylight Tower; Wilton Place
+D175,141/12,1,22.283124,114.142113,463.6,1433.6,162.25,14,67703.0,building_nearest_gfa_centroid,First Mansion; Lai Cheung House; Greenland Garden Block A
+D176,141/12,2,22.282693,114.141358,163.4,505.4,57.2,4,23869.0,building_nearest_gfa_centroid,Shing Kai Mansion; Babington Hill; Kingsford Height
+D177,141/14,1,22.281889,114.141496,141.1,516.6,49.39,14,29059.0,building_nearest_gfa_centroid,University Heights Tower 2; University Heights Tower 3; Greenview Gardens Block D
+D178,141/14,2,22.282388,114.142487,156.9,574.4,54.91,5,32312.0,building_nearest_gfa_centroid,Serene Court; Belmont Court; Greenview Gardens Block A
+D179,141/15,1,22.282313,114.144283,147.1,470.2,51.48,9,16867.0,building_nearest_gfa_centroid,Richmond Court; King's Garden; Peace Court
+D180,141/15,2,22.282103,114.143429,395.9,1265.8,138.57,7,45405.0,building_nearest_gfa_centroid,WAH SEN COURT; Villa Veneto; Dragonview Court
+D181,141/17,1,22.281085,114.143568,81.4,326.8,28.49,4,15832.0,building_nearest_gfa_centroid,Medallion Heights; Haddon Court
+D182,141/17,2,22.280832,114.140175,96.0,385.3,33.59,4,18664.0,building_nearest_gfa_centroid,No.1 Po Shan Road Block 3; No.1 Po Shan Road Block 1; Wisdom Court Block A
+D183,141/17,3,22.280825,114.140839,71.1,285.6,24.9,2,13837.0,building_nearest_gfa_centroid,璈珀; Cluny Park
+D184,141/17,4,22.281225,114.142668,151.3,607.5,52.96,8,29434.0,building_nearest_gfa_centroid,SKYLINE MANSION; Skyline Mansion Block 2; Skyline Mansion Block 1
+D185,141/17,5,22.28013,114.139313,71.2,285.8,24.91,5,13846.0,building_nearest_gfa_centroid,Wisdom Court Block B; Wisdom Court Block C; Wisdom Court Block D
+D186,141/18,1,22.280297,114.141764,102.2,406.5,35.79,5,31973.0,building_nearest_gfa_centroid,Altamira; Po Shan Mansions Block A; Po Shan Mansions Block B
+D187,141/18,2,22.27972,114.139905,64.8,257.5,22.66,3,20251.0,building_nearest_gfa_centroid,HAMILTON COURT; Hamilton Court; Piccadilly Mansion
+D188,141/19-22,1,22.277889,114.131995,134.6,448.7,47.11,25,29307.0,building_nearest_gfa_centroid,La Clare Mansion Block D; La Clare Mansion Block C; La Clare Mansion Block B
+D189,141/19-22,2,22.276559,114.130494,102.4,341.3,35.84,6,22294.0,building_nearest_gfa_centroid,Pokfulam Court; Fook Wai Mansion
+D190,142/01,1,22.281993,114.147254,357.6,809.1,125.17,13,40772.0,building_nearest_gfa_centroid,Savoy Court; SAVOY COURT; Scenic Heights Block 2
+D191,142/01,2,22.28271,114.146021,191.4,432.9,66.98,5,21817.0,building_nearest_gfa_centroid,WOODLAND GARDENS; Panorama Gardens; Prosperous Height
+D192,142/02,1,22.283384,114.14672,156.4,511.0,54.75,6,42133.0,building_nearest_gfa_centroid,80 Robinson Road Block 1; Breezy Court; 祝齡樓
+D193,142/02,2,22.282514,114.148351,360.6,1178.0,126.2,9,97115.0,building_nearest_gfa_centroid,Hong Kong Garden Block A-B; Hong Kong Garden Block C-D; Fair Wind Manor
+D194,142/03,1,22.282352,114.150064,518.5,1245.9,181.47,10,61211.0,building_nearest_gfa_centroid,泰豐大樓; On Fung Building; SUSSEX COURT
+D195,142/03,2,22.282706,114.149301,233.5,561.1,81.73,7,27567.0,building_nearest_gfa_centroid,Briar-Caine Co-op Building; JADESTONE COURT; Jadestone Court
+D196,142/04 and 142/11,1,22.279927,114.149788,227.1,754.5,79.49,5,42420.0,building_nearest_gfa_centroid,Conway Mansion Block E-F; Conway Mansion Block C-D; CLIFFVIEW MANSIONS
+D197,142/04 and 142/11,2,22.281916,114.146492,267.8,889.6,93.72,6,50013.0,building_nearest_gfa_centroid,39 Conduit Road; 39 CONDUIT ROAD; Fairmont Gardens
+D198,142/04 and 142/11,3,22.280424,114.148413,252.3,838.1,88.3,5,47117.0,building_nearest_gfa_centroid,Buxey Lodge Block A; Buxey Lodge Block B; THE MORGAN
+D199,142/04 and 142/11,4,22.281929,114.145251,314.8,1045.8,110.19,6,58798.0,building_nearest_gfa_centroid,Vienna Court; Venice Court; Rome Court
+D200,142/05,1,22.280394,114.149925,734.6,2247.3,257.12,11,59723.0,building_nearest_gfa_centroid,Palm Court; Manly Mansion; The Icon
+D201,142/05,2,22.281316,114.148637,869.3,2659.3,304.26,6,70673.0,building_nearest_gfa_centroid,Yee Lin Mansion; Robinson Mansion; Blessings Garden Phase I
+D202,142/05,3,22.279439,114.150273,88.1,269.4,30.83,4,7160.0,building_nearest_gfa_centroid,Cimbria Court; Ivory Court
+D203,142/06,1,22.281485,114.149493,1062.6,3684.5,371.91,9,144769.0,building_nearest_gfa_centroid,Carlos Court; Robinson Place Tower 1; Robinson Place Tower 2
+D204,142/06,2,22.280879,114.15038,178.4,618.5,62.44,4,24304.0,building_nearest_gfa_centroid,Garble Garden; 愛富華庭; Seymour Place
+D205,142/07,1,22.281327,114.150747,983.3,2378.1,344.14,20,87695.0,building_nearest_gfa_centroid,Green Field Court; The Fortune Gardens Block A; Ying Fai Court
+D206,142/07,2,22.280527,114.150959,306.7,741.9,107.36,2,27357.0,building_nearest_gfa_centroid,Palatial Crest; Fairview Height
+D207,142/08,1,22.280902,114.151663,549.0,1163.0,192.15,29,45006.0,building_nearest_gfa_centroid,Po Fat Bldg; Sung Tak Mansion; Prince Palace
+D208,142/09,1,22.279622,114.151497,654.0,1381.0,228.9,25,62168.0,building_nearest_gfa_centroid,Karling House; Peace Tower; Ming Garden
+D209,142/10,1,22.280373,114.152311,306.1,786.2,107.13,20,41133.0,building_nearest_gfa_centroid,San Fat Building; TAK MANSION; Tak Mansion
+D210,142/10,2,22.279884,114.153469,430.1,1104.7,150.54,8,57797.0,building_nearest_gfa_centroid,Long Mansion; Caine Building; Dragon Court
+D211,142/10,3,22.279034,114.153708,340.5,874.5,119.16,5,45751.0,building_nearest_gfa_centroid,CATHOLIC DIOCESE CENTRE; Robinson Heights Block 1; Robinson Heights Block 2
+D212,142/10,4,22.279469,114.152618,397.3,1020.6,139.07,7,53394.0,building_nearest_gfa_centroid,Central 8; The Grand Panorama Block 2; The Grand Panorama Block 4
+D213,142/12,1,22.278422,114.152669,141.7,411.3,49.59,5,23317.0,building_nearest_gfa_centroid,Regal Crest; Robinson Garden Apartment
+D214,142/12,2,22.27874,114.152332,282.7,820.9,98.96,8,46532.0,building_nearest_gfa_centroid,Good View Court; WELLESLEY; Roc Ye Court
+D215,142/12,3,22.27915,114.151281,360.6,1046.8,126.2,11,59342.0,building_nearest_gfa_centroid,Right Mansion; Mountain View Court; East Sun Mansion
+D216,142/13,1,22.278162,114.151624,69.4,451.0,24.28,5,23934.0,building_nearest_gfa_centroid,Botanic Terrace Block A; Botanic Terrace Block B; Chater Hall
+D217,142/13,2,22.27865,114.15046,291.6,1083.0,102.07,12,57481.0,building_nearest_gfa_centroid,Panorama Block 1; Panorama Block 2; Panorama Block 3
+D218,142/14 and 142/18,1,22.27608,114.152962,444.0,1727.0,155.4,10,127574.0,building_nearest_gfa_centroid,Queen's Garden Block B; Queen's Garden Block A; Queen's Garden Block C
+D219,142/15-17,1,22.276804,114.153602,106.2,476.3,37.19,18,28127.0,building_nearest_gfa_centroid,Pine Court Block F; Pine Court Block E; Kam Yuen Mansion Block F
+D220,142/15-17,2,22.277704,114.154835,73.8,330.7,25.81,1,19525.0,building_nearest_gfa_centroid,The Albany
+D221,142/19-20,1,22.276629,114.154749,102.8,451.7,35.99,23,31940.0,building_nearest_gfa_centroid,HONG KONG ZOOLOGICAL & BOTANICAL GARDENS; Villa Elegance; Education and Exhibition Centre
+D222,142/19-20,2,22.275947,114.154315,187.6,824.1,65.65,4,58271.0,building_nearest_gfa_centroid,2 & 3 Garden Terrace Block 3; 2 & 3 Garden Terrace Block 2; Garden Terrace Block 1
+D223,142/19-20,3,22.274245,114.153179,202.6,890.2,70.91,6,62943.0,building_nearest_gfa_centroid,Clovelly Court Block 1-2; Swimming Pool (Indoor); LADIES' RECREATION CLUB
+D224,142/21,1,22.275234,114.152374,296.5,924.7,103.79,4,54010.0,building_nearest_gfa_centroid,Hillsborough Court Tower 3; The Royal Tower; Hillsborough Court Tower 2
+D225,142/21,2,22.274561,114.152644,530.5,1654.3,185.66,4,96617.0,building_nearest_gfa_centroid,Tregunter Tower 2; Tregunter Tower 3; Tregunter Tower 1
+D226,143/01,1,22.27615,114.156934,372.0,1097.0,130.2,16,80212.0,building_nearest_gfa_centroid,Hoover Court; Park Rise; Park Mansions
+D227,143/02,1,22.27578,114.159813,144.0,446.2,50.38,19,43263.0,building_nearest_gfa_centroid,Seaview Mansion; Yale Lodge; Kenville
+D228,143/02,2,22.275765,114.158384,147.0,455.8,51.47,5,44193.0,building_nearest_gfa_centroid,Chenyu Court; Wealthy Heights; Li Chong Yuet Ming Building
+D229,143/03 and 143/05-07,1,22.274202,114.165504,102.5,360.1,35.87,6,23833.0,building_nearest_gfa_centroid,ASIA SOCIETY HONG KONG CENTER; HONGKONG ELECTRIC CENTRE; Hongkong Electric Centre
+D230,143/03 and 143/05-07,2,22.272876,114.163914,160.2,562.8,56.07,11,37248.0,building_nearest_gfa_centroid,21 Borrett Road No.10; 21 Borrett Road No.9; 21 Borrett Road No.2
+D231,143/03 and 143/05-07,3,22.275204,114.161794,139.7,503.0,48.9,12,33291.0,building_nearest_gfa_centroid,Mother's Choice; Grosvenor House; Montgomery Block
+D232,143/03 and 143/05-07,4,22.275002,114.157822,180.5,634.1,63.18,14,41971.0,building_nearest_gfa_centroid,Morning Light Apartments; Bo Kwong Apartments; St. Paul's Terrace
+D233,143/03 and 143/05-07,5,22.275108,114.159379,135.9,477.3,47.56,10,31593.0,building_nearest_gfa_centroid,Donnell Court; Bayview Mansion; Beau Cloud Mansion
+D234,143/03 and 143/05-07,6,22.274944,114.160448,234.2,822.8,81.98,12,54460.0,building_nearest_gfa_centroid,Welsby Court; Pak Fai Mansion; BIRCHWOOD PLACE
+D235,143/04,1,22.275751,114.155723,181.1,629.7,63.39,3,52302.0,building_nearest_gfa_centroid,Macdonnell House; St. John Tower; Estoril Court Block 1
+D236,143/04,2,22.275141,114.15663,288.9,1004.3,101.11,7,83426.0,building_nearest_gfa_centroid,St. Louis Mansion; Wilshire Park; William Mansion
+D237,143/08-09,1,22.274277,114.157608,124.2,592.1,43.47,11,38280.0,building_nearest_gfa_centroid,Grenville House Tower C; Grenville House Block J; Grenville House Block I
+D238,143/08-09,2,22.274082,114.155744,73.8,351.9,25.83,8,22752.0,building_nearest_gfa_centroid,Brewin Court; Po Garden; PO GARDEN
+D239,143/10,1,22.273337,114.153031,205.0,796.0,71.75,6,72270.0,building_nearest_gfa_centroid,Tavistock; Tavistock II; Aigburth
+D240,143/11,1,22.273137,114.155499,99.4,433.7,34.78,4,39149.0,building_nearest_gfa_centroid,Century Tower I; Branksome Crest; Century Tower II
+D241,143/11,2,22.273009,114.154619,65.6,286.3,22.97,2,25849.0,building_nearest_gfa_centroid,BRANKSOME GRANDE; Branksome Grande
+D242,143/12,1,22.272918,114.159356,83.7,305.2,29.28,5,26385.0,building_nearest_gfa_centroid,Rose Gardens; The Harbourview; MAGAZINE COURT
+D243,143/12,2,22.273498,114.157453,55.3,201.8,19.37,3,17451.0,building_nearest_gfa_centroid,THE MAYFAIR; Gladdon; The Mayfair
+D244,143/13,1,22.274453,114.159267,100.1,344.5,35.02,3,31632.0,building_nearest_gfa_centroid,Regence Royale Tower 2; Chung Tak Mansion; Regence Royale Tower 1
+D245,143/13,2,22.274064,114.161884,60.5,208.3,21.18,4,19125.0,building_nearest_gfa_centroid,BORRETT MANSIONS; Borrett Mansions
+D246,143/13,3,22.274168,114.160473,74.9,258.0,26.23,2,23692.0,building_nearest_gfa_centroid,Bowen Mansion; Fairlane Tower
+D247,143/13,4,22.272857,114.164765,96.5,332.2,33.77,4,30498.0,building_nearest_gfa_centroid,Grand Bowen; Bowen Place; Bowen's Lookout
+D248,"181/01-02, 182/01-05, 182/13 and 182/21",1,22.270329,114.155088,111.9,508.5,39.17,74,93639.0,building_nearest_gfa_centroid,Magazine Heights; 31 Barker Road House C; 31 Barker Road House A
+D249,"181/01-02, 182/01-05, 182/13 and 182/21",2,22.273028,114.147639,68.1,309.5,23.83,92,56983.0,building_nearest_gfa_centroid,Dragon Lodge; Chu Wan; The Peak Lookout
+D250,182/06-07,1,22.268912,114.157921,67.8,293.0,23.74,98,45715.0,building_nearest_gfa_centroid,House 9 Severn Hill; House 10 Severn Hill; House 6 Severn Hill
+D251,182/06-07,2,22.268338,114.154027,60.2,260.0,21.06,67,40568.0,building_nearest_gfa_centroid,Highlands 4; Mayfield; Villa de Victoria
+D252,182/08-12,1,22.26733,114.156131,150.0,697.0,52.5,126,59919.0,building_nearest_gfa_centroid,CLOUD NINE; PCCW; 62-66 Peak Road Block 1
+D253,182/15-17,1,22.264394,114.152547,104.0,470.0,36.4,127,72502.0,building_nearest_gfa_centroid,House 6; House 5; House 15
+D254,182/18-20,1,22.262763,114.148064,108.7,409.0,38.04,72,45177.0,building_nearest_gfa_centroid,KELLETTERIA; Harmony House C; Harmony House B
+D255,182/18-20,2,22.260726,114.150141,73.3,276.0,25.66,41,30480.0,building_nearest_gfa_centroid,LA HACIENDA; SHARP HOUSE; La Hacienda Block 15
+D256,182/22,1,22.266605,114.162528,100.0,403.0,35.0,43,32522.0,building_nearest_gfa_centroid,WATFORD VILLA; VILLA VERDE; Guildford Court

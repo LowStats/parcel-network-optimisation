@@ -32,33 +32,38 @@ if __name__ == "__main__":
     ex, cand = sites[sites.site_class == "existing"], sites[sites.site_class == "candidate"]
 
     # ---------------------------------------------------------------- static PNG
-    fig, ax = plt.subplots(figsize=(15, 10))
+    fig, ax = plt.subplots(figsize=(18, 12))
     buffer.boundary.plot(ax=ax, color="grey", ls="--", lw=0.8)
     ssg.boundary.plot(ax=ax, color="#bbbbbb", lw=0.5)
     boundary.boundary.plot(ax=ax, color="black", lw=1.6)
     bld.plot(ax=ax, color="#cfd8dc")
     for cat, g in cand.groupby("category"):
-        g.plot(ax=ax, marker="^", color=CATEGORY_COLORS.get(cat, "k"), markersize=28, alpha=.85,
+        g.plot(ax=ax, marker="^", color=CATEGORY_COLORS.get(cat, "k"),
+               markersize=10 if len(nodes) > 80 else 28, alpha=.85,
                label=f"candidate: {cat.replace('_', ' ')} ({len(g)})")
-    nodes.plot(ax=ax, color="#1565c0", alpha=.55, edgecolor="white",
-               markersize=nodes["households"] / 6)
-    for op, g in ex.groupby("operator"):
-        g.plot(ax=ax, marker="*", color=OPERATOR_COLORS.get(op, "k"), markersize=260,
-               edgecolor="white", lw=.8, label=f"existing: {op} ({len(g)})")
-    for _, r in nodes.iterrows():
-        ax.annotate(r.node_id, (r.geometry.x, r.geometry.y), fontsize=6, ha="center",
-                    va="center", color="white")
+    nodes.plot(ax=ax, color="#1565c0", alpha=.5, edgecolor="white",
+               markersize=nodes["households"] / (12 if len(nodes) > 80 else 6))
+    big = len(nodes) > 80  # district scale: smaller markers, no node labels
+    for (op, cat), g in ex.groupby(["operator", "category"]):
+        g.plot(ax=ax, marker="*" if cat == "locker" else "D", color=OPERATOR_COLORS.get(op, "k"),
+               markersize=(90 if big else 260) if cat == "locker" else (30 if big else 90),
+               edgecolor="white", lw=.6,
+               label=f"existing {cat.replace('_', ' ')}: {op} ({len(g)})")
+    if not big:
+        for _, r in nodes.iterrows():
+            ax.annotate(r.node_id, (r.geometry.x, r.geometry.y), fontsize=6, ha="center",
+                        va="center", color="white")
     handles, labels = ax.get_legend_handles_labels()
     handles += [Line2D([], [], marker="o", ls="", color="#1565c0", alpha=.55, markersize=12),
                 Line2D([], [], color="black", lw=1.6),
                 Line2D([], [], color="grey", ls="--")]
-    labels += ["demand node (size = households)", "study area (TPU 111)",
+    labels += ["demand node (size = households)", f"study area ({boundary.study_area.iloc[0]})",
                f"supply search buffer ({int(buffer.buffer_m.iloc[0])} m)"]
     ax.legend(handles, labels, loc="lower left", fontsize=8, framealpha=.9)
     xmin, ymin, xmax, ymax = buffer.total_bounds
     ax.set_xlim(xmin, xmax)
     ax.set_ylim(ymin, ymax)
-    ax.set_title(f"Kennedy Town parcel-locker study: {len(nodes)} demand nodes "
+    ax.set_title(f"{boundary.study_area.iloc[0]} parcel-locker study: {len(nodes)} demand nodes "
                  f"({nodes.households.sum():,.0f} households), {len(ex)} existing sites, "
                  f"{len(cand)} candidate sites", fontsize=11)
     ax.set_axis_off()
@@ -67,7 +72,7 @@ if __name__ == "__main__":
 
     # ---------------------------------------------------------------- interactive HTML
     c = boundary.to_crs(WGS84).geometry.iloc[0].centroid
-    m = folium.Map(location=[c.y, c.x], zoom_start=16, tiles="cartodbpositron")
+    m = folium.Map(location=[c.y, c.x], zoom_start=15, tiles="cartodbpositron")
     folium.GeoJson(buffer.to_crs(WGS84), name="supply buffer",
                    style_function=lambda _: dict(color="grey", dashArray="5", fill=False)).add_to(m)
     folium.GeoJson(ssg.to_crs(WGS84), name="census SSGs",
@@ -90,8 +95,11 @@ if __name__ == "__main__":
     for _, r in ex.to_crs(WGS84).iterrows():
         folium.Marker([r.geometry.y, r.geometry.x],
                       icon=folium.Icon(color="black" if r.operator == "SF Express" else "green"
-                                       if "iPostal" in r.operator else "orange"),
-                      tooltip=f"{r.site_id} | {r.operator} | {r['name']}").add_to(fg)
+                                       if "iPostal" in r.operator else "orange"
+                                       if r.operator == "Cainiao" else "red",
+                                       icon="lock" if r.category == "locker" else "user"),
+                      tooltip=f"{r.site_id} | {r.operator} | {r.category} | {r['name']}"
+                              f" | public: {r.public_access}").add_to(fg)
     folium.LayerControl().add_to(m)
     m.save(FIGURES / "study_area_map.html")
     print("saved figures/study_area_map.html")

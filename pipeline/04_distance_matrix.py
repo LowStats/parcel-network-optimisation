@@ -22,9 +22,10 @@ Time (slope-aware)
   climb_m = total ascent along the shortest path when walking from home to the site.
 
 Outputs (data/processed/)
-  distance_long.csv        one row per (node_id, site_id): walk_m, walk_min, walk_min_flat,
-                           climb_m, euclid_m, detour_ratio
-  distance_matrix_m.csv    wide matrix of walking distance (rows = demand nodes, cols = sites)
+  distance_long.csv        one row per (node_id, site_id) within MAX_PAIR_DISTANCE_M walk:
+                           walk_m, walk_min, walk_min_flat, climb_m, euclid_m, detour_ratio
+  distance_matrix_m.csv    wide matrix of walking distance (rows = demand nodes, cols = sites;
+                           blank = further than MAX_PAIR_DISTANCE_M)
   walk_time_matrix_min.csv wide matrix of slope-aware walking time
   snapping_report.csv      distance of each point to the network + its ground elevation (QA)
 """
@@ -37,13 +38,13 @@ import osmnx as ox
 import pandas as pd
 import rasterio
 
-from common import (CANDIDATE_DEDUP_M, HK1980, PROCESSED, RAW, STEPS_TIME_FACTOR,
+from common import (CANDIDATE_DEDUP_M, HK1980, MAX_PAIR_DISTANCE_M, PROCESSED, RAW, STEPS_TIME_FACTOR,
                     WALK_SPEED_M_PER_MIN)
 
 SNAP_WARN_M = 75  # points further than this from the network are flagged for checking
 MAX_GRADE = 0.5   # cap on |rise/run| per edge (steep stairs are ~0.5-0.7)
 MIN_EDGE_FOR_GRADE_M = 5.0  # shorter edges: DTM cell size, grade unreliable -> treat as flat
-DTM = RAW / "dtm" / "dtm_5m_kennedy_town.tif"
+DTM = RAW / "dtm" / "dtm_5m_study_bbox.tif"
 
 
 def tobler_speed(s: float) -> float:
@@ -104,21 +105,35 @@ if __name__ == "__main__":
     d_node, d_snap = snap(G, demand)
     s_node, s_snap = snap(G, sites)
 
+    # Searches stop at MAX_PAIR_DISTANCE_M of network length (coverage radii are <= 500 m);
+    # pairs further apart are left out of distance_long.csv and blank in the wide matrices.
+    cut_m = MAX_PAIR_DISTANCE_M
+    cut_min = 3 * MAX_PAIR_DISTANCE_M / WALK_SPEED_M_PER_MIN  # generous: slopes/stairs slow
+    dxy = np.column_stack([demand.geometry.x, demand.geometry.y])
+    node_of = {}
+    for i, n in enumerate(d_node):
+        node_of.setdefault(n, []).append(i)
     rows = []
     for j, site in sites.iterrows():
-        len_from, paths = nx.single_source_dijkstra(G, s_node[j], weight="length")
-        min_from = nx.single_source_dijkstra_path_length(G, s_node[j], weight="walk_min")
-        flat_from = nx.single_source_dijkstra_path_length(G, s_node[j], weight="walk_min_flat")
-        for i, dn in demand.iterrows():
+        len_from, paths = nx.single_source_dijkstra(G, s_node[j], cutoff=cut_m, weight="length")
+        min_from = nx.single_source_dijkstra_path_length(G, s_node[j], cutoff=cut_min,
+                                                         weight="walk_min")
+        flat_from = nx.single_source_dijkstra_path_length(G, s_node[j], cutoff=cut_min,
+                                                          weight="walk_min_flat")
+        euclid = np.hypot(dxy[:, 0] - site.geometry.x, dxy[:, 1] - site.geometry.y)
+        reached = {i for n in len_from if n in node_of for i in node_of[n]}
+        reached |= set(np.flatnonzero(euclid <= CANDIDATE_DEDUP_M))  # same-building pairs
+        for i in sorted(reached):
             access_m = d_snap[i] + s_snap[j]
-            p = paths.get(d_node[i])
+            n = d_node[i]
+            p = paths.get(n)
             rows.append(dict(
-                node_id=dn.node_id, site_id=site.site_id,
-                walk_m=len_from.get(d_node[i], np.inf) + access_m,
-                walk_min=min_from.get(d_node[i], np.inf) + access_m / WALK_SPEED_M_PER_MIN,
-                walk_min_flat=flat_from.get(d_node[i], np.inf) + access_m / WALK_SPEED_M_PER_MIN,
+                node_id=demand.node_id.iat[i], site_id=site.site_id,
+                walk_m=len_from.get(n, np.inf) + access_m,
+                walk_min=min_from.get(n, np.inf) + access_m / WALK_SPEED_M_PER_MIN,
+                walk_min_flat=flat_from.get(n, np.inf) + access_m / WALK_SPEED_M_PER_MIN,
                 climb_m=path_ascent(G, p[::-1]) if p else np.nan,  # home -> site
-                euclid_m=dn.geometry.distance(site.geometry)))
+                euclid_m=euclid[i]))
     long = pd.DataFrame(rows)
     # Same building / next door (<= CANDIDATE_DEDUP_M apart): use the straight-line distance -
     # routing both points out to the street network and back would overstate the walk.
@@ -127,14 +142,15 @@ if __name__ == "__main__":
     for col in ("walk_min", "walk_min_flat"):
         long.loc[same, col] = long.loc[same, "euclid_m"] / WALK_SPEED_M_PER_MIN
     long.loc[same, "climb_m"] = 0.0
+    long = long[long["walk_m"] <= cut_m].copy()
     long["detour_ratio"] = long["walk_m"] / long["euclid_m"].clip(lower=1)
     long = long.round({"walk_m": 1, "walk_min": 2, "walk_min_flat": 2, "climb_m": 1,
                        "euclid_m": 1, "detour_ratio": 3})
     long.to_csv(PROCESSED / "distance_long.csv", index=False)
     long.pivot(index="node_id", columns="site_id", values="walk_m") \
-        .to_csv(PROCESSED / "distance_matrix_m.csv")
+        .reindex(index=demand.node_id, columns=sites.site_id).to_csv(PROCESSED / "distance_matrix_m.csv")
     long.pivot(index="node_id", columns="site_id", values="walk_min") \
-        .to_csv(PROCESSED / "walk_time_matrix_min.csv")
+        .reindex(index=demand.node_id, columns=sites.site_id).to_csv(PROCESSED / "walk_time_matrix_min.csv")
 
     snap_rep = pd.concat([
         pd.DataFrame(dict(kind="demand", id=demand.node_id, snap_m=d_snap.round(1),
@@ -145,8 +161,8 @@ if __name__ == "__main__":
     snap_rep.to_csv(PROCESSED / "snapping_report.csv", index=False)
 
     # ---- summary
-    print(f"Matrix: {demand.shape[0]} demand nodes x {sites.shape[0]} sites = {len(long)} pairs; "
-          f"unreachable pairs: {np.isinf(long.walk_m).sum()}")
+    print(f"Matrix: {demand.shape[0]} demand nodes x {sites.shape[0]} sites; {len(long)} pairs "
+          f"within {cut_m} m walk stored")
     print(f"Snapping: median {np.median(d_snap):.0f} m (demand), {np.median(s_snap):.0f} m (sites); "
           f"flagged > {SNAP_WARN_M} m: {int(snap_rep.flag.sum())}")
     dz = snap_rep[snap_rep.kind == "demand"].elev_m

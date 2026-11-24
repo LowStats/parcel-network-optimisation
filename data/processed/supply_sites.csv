@@ -1,114 +1,608 @@
 site_id,site_class,operator,category,name,address,ref,lat,lon,in_study_area,dist_to_boundary_m,public_access,include_baseline,source,notes
-S001,existing,Cainiao,staffed_station,Cainiao Kennedy Town Belcher's Street 133 Station,"G/F, 133 Belcher's Street, Kennedy Town (卑路乍街133號地下)",Z21?,22.28258,114.1276,True,0.0,yes,no,pickup852.com 西環 list (search-indexed; site blocks automated access) point_id=2805,pickup852 labels this Z21 while hillmalaya gives Z21 at No.147 - likely the same station listed twice/relocated; excluded from baseline to avoid double counting
-S002,existing,Cainiao,staffed_station,Cainiao Kennedy Town Belcher's Street Station,"No. 147 Belcher's Street, Kennedy Town",Z21,22.28253,114.12728,True,0.0,yes,yes,hillmalaya.com.hk pick-up points finder,驛站 (staffed pick-up point) not a locker; third-party list - verify in Cainiao app
-S003,existing,Cainiao,staffed_station,Cainiao Kennedy Town Kam Bo Shopping Arcade Station,"Shop J, Kam Bo Shopping Arcade, 28 Belcher's Street, Kennedy Town (卑路乍街28號金寶商場J鋪)",,22.28331,114.13042,True,0.0,yes,yes,pickup852.com 西環 list (search-indexed; site blocks automated access),驛站; verify in Cainiao app
-S004,existing,Cainiao,staffed_station,Cainiao Kennedy Town Kwan Yick Phase 1 Station,"Shop 29A, Kwan Yick Building Phase 1, 430-440A Des Voeux Road West (德輔道西430-440A號均益大廈一期29A號舖)",,22.28674,114.13443,False,68.0,yes,yes,pickup852.com 西環 list (search-indexed; site blocks automated access) point_id=3094,驛站; verify in Cainiao app
-S005,existing,Cainiao,staffed_station,Cainiao Kennedy Town Luen On Building Station (Z22),"Shop E, G/F, Luen On Building, 51 Smithfield, Kennedy Town (士美菲路51號聯安新樓地下E舖)",,22.28158,114.1274,True,0.0,yes,yes,pickup852.com 西環 list (search-indexed; site blocks automated access) point_id=2840,驛站; verify in Cainiao app
-S006,existing,Cainiao,staffed_station,Cainiao Kennedy Town North Street Station,"G/F, 7 North Street, Kennedy Town (北街7號地鋪, 近海旁)",,22.28392,114.12892,True,0.0,yes,yes,pickup852.com 西環 list (search-indexed; site blocks automated access),驛站; same address also listed as a JD service station (laundry) - verify
-S007,existing,Cainiao,staffed_station,Cainiao Sai Wan Hong Kong Plaza Station,"Shop 12, G/F, No. 363 Des Voeux Road West, Sai Wan",Z24,22.287,114.13636,False,260.0,yes,yes,hillmalaya.com.hk pick-up points finder,驛站 (staffed pick-up point); third-party list - verify in Cainiao app
-S008,existing,Hongkong Post (iPostal),locker,Hong Kong Plaza iPostal Station,"Cargo Lift Lobby, 2/F, Hong Kong Plaza, 188 Connaught Road West, Sai Wan",PLHKP,22.28709,114.13589,False,220.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 07:00 - 22:00
-S009,existing,JD Logistics,staffed_station,JD Service Station Kuk Fung Building,"G/F, Shop A, Kuk Fung Building, 60 Catchick Street, Kennedy Town",,22.2831,114.12755,True,0.0,yes,no,hillmalaya.com.hk pick-up points finder,operator outside the 4 in scope - kept for reference only
-S010,existing,JD Logistics,staffed_station,JD Service Station Kwan Yick Building,"G/F, Shop B, Kwan Yick Building, 343 Des Voeux Road West, Sai Wan",,22.28783,114.13828,False,476.0,yes,no,hillmalaya.com.hk pick-up points finder,operator outside the 4 in scope - kept for reference only
-S011,existing,SF Express,locker,SF Locker Cayman Rise,"Carpark, 5/F, Cayman Rise, Kennedy Town",H852MA27P,22.28176,114.12467,True,0.0,no,no,SF Express locker list (image.png),24h; residents only - excluded from public baseline
-S012,existing,SF Express,locker,SF Locker Han Yu Building (No.2),"Locker No.2, Shop 3-4, G/F, Han Yu Building, 45-55 Cadogan Street, Kennedy Town",H852MA51P,22.28179,114.12638,True,0.0,yes,yes,SF Express locker list (image.png),24h; no self-drop; source marker '^'
-S013,existing,SF Express,locker,SF Locker Luen Gay Apartments,"G/F, Luen Gay Apartments, 9 Davis Street, Kennedy Town",H852MA13P,22.28194,114.12748,True,0.0,yes,yes,SF Express locker list (image.png),24h; self-drop applicable
-S014,existing,SF Express,locker,SF Locker Smithfield,"Shop 2A, G/F, 71-77 Smithfield, Kennedy Town",H852MA23P,22.28044,114.12903,True,0.0,yes,yes,SF Express locker list (image.png),24h; self-drop applicable; source marker '+'
-S015,existing,SF Express,locker,SF Locker Sunglow Building,"Shop 1, G/F, Sunglow Building, 1L-1Q Belcher's Street, Kennedy Town",H852MA49P,22.28609,114.13232,False,27.0,yes,yes,SF Express locker list (image.png),24h; no self-drop; source marker '^'
-S016,existing,SF Express,staffed_station,SF Store Shun Cheong Building,"Shop C, G/F, Shun Cheong Building, 28 Hau Wo Street, Kennedy Town",852MAL,22.28272,114.12746,True,0.0,yes,no,"SF Store list (Birkenstock-hosted PDF, 2026-10-29)","SF staffed store (11:00-22:00), not a locker - reference only"
-S017,candidate,,mtr_exit,Belcher's Street,,osm:node/2555184307,22.285901,114.132644,True,0.0,yes,no,OpenStreetMap,
-S018,candidate,,mtr_exit,Forbes Street,,osm:node/2555174997,22.281282,114.128035,True,0.0,yes,no,OpenStreetMap,
-S019,candidate,,mtr_exit,Hill Road,,osm:node/2555184305,22.28564,114.135151,False,83.0,yes,no,OpenStreetMap,
-S020,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/2555184306,22.284455,114.134639,False,46.0,yes,no,OpenStreetMap,
-S021,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/4099072622,22.283424,114.136656,False,283.0,yes,no,OpenStreetMap,
-S022,candidate,,mtr_exit,Rock Hill Street,,osm:node/2555174998,22.281812,114.129353,True,0.0,yes,no,OpenStreetMap,
-S023,candidate,,mtr_exit,Smithfield,,osm:node/2555174996,22.281178,114.12854,True,0.0,yes,no,OpenStreetMap,
-S024,candidate,,mtr_exit,Whitty Street,,osm:node/2555184304,22.285659,114.13682,False,254.0,yes,no,OpenStreetMap,
-S025,candidate,,wet_market,Shek Tong Tsui Market,470 皇后大道西 Queen's Road West,osm:node/12160288024,22.285482,114.136274,False,198.0,yes,no,OpenStreetMap,
-S026,candidate,,wet_market,Smithfield Market,,osm:node/12337705220,22.281875,114.128734,True,0.0,yes,no,OpenStreetMap,
-S027,candidate,,shopping_mall,MINISO,皇后大道西 Queen's Road West,osm:node/4862556870,22.28594,114.136241,False,199.0,yes,no,OpenStreetMap,
-S028,candidate,,shopping_mall,Nan Hai Plaza,,osm:node/3276856747,22.283806,114.130441,True,0.0,yes,no,OpenStreetMap,
-S029,candidate,,shopping_mall,The Rockpool,402-404 德輔道西 Des Voeux Road West,osm:way/112687053,22.286358,114.136854,False,272.0,yes,no,OpenStreetMap,
-S030,candidate,,shopping_mall,The Westwood,8 卑路乍街 Belcher's Street,osm:way/756201201,22.285746,114.133187,True,0.0,yes,no,OpenStreetMap,
-S031,candidate,,community_facility,Caritas Mok Cheung Sui Kun Community Centre,27 蒲飛路 Pokfield Road,osm:way/290696408,22.28022,114.129803,True,0.0,yes,no,OpenStreetMap,
-S032,candidate,,community_facility,Chi Wah Learning Commons,,osm:node/5180139180,22.283477,114.134606,False,132.0,yes,no,OpenStreetMap,
-S033,candidate,,community_facility,HKU Main Library,,osm:way/898471121,22.283309,114.13782,False,397.0,yes,no,OpenStreetMap,
-S034,candidate,,community_facility,Kennedy Town Community Complex,12 石山街 Rock Hill Street,osm:way/71379590,22.281803,114.12911,True,0.0,yes,no,OpenStreetMap,
-S035,candidate,,community_facility,Kennedy Town Playground,科士街 Forbes Street,osm:way/178741316,22.281017,114.127038,True,0.0,yes,no,OpenStreetMap,
-S036,candidate,,community_facility,Kennedy Town Service Reservoir Playground,,osm:way/107387342,22.279121,114.127401,True,0.0,yes,no,OpenStreetMap,
-S037,candidate,,community_facility,Kennedy Town Swimming Pool,2 西祥街北 Sai Cheung Street North,osm:way/557525860,22.286222,114.131589,False,80.0,yes,no,OpenStreetMap,
-S038,candidate,,community_facility,Lui Che Woo Law Library,,osm:node/1926828720,22.283316,114.13404,False,124.0,yes,no,OpenStreetMap,
-S039,candidate,,community_facility,Saint Barnabas Society and Home,,osm:way/322839598,22.287852,114.135399,False,224.0,yes,no,OpenStreetMap,
-S040,candidate,,community_facility,Shek Tong Tsui Public Library,皇后大道西 Queen's Road West,osm:node/1928260884,22.28574,114.135979,False,168.0,yes,no,OpenStreetMap,
-S041,candidate,,community_facility,Smithfield Public Library,12K 士美菲路 Smithfield,osm:node/2935664494,22.281721,114.128484,True,0.0,yes,no,OpenStreetMap,
-S042,candidate,,community_facility,The Hong Kong Bayanihan Kennedy Town Centre,55 域多利道 Victoria Road,osm:way/312192656,22.281515,114.123007,True,0.0,yes,no,OpenStreetMap,
-S043,candidate,,supermarket,DS Groceries,卑路乍街 Belcher's Street,osm:node/4862626537,22.283852,114.130981,True,0.0,yes,no,OpenStreetMap,
-S044,candidate,,supermarket,DS Groceries,426-428B 德輔道西 Des Voeux Road West,osm:node/4870132720,22.286754,114.135271,False,148.0,yes,no,OpenStreetMap,
-S045,candidate,,supermarket,Fusion,吉席街 Catchick Street,osm:node/4870091585,22.283241,114.127268,True,0.0,yes,no,OpenStreetMap,
-S046,candidate,,supermarket,PARKnSHOP,,osm:node/5283275438,22.284069,114.130642,True,0.0,yes,no,OpenStreetMap,
-S047,candidate,,supermarket,PARKnSHOP,,osm:node/6187953341,22.281721,114.127823,True,0.0,yes,no,OpenStreetMap,
-S048,candidate,,supermarket,PRICERITE,,osm:node/11752363006,22.282192,114.127347,True,0.0,yes,no,OpenStreetMap,
-S049,candidate,,supermarket,Shun Ya,卑路乍街 Belcher's Street,osm:node/3276860389,22.284341,114.131298,True,0.0,yes,no,OpenStreetMap,
-S050,candidate,,supermarket,Star Mart,卑路乍街 Belcher's Street,osm:node/4862580155,22.286376,114.132591,False,11.0,yes,no,OpenStreetMap,
-S051,candidate,,supermarket,Tung Tai Supermarket,428-432 皇后大道西 Queen's Road West,osm:node/4862618395,22.286406,114.138572,False,444.0,yes,no,OpenStreetMap,
-S052,candidate,,supermarket,U Select,374-378 德輔道西 Des Voeux Road West,osm:node/4862057457,22.286938,114.137406,False,349.0,yes,no,OpenStreetMap,
-S053,candidate,,supermarket,Wellcome,46A 卑路乍街 Belcher's Street,osm:node/3125709385,22.28272,114.129389,True,0.0,yes,no,OpenStreetMap,
-S054,candidate,,supermarket,Wellcome,562-566 皇后大道西 Queen's Road West,osm:node/3125709386,22.286322,114.133725,True,0.0,yes,no,OpenStreetMap,
-S055,candidate,,supermarket,Wellcome,1 域多利道 Victoria Road,osm:node/3125709388,22.282113,114.126026,True,0.0,yes,no,OpenStreetMap,
-S056,candidate,,supermarket,Wellcome,8 卑路乍街 Belcher's Street,osm:node/3125709391,22.284948,114.133293,True,0.0,yes,no,OpenStreetMap,
-S057,candidate,,supermarket,Wellcome,士美菲路 Smithfield,osm:node/4116103528,22.280817,114.128745,True,0.0,yes,no,OpenStreetMap,
-S058,candidate,,supermarket,Wellcome,皇后大道西 Queen's Road West,osm:node/4862618396,22.285864,114.135752,False,148.0,yes,no,OpenStreetMap,
-S059,candidate,,supermarket,Yata,,osm:node/9720055485,22.286884,114.135752,False,200.0,yes,no,OpenStreetMap,
-S060,candidate,,supermarket,supermarket,,osm:node/7828904220,22.26852,114.124925,False,482.0,yes,no,OpenStreetMap,
-S061,candidate,,convenience_store,7-Eleven,,osm:node/1280317651,22.286383,114.136572,False,246.0,yes,no,OpenStreetMap,
-S062,candidate,,convenience_store,7-Eleven,,osm:node/4116103533,22.280697,114.127885,True,0.0,yes,no,OpenStreetMap,
-S063,candidate,,convenience_store,7-Eleven,德輔道西 Des Voeux Road West,osm:node/4116132392,22.287291,114.138711,False,488.0,yes,no,OpenStreetMap,
-S064,candidate,,convenience_store,7-Eleven,第三街 Third Street,osm:node/4848432326,22.28578,114.138773,False,456.0,yes,no,OpenStreetMap,
-S065,candidate,,convenience_store,7-Eleven,皇后大道西 Queen's Road West,osm:node/4862580147,22.28656,114.133742,False,13.0,yes,no,OpenStreetMap,
-S066,candidate,,convenience_store,7-Eleven,卑路乍街 Belcher's Street,osm:node/4862637029,22.282664,114.128989,True,0.0,yes,no,OpenStreetMap,
-S067,candidate,,convenience_store,7-Eleven,士美菲路 Smithfield,osm:node/4862637035,22.282184,114.128393,True,0.0,yes,no,OpenStreetMap,
-S068,candidate,,convenience_store,7-Eleven,科士街 Forbes Street,osm:node/4870025962,22.281599,114.128251,True,0.0,yes,no,OpenStreetMap,
-S069,candidate,,convenience_store,7-Eleven,,osm:node/6183614044,22.281199,114.1288,True,0.0,yes,no,OpenStreetMap,
-S070,candidate,,convenience_store,7-Eleven,厚和街 Hau Wo Street,osm:node/8999689180,22.282691,114.126999,True,0.0,yes,no,OpenStreetMap,
-S071,candidate,,convenience_store,759,德輔道西 Des Voeux Road West,osm:node/4862113242,22.287242,114.137586,False,381.0,yes,no,OpenStreetMap,
-S072,candidate,,convenience_store,759 Store,,osm:node/13865049581,22.285894,114.135251,False,99.0,yes,no,OpenStreetMap,
-S073,candidate,,convenience_store,Circle K,德輔道西 Des Voeux Road West,osm:node/4862113249,22.28754,114.138625,False,491.0,yes,no,OpenStreetMap,
-S074,candidate,,convenience_store,Circle K,,osm:node/4870025963,22.2823,114.126972,True,0.0,yes,no,OpenStreetMap,
-S075,candidate,,convenience_store,Circle K,吉席街 Catchick Street,osm:node/4870058231,22.283369,114.129164,True,0.0,yes,no,OpenStreetMap,
-S076,candidate,,convenience_store,Circle K,,osm:node/5824533200,22.283406,114.130151,True,0.0,yes,no,OpenStreetMap,
-S077,candidate,,convenience_store,Free Market,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132934,22.283848,114.129905,True,0.0,yes,no,OpenStreetMap,
-S078,candidate,,convenience_store,Hing Tat Trading,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132929,22.28489,114.131199,True,0.0,yes,no,OpenStreetMap,
-S079,candidate,,convenience_store,uSmile,,osm:way/762788090,22.281645,114.132545,False,38.0,yes,no,OpenStreetMap,
-S080,candidate,,bus_terminus,Kennedy Town,,osm:way/1193058436,22.282537,114.12357,True,0.0,yes,no,OpenStreetMap,
-S081,candidate,,bus_terminus,Kennedy Town (Belcher Bay),,osm:way/875004398,22.284551,114.128425,True,0.0,yes,no,OpenStreetMap,
-S082,candidate,,residential_building,Axeford Villa,,demand:D031,22.282285,114.130688,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D031
-S083,candidate,,residential_building,Bayanihan Kennedytown Centre,,demand:D018,22.281231,114.122868,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D018
-S084,candidate,,residential_building,Blessing House,,demand:D006,22.283763,114.12916,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D006
-S085,candidate,,residential_building,Cheong Kat Building,,demand:D007,22.282833,114.126536,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D007
-S086,candidate,,residential_building,East Terrace,,demand:D040,22.281079,114.125896,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D040
-S087,candidate,,residential_building,Four Winds,,demand:D039,22.27485,114.128024,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D039
-S088,candidate,,residential_building,Hing Wong Building,,demand:D004,22.283701,114.127444,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D004
-S089,candidate,,residential_building,Hung Lee Building,,demand:D024,22.282527,114.129822,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D024
-S090,candidate,,residential_building,Jade Lotus Garden,,demand:D033,22.282817,114.131304,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D033
-S091,candidate,,residential_building,Ko Leung Mansion,,demand:D015,22.286294,114.133417,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D015
-S092,candidate,,residential_building,Kwun Lung Lau Block 2,,demand:D028,22.280418,114.127583,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D028
-S093,candidate,,residential_building,Man Kwong Court,,demand:D023,22.282532,114.128625,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D023
-S094,candidate,,residential_building,Mei Wah Mansion,,demand:D035,22.279022,114.129653,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D035
-S095,candidate,,residential_building,New Fortune House Block B,,demand:D005,22.283612,114.12849,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D005
-S096,candidate,,residential_building,On Lee Block C-E,,demand:D038,22.27312,114.121073,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D038
-S097,candidate,,residential_building,Pearl Court Block A,,demand:D013,22.284627,114.130962,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D013
-S098,candidate,,residential_building,Po Leung Kuk Chan Au Big Yan Home For The Elderly,,demand:D016,22.284743,114.132687,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D016
-S099,candidate,,residential_building,Poksmith Villa,,demand:D029,22.280641,114.129285,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D029
-S100,candidate,,residential_building,Residential cluster D030,,demand:D030,22.281534,114.130941,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D030
-S101,candidate,,residential_building,Shun Hing Building,,demand:D010,22.283197,114.128542,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D010
-S102,candidate,,residential_building,Smithfield Court Block 1,,demand:D022,22.282088,114.12777,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D022
-S103,candidate,,residential_building,Smithfield Garden Block C,,demand:D027,22.279014,114.12927,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D027
-S104,candidate,,residential_building,Suen Chi Sun Hall,,demand:D034,22.279973,114.130757,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D034
-S105,candidate,,residential_building,THE WESTWOOD,,demand:D017,22.285481,114.133461,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D017
-S106,candidate,,residential_building,Tai Pak Mansion,,demand:D032,22.283289,114.13131,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D032
-S107,candidate,,residential_building,The Merton Block 1,,demand:D003,22.283429,114.126155,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D003
-S108,candidate,,residential_building,The Sail at Victoria,,demand:D002,22.281298,114.120756,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D002
-S109,candidate,,residential_building,To Li Garden,,demand:D037,22.282262,114.131758,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D037
-S110,candidate,,residential_building,Tung Hing Mansion,,demand:D011,22.283135,114.129496,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D011
-S111,candidate,,residential_building,University Heights Tower 1,,demand:D036,22.281424,114.130175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D036
-S112,candidate,,residential_building,Victoria Public Mortuary,,demand:D001,22.281809,114.122246,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D001
-S113,candidate,,residential_building,何莊,,demand:D020,22.281743,114.126029,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D020
+S0001,existing,Cainiao,staffed_station,(自助取件)西營盤皇后大道西驛站Z02,"G/F, No. 193 Queen's Road West, Sai Ying Pun",4178383,22.2872,114.14472,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日12:00-21:00,午休時間15:00-16:00,公眾假期照常營業"
+S0002,existing,Cainiao,staffed_station,上環威勝商業大廈驛站Z26,"Room 810, No. 28 Connaught Road West, Sheung Wan",4025042,22.28787,114.14892,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-18:00,星期六10:00-14:00,星期日休息,午休時間14:00-15:00,公眾假期休息,9月25日营业时间为10:00-16:00"
+S0003,existing,Cainiao,staffed_station,上環聯發商業中心驛站Z35,"Shop C35, 1/F, Nos. 2-12 Queen's Road West, Sheung Wan",4088047,22.28625,114.14829,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-21:00,星期六10:00-21:00,星期日10:00-17:00,午休時間15:00-16:00,2026-10-01 12:00-16:00,2026-10-19 12:00-16:00"
+S0004,existing,Cainiao,staffed_station,中環摩羅廟交加街驛站Z01,"G/F, No. 31 Mosque Junction, Central",4148122,22.27989,114.15134,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日12:00-21:00,午休時間15:00-16:00,公眾假期照常營業"
+S0005,existing,Cainiao,staffed_station,中環擺花街嘉寶商業大廈驛站Z47,"Room 1203, Nos. 18-20 Lyndhurst Terrace, Central",4191544,22.28233,114.15446,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-19:30,星期六12:00-19:30,星期日休息,午休時間15:00-16:00,公眾假期休息,, 10月1日及19日: 12:00-17:00"
+S0006,existing,Cainiao,staffed_station,中環永吉利商業大厦驛站Z27,"9/F, Room E, Willy Commercial Building, 28 Wing Kut Street, Central and Western, Hong Kong Island",4023046,22.28536,114.15408,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五09:30-18:30,星期六09:30-13:00,星期日休息,公眾假期休息,接受退貨時間14:00-18:30"
+S0007,existing,Cainiao,staffed_station,坚尼地城卑路乍街海都樓驛站Z52,"Shop 17, G/F, Nos. 7-11 Belcher's Street, Kennedy Town",4701001,22.28458,114.13161,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-20:00,星期六12:00-20:00,星期日12:00-20:00,午休時間17:00-18:00,公眾假期照常營業,10月9日: 14:00-20:00,10月1日休息"
+S0008,existing,Cainiao,staffed_station,堅尼地城卑路乍街驛站Z21,"No. 147 Belcher's Street, Kennedy Town",2921362,22.282204,114.126727,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日休息,公眾假期照常營業"
+S0009,existing,Cainiao,staffed_station,堅尼地城吉豐大廈驛站Z31,"Shop A, G/F, Nos. 46-60 Catchick Street, Kennedy Town",4035203,22.2831,114.12755,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-20:30,星期六12:00-20:30,星期日12:00-18:00,午休時間15:00-16:00,2026-10-19 12:00-18:00"
+S0010,existing,Cainiao,staffed_station,堅尼地城均益一期驛站Z40,"Shop 29A, Kwan Yick Building Phase 1, Nos. 430-440A Des Voeux Road West, Kennedy Town",4193161,22.28674,114.13443,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日10:30-18:30,午休時間15:00-16:00,2026-10-01 12:00-16:00,2026-10-19 12:00-16:00"
+S0011,existing,Cainiao,staffed_station,堅尼地城聯興新樓驛站Z50,"Shop H, G/F, No. 47 Smithfield, Kennedy Town",4303378,22.28174,114.12787,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-20:00,星期六12:00-20:00,星期日12:00-16:00,午休時間15:00-16:00,公眾假期照常營業,公衆假期12:00-16:00, 9月25及26日: 12:00-16:00"
+S0012,existing,Cainiao,staffed_station,灣仔偉信商業大廈驛站C20,"9/F, Nos. 68-70 Lockhart Road, Wan Chai",2842385,22.27797,114.17108,False,316.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-19:30,星期日12:00-16:00,午休時間14:00-15:00,公眾假期照常營業,星期日及公眾假期 無午休 12:00-16:00"
+S0013,existing,Cainiao,staffed_station,灣仔安興大廈驛站C05,"Shop 9B, G/F, Nos. 156-164 Queen's Road East, Wan Chai",4182168,22.27546,114.1713,False,398.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日12:00-21:00,午休時間15:00-16:00,公眾假期照常營業"
+S0014,existing,Cainiao,locker,菜鳥智能櫃-(只限住戶)中環舊山頂道8A花園台 A451,"Garden Terrace, 8A Old Peak Road, Central and Western, Hong Kong Island",5669055,22.27593,114.15437,True,0.0,no,no,operators/pickup-points-cainiao.js (last_verified 2026-10-05),hours: 24小時
+S0015,existing,Cainiao,locker,菜鳥智能櫃-(只限住戶)聯邦花園A434,"Facilities Floor, No. 41 Conduit Road, Mid-Levels West",5503130,22.28192,114.14525,True,0.0,no,no,operators/pickup-points-cainiao.js (last_verified 2026-10-05),hours: 24小時
+S0016,existing,Cainiao,staffed_station,西營盤忠正街驛站Z29,"Shop B1, G/F, No. 266 Des Voeux Road West, Sai Ying Pun",4033017,22.28783,114.14117,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-21:00,星期六10:00-21:00,星期日10:00-18:00,公眾假期照常營業,10:00-18:00"
+S0017,existing,Cainiao,staffed_station,西營盤西都大廈驛站Z57,"G/F, Shop F, Western Hse, 164 Des Voeux Road West, Hong Kong Island",8245001,22.28774,114.14396,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-20:00,星期六12:00-20:00,星期日12:00-18:00,公眾假期休息"
+S0018,existing,Cainiao,staffed_station,西環俊陞華庭驛站Z54,"Shop 1C, G/F, Nos. 68-82 Ko Shing Street, Sai Wan",8187004,22.28733,114.14549,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五13:00-21:00,星期六14:00-20:00,星期日14:00-20:00,公眾假期照常營業,9月26日中秋節營業1400-2000"
+S0019,existing,Cainiao,staffed_station,西環北街驛站Z44,"G/F, No. 7 North Street, Sai Wan",4191540,22.28392,114.12892,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-21:00,星期六10:00-21:00,星期日09:00-18:00,午休時間14:00-15:00,公眾假期照常營業,10月01日: 10:00-18:00"
+S0020,existing,Cainiao,staffed_station,西環名店廣場驛站Z24,"Shop 12, G/F, No. 363 Des Voeux Road West, Sai Wan",4025014,22.28694,114.1362,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日11:00-19:00,午休時間14:00-15:00,公眾假期照常營業,公眾假期營業時間:12:00-19:00"
+S0021,existing,Cainiao,staffed_station,西環慧華閣驛站Z55,"Shop 2, G/F, No. 12R Smithfield, Sai Wan",8198001,22.28058,114.12933,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-20:30,星期六10:00-20:30,星期日10:00-20:30,公眾假期照常營業"
+S0022,existing,Cainiao,staffed_station,西環永多樓驛站Z41,"Shop A, G/F, No. 4 Water Street, Sai Wan",4192265,22.28648,114.13919,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日休息,午休時間15:00-16:00,2026-10-01 12:00-21:00,午休時間15:00-16:00,2026-10-19 12:00-21:00,午休時間15:00-16:00"
+S0023,existing,Cainiao,staffed_station,西環第一街驛站Z42,"G/F, No. 77 First Street, Sai Wan",4192261,22.286588,114.141922,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日11:00-18:00,午休時間15:00-16:00,公眾假期休息,10月1日及19日: 12:00-16:00"
+S0024,existing,Cainiao,staffed_station,西環第三街驛站Z25,"Shop G, G/F, No. 106 Third Street, Sai Wan",4022025,22.28555,114.14032,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-19:30,星期六12:00-19:30,星期日10:30-19:30,午休時間15:00-16:00,公眾假期照常營業,特別營業時間: 2026-09-25:12:00-18:30, 午休時間15:00-16:00"
+S0025,existing,Cainiao,staffed_station,西環西寶城驛站Z32,"Shop 3A, G/F, No. 3 Belcher's Street, Sai Wan",4045022,22.2859,114.13224,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日休息,午休時間14:00-15:00,2026-10-01 12:00-21:00,午休時間14:00-15:00,2026-10-19 12:00-21:00,午休時間14:00-15:00"
+S0026,existing,Cainiao,staffed_station,西環金寶商場驛站Z56,"Shop J, No. 28 Belcher's Street, Sai Wan",8225001,22.28331,114.13042,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五11:30-20:30,星期六13:00-20:30,星期日13:00-20:30,午休時間14:30-15:30,公眾假期照常營業,公众假期:13:00-18:00"
+S0027,existing,Cainiao,staffed_station,金鐘統一中心驛站Z45,"Shop 2041, 2/F, United Centre, No. 95 Queensway, Admiralty",4190559,22.27837,114.16526,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五12:00-21:00,星期六12:00-21:00,星期日11:00-15:00,午休時間15:00-16:00,公眾假期照常營業,11:00-15:00"
+S0028,existing,Cainiao,staffed_station,香港仔田灣街市驛站S35,"Shop MN78, Tin Wan Market, No. 11 Hing Wo Street, Aberdeen",4126179,22.25015,114.14822,False,245.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五16:00-20:00,星期六16:00-20:00,星期日休息,公眾假期休息"
+S0029,existing,Cainiao,staffed_station,香港仔田灣街市驛站S41,"Shop 1MN82, Tin Wan Market, No. 11 Hing Wo Street, Aberdeen",4302111,22.25015,114.14822,False,245.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五13:00-20:00,星期六13:00-20:00,星期日13:00-20:00,公眾假期照常營業,9月26日營業時間: 13:00-18:00"
+S0030,existing,Cainiao,staffed_station,香港大學驛站Z37,"5/F, T.T. Tsui Building, The University of Hong Kong",4110645,22.28396,114.13937,True,0.0,yes,yes,operators/pickup-points-cainiao.js (last_verified 2026-10-05),"hours: 星期一至五10:00-18:00,星期六休息,星期日休息,午休時間14:30-15:30,公眾假期休息,9月25日 11:00-18:00"
+S0031,existing,Hongkong Post (iPostal),locker,General Post Office iPostal Station,"G/F, 2 Connaught Place, Central (beside East Entrance of General Post Office)",PLGPO,22.28363,114.1592,True,0.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 24 HOURS
+S0032,existing,Hongkong Post (iPostal),locker,Hong Kong Plaza iPostal Station,"Cargo Lift Lobby, 2/F, Hong Kong Plaza, 188 Connaught Road West, Sai Wan",PLHKP,22.28709,114.13589,True,0.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 07:00 - 22:00
+S0033,existing,Hongkong Post (iPostal),locker,Sai Ying Pun Post Office iPostal Station,"27 Pok Fu Lam Road, Sai Ying Pun",PLSYP,22.28596,114.13988,True,0.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 24 HOURS
+S0034,existing,Hongkong Post (iPostal),locker,Tamar Park iPostal Station,"Tamar Park , Harcourt Road, Admiralty, Hong Kong (near Tamar Cafe)",PLTAP,22.281002,114.165657,True,0.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 24 HOURS
+S0035,existing,JD Logistics,staffed_station,120樹熊屋自取站京東服務站,"G/F, Shop B, Kwan Yick Building, 343 Des Voeux Road West, Sai Wan, Central and Western, Hong Kong Island",2242381,22.28783,114.13828,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 13:00-19:00
+S0036,existing,JD Logistics,locker,中通老5號樓2號新北洋櫃機1兔喜快遞櫃,香港特別行政區香港島中西區中西區華志路1588號,6459139,22.28795,114.13983,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:59
+S0037,existing,JD Logistics,staffed_station,京東代收點-711偉利大廈,"G/F, Shop 7, Welland Building, 368 Queen'S Road Central, Sheung Wan, Central and Western, Hong Kong Island",6253153,22.28593,114.14907,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0038,existing,JD Logistics,staffed_station,京東代收點-711其康大廈,"G/F, Shop 2, Dannies House, 20 Luard Road, Wan Chai, Hong Kong Island",6323491,22.2787,114.17191,False,398.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0039,existing,JD Logistics,staffed_station,京東代收點-711冠華大廈,"G/F, Shop C, Koon Wah Building, 424 Queen'S Road West, Sai Wan, Central and Western, Hong Kong Island",6253133,22.28644,114.13878,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0040,existing,JD Logistics,staffed_station,京東代收點-711厚和大廈,"G/F, Shop 5, Hau Wo Building, 52 Hau Wo Street, Sai Wan, Central and Western, Hong Kong Island",6253155,22.28266,114.12689,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0041,existing,JD Logistics,staffed_station,京東代收點-711國金一期,"Shop 59, Mtr Hong Kong Station, International Finance Centre, 1 Harbour View Street, Central and Western, Hong Kong Island",6350499,22.28586,114.15663,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0042,existing,JD Logistics,staffed_station,京東代收點-711堅道27號,1/F. Front Albron Court no. 99 Caine Road Central Hong Kong,6253149,22.278876,114.154304,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0043,existing,JD Logistics,staffed_station,京東代收點-711堅道89號,1/F. Front Albron Court no. 99 Caine Road Central Hong Kong,6253147,22.28188,114.15149,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0044,existing,JD Logistics,staffed_station,京東代收點-711如意大樓,"G/F, Shop 1, Yue Yee Mansion, 20A Belcher'S Street, Sai Wan, Central and Western, Hong Kong Island",6253137,22.28369,114.13098,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0045,existing,JD Logistics,staffed_station,京東代收點-711威靈頓街76號,"Ground Floor, No. 76 Wellington Street, Central, Kong Kong",6323463,22.282337,114.154974,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0046,existing,JD Logistics,staffed_station,京東代收點-711德中298號,"G/F, Chun Yin Hse, 298 Des Voeux Road Central, Hong Kong Island",6253141,22.28667,114.15096,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0047,existing,JD Logistics,staffed_station,京東代收點-711德西316號,"G/F, Shop B, Standard Mansion, 316-320 Des Voeux Road West, Hong Kong Island",6253135,22.28729,114.13867,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0048,existing,JD Logistics,staffed_station,京東代收點-711愛瑪大廈,"G/F, Shop B, Al-Aqmar Hse, 30 Hollywood Road, Central and Western, Hong Kong Island",6323465,22.28209,114.15349,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0049,existing,JD Logistics,staffed_station,京東代收點-711正街30號,"44 CENTRE STREET, SAI YING PUN, HK",6253107,22.287356,114.142242,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0050,existing,JD Logistics,staffed_station,京東代收點-711港鐵HOK,港澳中國香港中西區中環香港站 HOK 10 號舖-6350501,6350501,22.28468,114.158179,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0051,existing,JD Logistics,staffed_station,京東代收點-711港鐵KET,港澳中國香港中西區堅尼地城堅尼地城站 KET 6 號舖-6350519,6350519,22.281247,114.128883,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0052,existing,JD Logistics,staffed_station,京東代收點-711港鐵SYP,港澳中國香港中西區西營盤西營盤站 SYP 4 號舖-6350503,6350503,22.285533,114.142733,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0053,existing,JD Logistics,staffed_station,京東代收點-711珀麗灣,"Shop S6, Tung Wan Pier & Central Pier 2, Park Island, 8 Pak Lai Road, Ma Wan, Tsuen Wan, New Territories",6323411,22.28835,114.15663,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0054,existing,JD Logistics,staffed_station,京東代收點-711登富大廈,"G/F, Teng Fuh Commercial Building, 331-333 Queen'S Road Central, Central and Western, Hong Kong Island",6253105,22.2857,114.15,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0055,existing,JD Logistics,staffed_station,京東代收點-711皇西240號,"G/F & C/F, No. 240 Queen's Road West, Sai Ying Pun, Hong Kong",6253131,22.286796,114.143309,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0056,existing,JD Logistics,staffed_station,京東代收點-711祥興大廈,"G/F, Cheung Hing Commercial Building, 37 Cochrane Street, Central and Western, Hong Kong Island",6323467,22.28274,114.15395,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0057,existing,JD Logistics,staffed_station,京東代收點-711聯安新樓,"G/F, Shop A1, Luen Fat Apartments/ Luen On Apartments, 49-51 Smithfield, Kennedy Town, Central and Western, Hong Kong Island",6253145,22.28149,114.12766,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0058,existing,JD Logistics,staffed_station,京東代收點-711聯業大廈,"G/F, Enterprise Building, 238 Queen'S Road Central, Sheung Wan, Central and Western, Hong Kong Island",6253151,22.28461,114.15163,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0059,existing,JD Logistics,staffed_station,京東代收點-711般鹹道55號,"G/F, 55 Bonham Road, Hong Kong Island",6253165,22.284854,114.141117,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0060,existing,JD Logistics,staffed_station,京東代收點-711荷李活華庭,"G/F, Shop 3, Hollywood Terrace, 123 Hollywood Road, Sai Wan, Central and Western, Hong Kong Island",6253159,22.28421,114.15119,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0061,existing,JD Logistics,staffed_station,京東代收點-711萬和閣,"G/F, Shop 1, Harmony Court, 125 Bonham Strand, Sheung Wan, Central and Western, Hong Kong Island",6253139,22.28635,114.15049,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0062,existing,JD Logistics,staffed_station,京東代收點-711軒尼詩道99號,港澳中國香港灣仔區灣仔灣仔軒尼詩道 99 號地下 1 及2號舖-6323479,6323479,22.277742,114.171955,False,402.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0063,existing,JD Logistics,staffed_station,京東代收點-711輝煌臺,"G/F, Shop 7, Fairview Height, 1 Seymour Road, Mid-levels Central/West, Central and Western, Hong Kong Island",6253161,22.28006,114.1508,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0064,existing,JD Logistics,staffed_station,京東代收點-711金爵大廈,"G/F, Shop D, Kam Tseuk Mansion, 1-3 Ka Wo Street, Aberdeen, Southern, Hong Kong Island",6253121,22.24947,114.1489,False,332.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0065,existing,JD Logistics,staffed_station,京東代收點-711金穀大廈,"G/F, Shop 2, Golden Valley Mansion, 135-137 Caine Road, Mid-levels Central/West, Central and Western, Hong Kong Island",6253163,22.28297,114.14977,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0066,existing,JD Logistics,staffed_station,京東代收點-711長康大廈,"G/F, Shop B, Cheong Hong Mansion, 25-33 Johnston Road, Wan Chai, Hong Kong Island",6323475,22.27717,114.17064,False,266.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 24小時
+S0067,existing,JD Logistics,staffed_station,京東代收點-711預辦登機大堂,港澳中國香港中西區中環香港站市區預辦登機大堂HOK 83 號舖-6350497,6350497,22.284685,114.158088,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-22:00
+S0068,existing,JD Logistics,staffed_station,京東代收點-711駱克道64號,港澳中國香港灣仔區灣仔灣仔駱克道 64 號地下-6323493,6323493,22.277977,114.170994,False,308.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0069,existing,JD Logistics,staffed_station,京東代收點-711鴻德大廈,"G/F, Hung Tak Building, 106 Des Voeux Road Central, Central and Western, Hong Kong Island",6323523,22.28496,114.15523,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0070,existing,JD Logistics,staffed_station,京東代收點-港郵GLR郵局,"1/F, Revenue Tower, 5 Gloucester Road, Wan Chai, Hong Kong Island",3253183,22.2796,114.17184,False,375.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 9:30-17:00
+S0071,existing,JD Logistics,staffed_station,京東代收點-港郵GPO郵局,"General Post Office, 2 Connaught Place, Central and Western, Hong Kong Island",3253149,22.28347,114.15941,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 8:00-18:00
+S0072,existing,JD Logistics,staffed_station,京東代收點-港郵HEN郵局,"1/F, Shop 105, One Hennessy, 1 Hennessy Road, Wan Chai, Hong Kong Island",3253185,22.27808,114.16889,False,112.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 9:30-17:00
+S0073,existing,JD Logistics,staffed_station,京東代收點-港郵SWN郵局,"1/F, West Exchange Tower, 322 Des Voeux Road Central, Hong Kong Island",3253151,22.286761,114.150247,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 9:30-18:00
+S0074,existing,JD Logistics,staffed_station,偉信大廈京東服務站,"9/F, Wayson Commercial Hse, 68-70 Lockhart Road, Wan Chai, Hong Kong Island",4114503,22.27797,114.17108,False,316.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 12:00-21:00
+S0075,existing,JD Logistics,staffed_station,吉豐大廈A鋪京東服務站,"G/F, Shop A, Kuk Fung Building, 60 Catchick Street, Kennedy Town, Central and Western, Hong Kong Island",2252691,22.2831,114.12755,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 10:00-20:30
+S0076,existing,JD Logistics,staffed_station,忠正街京東服務站,"Shop A3, Sanfer Commercial Building, 266 Des Voeux Road West, Hong Kong Island",5944275,22.28783,114.14117,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 10:00-21:00
+S0077,existing,JD Logistics,staffed_station,怡和31樓京東服務站,1 CONNAUGHT PLACE,6665357,22.283096,114.159185,True,0.0,no,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 09:30-18:00
+S0078,existing,JD Logistics,staffed_station,永吉利大廈京東服務站,"9/F, Room E, Willy Commercial Building, 28-36 Wing Kut Street, Central and Western, Hong Kong Island",2495083,22.28536,114.15408,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 09:30-18:30
+S0079,existing,JD Logistics,staffed_station,永華大廈港大京東服務站,"G/F, Wing Wah Mansion, 425Z Queen'S Road West, Sai Wan, Central and Western, Hong Kong Island",6202715,22.2861,114.13585,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 10:30-19:30
+S0080,existing,JD Logistics,staffed_station,海豚曉暉自助京東服務站,"G/F, Shop 9, Sunglow Building, 11 Praya Kennedy Town, Central and Western, Hong Kong Island",7619421,22.28609,114.13232,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:59
+S0081,existing,JD Logistics,staffed_station,海豚洗衣厚和閣京東服務站,"G/F, 41C Hau Wo Street, Kennedy Town, Hong Kong Island",6131595,22.282656,114.126892,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 09:00-19:00
+S0082,existing,JD Logistics,staffed_station,海豚輝煌豪園京東服務站,"G/F, Shop 15, Palatial Crest, 3 Seymour Road, Mid-levels Central/West, Central and Western, Hong Kong Island",6402601,22.28051,114.15095,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 11:00-20:00
+S0083,existing,JD Logistics,staffed_station,港郵PLGPO智郵站,"G/F, General Post Office, 2 Connaught Place, Central and Western, Hong Kong Island",5877369,22.28347,114.15941,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:59
+S0084,existing,JD Logistics,staffed_station,港郵PLHKP智郵站,"2/F, Hong Kong Plaza Shopping Mall, 188 Connaught Road West, Sai Wan, Central and Western, Hong Kong Island",5877391,22.28704,114.13583,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:59
+S0085,existing,JD Logistics,staffed_station,港郵PLSYP智郵站,"Sai Ying Poon Post Office Building, Sai Ying Poon Post Office (Firemen'S Married Quarters), 27 Pok Fu Lam Road, Sai Ying Pun, Central and Western, Hong Kong Island",5879925,22.28596,114.13988,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:55
+S0086,existing,JD Logistics,staffed_station,港郵PLTAP智郵站,"Tamar Park , Harcourt Road, Admiralty, Hong Kong (near Tamar Cafe)",5879915,22.280998,114.165656,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 00:00-23:55
+S0087,existing,JD Logistics,staffed_station,盈盈乾洗京東服務站,"G/F, 7 NORTH STREET, Kennedy Town",5687557,22.283921,114.12892,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 10:00-21:00
+S0088,existing,JD Logistics,staffed_station,福陞閣商場京東服務站,"Fook Sing Shopping Arcade, 378 Queen'S Road Central, Sheung Wan, Central and Western, Hong Kong Island",6163645,22.28595,114.14867,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 10:30-20:00
+S0089,existing,JD Logistics,staffed_station,第一街77號京東服務站,"G/F, 77B FIRST STREET, Sai Ying Pun",4198531,22.286588,114.141922,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 12:00-19:30
+S0090,existing,JD Logistics,staffed_station,統一中心京東服務站,"2/F, Shop 2041, United Centre, 95 Queensway, Admiralty, Central and Western, Hong Kong Island",3213575,22.27837,114.16526,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 11:30-20:30
+S0091,existing,JD Logistics,staffed_station,聯發商業中心京東服務站,"1/F, Shop A42, Arion Commercial Centre, 8 Queen'S Road West, Sheung Wan, Central and Western, Hong Kong Island",2253567,22.28636,114.14836,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 11:00-19:00
+S0092,existing,JD Logistics,staffed_station,聯興新樓京東服務站,"G/F, Shop H, Luen Hing Apartments, 47 Smithfield, Kennedy Town, Central and Western, Hong Kong Island",4114489,22.28174,114.12787,True,0.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 12:00-20:00
+S0093,existing,JD Logistics,staffed_station,譚臣道京東服務站,"Shun Pont Commercial Building, 5 Thomson Road, Wan Chai, Hong Kong Island",2527147,22.27715,114.17079,False,282.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 11:00-19:00
+S0094,existing,JD Logistics,staffed_station,金爵大廈京東服務站,"G/F, Shop A, Kam Tseuk Mansion, 1-3 Ka Wo Street, Aberdeen, Southern, Hong Kong Island",3251647,22.24947,114.1489,False,332.0,yes,no,operators/pickup-points-jd.js (last_verified 2026-10-05),hours: 11:00-20:00
+S0095,existing,SF Express,staffed_station,OK便利店-上環,"Shop D & H, G/F, Sea View Mansion, 21-27 Sutherland Street, Sheung Wan,HK",852MA2006,22.28828,114.14606,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-22:00
+S0096,existing,SF Express,staffed_station,OK便利店-上環,"All That Portion of Shop A1 (including the portion of external walls thereof) on G/F, ArionCommercial Centre, Nos. 2-12 Queen’s Road West, Hong Kong",852MD2001,22.28625,114.14829,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-00:00
+S0097,existing,SF Express,staffed_station,OK便利店-中環,"Shop 1 G/F, 10-16 Cochrane Street, Central, Hong Kong",852M2002,22.28316,114.1546,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0098,existing,SF Express,staffed_station,OK便利店-中環,"Shop E on Ground Floor (G/F of No. 10 D’Aguilar Street), Yip Fung Building, Nos. 2, 4, 6, 8& 10 D’Aguilar Street, Hong Kong",852MB2001,22.28137,114.15606,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0099,existing,SF Express,staffed_station,OK便利店-堅尼地城,"Shop 2C on Ground Floor, Harbour View Garden Tower III, 2 Catchick Street,HK",852MC2001,22.28335,114.12933,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-24:00
+S0100,existing,SF Express,staffed_station,OK便利店-堅尼地城,"Shop 6, G/F, Sands House, 39 Belcher's st & 18 Sands st, Kennedy Town,HK",852MA2010,22.28355,114.13,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0101,existing,SF Express,staffed_station,OK便利店-堅尼地城,"Shop A on Ground Floor, Luen Wai Apartments, Nos.136, 136A, 138, 140 & 142 Belcher’sStreet, Nos. 7 & 7A Davis Street, Hong Kong",852MA2013,22.28229,114.12705,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0102,existing,SF Express,staffed_station,OK便利店-灣仔,"G/F & M/F, 38 Hennessy Road, Wan Chai, HK",852TA2001,22.27739,114.17054,False,255.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0103,existing,SF Express,staffed_station,OK便利店-灣仔,"G/F., Warner Building, 91 Hennessy Road, Hong Kong",852TC2007,22.2777,114.17183,False,389.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0104,existing,SF Express,staffed_station,OK便利店-西營盤,"Shop A on G/F., & Cloak Room on LG/F., Kam Ning Mansion, Nos. 13 & 15 Bonham Road,Hong Kong",852M2016,22.28451,114.14292,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0105,existing,SF Express,staffed_station,OK便利店-西營盤,"Ground Floor, 202 Centre, No. 202 Des Voeux Road West, Hong Kong",852MA2009,22.28773,114.14289,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0106,existing,SF Express,staffed_station,OK便利店-西環,"Shop A, G/F , 64 Centre Street, Sai Wan, HK",852M2015,22.28487,114.14211,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0107,existing,SF Express,staffed_station,OK便利店-西環,"G/F, 333 & 335 Des Voeux Road West, Sai Wan, HK",852MA2002,22.28753,114.13861,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0108,existing,SF Express,staffed_station,OK便利店-西環,"G/F., No. 232 Des Voeux Road West, Hong Kong",852MA2012,22.2878,114.14216,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0109,existing,SF Express,staffed_station,OK便利店-西環,"Shop Nos. 1 & 2 on Ground Floor, Fairview Height, No.1 Seymour Road, HongKong",852MC2002,22.28006,114.1508,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0110,existing,SF Express,staffed_station,OK便利店-金鐘,"Shop 1002B, 1/F, United Centre, 95 Queensway, Central, HK",852TA2005,22.27837,114.16526,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:07:00-20:00 星期日及公眾假期:08:00-18:00
+S0111,existing,SF Express,staffed_station,OK便利店-金鐘,"Shop No. F01-02, Lab Concept, 1/F Queensway Plaza, 93 Queensway, HongKong",852TA2008,22.27872,114.16454,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-21:00
+S0112,existing,SF Express,staffed_station,OK便利店-香港仔,"Shop 3 & 4, G/F, Silver Mansion, 81 Shek Pai Wan Road, Aberdeen, HK",852TB2004,22.24936,114.14876,False,340.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0113,existing,SF Express,staffed_station,SF Store 852MAL,"Shop C, G/F, Shun Cheong Building, 28 Hau Wo Street, Kennedy Town, Sai Wan, Central and Western District, Hong Kong Island, Hong Kong",852MAL,22.28272,114.12746,True,0.0,yes,yes,operators/sf_store_hk_island_20261029.pdf (SF store list),SF store; hours: 11:00-22:00
+S0114,existing,SF Express,staffed_station,SF Store 852MCL,"Shop 9, G/F, Belcher Court, 2 Sai Cheung Street, Sai Wan, Central and Western District, Hong Kong Island, Hong Kong",852MCL,22.2851,114.1318,True,0.0,yes,yes,operators/sf_store_hk_island_20261029.pdf (SF store list),SF store; hours: 11:00-22:00
+S0115,existing,SF Express,staffed_station,上環嘉安大廈順豐站,"Shop No. 15, G/F, Ka On Building, Nos. 8-14 Connaught Road West, Nos. 15-27 New Market Street, Sheung Wan,Central and Western District, Hong Kong Island, Hong Kong",852MD,22.28766,114.14979,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日/假期休息"
+S0116,existing,SF Express,staffed_station,上環寶寶,"Shop A42, 1 / F, Parkway Computer City Plaza(Lianfa Commercial Centre), 2-12 Queen's RoadWest, Sheung Wan, Hong Kong",852MD3001,22.28634,114.14868,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至五:11:00-19:00 星期六:13:00-18:00 星期日、公眾假期: 休息
+S0117,existing,SF Express,staffed_station,上環文樂商廈順豐站,"Shop A, G/F, Man Lok Building, No. 91 Bonham Strand, Sheung Wan, Central and Western District, Hong Kong Island, Hong Kong",852M,22.28611,114.15129,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日/假期09:00-18:00"
+S0118,existing,SF Express,staffed_station,中環勝基中心順豐站,"Unit D, G/F, Winbase Centre, No. 208 Queen's Road Central, Central, Central and Western District,Hong Kong Island, Hong Kong",852MB,22.28462,114.15208,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日/假期休息"
+S0119,existing,SF Express,staffed_station,中環環球大廈順豐站,"Shop 131, 1/F, World Wide House, No. 19 Des Voeux Road Central, Central, Central and Western District, Hong Kong Island, Hong Kong(1st-floor footbridge podium)",852Z503,22.28257,114.15779,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五11:00-20:00,星期六12:00-20:00,星期日/假期休息"
+S0120,existing,SF Express,staffed_station,士美菲自提點,"Shop H, G/F, Luen Hing New Building, 47Smithfield Road, Kennedy Town,HK",852MA3018,22.28174,114.12787,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:12:00-20:00(15:00-16:00午休) 星期日及公眾假期: 12:00-16:00
+S0121,existing,SF Express,staffed_station,富麗美沖印,"Shop 2J ,Kam Ho Court,144-148 Belcher'sStreet,Kennedy Town,HK",852MA3010,22.2822,114.12673,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一:12:30-20:30 星期二至六: 11:00-20:30(16:30-17:30午休) 星期日: 12:30-18:30,公眾假期休息"
+S0122,existing,SF Express,staffed_station,揚壹物流統一中心,"Shop 2041,2/F,United Centre,95Queensway,Central,HK",852TA3003,22.27837,114.16526,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:12:00-21:00(午休15:00-16:00) 星期日及公眾假期: 11:00-15:00
+S0123,existing,SF Express,staffed_station,樹熊屋自取站,"Shop 13B,, G/F Kwan Yick BLDG Phase 2, 343Des Voeux Road West, HK",852MA3002,22.28783,114.13828,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六: 13:00-19:00 星期日、公眾假期: 休息
+S0124,existing,SF Express,staffed_station,港大自提點,"（Rear Block)G/F ,Wing Wah Mansion 425ZQUEEN'S ROAD WEST Shek TongTsui",852MA3017,22.2861,114.13585,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至五: 11:00-20:00 星期六:11:00-17:00 星期日、公眾假期: OFF
+S0125,existing,SF Express,staffed_station,灣仔莊士敦大樓順豐站,"Shop D, G/F, Johnston Court, No. 9, 11 & 13 Lun Fat Street, Wan Chai, Wan Chai District, Hong Kong Island, Hong Kong",852TA,22.27648,114.17041,False,263.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日/假期休息"
+S0126,existing,SF Express,staffed_station,田園坊,"Shop A, G/F, Kuk Fung Building, 30 CatchickStreet, Kennedy Town, HK",852MA3011,22.2832,114.12818,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:12:00-20:30 星期日及公眾假期: 12:00-18:00
+S0127,existing,SF Express,staffed_station,盈盈乾洗,"G/F,No.7 North Street,KennedyTown,HK",852MA3007,22.283921,114.12892,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:09:00-20:00 星期日及公眾假期: 休息
+S0128,existing,SF Express,staffed_station,第一街自提點,FLAT /RM 77B G/F FIRST STREET SAI YINGPUN,852MA3015,22.286588,114.141922,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六: 12:00-19:30 星期日:12:00-16:00 公眾假期:休息
+S0129,existing,SF Express,staffed_station,花膠雜貨小店,"Room 5,20/F,Kaiser Centre,18 Centre St,Sai YingPun",852MA3009,22.28758,114.14221,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至五: 13:00-19:00 星期六:13:00-17:00 星期日、公眾假期:休息
+S0130,existing,SF Express,staffed_station,西營盤兆祥坊順豐站,"Shop A2, G/F, Siu Cheung Building, Siu Cheung Fong, No. 4A Chiu Kwong Street, Sai Ying Pun, Central and Western District, Hong Kong Island, Hong Kong",852MA,22.28736,114.13966,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五09:00-20:00,星期六09:00-20:00,星期日/假期休息"
+S0131,existing,SF Express,staffed_station,西環恒裕大廈順豐站,"Shop Nos 3 and 4, G/F, Han Yu Building, Nos. 45-55 Cadogan Street, Sai Wan, Central and Western District, Hong Kong Island, Hong Kong",852Z502,22.28179,114.12638,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五11:00-21:00,星期六12:00-20:00,星期日/假期12:00-20:00"
+S0132,existing,SF Express,staffed_station,西環曉暉大廈順豐站,"Shop No.1, G/F, Sunglow Building, Nos. 1L-1Q Belcher's Street, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong",852Z501,22.28609,114.13232,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),"hours: 星期一至五11:00-20:30,星期六12:00-20:00,星期日/假期12:00-20:00"
+S0133,existing,SF Express,staffed_station,阿婆自提點,"Shop 82, 1MN, Tin Wan Market, 11 Hing WoStreet, Aberdeen, Hong Kong",852TE3006,22.25015,114.14822,False,245.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 星期一至六:13:00-20:00 星期日:13:00-20:00 公眾假期:休息
+S0134,existing,SF Express,locker,順豐自助櫃-上環,"1/F Platform, CentrePoint, No.72 Staunton Street, Sheung Wan, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852M015P,22.28295,114.1514,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0135,existing,SF Express,locker,順豐自助櫃-上環,"G/F, 25 Tung Street, Sheung Wan, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852M020P,22.286038,114.14362,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0136,existing,SF Express,locker,順豐自助櫃-上環,"Shop F2, G/F, Kam Fung Building, 8 Cleverly Street, Sheung Wan, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852M052P,22.2857,114.15109,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0137,existing,SF Express,locker,順豐自助櫃-中環,"G/F, Central Pier 2, Central, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852M038P,22.28827,114.156555,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0138,existing,SF Express,locker,順豐自助櫃-中環,"Unit 15, G/F, Shing Lee Commerical Building, 3-5 Wing Wo Street, Central, Hong Kong(SF Locker)",H852M053P,22.28498,114.15378,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0139,existing,SF Express,locker,順豐自助櫃-半山區,"Car Park B1/F, adjacent to Parking lot M2, Babington Hill, No. 23 Babington Path, Mid-levels, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852M035P,22.282673,114.141631,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 07:00-23:00
+S0140,existing,SF Express,locker,順豐自助櫃-半山區,"L1, Block 3, Tregunter, Mid-Levels, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852M041P,22.27453,114.15265,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0141,existing,SF Express,locker,順豐自助櫃-半山區,"Lobby of Podium, Phase 1 of Blessings Garden, 95 Robinson Road, Mid-Levels, Central and Western District, Hong Kong Island, Hong Kong(Only for Resident)",H852M026P,22.28147,114.14835,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0142,existing,SF Express,locker,順豐自助櫃-半山區,"Clubhouse, 1/F, Bella Vista, No. 3 Ying Fai Terrace, Mid-Levels, Central and Western District, Hong Kong Island, Hong Kong (SF Locker - Only for residents)",H852MC47P,22.28149,114.15112,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0143,existing,SF Express,locker,順豐自助櫃-半山區,"G/F, Block 3, Garden Terrace, 8A Old Peak Road, Mid-Levels, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852MC54P,22.27563,114.15424,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0144,existing,SF Express,locker,順豐自助櫃-堅尼地城,"Shop 2A, G/F, 71-77 Smithfield, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)+",H852MA23P,22.28015,114.12904,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0145,existing,SF Express,locker,順豐自助櫃-堅尼地城,"Carpark, 5/F, Cayman Rise, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852MA27P,22.28172,114.12455,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0146,existing,SF Express,locker,順豐自助櫃-堅尼地城,"G/F, Luen Gay Apartments, 9 Davis Street, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852MA13P,22.28194,114.12748,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0147,existing,SF Express,locker,順豐自助櫃-堅尼地城,"Shop 1, G/F, Sunglow Building, Nos.1L, 1M, 1N, 1P & 1Q Belcher's Street, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852MA49P,22.28609,114.13232,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0148,existing,SF Express,locker,順豐自助櫃-堅尼地城,"Locker No.2, Shop Nos 3 and 4, G/F, Han Yu Building, 45-55 Cadogan Street, Kennedy Town, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852MA51P,22.28179,114.12638,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0149,existing,SF Express,locker,順豐自助櫃-灣仔,"Lift Lobby, B3/F, The Avenue, 200 Queen's Road East, Wan Chai, Wan Chai District, Hong Kong Island, Hong Kong(SF Locker)",H852TA56P,22.27618,114.17237,False,464.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0150,existing,SF Express,locker,順豐自助櫃-西營盤,"Shop 32A, G/F, Phase 3 Kwan Yick Building, 273 Des Voeux Road West, Sai Ying Pun, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)+",H852MA12P,22.28817,114.14021,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0151,existing,SF Express,locker,順豐自助櫃-西營盤,"Shop 3, G/F, Upton, 180 Connaught Road West, Sai Ying Pun, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)",H852MA31P,22.28747,114.13716,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0152,existing,SF Express,locker,順豐自助櫃-西營盤,"G/F, 11 Eastern Street, Sai Ying Pun, Central and Western District, Hong Kong Island, Hong Kong(SF Locker)+",H852MA14P,22.28735,114.14361,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0153,existing,SF Express,locker,順豐自助櫃-西營盤,"Shuttle Lift Lobby, B/F, Island Crest, Sai Ying Pun, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852M046P,22.28634,114.14316,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0154,existing,SF Express,locker,順豐自助櫃-西環,"Podium, 4/F, Block 1, Connaught Garden, Sai Wan, Central and Western District, Hong Kong Island, Hong Kong(SF Locker - Only for residents)",H852MA28P,22.28841,114.14125,True,0.0,no,no,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0155,existing,SF Express,locker,順豐自助櫃-香港仔,"Carpark, G/F, Tin Wan Shopping Centre, Aberdeen, Southern District, Hong Kong Island, Hong Kong(SF Locker)",H852TB32P,22.25067,114.14939,False,235.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0156,existing,SF Express,locker,順豐自助櫃-香港仔,"Locker No.2, Carpark, G/F, Tin Wan Shopping Centre, Aberdeen, Southern District, Hong Kong Island, Hong Kong(SF Locker)",H852TB33P,22.25067,114.14939,False,235.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0157,existing,SF Express,locker,順豐自助櫃-馬灣,"Park Island Harbour, No. 8 Park Lai Road, Ma Wan, Tseun Wan District, New Territories, Hong Kong(SF Locker)",H852GC08P,22.28835,114.15663,True,0.0,yes,yes,operators/pickup-points-sf.js (last_verified 2026-10-05),hours: 24小時
+S0158,candidate,,mtr_exit,Admiralty Centre,,osm:node/2556667486,22.279303,114.165069,True,0.0,yes,no,OpenStreetMap,
+S0159,candidate,,mtr_exit,Alexandra House,,osm:node/2555348136,22.28165,114.158771,True,0.0,yes,no,OpenStreetMap,
+S0160,candidate,,mtr_exit,Belcher's Street,,osm:node/2555184307,22.285901,114.132644,True,0.0,yes,no,OpenStreetMap,
+S0161,candidate,,mtr_exit,Bonham Road,,osm:node/7617293457,22.284536,114.143353,True,0.0,yes,no,OpenStreetMap,
+S0162,candidate,,mtr_exit,CCB Tower,,osm:node/3145326115,22.281124,114.161384,True,0.0,yes,no,OpenStreetMap,
+S0163,candidate,,mtr_exit,Chater Garden,,osm:node/2555337840,22.281015,114.16098,True,0.0,yes,no,OpenStreetMap,
+S0164,candidate,,mtr_exit,Chater Garden,,osm:node/2555632176,22.281263,114.160973,True,0.0,yes,no,OpenStreetMap,
+S0165,candidate,,mtr_exit,Chater Garden,,osm:node/2555632177,22.281267,114.160481,True,0.0,yes,no,OpenStreetMap,
+S0166,candidate,,mtr_exit,Chater House,,osm:node/2555632180,22.281939,114.158391,True,0.0,yes,no,OpenStreetMap,
+S0167,candidate,,mtr_exit,Connaught Road Central,,osm:node/2555299652,22.287088,114.15211,True,0.0,yes,no,OpenStreetMap,
+S0168,candidate,,mtr_exit,Des Voeux Road West,德輔道西 Des Voeux Road West,osm:node/2555265440,22.287758,114.144222,True,0.0,yes,no,OpenStreetMap,
+S0169,candidate,,mtr_exit,Douglas Street,,osm:node/2555854344,22.283124,114.157089,True,0.0,yes,no,OpenStreetMap,
+S0170,candidate,,mtr_exit,Drake Street,,osm:node/2556667487,22.279354,114.164107,True,0.0,yes,no,OpenStreetMap,
+S0171,candidate,,mtr_exit,Forbes Street,,osm:node/2555174997,22.281282,114.128035,True,0.0,yes,no,OpenStreetMap,
+S0172,candidate,,mtr_exit,HK-Macau Ferry Terminal,,osm:node/2555299653,22.287658,114.152242,True,0.0,yes,no,OpenStreetMap,
+S0173,candidate,,mtr_exit,Hill Road,,osm:node/2555184305,22.28564,114.135151,True,0.0,yes,no,OpenStreetMap,
+S0174,candidate,,mtr_exit,Hiller Street,,osm:node/2555299651,22.286668,114.152007,True,0.0,yes,no,OpenStreetMap,
+S0175,candidate,,mtr_exit,IFC Mall,,osm:node/2555854350,22.285357,114.158465,True,0.0,yes,no,OpenStreetMap,
+S0176,candidate,,mtr_exit,Infinitus Plaza,干諾道中 Connaught Road Central,osm:node/2555281852,22.28665,114.153672,True,0.0,yes,no,OpenStreetMap,
+S0177,candidate,,mtr_exit,Infinitus Plaza,,osm:node/2555299655,22.286087,114.153325,True,0.0,yes,no,OpenStreetMap,
+S0178,candidate,,mtr_exit,Infinitus Plaza,,osm:node/2555299657,22.286171,114.153641,True,0.0,yes,no,OpenStreetMap,
+S0179,candidate,,mtr_exit,Ki Ling Lane,,osm:node/4128161006,22.287606,114.141506,True,0.0,yes,no,OpenStreetMap,
+S0180,candidate,,mtr_exit,Lee Tung Avenue,,osm:node/5447058900,22.276417,114.172445,False,464.0,yes,no,OpenStreetMap,
+S0181,candidate,,mtr_exit,Li Yuen Street East,,osm:node/1442107005,22.282216,114.157463,True,0.0,yes,no,OpenStreetMap,
+S0182,candidate,,mtr_exit,One International Finance Centre,,osm:node/2555863742,22.285042,114.157274,True,0.0,yes,no,OpenStreetMap,
+S0183,candidate,,mtr_exit,One and Two Exchange Square,,osm:node/2555854347,22.284128,114.159061,True,0.0,yes,no,OpenStreetMap,
+S0184,candidate,,mtr_exit,One and Two Exchange Square,,osm:node/2555854348,22.284126,114.158653,True,0.0,yes,no,OpenStreetMap,
+S0185,candidate,,mtr_exit,Pacific Place,,osm:node/2556672766,22.278826,114.165844,True,0.0,yes,no,OpenStreetMap,
+S0186,candidate,,mtr_exit,Pedder Street,,osm:node/288382081,22.281812,114.15727,True,0.0,yes,no,OpenStreetMap,
+S0187,candidate,,mtr_exit,Pedder Street,,osm:node/1442107003,22.281966,114.157057,True,0.0,yes,no,OpenStreetMap,
+S0188,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/2555184306,22.284455,114.134639,True,0.0,yes,no,OpenStreetMap,
+S0189,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/4099072622,22.283424,114.136656,True,0.0,yes,no,OpenStreetMap,
+S0190,candidate,,mtr_exit,Queen's Road West,皇后大道西 Queen's Road West,osm:node/2555265441,22.287092,114.14447,True,0.0,yes,no,OpenStreetMap,
+S0191,candidate,,mtr_exit,Queensway Plaza,,osm:node/1234054220,22.278519,114.164768,True,0.0,yes,no,OpenStreetMap,
+S0192,candidate,,mtr_exit,Queensway Plaza,,osm:node/2556667489,22.279019,114.164767,True,0.0,yes,no,OpenStreetMap,
+S0193,candidate,,mtr_exit,Rock Hill Street,,osm:node/2555174998,22.281812,114.129353,True,0.0,yes,no,OpenStreetMap,
+S0194,candidate,,mtr_exit,Rodney Street,,osm:node/5602771872,22.278873,114.16612,True,0.0,yes,no,OpenStreetMap,
+S0195,candidate,,mtr_exit,Second Street,第二街 Second Street,osm:node/2555265438,22.286208,114.141799,True,0.0,yes,no,OpenStreetMap,
+S0196,candidate,,mtr_exit,Smithfield,,osm:node/2555174996,22.281178,114.12854,True,0.0,yes,no,OpenStreetMap,
+S0197,candidate,,mtr_exit,Southorn Playground,,osm:node/288361302,22.277412,114.172666,False,474.0,yes,no,OpenStreetMap,
+S0198,candidate,,mtr_exit,Statue Square,,osm:node/2555632178,22.281098,114.159541,True,0.0,yes,no,OpenStreetMap,
+S0199,candidate,,mtr_exit,The Landmark,,osm:node/1442107002,22.281824,114.157786,True,0.0,yes,no,OpenStreetMap,
+S0200,candidate,,mtr_exit,United Centre,,osm:node/2556667490,22.278724,114.165571,True,0.0,yes,no,OpenStreetMap,
+S0201,candidate,,mtr_exit,Whitty Street,,osm:node/2555184304,22.285659,114.13682,True,0.0,yes,no,OpenStreetMap,
+S0202,candidate,,mtr_exit,Wing Lok Street,,osm:node/2555299649,22.286388,114.152259,True,0.0,yes,no,OpenStreetMap,
+S0203,candidate,,mtr_exit,Wing Lok Street,,osm:node/2555299650,22.286114,114.152213,True,0.0,yes,no,OpenStreetMap,
+S0204,candidate,,mtr_exit,mtr exit,,osm:node/2555854345,22.284336,114.158499,True,0.0,yes,no,OpenStreetMap,
+S0205,candidate,,mtr_exit,mtr exit,,osm:node/8424412470,22.284641,114.158488,True,0.0,yes,no,OpenStreetMap,
+S0206,candidate,,mtr_exit,mtr exit,,osm:node/8424412473,22.284919,114.158009,True,0.0,yes,no,OpenStreetMap,
+S0207,candidate,,wet_market,Centre Street Market,44 正街 Centre Street,osm:way/193251306,22.28637,114.142057,True,0.0,yes,no,OpenStreetMap,
+S0208,candidate,,wet_market,Chop Street,,osm:relation/20088108,22.286193,114.152464,True,0.0,yes,no,OpenStreetMap,
+S0209,candidate,,wet_market,Graham Market,23 結志街 Gage Street,osm:way/675076081,22.283292,114.153552,True,0.0,yes,no,OpenStreetMap,
+S0210,candidate,,wet_market,Sai Ying Pun Market,45 正街 Centre Street,osm:way/193250885,22.285902,114.142445,True,0.0,yes,no,OpenStreetMap,
+S0211,candidate,,wet_market,Shek Tong Tsui Market,470 皇后大道西 Queen's Road West,osm:node/12160288024,22.285482,114.136274,True,0.0,yes,no,OpenStreetMap,
+S0212,candidate,,wet_market,Sheung Wan Market,345 皇后大道中 Queen's Road Central,osm:node/1705334130,22.286082,114.149824,True,0.0,yes,no,OpenStreetMap,
+S0213,candidate,,wet_market,Smithfield Market,,osm:node/12337705220,22.281875,114.128734,True,0.0,yes,no,OpenStreetMap,
+S0214,candidate,,wet_market,wet market,利源東街 Li Yuen Street East,osm:node/9189029848,22.282787,114.156421,True,0.0,yes,no,OpenStreetMap,
+S0215,candidate,,wet_market,wet market,利源西街 Li Yuen Street West,osm:node/9189029849,22.283072,114.156208,True,0.0,yes,no,OpenStreetMap,
+S0216,candidate,,wet_market,wet market,,osm:way/969815759,22.282781,114.152491,True,0.0,yes,no,OpenStreetMap,
+S0217,candidate,,shopping_mall,Cat Street Galleries,38 樂古道 Lok Ku Road,osm:way/969277821,22.284986,114.149717,True,0.0,yes,no,OpenStreetMap,
+S0218,candidate,,shopping_mall,Central Market,80 德輔道中 Des Voeux Road Central,osm:way/988672084,22.284027,114.15542,True,0.0,yes,no,OpenStreetMap,
+S0219,candidate,,shopping_mall,Harvey Nichols ,,osm:node/4168510689,22.277606,114.164622,True,0.0,yes,no,OpenStreetMap,
+S0220,candidate,,shopping_mall,Hong Kong-Macau Ferry Terminal,干諾道中 Connaught Road Central,osm:relation/2462122,22.288671,114.152437,True,0.0,yes,no,OpenStreetMap,
+S0221,candidate,,shopping_mall,Hopewell Mall,15 堅尼地道 Kennedy Road,osm:relation/19022420,22.274859,114.170542,False,346.0,yes,no,OpenStreetMap,
+S0222,candidate,,shopping_mall,International Finance Centre Mall,,osm:relation/13849938,22.285228,114.158766,True,0.0,yes,no,OpenStreetMap,
+S0223,candidate,,shopping_mall,LANDMARK,,osm:relation/17417565,22.281109,114.157892,True,0.0,yes,no,OpenStreetMap,
+S0224,candidate,,shopping_mall,LANDMARK PRINCE'S,10 遮打道 Chater Road,osm:way/42293788,22.281209,114.15917,True,0.0,yes,no,OpenStreetMap,
+S0225,candidate,,shopping_mall,LHT Tower,1-7 戲院里 Theatre Lane,osm:way/200238459,22.28214,114.156632,True,0.0,yes,no,OpenStreetMap,
+S0226,candidate,,shopping_mall,MINISO,皇后大道西 Queen's Road West,osm:node/4862556870,22.28594,114.136241,True,0.0,yes,no,OpenStreetMap,
+S0227,candidate,,shopping_mall,Marks & Spencer,皇后大道中 Queen's Road Central,osm:node/5477117223,22.281272,114.156712,True,0.0,yes,no,OpenStreetMap,
+S0228,candidate,,shopping_mall,Midland Plaza,328 皇后大道中 Queen's Road Central,osm:way/969248426,22.285225,114.149952,True,0.0,yes,no,OpenStreetMap,
+S0229,candidate,,shopping_mall,Nan Hai Plaza,,osm:node/3276856747,22.283806,114.130441,True,0.0,yes,no,OpenStreetMap,
+S0230,candidate,,shopping_mall,Pacific Place,88 金鐘道 Queensway,osm:way/41498903,22.277277,114.165252,True,0.0,yes,no,OpenStreetMap,
+S0231,candidate,,shopping_mall,Pacific Place Shopping Mall,88 金鐘道 Queensway,osm:node/4539059390,22.277415,114.164955,True,0.0,yes,no,OpenStreetMap,
+S0232,candidate,,shopping_mall,Peak Tower,128 山頂道 Peak Road,osm:way/143716612,22.271255,114.149986,True,0.0,yes,no,OpenStreetMap,
+S0233,candidate,,shopping_mall,Queensway Plaza,93 金鐘道 Queensway,osm:relation/17383281,22.279214,114.16449,True,0.0,yes,no,OpenStreetMap,
+S0234,candidate,,shopping_mall,Shun Tak Centre,干諾道中 Connaught Road Central,osm:relation/14937822,22.287928,114.151865,True,0.0,yes,no,OpenStreetMap,
+S0235,candidate,,shopping_mall,Sincere,189 德輔道中 Des Voeux Road Central,osm:node/1887790087,22.286041,114.153893,True,0.0,yes,no,OpenStreetMap,
+S0236,candidate,,shopping_mall,The Avenue,200 皇后大道東 Queen's Road East,osm:way/184798506,22.275729,114.172322,False,477.0,yes,no,OpenStreetMap,
+S0237,candidate,,shopping_mall,The Galleria,9 皇后大道中 Queen's Road Central,osm:way/295407307,22.280493,114.15842,True,0.0,yes,no,OpenStreetMap,
+S0238,candidate,,shopping_mall,The Peak Galleria,118 山頂道 Peak Road,osm:way/156335591,22.270356,114.149872,True,0.0,yes,no,OpenStreetMap,
+S0239,candidate,,shopping_mall,The Rockpool,402-404 德輔道西 Des Voeux Road West,osm:way/112687053,22.286358,114.136854,True,0.0,yes,no,OpenStreetMap,
+S0240,candidate,,shopping_mall,The Westwood,8 卑路乍街 Belcher's Street,osm:way/756201201,22.285746,114.133187,True,0.0,yes,no,OpenStreetMap,
+S0241,candidate,,shopping_mall,Three Pacific Place,,osm:way/88391081,22.276956,114.168021,False,26.0,yes,no,OpenStreetMap,
+S0242,candidate,,shopping_mall,Tin Wan Shopping Centre,17 田灣街 Tin Wan Street,osm:way/346130734,22.250957,114.149604,False,225.0,yes,no,OpenStreetMap,
+S0243,candidate,,shopping_mall,Wing On Main Store,,osm:node/1705327179,22.286486,114.153218,True,0.0,yes,no,OpenStreetMap,
+S0244,candidate,,community_facility,Caritas Jockey Club Aberdeen Social Centre,20 田灣街 Tin Wan Street,osm:way/346127140,22.249621,114.149539,False,341.0,yes,no,OpenStreetMap,
+S0245,candidate,,community_facility,Caritas Mok Cheung Sui Kun Community Centre,27 蒲飛路 Pokfield Road,osm:way/290696408,22.28022,114.129803,True,0.0,yes,no,OpenStreetMap,
+S0246,candidate,,community_facility,Central Government Offices,2 添美道 Tim Mei Avenue,osm:way/918333902,22.280473,114.165597,True,0.0,yes,no,OpenStreetMap,
+S0247,candidate,,community_facility,Central Junior Police Call Clubhouse,,osm:way/295407285,22.283466,114.152172,True,0.0,yes,no,OpenStreetMap,
+S0248,candidate,,community_facility,Chi Wah Learning Commons,,osm:node/5180139180,22.283477,114.134606,True,0.0,yes,no,OpenStreetMap,
+S0249,candidate,,community_facility,City Hall Public Library,5 愛丁堡廣場 Edinburgh Square,osm:node/2521837063,22.282139,114.160927,True,0.0,yes,no,OpenStreetMap,
+S0250,candidate,,community_facility,Conduit Road Service Reservoir Playground,,osm:way/448041652,22.277484,114.151166,True,0.0,yes,no,OpenStreetMap,
+S0251,candidate,,community_facility,Duke of Windsor Social Service Building,15 軒尼詩道 Hennessy Road,osm:way/200238639,22.278021,114.16962,False,173.0,yes,no,OpenStreetMap,
+S0252,candidate,,community_facility,HKMA Library,8 金融街 Finance Street,osm:node/13715735947,22.285461,114.159454,True,0.0,yes,no,OpenStreetMap,
+S0253,candidate,,community_facility,HKU Main Library,,osm:way/898471121,22.283309,114.13782,True,0.0,yes,no,OpenStreetMap,
+S0254,candidate,,community_facility,Hong Kong Park Sports Centre,29 紅棉路 Cotton Tree Drive,osm:way/42257908,22.277254,114.159347,True,0.0,yes,no,OpenStreetMap,
+S0255,candidate,,community_facility,Hong Kong Squash Centre,23 紅棉路 Cotton Tree Drive,osm:way/114282522,22.277398,114.160039,True,0.0,yes,no,OpenStreetMap,
+S0256,candidate,,community_facility,Justice Place,18-20 下亞厘畢道 Lower Albert Road,osm:way/295407292,22.279146,114.158858,True,0.0,yes,no,OpenStreetMap,
+S0257,candidate,,community_facility,Kennedy Town Community Complex,12 石山街 Rock Hill Street,osm:way/71379590,22.281803,114.12911,True,0.0,yes,no,OpenStreetMap,
+S0258,candidate,,community_facility,Kennedy Town Playground,科士街 Forbes Street,osm:way/178741316,22.281017,114.127038,True,0.0,yes,no,OpenStreetMap,
+S0259,candidate,,community_facility,Kennedy Town Service Reservoir Playground,,osm:way/107387342,22.279121,114.127401,True,0.0,yes,no,OpenStreetMap,
+S0260,candidate,,community_facility,Kennedy Town Swimming Pool,2 西祥街北 Sai Cheung Street North,osm:way/557525860,22.286222,114.131589,True,0.0,yes,no,OpenStreetMap,
+S0261,candidate,,community_facility,Ladies' Recreation Club,10 舊山頂道,osm:way/758451469,22.274914,114.154087,True,0.0,yes,no,OpenStreetMap,
+S0262,candidate,,community_facility,Lee Chi Hung Hall,,osm:node/3937121777,22.282721,114.13908,True,0.0,yes,no,OpenStreetMap,
+S0263,candidate,,community_facility,London Mission Building,80 羅便臣道 Robinson Road,osm:way/815414029,22.282724,114.146781,True,0.0,yes,no,OpenStreetMap,
+S0264,candidate,,community_facility,Lui Che Woo Law Library,,osm:node/1926828720,22.283316,114.13404,True,0.0,yes,no,OpenStreetMap,
+S0265,candidate,,community_facility,Lung King No.8,8 龍景街 Lung King Street,osm:way/148858991,22.281233,114.16947,False,186.0,yes,no,OpenStreetMap,
+S0266,candidate,,community_facility,Sai Ying Pun Community Complex,2 高街 High Street,osm:way/219119236,22.284792,114.144139,True,0.0,yes,no,OpenStreetMap,
+S0267,candidate,,community_facility,Saint Barnabas Society and Home,,osm:way/322839598,22.287852,114.135399,True,0.0,yes,no,OpenStreetMap,
+S0268,candidate,,community_facility,Shek Tong Tsui Public Library,皇后大道西 Queen's Road West,osm:node/1928260884,22.28574,114.135979,True,0.0,yes,no,OpenStreetMap,
+S0269,candidate,,community_facility,Smithfield Public Library,12K 士美菲路 Smithfield,osm:node/2935664494,22.281721,114.128484,True,0.0,yes,no,OpenStreetMap,
+S0270,candidate,,community_facility,Southorn Playground,,osm:way/5020555,22.276852,114.17219,False,429.0,yes,no,OpenStreetMap,
+S0271,candidate,,community_facility,St John's Ambulance Headquarters,2 麥當勞道 Macdonnell Road,osm:way/532434955,22.276086,114.155495,True,0.0,yes,no,OpenStreetMap,
+S0272,candidate,,community_facility,Sun Yat Sen Memorial Park Sports Centre,,osm:way/26104148,22.290061,114.143502,True,0.0,yes,no,OpenStreetMap,
+S0273,candidate,,community_facility,Sun Yat Sen Memorial Park Swimming Pool,東邊街北 Eastern Street North,osm:way/178594304,22.290018,114.14441,True,0.0,yes,no,OpenStreetMap,
+S0274,candidate,,community_facility,The Asia Society Hong Kong Center,9 正義道 Justice Drive,osm:way/188934436,22.275464,114.165459,True,0.0,yes,no,OpenStreetMap,
+S0275,candidate,,community_facility,The Boys' and Girls' Clubs Association of Hong Kong,3 駱克道 Lockhart Road,osm:node/4505462795,22.278468,114.169171,False,162.0,yes,no,OpenStreetMap,
+S0276,candidate,,community_facility,The Hong Kong Bayanihan Kennedy Town Centre,55 域多利道 Victoria Road,osm:way/312192656,22.281515,114.123007,True,0.0,yes,no,OpenStreetMap,
+S0277,candidate,,community_facility,Western District Community Centre,36A 西邊街 Western Street,osm:way/1359088998,22.285897,114.140941,True,0.0,yes,no,OpenStreetMap,
+S0278,candidate,,community_facility,Western Magistracy Building,2A 薄扶林道 Pok Fu Lam Road,osm:way/322839518,22.286772,114.14056,True,0.0,yes,no,OpenStreetMap,
+S0279,candidate,,community_facility,YWCA Headquarters,1 麥當勞道 Macdonnell Road,osm:way/533485357,22.276249,114.155911,True,0.0,yes,no,OpenStreetMap,
+S0280,candidate,,community_facility,Zetland Hall,1 堅尼地道 Kennedy Road,osm:way/533484361,22.276401,114.158158,True,0.0,yes,no,OpenStreetMap,
+S0281,candidate,,community_facility,community facility,,osm:way/1193828848,22.279725,114.152939,True,0.0,yes,no,OpenStreetMap,
+S0282,candidate,,community_facility,community facility,,osm:way/1204354633,22.274454,114.15336,True,0.0,yes,no,OpenStreetMap,
+S0283,candidate,,post_office,Gloucester Road Post Office,5 告士打道 Gloucester Road,osm:node/5386799343,22.279793,114.172,False,392.0,yes,no,OpenStreetMap,
+S0284,candidate,,post_office,Wyndham Street Post Office,69 雲咸街 Wyndham Street,osm:node/4985316463,22.281578,114.154932,True,0.0,yes,no,OpenStreetMap,
+S0285,candidate,,supermarket,759 Store,莊士敦道 Johnston Road,osm:node/4856508500,22.276837,114.170549,False,264.0,yes,no,OpenStreetMap,
+S0286,candidate,,supermarket,DS Groceries,426-428B 德輔道西 Des Voeux Road West,osm:node/4870132720,22.286754,114.135271,True,0.0,yes,no,OpenStreetMap,
+S0287,candidate,,supermarket,DS Groceries,315-319 皇后大道中 Queen's Road Central,osm:node/12505636256,22.285449,114.150193,True,0.0,yes,no,OpenStreetMap,
+S0288,candidate,,supermarket,Don Don Donki,皇后大道中 Queen's Road Central,osm:node/8154639372,22.283471,114.15499,True,0.0,yes,no,OpenStreetMap,
+S0289,candidate,,supermarket,Food le Parc,,osm:node/7566254887,22.27949,114.160546,True,0.0,yes,no,OpenStreetMap,
+S0290,candidate,,supermarket,Fusion,吉席街 Catchick Street,osm:node/4870091585,22.283241,114.127268,True,0.0,yes,no,OpenStreetMap,
+S0291,candidate,,supermarket,International by PARKnSHOP,37-47 般咸道 Bonham Road,osm:node/579167930,22.284723,114.141847,True,0.0,yes,no,OpenStreetMap,
+S0292,candidate,,supermarket,Market Place,1 西摩臺 Seymour Terrace,osm:node/469510012,22.280643,114.150626,True,0.0,yes,no,OpenStreetMap,
+S0293,candidate,,supermarket,Market Place,270-276 皇后大道中 Queen's Road Central,osm:node/4239530853,22.28449,114.15089,True,0.0,yes,no,OpenStreetMap,
+S0294,candidate,,supermarket,Market Place by Jasons,山頂道 Peak Road,osm:node/2131730512,22.26827,114.151597,True,0.0,yes,no,OpenStreetMap,
+S0295,candidate,,supermarket,Market Place by Jasons,,osm:node/4102692014,22.284089,114.156359,True,0.0,yes,no,OpenStreetMap,
+S0296,candidate,,supermarket,Market Place by Jasons,8 第一街 First Street,osm:node/4128170388,22.286292,114.142651,True,0.0,yes,no,OpenStreetMap,
+S0297,candidate,,supermarket,PARKnSHOP,德輔道西 Des Voeux Road West,osm:node/4116132390,22.288075,114.140712,True,0.0,yes,no,OpenStreetMap,
+S0298,candidate,,supermarket,PARKnSHOP,,osm:node/5283275438,22.284069,114.130642,True,0.0,yes,no,OpenStreetMap,
+S0299,candidate,,supermarket,PARKnSHOP,,osm:node/8720180078,22.282741,114.153706,True,0.0,yes,no,OpenStreetMap,
+S0300,candidate,,supermarket,PRICERITE,,osm:node/11752363006,22.282192,114.127347,True,0.0,yes,no,OpenStreetMap,
+S0301,candidate,,supermarket,ParkNShop (Peak Galleria),,osm:node/26412241,22.270048,114.150153,True,0.0,yes,no,OpenStreetMap,
+S0302,candidate,,supermarket,Shun Ya,卑路乍街 Belcher's Street,osm:node/3276860389,22.284341,114.131298,True,0.0,yes,no,OpenStreetMap,
+S0303,candidate,,supermarket,Slowood,,osm:node/8490943552,22.281516,114.127185,True,0.0,yes,no,OpenStreetMap,
+S0304,candidate,,supermarket,Star Mart,卑路乍街 Belcher's Street,osm:node/4862580155,22.286376,114.132591,True,0.0,yes,no,OpenStreetMap,
+S0305,candidate,,supermarket,U Select,374-378 德輔道西 Des Voeux Road West,osm:node/4862057457,22.286938,114.137406,True,0.0,yes,no,OpenStreetMap,
+S0306,candidate,,supermarket,Vanguard,謝斐道 Jaffe Road,osm:node/6713630045,22.278728,114.172779,False,484.0,yes,no,OpenStreetMap,
+S0307,candidate,,supermarket,Wellcome,堅道 Caine Road,osm:node/288745329,22.282265,114.151108,True,0.0,yes,no,OpenStreetMap,
+S0308,candidate,,supermarket,Wellcome,,osm:node/1026522021,22.265573,114.161469,True,0.0,yes,no,OpenStreetMap,
+S0309,candidate,,supermarket,Wellcome,14-22 嘉禾街 Ka Wo Street,osm:node/1180107920,22.250004,114.148485,False,264.0,yes,no,OpenStreetMap,
+S0310,candidate,,supermarket,Wellcome,62 般咸道 Bonham Road,osm:node/1298704926,22.284164,114.143708,True,0.0,yes,no,OpenStreetMap,
+S0311,candidate,,supermarket,Wellcome,,osm:node/1453357636,22.28373,114.146563,True,0.0,yes,no,OpenStreetMap,
+S0312,candidate,,supermarket,Wellcome,,osm:node/2706145340,22.277108,114.170041,False,206.0,yes,no,OpenStreetMap,
+S0313,candidate,,supermarket,Wellcome,46A 卑路乍街 Belcher's Street,osm:node/3125709385,22.28272,114.129389,True,0.0,yes,no,OpenStreetMap,
+S0314,candidate,,supermarket,Wellcome,562-566 皇后大道西 Queen's Road West,osm:node/3125709386,22.286322,114.133725,True,0.0,yes,no,OpenStreetMap,
+S0315,candidate,,supermarket,Wellcome,1 域多利道 Victoria Road,osm:node/3125709388,22.282113,114.126026,True,0.0,yes,no,OpenStreetMap,
+S0316,candidate,,supermarket,Wellcome,8 卑路乍街 Belcher's Street,osm:node/3125709391,22.284948,114.133293,True,0.0,yes,no,OpenStreetMap,
+S0317,candidate,,supermarket,Wellcome,,osm:node/4092054339,22.286739,114.151751,True,0.0,yes,no,OpenStreetMap,
+S0318,candidate,,supermarket,Wellcome,士美菲路 Smithfield,osm:node/4116103528,22.280817,114.128745,True,0.0,yes,no,OpenStreetMap,
+S0319,candidate,,supermarket,Wellcome,88 德輔道西 Des Voeux Road West,osm:node/4118418176,22.28761,114.14603,True,0.0,yes,no,OpenStreetMap,
+S0320,candidate,,supermarket,Wellcome,皇后大道西 Queen's Road West,osm:node/4862618396,22.285864,114.135752,True,0.0,yes,no,OpenStreetMap,
+S0321,candidate,,supermarket,Wellcome,皇后大道中 Queen's Road Central,osm:node/6433997604,22.284195,114.153991,True,0.0,yes,no,OpenStreetMap,
+S0322,candidate,,supermarket,Yata,,osm:node/9720055485,22.286884,114.135752,True,0.0,yes,no,OpenStreetMap,
+S0323,candidate,,supermarket,city’super,,osm:node/13816467894,22.286073,114.15775,True,0.0,yes,no,OpenStreetMap,
+S0324,candidate,,supermarket,fusion by PARKnSHOP,,osm:node/4168537789,22.278639,114.165175,True,0.0,yes,no,OpenStreetMap,
+S0325,candidate,,supermarket,fusion by ParknShop,,osm:node/1298704847,22.276402,114.156196,True,0.0,yes,no,OpenStreetMap,
+S0326,candidate,,supermarket,international,,osm:node/1298704626,22.282955,114.150024,True,0.0,yes,no,OpenStreetMap,
+S0327,candidate,,supermarket,supermarket,,osm:node/7828904220,22.26852,114.124925,False,482.0,yes,no,OpenStreetMap,
+S0328,candidate,,convenience_store,7-11,,osm:node/6257931386,22.270798,114.131025,False,391.0,yes,no,OpenStreetMap,
+S0329,candidate,,convenience_store,7-Eleven,,osm:node/1280317651,22.286383,114.136572,True,0.0,yes,no,OpenStreetMap,
+S0330,candidate,,convenience_store,7-Eleven,皇后大道東 Queen's Road East,osm:node/1298359471,22.276055,114.170336,False,278.0,yes,no,OpenStreetMap,
+S0331,candidate,,convenience_store,7-Eleven,,osm:node/1298704636,22.284439,114.153344,True,0.0,yes,no,OpenStreetMap,
+S0332,candidate,,convenience_store,7-Eleven,,osm:node/1298704812,22.283128,114.152597,True,0.0,yes,no,OpenStreetMap,
+S0333,candidate,,convenience_store,7-Eleven,42-50 駱克道 Lockhart Road,osm:node/1299465491,22.27809,114.17049,False,260.0,yes,no,OpenStreetMap,
+S0334,candidate,,convenience_store,7-Eleven,,osm:node/1890950686,22.249124,114.148089,False,347.0,yes,no,OpenStreetMap,
+S0335,candidate,,convenience_store,7-Eleven,125 德輔道西 Des Voeux Road West,osm:node/2092498560,22.287898,114.144592,True,0.0,yes,no,OpenStreetMap,
+S0336,candidate,,convenience_store,7-Eleven,3 蘭桂坊 Lan Kwai Fong,osm:node/2123565666,22.280897,114.15572,True,0.0,yes,no,OpenStreetMap,
+S0337,candidate,,convenience_store,7-Eleven,41 雲咸街 Wyndham Street,osm:node/2124676772,22.280618,114.154969,True,0.0,yes,no,OpenStreetMap,
+S0338,candidate,,convenience_store,7-Eleven,,osm:node/3527410682,22.250882,114.149854,False,249.0,yes,no,OpenStreetMap,
+S0339,candidate,,convenience_store,7-Eleven,,osm:node/3714564365,22.280246,114.153852,True,0.0,yes,no,OpenStreetMap,
+S0340,candidate,,convenience_store,7-Eleven,,osm:node/4075184722,22.283997,114.151045,True,0.0,yes,no,OpenStreetMap,
+S0341,candidate,,convenience_store,7-Eleven,,osm:node/4116103533,22.280697,114.127885,True,0.0,yes,no,OpenStreetMap,
+S0342,candidate,,convenience_store,7-Eleven,1 皇后街 Queen Street,osm:node/4118418178,22.287326,114.147104,True,0.0,yes,no,OpenStreetMap,
+S0343,candidate,,convenience_store,7-Eleven,36 士丹頓街 Staunton Street,osm:node/4148659709,22.282391,114.152236,True,0.0,yes,no,OpenStreetMap,
+S0344,candidate,,convenience_store,7-Eleven,89-91 永樂街 Wing Lok Street,osm:node/4155282341,22.286084,114.15188,True,0.0,yes,no,OpenStreetMap,
+S0345,candidate,,convenience_store,7-Eleven,27 皇后大道東 Queen's Road East,osm:node/4168582289,22.276943,114.168626,False,77.0,yes,no,OpenStreetMap,
+S0346,candidate,,convenience_store,7-Eleven,106 蘇杭街 Jervois Street,osm:node/4770543524,22.28533,114.150609,True,0.0,yes,no,OpenStreetMap,
+S0347,candidate,,convenience_store,7-Eleven,第三街 Third Street,osm:node/4848432326,22.28578,114.138773,True,0.0,yes,no,OpenStreetMap,
+S0348,candidate,,convenience_store,7-Eleven,德輔道西 Des Voeux Road West,osm:node/4862122128,22.287693,114.139557,True,0.0,yes,no,OpenStreetMap,
+S0349,candidate,,convenience_store,7-Eleven,皇后大道西 Queen's Road West,osm:node/4862580147,22.28656,114.133742,True,0.0,yes,no,OpenStreetMap,
+S0350,candidate,,convenience_store,7-Eleven,卑路乍街 Belcher's Street,osm:node/4862637029,22.282664,114.128989,True,0.0,yes,no,OpenStreetMap,
+S0351,candidate,,convenience_store,7-Eleven,士美菲路 Smithfield,osm:node/4862637035,22.282184,114.128393,True,0.0,yes,no,OpenStreetMap,
+S0352,candidate,,convenience_store,7-Eleven,科士街 Forbes Street,osm:node/4870025962,22.281599,114.128251,True,0.0,yes,no,OpenStreetMap,
+S0353,candidate,,convenience_store,7-Eleven,154 德輔道中 Des Voeux Road Central,osm:node/6419143855,22.28553,114.154242,True,0.0,yes,no,OpenStreetMap,
+S0354,candidate,,convenience_store,7-Eleven,1 租庇利街 Jubilee Street,osm:node/8779004018,22.284103,114.154952,True,0.0,yes,no,OpenStreetMap,
+S0355,candidate,,convenience_store,7-Eleven,40-42 德輔道中 Des Voeux Road Central,osm:node/9295851535,22.28318,114.156691,True,0.0,yes,no,OpenStreetMap,
+S0356,candidate,,convenience_store,7-Eleven,,osm:node/11267651157,22.281414,114.152675,True,0.0,yes,no,OpenStreetMap,
+S0357,candidate,,convenience_store,7-Eleven,,osm:node/11497664151,22.28683,114.161119,True,0.0,yes,no,OpenStreetMap,
+S0358,candidate,,convenience_store,7-Eleven,,osm:node/12579188979,22.285606,114.142149,True,0.0,yes,no,OpenStreetMap,
+S0359,candidate,,convenience_store,759,德輔道西 Des Voeux Road West,osm:node/4862113242,22.287242,114.137586,True,0.0,yes,no,OpenStreetMap,
+S0360,candidate,,convenience_store,759 Store,皇后大道西 Queen's Road West,osm:node/4862556858,22.28657,114.138408,True,0.0,yes,no,OpenStreetMap,
+S0361,candidate,,convenience_store,759 Store,,osm:node/13865049581,22.285894,114.135251,True,0.0,yes,no,OpenStreetMap,
+S0362,candidate,,convenience_store,Cheers Coop,,osm:node/6033195085,22.279714,114.172742,False,468.0,yes,no,OpenStreetMap,
+S0363,candidate,,convenience_store,Circle K,28 羅便臣道 Robinson Road,osm:node/4868739491,22.279335,114.152,True,0.0,yes,no,OpenStreetMap,
+S0364,candidate,,convenience_store,Circle K,,osm:node/11497664152,22.287846,114.157444,True,0.0,yes,no,OpenStreetMap,
+S0365,candidate,,convenience_store,Free Market,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132934,22.283848,114.129905,True,0.0,yes,no,OpenStreetMap,
+S0366,candidate,,convenience_store,Hing Tat Trading,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132929,22.28489,114.131199,True,0.0,yes,no,OpenStreetMap,
+S0367,candidate,,convenience_store,Jin Yuan tea shop,208 皇后大道西 Queen's Road West,osm:node/6463442685,22.286887,114.144361,True,0.0,yes,no,OpenStreetMap,
+S0368,candidate,,convenience_store,Kk Store,,osm:node/10247772946,22.287393,114.159348,True,0.0,yes,no,OpenStreetMap,
+S0369,candidate,,convenience_store,Live Zero,24 高街 High Street,osm:node/5653670117,22.285097,114.142572,True,0.0,yes,no,OpenStreetMap,
+S0370,candidate,,convenience_store,M&S Simply Food,,osm:node/2556738323,22.279758,114.163614,True,0.0,yes,no,OpenStreetMap,
+S0371,candidate,,convenience_store,VanGO,,osm:node/4118418174,22.287578,114.147399,True,0.0,yes,no,OpenStreetMap,
+S0372,candidate,,convenience_store,uSmile,,osm:way/762788090,22.281645,114.132545,True,0.0,yes,no,OpenStreetMap,
+S0373,candidate,,bus_terminus,Admiralty (East),,osm:way/1067577421,22.278793,114.164781,True,0.0,yes,no,OpenStreetMap,
+S0374,candidate,,bus_terminus,Admiralty (West),,osm:way/1067577422,22.279646,114.163925,True,0.0,yes,no,OpenStreetMap,
+S0375,candidate,,bus_terminus,Central (Exchange Square),,osm:node/289558548,22.284004,114.157803,True,0.0,yes,no,OpenStreetMap,
+S0376,candidate,,bus_terminus,Central (Exchange Square),,osm:node/7925365733,22.283674,114.158662,True,0.0,yes,no,OpenStreetMap,
+S0377,candidate,,bus_terminus,Central (Ferry Piers),,osm:way/1499620623,22.286144,114.159931,True,0.0,yes,no,OpenStreetMap,
+S0378,candidate,,bus_terminus,Central (Hong Kong Station),,osm:node/1616458712,22.286224,114.15655,True,0.0,yes,no,OpenStreetMap,
+S0379,candidate,,bus_terminus,Central (Macau Ferry),,osm:way/26305418,22.288513,114.149966,True,0.0,yes,no,OpenStreetMap,
+S0380,candidate,,bus_terminus,Central (Rumsey Street),,osm:way/1574134430,22.286787,114.154467,True,0.0,yes,no,OpenStreetMap,
+S0381,candidate,,bus_terminus,Chi Fu,,osm:way/1163293987,22.2575,114.139276,False,478.0,yes,no,OpenStreetMap,
+S0382,candidate,,bus_terminus,Kennedy Town,,osm:way/1193058436,22.282537,114.12357,True,0.0,yes,no,OpenStreetMap,
+S0383,candidate,,bus_terminus,Kennedy Town (Belcher Bay),,osm:way/875004398,22.284551,114.128425,True,0.0,yes,no,OpenStreetMap,
+S0384,candidate,,bus_terminus,Queen Mary Hospital,,osm:node/8211982581,22.270707,114.130645,False,419.0,yes,no,OpenStreetMap,
+S0385,candidate,,residential_building,2 Park Road,,demand:D171,22.284433,114.145482,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D171
+S0386,candidate,,residential_building,21 Borrett Road No.10,,demand:D230,22.272876,114.163914,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D230
+S0387,candidate,,residential_building,39 Conduit Road,,demand:D197,22.281916,114.146492,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D197
+S0388,candidate,,residential_building,48 Mansion,,demand:D109,22.284367,114.149234,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D109
+S0389,candidate,,residential_building,80 Robinson Road Block 1,,demand:D192,22.283384,114.14672,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D192
+S0390,candidate,,residential_building,ASIA SOCIETY HONG KONG CENTER,,demand:D229,22.274202,114.165504,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D229
+S0391,candidate,,residential_building,Ablutions Block,,demand:D151,22.281259,114.154927,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D151
+S0392,candidate,,residential_building,Al-Aqmar House,,demand:D153,22.281745,114.153551,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D153
+S0393,candidate,,residential_building,All Fit Garden,,demand:D172,22.283671,114.146058,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D172
+S0394,candidate,,residential_building,Altamira,,demand:D186,22.280297,114.141764,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D186
+S0395,candidate,,residential_building,Avon Court,,demand:D156,22.280448,114.153572,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D156
+S0396,candidate,,residential_building,Aw Boon Haw Wing,,demand:D162,22.280524,114.132101,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D162
+S0397,candidate,,residential_building,Axeford Villa,,demand:D031,22.282285,114.130688,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D031
+S0398,candidate,,residential_building,BONHAM COMMERCIAL CENTRE,,demand:D099,22.286671,114.14857,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D099
+S0399,candidate,,residential_building,BORRETT MANSIONS,,demand:D245,22.274064,114.161884,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D245
+S0400,candidate,,residential_building,BRANKSOME GRANDE,,demand:D241,22.273009,114.154619,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D241
+S0401,candidate,,residential_building,Bayanihan Kennedytown Centre,,demand:D018,22.281231,114.122868,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D018
+S0402,candidate,,residential_building,Bel Mount Garden,,demand:D155,22.279811,114.154379,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D155
+S0403,candidate,,residential_building,Belcher Court Block B,,demand:D135,22.285365,114.132002,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D135
+S0404,candidate,,residential_building,Blake Block,,demand:D161,22.282042,114.164609,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D161
+S0405,candidate,,residential_building,Blessing House,,demand:D006,22.283763,114.12916,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D006
+S0406,candidate,,residential_building,Bonham Crest,,demand:D173,22.283973,114.144085,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D173
+S0407,candidate,,residential_building,Botanic Terrace Block A,,demand:D216,22.278162,114.151624,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D216
+S0408,candidate,,residential_building,Bowen Mansion,,demand:D246,22.274168,114.160473,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D246
+S0409,candidate,,residential_building,Brewin Court,,demand:D238,22.274082,114.155744,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D238
+S0410,candidate,,residential_building,Briar-Caine Co-op Building,,demand:D195,22.282706,114.149301,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D195
+S0411,candidate,,residential_building,Buxey Lodge Block A,,demand:D198,22.280424,114.148413,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D198
+S0412,candidate,,residential_building,CATHOLIC DIOCESE CENTRE,,demand:D211,22.279034,114.153708,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D211
+S0413,candidate,,residential_building,CLOUD NINE,,demand:D252,22.26733,114.156131,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D252
+S0414,candidate,,residential_building,Carlos Court,,demand:D203,22.281485,114.149493,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D203
+S0415,candidate,,residential_building,Cayman Rise Block 2,,demand:D019,22.281688,114.12485,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D019
+S0416,candidate,,residential_building,Central 8,,demand:D212,22.279469,114.152618,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D212
+S0417,candidate,,residential_building,Centre Point,,demand:D128,22.282868,114.151153,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D128
+S0418,candidate,,residential_building,CentreStage Tower 1,,demand:D125,22.283808,114.151378,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D125
+S0419,candidate,,residential_building,CentreStage Tower 2,,demand:D124,22.283711,114.150527,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D124
+S0420,candidate,,residential_building,Century Tower I,,demand:D240,22.273137,114.155499,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D240
+S0421,candidate,,residential_building,Chartered Bank Building,,demand:D096,22.286141,114.146066,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D096
+S0422,candidate,,residential_building,Chenyu Court,,demand:D228,22.275765,114.158384,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D228
+S0423,candidate,,residential_building,Cheong Kat Building,,demand:D007,22.282833,114.126536,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D007
+S0424,candidate,,residential_building,Cheong Kwai Building,,demand:D054,22.287261,114.142874,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D054
+S0425,candidate,,residential_building,Cherry Crest,,demand:D113,22.283642,114.148887,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D113
+S0426,candidate,,residential_building,Ching Tak Building,,demand:D053,22.287485,114.141118,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D053
+S0427,candidate,,residential_building,Chun Kwan Building,,demand:D063,22.286825,114.141713,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D063
+S0428,candidate,,residential_building,Chun Yin House,,demand:D092,22.286631,114.150638,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D092
+S0429,candidate,,residential_building,Chung Yin Court,,demand:D102,22.285094,114.145947,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D102
+S0430,candidate,,residential_building,Cimbria Court,,demand:D202,22.279439,114.150273,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D202
+S0431,candidate,,residential_building,City Hall,,demand:D157,22.281889,114.160209,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D157
+S0432,candidate,,residential_building,Clovelly Court Block 1-2,,demand:D223,22.274245,114.153179,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D223
+S0433,candidate,,residential_building,Conway Mansion Block E-F,,demand:D196,22.279927,114.149788,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D196
+S0434,candidate,,residential_building,Dina House,,demand:D158,22.280497,114.157071,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D158
+S0435,candidate,,residential_building,Donnell Court,,demand:D233,22.275108,114.159379,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D233
+S0436,candidate,,residential_building,Dragon Lodge,,demand:D249,22.273028,114.147639,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D249
+S0437,candidate,,residential_building,East Terrace,,demand:D040,22.281079,114.125896,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D040
+S0438,candidate,,residential_building,Emerald House,,demand:D059,22.285399,114.138102,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D059
+S0439,candidate,,residential_building,Emmanuel House,,demand:D165,22.2836,114.140729,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D165
+S0440,candidate,,residential_building,FUNG SHING BUILDING,,demand:D044,22.287592,114.13808,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D044
+S0441,candidate,,residential_building,Far East Consortium Building,,demand:D118,22.285103,114.15557,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D118
+S0442,candidate,,residential_building,First Mansion,,demand:D175,22.283124,114.142113,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D175
+S0443,candidate,,residential_building,Foundation Building,,demand:D119,22.284927,114.152359,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D119
+S0444,candidate,,residential_building,Four Winds,,demand:D039,22.27485,114.128024,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D039
+S0445,candidate,,residential_building,Fu Ga Building,,demand:D139,22.285994,114.134089,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D139
+S0446,candidate,,residential_building,Fu Tai Mansion,,demand:D095,22.286757,114.145052,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D095
+S0447,candidate,,residential_building,Fulful Building,,demand:D094,22.286745,114.144104,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D094
+S0448,candidate,,residential_building,Fulham Garden Block A,,demand:D163,22.279708,114.131664,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D163
+S0449,candidate,,residential_building,Garble Garden,,demand:D204,22.280879,114.15038,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D204
+S0450,candidate,,residential_building,Golder Court,,demand:D069,22.286057,114.143043,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D069
+S0451,candidate,,residential_building,Good View Court,,demand:D214,22.27874,114.152332,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D214
+S0452,candidate,,residential_building,Grand Bowen,,demand:D247,22.272857,114.164765,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D247
+S0453,candidate,,residential_building,Green Field Court,,demand:D205,22.281327,114.150747,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D205
+S0454,candidate,,residential_building,Grenville House Tower C,,demand:D237,22.274277,114.157608,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D237
+S0455,candidate,,residential_building,Guangdong Finance Building,,demand:D132,22.288257,114.145731,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D132
+S0456,candidate,,residential_building,HAMILTON COURT,,demand:D187,22.27972,114.139905,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D187
+S0457,candidate,,residential_building,HONG KONG ZOOLOGICAL & BOTANICAL GARDENS,,demand:D221,22.276629,114.154749,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D221
+S0458,candidate,,residential_building,HOPSON MANSION,,demand:D154,22.280998,114.152923,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D154
+S0459,candidate,,residential_building,Hang Fat Building,,demand:D086,22.287335,114.149417,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D086
+S0460,candidate,,residential_building,Hang Hing Court,,demand:D067,22.28595,114.140269,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D067
+S0461,candidate,,residential_building,High House,,demand:D073,22.285345,114.143156,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D073
+S0462,candidate,,residential_building,Highlands 4,,demand:D251,22.268338,114.154027,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D251
+S0463,candidate,,residential_building,Hillsborough Court Tower 3,,demand:D224,22.275234,114.152374,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D224
+S0464,candidate,,residential_building,Hillview Garden Block 5-8,,demand:D142,22.285147,114.135315,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D142
+S0465,candidate,,residential_building,Hing Fat Mansion,,demand:D082,22.287577,114.141984,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D082
+S0466,candidate,,residential_building,Hing Wong Building,,demand:D004,22.283701,114.127444,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D004
+S0467,candidate,,residential_building,Hoi Sing Building,,demand:D066,22.285875,114.139514,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D066
+S0468,candidate,,residential_building,Hollywood Building,,demand:D104,22.28495,114.148607,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D104
+S0469,candidate,,residential_building,Hong Kong Garden Block A-B,,demand:D193,22.282514,114.148351,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D193
+S0470,candidate,,residential_building,Hong Ning House,,demand:D108,22.284943,114.147186,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D108
+S0471,candidate,,residential_building,Hong Yue Court,,demand:D060,22.286188,114.138897,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D060
+S0472,candidate,,residential_building,Honor Villa,,demand:D147,22.281527,114.152052,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D147
+S0473,candidate,,residential_building,Hoover Court,,demand:D226,22.27615,114.156934,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D226
+S0474,candidate,,residential_building,Hoover Mansion Block C-D,,demand:D168,22.283698,114.142514,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D168
+S0475,candidate,,residential_building,House 6,,demand:D253,22.264394,114.152547,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D253
+S0476,candidate,,residential_building,House 9 Severn Hill,,demand:D250,22.268912,114.157921,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D250
+S0477,candidate,,residential_building,Hung Lee Building,,demand:D024,22.282527,114.129822,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D024
+S0478,candidate,,residential_building,ICBC Asia Building,,demand:D152,22.282728,114.154628,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D152
+S0479,candidate,,residential_building,Ihong Mansion,,demand:D167,22.284081,114.14138,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D167
+S0480,candidate,,residential_building,Ivy Tower,,demand:D064,22.286473,114.141239,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D064
+S0481,candidate,,residential_building,Jade Lotus Garden,,demand:D033,22.282817,114.131304,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D033
+S0482,candidate,,residential_building,KELLETTERIA,,demand:D254,22.262763,114.148064,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D254
+S0483,candidate,,residential_building,Ka Yue Building,,demand:D133,22.28819,114.146623,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D133
+S0484,candidate,,residential_building,Kai Fat Building,,demand:D085,22.287887,114.148601,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D085
+S0485,candidate,,residential_building,Kam Bong Bldg,,demand:D116,22.284672,114.154409,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D116
+S0486,candidate,,residential_building,Kam Kin Mansion,,demand:D127,22.283208,114.150481,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D127
+S0487,candidate,,residential_building,Karling House,,demand:D208,22.279622,114.151497,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D208
+S0488,candidate,,residential_building,Kee On Building,,demand:D105,22.28541,114.147668,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D105
+S0489,candidate,,residential_building,Kingearn Building,,demand:D129,22.283111,114.152255,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D129
+S0490,candidate,,residential_building,Kingsfield Tower Block B,,demand:D076,22.285036,114.13788,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D076
+S0491,candidate,,residential_building,Kiu Shing Building,,demand:D083,22.287254,114.141756,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D083
+S0492,candidate,,residential_building,Ko Leung Mansion,,demand:D015,22.286294,114.133417,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D015
+S0493,candidate,,residential_building,Kwong Fook Building,,demand:D146,22.282163,114.15195,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D146
+S0494,candidate,,residential_building,Kwong Tak Building,,demand:D061,22.285472,114.138983,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D061
+S0495,candidate,,residential_building,Kwun Lung Lau Block 2,,demand:D028,22.280418,114.127583,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D028
+S0496,candidate,,residential_building,LA HACIENDA,,demand:D255,22.260726,114.150141,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D255
+S0497,candidate,,residential_building,LUEN WAH MANSION,,demand:D140,22.286,114.134732,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D140
+S0498,candidate,,residential_building,La Clare Mansion Block D,,demand:D188,22.277889,114.131995,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D188
+S0499,candidate,,residential_building,Lok Po House,,demand:D074,22.284855,114.136564,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D074
+S0500,candidate,,residential_building,Long Mansion,,demand:D210,22.279884,114.153469,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D210
+S0501,candidate,,residential_building,Lop Po Building,,demand:D088,22.286599,114.1464,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D088
+S0502,candidate,,residential_building,Luen Yick Building,,demand:D100,22.285564,114.148878,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D100
+S0503,candidate,,residential_building,Macdonnell House,,demand:D235,22.275751,114.155723,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D235
+S0504,candidate,,residential_building,Magazine Heights,,demand:D248,22.270329,114.155088,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D248
+S0505,candidate,,residential_building,Man Kwong Court,,demand:D023,22.282532,114.128625,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D023
+S0506,candidate,,residential_building,Medal Court,,demand:D098,22.286569,114.147633,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D098
+S0507,candidate,,residential_building,Medallion Heights,,demand:D181,22.281085,114.143568,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D181
+S0508,candidate,,residential_building,Mei Shing Mansion,,demand:D137,22.286737,114.133304,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D137
+S0509,candidate,,residential_building,Mei Wah Mansion,,demand:D035,22.279022,114.129653,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D035
+S0510,candidate,,residential_building,Merit Court,,demand:D045,22.287731,114.139145,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D045
+S0511,candidate,,residential_building,Mier,,demand:D111,22.284288,114.146909,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D111
+S0512,candidate,,residential_building,Morning Light Apartments,,demand:D232,22.275002,114.157822,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D232
+S0513,candidate,,residential_building,Mother's Choice,,demand:D231,22.275204,114.161794,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D231
+S0514,candidate,,residential_building,New Fortune House Block B,,demand:D005,22.283612,114.12849,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D005
+S0515,candidate,,residential_building,Nexxus Building,,demand:D143,22.285115,114.156951,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D143
+S0516,candidate,,residential_building,Ngan House,,demand:D117,22.286691,114.152986,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D117
+S0517,candidate,,residential_building,Ning Yeung Terrace,,demand:D166,22.284472,114.141231,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D166
+S0518,candidate,,residential_building,No.1 Po Shan Road Block 3,,demand:D182,22.280832,114.140175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D182
+S0519,candidate,,residential_building,Novum West,,demand:D058,22.285551,114.136541,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D058
+S0520,candidate,,residential_building,On Lee Block C-E,,demand:D038,22.27312,114.121073,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D038
+S0521,candidate,,residential_building,On Lok House,,demand:D150,22.282454,114.153538,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D150
+S0522,candidate,,residential_building,Orlins Court,,demand:D049,22.286681,114.137204,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D049
+S0523,candidate,,residential_building,Palm Court,,demand:D200,22.280394,114.149925,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D200
+S0524,candidate,,residential_building,Pan View Court,,demand:D070,22.285667,114.139362,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D070
+S0525,candidate,,residential_building,Panorama Block 1,,demand:D217,22.27865,114.15046,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D217
+S0526,candidate,,residential_building,Park View Court Block A,,demand:D170,22.28325,114.144852,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D170
+S0527,candidate,,residential_building,Pearl Court Block A,,demand:D013,22.284627,114.130962,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D013
+S0528,candidate,,residential_building,Pine Court Block F,,demand:D219,22.276804,114.153602,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D219
+S0529,candidate,,residential_building,Po Fat Bldg,,demand:D207,22.280902,114.151663,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D207
+S0530,candidate,,residential_building,Po Leung Kuk Chan Au Big Yan Home For The Elderly,,demand:D016,22.284743,114.132687,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D016
+S0531,candidate,,residential_building,Pokfulam Court,,demand:D189,22.276559,114.130494,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D189
+S0532,candidate,,residential_building,Queen's Garden Block B,,demand:D218,22.27608,114.152962,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D218
+S0533,candidate,,residential_building,Regal Crest,,demand:D213,22.278422,114.152669,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D213
+S0534,candidate,,residential_building,Regence Royale Tower 2,,demand:D244,22.274453,114.159267,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D244
+S0535,candidate,,residential_building,Regent On The Park,,demand:D160,22.278069,114.163221,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D160
+S0536,candidate,,residential_building,Residential cluster D030,,demand:D030,22.281534,114.130941,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D030
+S0537,candidate,,residential_building,Richmond Court,,demand:D179,22.282313,114.144283,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D179
+S0538,candidate,,residential_building,Right Mansion,,demand:D215,22.27915,114.151281,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D215
+S0539,candidate,,residential_building,Rockson Mansion,,demand:D051,22.286963,114.139127,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D051
+S0540,candidate,,residential_building,Rose Gardens,,demand:D242,22.272918,114.159356,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D242
+S0541,candidate,,residential_building,Rose Villas,,demand:D081,22.283941,114.136518,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D081
+S0542,candidate,,residential_building,SKYLINE MANSION,,demand:D184,22.281225,114.142668,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D184
+S0543,candidate,,residential_building,San Fat Building,,demand:D209,22.280373,114.152311,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D209
+S0544,candidate,,residential_building,Savoy Court,,demand:D190,22.281993,114.147254,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D190
+S0545,candidate,,residential_building,Scholastic Garden,,demand:D169,22.283418,114.141314,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D169
+S0546,candidate,,residential_building,Seaview Mansion,,demand:D227,22.27578,114.159813,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D227
+S0547,candidate,,residential_building,Second Street Public Bathhouse,,demand:D068,22.286016,114.141524,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D068
+S0548,candidate,,residential_building,Serene Court,,demand:D178,22.282388,114.142487,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D178
+S0549,candidate,,residential_building,Shing Kai Mansion,,demand:D176,22.282693,114.141358,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D176
+S0550,candidate,,residential_building,Shun Hing Building,,demand:D010,22.283197,114.128542,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D010
+S0551,candidate,,residential_building,Shun Loong Mansion,,demand:D093,22.285709,114.150477,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D093
+S0552,candidate,,residential_building,Silver Court,,demand:D078,22.285012,114.140333,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D078
+S0553,candidate,,residential_building,Silver Jubilee Mansion,,demand:D112,22.283753,114.148294,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D112
+S0554,candidate,,residential_building,Smithfield Court Block 1,,demand:D022,22.282088,114.12777,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D022
+S0555,candidate,,residential_building,Smithfield Garden Block C,,demand:D027,22.279014,114.12927,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D027
+S0556,candidate,,residential_building,St. Louis Mansion,,demand:D236,22.275141,114.15663,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D236
+S0557,candidate,,residential_building,Starr Hall,,demand:D141,22.284145,114.133275,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D141
+S0558,candidate,,residential_building,Stone House,,demand:D164,22.283021,114.139409,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D164
+S0559,candidate,,residential_building,Suen Chi Sun Hall,,demand:D034,22.279973,114.130757,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D034
+S0560,candidate,,residential_building,Sun Luen Building,,demand:D080,22.284724,114.14277,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D080
+S0561,candidate,,residential_building,THE HELENA MAY,,demand:D159,22.278453,114.160532,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D159
+S0562,candidate,,residential_building,THE MAYFAIR,,demand:D243,22.273498,114.157453,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D243
+S0563,candidate,,residential_building,THE WESTWOOD,,demand:D017,22.285481,114.133461,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D017
+S0564,candidate,,residential_building,Tai On Building,,demand:D107,22.284703,114.148178,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D107
+S0565,candidate,,residential_building,Tai Pak Mansion,,demand:D032,22.283289,114.13131,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D032
+S0566,candidate,,residential_building,Tai Wing House,,demand:D106,22.284789,114.14992,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D106
+S0567,candidate,,residential_building,Tavistock,,demand:D239,22.273337,114.153031,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D239
+S0568,candidate,,residential_building,The Albany,,demand:D220,22.277704,114.154835,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D220
+S0569,candidate,,residential_building,The Connaught,,demand:D041,22.288048,114.143256,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D041
+S0570,candidate,,residential_building,The Merton Block 1,,demand:D003,22.283429,114.126155,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D003
+S0571,candidate,,residential_building,The Sail at Victoria,,demand:D002,22.281298,114.120756,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D002
+S0572,candidate,,residential_building,The Summa Tower 1,,demand:D077,22.284484,114.139532,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D077
+S0573,candidate,,residential_building,The Yuen Yuen Institute Mansion,,demand:D121,22.284453,114.152654,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D121
+S0574,candidate,,residential_building,To Li Garden,,demand:D037,22.282262,114.131758,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D037
+S0575,candidate,,residential_building,Tone Hing Building,,demand:D047,22.288401,114.141587,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D047
+S0576,candidate,,residential_building,Tsang Chiu Ho Building,,demand:D123,22.283772,114.153225,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D123
+S0577,candidate,,residential_building,Tung Hing Mansion,,demand:D011,22.283135,114.129496,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D011
+S0578,candidate,,residential_building,Two International Finance Centre,,demand:D145,22.285299,114.159278,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D145
+S0579,candidate,,residential_building,University Heights Tower 1,,demand:D036,22.281424,114.130175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D036
+S0580,candidate,,residential_building,University Heights Tower 2,,demand:D177,22.281889,114.141496,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D177
+S0581,candidate,,residential_building,Victoria Public Mortuary,,demand:D001,22.281809,114.122246,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D001
+S0582,candidate,,residential_building,WAH SEN COURT,,demand:D180,22.282103,114.143429,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D180
+S0583,candidate,,residential_building,WATFORD VILLA,,demand:D256,22.266605,114.162528,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D256
+S0584,candidate,,residential_building,WOODLAND GARDENS,,demand:D191,22.28271,114.146021,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D191
+S0585,candidate,,residential_building,Wai Lee Building,,demand:D114,22.287482,114.144452,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D114
+S0586,candidate,,residential_building,Wai Yue Building,,demand:D097,22.285905,114.146878,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D097
+S0587,candidate,,residential_building,Wai Yuen Building,,demand:D130,22.282558,114.152678,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D130
+S0588,candidate,,residential_building,Welsby Court,,demand:D234,22.274944,114.160448,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D234
+S0589,candidate,,residential_building,Western Harbour Centre,,demand:D043,22.287374,114.136724,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D043
+S0590,candidate,,residential_building,Wing Hing House,,demand:D057,22.285581,114.135573,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D057
+S0591,candidate,,residential_building,Wing On Building,,demand:D148,22.281954,114.152948,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D148
+S0592,candidate,,residential_building,Wing Shun Building,,demand:D090,22.28706,114.147659,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D090
+S0593,candidate,,residential_building,Wing To Building,,demand:D062,22.286504,114.140039,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D062
+S0594,candidate,,residential_building,Wisdom Court Block B,,demand:D185,22.28013,114.139313,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D185
+S0595,candidate,,residential_building,Yee Ga Court,,demand:D174,22.284169,114.143194,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D174
+S0596,candidate,,residential_building,Yee Lin Mansion,,demand:D201,22.281316,114.148637,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D201
+S0597,candidate,,residential_building,Yin Tak Building,,demand:D072,22.28544,114.141711,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D072
+S0598,candidate,,residential_building,Yip Cheong Building,,demand:D138,22.286357,114.134744,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D138
+S0599,candidate,,residential_building,iclub Sheung Wan II Hotel,,demand:D091,22.286867,114.148929,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D091
+S0600,candidate,,residential_building,何莊,,demand:D020,22.281743,114.126029,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D020
+S0601,candidate,,residential_building,光源樓,,demand:D149,22.283412,114.154335,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D149
+S0602,candidate,,residential_building,庾黃淑靈紀念樓,,demand:D087,22.287329,114.145069,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D087
+S0603,candidate,,residential_building,昌寶大樓,,demand:D075,22.284428,114.136439,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D075
+S0604,candidate,,residential_building,樹本善堂大廈,,demand:D120,22.284908,114.151083,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D120
+S0605,candidate,,residential_building,泰豐大樓,,demand:D194,22.282352,114.150064,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D194
+S0606,candidate,,residential_building,璈珀,,demand:D183,22.280825,114.140839,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D183
+S0607,candidate,,residential_building,開僑樓,,demand:D115,22.28564,114.151636,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D115

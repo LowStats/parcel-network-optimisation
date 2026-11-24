@@ -844,5 +844,526 @@
     }
    }
   ]
+ },
+ "Wah On House, Wah Fu (I) Estate, 18 Wah Fu Road, Aberdeen": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Wah On House, Wah Fu (I) Estate, 18 Wah Fu Road, Aberdeen"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "WAH ON HSE",
+       "EngEstate": {
+        "EstateName": "WAH FU (I) ESTATE"
+       },
+       "EngStreet": {
+        "StreetName": "WAH FU ROAD",
+        "BuildingNoFrom": "18"
+       },
+       "EngDistrict": {
+        "DcDistrict": "SOUTHERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3223112543T20050430",
+      "GeospatialInformation": {
+       "Northing": "812543",
+       "Easting": "832231",
+       "Latitude": "22.25166",
+       "Longitude": "114.13771"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "9/F, Fullagar Industrial Building, 234 Aberdeen Main Road, Aberdeen": {
+  "RequestAddress": {
+   "AddressLine": [
+    "9/F, Fullagar Industrial Building, 234 Aberdeen Main Road, Aberdeen"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "FULLAGAR INDUSTRIAL BUILDING",
+       "EngStreet": {
+        "StreetName": "ABERDEEN MAIN ROAD",
+        "BuildingNoFrom": "234"
+       },
+       "EngDistrict": {
+        "DcDistrict": "SOUTHERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3378412238T20050902",
+      "GeospatialInformation": {
+       "Northing": "812238",
+       "Easting": "833784",
+       "Latitude": "22.24891",
+       "Longitude": "114.15278"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street, Ap Lei Chau": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street, Ap Lei Chau"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "FORTUNE MANSION",
+       "EngStreet": {
+        "StreetName": "MAIN ST AP LEI CHAU",
+        "BuildingNoFrom": "57"
+       },
+       "EngDistrict": {
+        "DcDistrict": "SOUTHERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3411111690P20060312",
+      "GeospatialInformation": {
+       "Northing": "811690",
+       "Easting": "834111",
+       "Latitude": "22.24396",
+       "Longitude": "114.15595"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 82.0
+    }
+   }
+  ]
+ },
+ "5/F, Trend Centre, 29 Cheung Lee Street, Chai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "5/F, Trend Centre, 29 Cheung Lee Street, Chai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "TREND CENTRE",
+       "EngStreet": {
+        "StreetName": "CHEUNG LEE STREET",
+        "BuildingNoFrom": "29"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "4229414065T20050430",
+      "GeospatialInformation": {
+       "Northing": "814065",
+       "Easting": "842294",
+       "Latitude": "22.2654",
+       "Longitude": "114.23534"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "Yiko Industrial Building, No. 10 Ka Yip Street, Chai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Yiko Industrial Building, No. 10 Ka Yip Street, Chai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "YIKO INDUSTRIAL BUILDING",
+       "EngStreet": {
+        "StreetName": "KA YIP STREET",
+        "BuildingNoFrom": "10"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "4316214322T20050430",
+      "GeospatialInformation": {
+       "Northing": "814322",
+       "Easting": "843162",
+       "Latitude": "22.26771",
+       "Longitude": "114.24376"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "2/F, Olympia Plaza, 255 King's Road, North Point": {
+  "RequestAddress": {
+   "AddressLine": [
+    "2/F, Olympia Plaza, 255 King's Road, North Point"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "OLYMPIA PLAZA",
+       "EngStreet": {
+        "StreetName": "KING'S ROAD",
+        "BuildingNoFrom": "255"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3807316759T20050430",
+      "GeospatialInformation": {
+       "Northing": "816759",
+       "Easting": "838073",
+       "Latitude": "22.28973",
+       "Longitude": "114.19439"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "Fung Full Plaza, 480 King's Road, North Point": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Fung Full Plaza, 480 King's Road, North Point"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "KING'S TOWERS"
+       },
+       "EngStreet": {
+        "StreetName": "KING'S ROAD",
+        "BuildingNoFrom": "480"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3877616900P20101207",
+      "GeospatialInformation": {
+       "Northing": "816900",
+       "Easting": "838776",
+       "Latitude": "22.29101",
+       "Longitude": "114.20121"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 66.59
+    }
+   }
+  ]
+ },
+ "Belcher Court, 2 Sai Cheung Street, Sai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Belcher Court, 2 Sai Cheung Street, Sai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "BELCHER COURT"
+       },
+       "EngStreet": {
+        "StreetName": "SAI CHEUNG STREET",
+        "BuildingNoFrom": "2"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3162316247P20060312",
+      "GeospatialInformation": {
+       "Northing": "816247",
+       "Easting": "831623",
+       "Latitude": "22.2851",
+       "Longitude": "114.1318"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "Shun Cheong Building, 28 Hau Wo Street, Kennedy Town, Sai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Shun Cheong Building, 28 Hau Wo Street, Kennedy Town, Sai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "SHUN CHEONG BUILDING",
+       "EngStreet": {
+        "StreetName": "HAU WO STREET",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3117615983T20050430",
+      "GeospatialInformation": {
+       "Northing": "815983",
+       "Easting": "831176",
+       "Latitude": "22.28272",
+       "Longitude": "114.12746"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "28-36 Hing Man Street, Sai Wan Ho": {
+  "RequestAddress": {
+   "AddressLine": [
+    "28-36 Hing Man Street, Sai Wan Ho"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "WAH SING BUILDING",
+       "EngStreet": {
+        "StreetName": "SAI WAN HO STREET",
+        "BuildingNoFrom": "30"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "4111515698P20060312",
+      "GeospatialInformation": {
+       "Northing": "815698",
+       "Easting": "841115",
+       "Latitude": "22.28015",
+       "Longitude": "114.22391"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 74.39
+    }
+   }
+  ]
+ },
+ "1/F, Smiling Shaukeiwan Plaza, 17 Nam Hong Street, Shau Kei Wan,": {
+  "RequestAddress": {
+   "AddressLine": [
+    "1/F, Smiling Shaukeiwan Plaza, 17 Nam Hong Street, Shau Kei Wan,"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "SMILING SHAUKEIWAN PLAZA",
+       "EngEstate": {
+        "EstateName": "SHAUKEIWAN PLAZA"
+       },
+       "EngStreet": {
+        "StreetName": "NAM HONG STREET",
+        "BuildingNoFrom": "17"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "4136215429P20060312",
+      "GeospatialInformation": {
+       "Northing": "815429",
+       "Easting": "841362",
+       "Latitude": "22.27772",
+       "Longitude": "114.2263"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 89.57
+    }
+   }
+  ]
+ },
+ "Island Resort Mall, 28 Siu Sai Wan Road, Siu Sai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Island Resort Mall, 28 Siu Sai Wan Road, Siu Sai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "ISLAND RESORT MALL",
+       "EngEstate": {
+        "EstateName": "ISLAND RESORT"
+       },
+       "EngStreet": {
+        "StreetName": "SIU SAI WAN ROAD",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "EASTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "4389314164P20060312",
+      "GeospatialInformation": {
+       "Northing": "814164",
+       "Easting": "843893",
+       "Latitude": "22.26628",
+       "Longitude": "114.25085"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 98.24
+    }
+   }
+  ]
+ },
+ "Mayson Garden Building, Nos. 2A-2E Wing Hing Street": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Mayson Garden Building, Nos. 2A-2E Wing Hing Street"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "MAYSON GARDEN BUILDING",
+       "EngStreet": {
+        "StreetName": "WING HING STREET",
+        "BuildingNoFrom": "2A"
+       },
+       "EngDistrict": {
+        "DcDistrict": "WAN CHAI DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3774516232P20060312",
+      "GeospatialInformation": {
+       "Northing": "816232",
+       "Easting": "837745",
+       "Latitude": "22.28497",
+       "Longitude": "114.19121"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 76.67
+    }
+   }
+  ]
+ },
+ "Level 3, The Lohas, No.1 Lohas Park Road, Tseung Kwan O, N.T. Hong Kong": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Level 3, The Lohas, No.1 Lohas Park Road, Tseung Kwan O, N.T. Hong Kong"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "THE LOHAS",
+       "EngEstate": {
+        "EstateName": "LOHAS PARK"
+       },
+       "EngStreet": {
+        "LocationName": "TSEUNG KWAN O",
+        "StreetName": "LOHAS PARK ROAD",
+        "BuildingNoFrom": "1"
+       },
+       "EngDistrict": {
+        "DcDistrict": "SAI KUNG DISTRICT"
+       },
+       "Region": "NT"
+      },
+      "GeoAddress": "4569917294P20210618",
+      "GeospatialInformation": {
+       "Northing": "817294",
+       "Easting": "845699",
+       "Latitude": "22.29454",
+       "Longitude": "114.2684"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 98.24
+    }
+   }
+  ]
  }
 }
