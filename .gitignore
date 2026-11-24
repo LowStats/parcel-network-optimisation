@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project
+data/raw/.osmnx_cache/
+data/raw/fetch.log
+.DS_Store

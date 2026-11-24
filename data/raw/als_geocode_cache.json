@@ -1,0 +1,412 @@
+{
+ "71-77 Smithfield Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "71-77 Smithfield Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "KENNEDY TOWN FIRE STATION",
+       "EngEstate": {
+        "EstateName": "KENNEDY TOWN FIRE STATION"
+       },
+       "EngStreet": {
+        "StreetName": "NEW PRAYA, KENNEDY TOWN",
+        "BuildingNoFrom": "6"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3123916107T20050430",
+      "GeospatialInformation": {
+       "Northing": "816107",
+       "Easting": "831239",
+       "Latitude": "22.28384",
+       "Longitude": "114.12808"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 50.0
+    }
+   }
+  ]
+ },
+ "Cayman Rise 29 Ka Wai Man Road Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Cayman Rise 29 Ka Wai Man Road Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "CAYMAN RISE"
+       },
+       "EngStreet": {
+        "StreetName": "KA WAI MAN ROAD",
+        "BuildingNoFrom": "29"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3088815877P20050621",
+      "GeospatialInformation": {
+       "Northing": "815877",
+       "Easting": "830888",
+       "Latitude": "22.28176",
+       "Longitude": "114.12467"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 91.0
+    }
+   }
+  ]
+ },
+ "9 Davis Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "9 Davis Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "LUEN GAY APARTMENTS",
+       "EngStreet": {
+        "StreetName": "DAVIS STREET",
+        "BuildingNoFrom": "9C"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3117815897P20050621",
+      "GeospatialInformation": {
+       "Northing": "815897",
+       "Easting": "831178",
+       "Latitude": "22.28194",
+       "Longitude": "114.12748"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 65.03
+    }
+   }
+  ]
+ },
+ "Sunglow Building Belcher's Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Sunglow Building Belcher's Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "SUNGLOW BUILDING",
+       "EngStreet": {
+        "StreetName": "BELCHER'S STREET",
+        "BuildingNoFrom": "1L"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3167716356P20060312",
+      "GeospatialInformation": {
+       "Northing": "816356",
+       "Easting": "831677",
+       "Latitude": "22.28609",
+       "Longitude": "114.13232"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 74.93
+    }
+   }
+  ]
+ },
+ "Han Yu Building 45-55 Cadogan Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Han Yu Building 45-55 Cadogan Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "HANG YU BUILDING",
+       "EngStreet": {
+        "StreetName": "CADOGAN STREET",
+        "BuildingNoFrom": "45",
+        "BuildingNoTo": "55"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3106415880T20050617",
+      "GeospatialInformation": {
+       "Northing": "815880",
+       "Easting": "831064",
+       "Latitude": "22.28179",
+       "Longitude": "114.12638"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 82.0
+    }
+   }
+  ]
+ },
+ "147 Belcher's Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "147 Belcher's Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "KAM TONG BUILDING",
+       "EngStreet": {
+        "StreetName": "BELCHER'S STREET",
+        "BuildingNoFrom": "147"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3115715962T20050430",
+      "GeospatialInformation": {
+       "Northing": "815962",
+       "Easting": "831157",
+       "Latitude": "22.28253",
+       "Longitude": "114.12728"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 66.48
+    }
+   }
+  ]
+ },
+ "106 Third Street Sai Ying Pun": {
+  "RequestAddress": {
+   "AddressLine": [
+    "106 Third Street Sai Ying Pun"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "TRUE LIGHT BUILDING",
+       "EngStreet": {
+        "StreetName": "THIRD STREET",
+        "BuildingNoFrom": "106"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3250116296P20060312",
+      "GeospatialInformation": {
+       "Northing": "816296",
+       "Easting": "832501",
+       "Latitude": "22.28555",
+       "Longitude": "114.14032"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 61.06
+    }
+   }
+  ]
+ },
+ "363 Des Voeux Road West Sai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "363 Des Voeux Road West Sai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "LUN FUNG COURT",
+       "EngStreet": {
+        "StreetName": "DES VOEUX ROAD WEST",
+        "BuildingNoFrom": "363"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3209316457T20050430",
+      "GeospatialInformation": {
+       "Northing": "816457",
+       "Easting": "832093",
+       "Latitude": "22.287",
+       "Longitude": "114.13636"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 97.69
+    }
+   }
+  ]
+ },
+ "60 Catchick Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "60 Catchick Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "KUK FUNG BUILDING",
+       "EngStreet": {
+        "StreetName": "CATCHICK STREET",
+        "BuildingNoFrom": "60"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3118516025T20050430",
+      "GeospatialInformation": {
+       "Northing": "816025",
+       "Easting": "831185",
+       "Latitude": "22.2831",
+       "Longitude": "114.12755"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 88.75
+    }
+   }
+  ]
+ },
+ "343 Des Voeux Road West Sai Wan": {
+  "RequestAddress": {
+   "AddressLine": [
+    "343 Des Voeux Road West Sai Wan"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "KWAN YICK BUILDING",
+        "EngPhase": {
+         "PhaseName": "PHASE II"
+        }
+       },
+       "EngStreet": {
+        "StreetName": "DES VOEUX ROAD WEST",
+        "BuildingNoFrom": "343"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3229116549T20050430",
+      "GeospatialInformation": {
+       "Northing": "816549",
+       "Easting": "832291",
+       "Latitude": "22.28783",
+       "Longitude": "114.13828"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 97.69
+    }
+   }
+  ]
+ },
+ "71-77 Smithfield Road": {
+  "RequestAddress": {
+   "AddressLine": [
+    "71-77 Smithfield Road"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "SMITHFIELD TERRACE"
+       },
+       "EngStreet": {
+        "StreetName": "SMITHFIELD",
+        "BuildingNoFrom": "71",
+        "BuildingNoTo": "77"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3133715731P20050622",
+      "GeospatialInformation": {
+       "Northing": "815731",
+       "Easting": "831337",
+       "Latitude": "22.28044",
+       "Longitude": "114.12903"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 81.25
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+name,query,score,matched,check
+SF Locker Smithfield,71-77 Smithfield Road,81.25,71 SMITHFIELD SMITHFIELD TERRACE,False
+SF Locker Cayman Rise,Cayman Rise 29 Ka Wai Man Road Kennedy Town,91.0,29 KA WAI MAN ROAD CAYMAN RISE,False
+SF Locker Luen Gay Apartments,9 Davis Street Kennedy Town,65.03,LUEN GAY APARTMENTS 9C DAVIS STREET,False
+SF Locker Sunglow Building,Sunglow Building Belcher's Street Kennedy Town,74.93,SUNGLOW BUILDING 1L BELCHER'S STREET,False
+SF Locker Han Yu Building (No.2),Han Yu Building 45-55 Cadogan Street Kennedy Town,82.0,HANG YU BUILDING 45 CADOGAN STREET,False
+Cainiao Kennedy Town Belcher's Street Station,147 Belcher's Street Kennedy Town,66.48,KAM TONG BUILDING 147 BELCHER'S STREET,False
+Cainiao Sai Wan Third Street Station,106 Third Street Sai Ying Pun,61.06,TRUE LIGHT BUILDING 106 THIRD STREET,False
+Cainiao Sai Wan Hong Kong Plaza Station,363 Des Voeux Road West Sai Wan,97.69,LUN FUNG COURT 363 DES VOEUX ROAD WEST,False
+JD Service Station Kuk Fung Building,60 Catchick Street Kennedy Town,88.75,KUK FUNG BUILDING 60 CATCHICK STREET,False
+JD Service Station Kwan Yick Building,343 Des Voeux Road West Sai Wan,97.69,343 DES VOEUX ROAD WEST KWAN YICK BUILDING,False

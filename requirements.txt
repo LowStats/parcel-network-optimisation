@@ -1,0 +1,13 @@
+folium==1.0.0
+geopandas==1.2.0
+matplotlib==3.11.2
+networkx==3.7
+numpy==2.5.5
+osmnx==2.2.0
+pandas==3.1.1
+PuLP==4.3.1
+pyogrio==0.13.0
+pyproj==3.8.0
+requests==2.34.2
+scipy==1.18.1
+shapely==2.2.0

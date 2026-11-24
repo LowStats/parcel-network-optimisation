@@ -1,0 +1,109 @@
+site_id,site_class,operator,category,name,address,ref,lat,lon,in_study_area,dist_to_boundary_m,public_access,include_baseline,source,notes
+S001,existing,Cainiao,staffed_station,Cainiao Kennedy Town Belcher's Street Station,"No. 147 Belcher's Street, Kennedy Town",Z21,22.28253,114.12728,True,0.0,yes,yes,hillmalaya.com.hk pick-up points finder,驛站 (staffed pick-up point) not a locker; third-party list - verify in Cainiao app
+S002,existing,Cainiao,staffed_station,Cainiao Sai Wan Hong Kong Plaza Station,"Shop 12, G/F, No. 363 Des Voeux Road West, Sai Wan",Z24,22.287,114.13636,False,260.0,yes,yes,hillmalaya.com.hk pick-up points finder,驛站 (staffed pick-up point); third-party list - verify in Cainiao app
+S003,existing,Hongkong Post (iPostal),locker,Hong Kong Plaza iPostal Station,"Cargo Lift Lobby, 2/F, Hong Kong Plaza, 188 Connaught Road West, Sai Wan",PLHKP,22.28709,114.13589,False,220.0,yes,yes,CSDI hkpo iPostal Station dataset,Opening hours (weekday): 07:00 - 22:00
+S004,existing,JD Logistics,staffed_station,JD Service Station Kuk Fung Building,"G/F, Shop A, Kuk Fung Building, 60 Catchick Street, Kennedy Town",,22.2831,114.12755,True,0.0,yes,no,hillmalaya.com.hk pick-up points finder,operator outside the 4 in scope - kept for reference only
+S005,existing,JD Logistics,staffed_station,JD Service Station Kwan Yick Building,"G/F, Shop B, Kwan Yick Building, 343 Des Voeux Road West, Sai Wan",,22.28783,114.13828,False,476.0,yes,no,hillmalaya.com.hk pick-up points finder,operator outside the 4 in scope - kept for reference only
+S006,existing,SF Express,locker,SF Locker Cayman Rise,"Carpark, 5/F, Cayman Rise, Kennedy Town",H852MA27P,22.28176,114.12467,True,0.0,no,no,SF Express locker list (image.png),24h; residents only - excluded from public baseline
+S007,existing,SF Express,locker,SF Locker Han Yu Building (No.2),"Locker No.2, Shop 3-4, G/F, Han Yu Building, 45-55 Cadogan Street, Kennedy Town",H852MA51P,22.28179,114.12638,True,0.0,yes,yes,SF Express locker list (image.png),24h; no self-drop; source marker '^'
+S008,existing,SF Express,locker,SF Locker Luen Gay Apartments,"G/F, Luen Gay Apartments, 9 Davis Street, Kennedy Town",H852MA13P,22.28194,114.12748,True,0.0,yes,yes,SF Express locker list (image.png),24h; self-drop applicable
+S009,existing,SF Express,locker,SF Locker Smithfield,"Shop 2A, G/F, 71-77 Smithfield, Kennedy Town",H852MA23P,22.28044,114.12903,True,0.0,yes,yes,SF Express locker list (image.png),24h; self-drop applicable; source marker '+'
+S010,existing,SF Express,locker,SF Locker Sunglow Building,"Shop 1, G/F, Sunglow Building, 1L-1Q Belcher's Street, Kennedy Town",H852MA49P,22.28609,114.13232,False,27.0,yes,yes,SF Express locker list (image.png),24h; no self-drop; source marker '^'
+S011,candidate,,mtr_exit,Belcher's Street,,osm:node/2555184307,22.285901,114.132644,True,0.0,yes,no,OpenStreetMap,
+S012,candidate,,mtr_exit,Forbes Street,,osm:node/2555174997,22.281282,114.128035,True,0.0,yes,no,OpenStreetMap,
+S013,candidate,,mtr_exit,Hill Road,,osm:node/2555184305,22.28564,114.135151,False,83.0,yes,no,OpenStreetMap,
+S014,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/2555184306,22.284455,114.134639,False,46.0,yes,no,OpenStreetMap,
+S015,candidate,,mtr_exit,Pok Fu Lam Road,,osm:node/4099072622,22.283424,114.136656,False,283.0,yes,no,OpenStreetMap,
+S016,candidate,,mtr_exit,Rock Hill Street,,osm:node/2555174998,22.281812,114.129353,True,0.0,yes,no,OpenStreetMap,
+S017,candidate,,mtr_exit,Smithfield,,osm:node/2555174996,22.281178,114.12854,True,0.0,yes,no,OpenStreetMap,
+S018,candidate,,mtr_exit,Whitty Street,,osm:node/2555184304,22.285659,114.13682,False,254.0,yes,no,OpenStreetMap,
+S019,candidate,,wet_market,Shek Tong Tsui Market,470 皇后大道西 Queen's Road West,osm:node/12160288024,22.285482,114.136274,False,198.0,yes,no,OpenStreetMap,
+S020,candidate,,wet_market,Smithfield Market,,osm:node/12337705220,22.281875,114.128734,True,0.0,yes,no,OpenStreetMap,
+S021,candidate,,shopping_mall,MINISO,皇后大道西 Queen's Road West,osm:node/4862556870,22.28594,114.136241,False,199.0,yes,no,OpenStreetMap,
+S022,candidate,,shopping_mall,Nan Hai Plaza,,osm:node/3276856747,22.283806,114.130441,True,0.0,yes,no,OpenStreetMap,
+S023,candidate,,shopping_mall,The Rockpool,402-404 德輔道西 Des Voeux Road West,osm:way/112687053,22.286358,114.136854,False,272.0,yes,no,OpenStreetMap,
+S024,candidate,,shopping_mall,The Westwood,8 卑路乍街 Belcher's Street,osm:way/756201201,22.285746,114.133187,True,0.0,yes,no,OpenStreetMap,
+S025,candidate,,community_facility,Caritas Mok Cheung Sui Kun Community Centre,27 蒲飛路 Pokfield Road,osm:way/290696408,22.28022,114.129803,True,0.0,yes,no,OpenStreetMap,
+S026,candidate,,community_facility,Chi Wah Learning Commons,,osm:node/5180139180,22.283477,114.134606,False,132.0,yes,no,OpenStreetMap,
+S027,candidate,,community_facility,HKU Main Library,,osm:way/898471121,22.283309,114.13782,False,397.0,yes,no,OpenStreetMap,
+S028,candidate,,community_facility,Kennedy Town Community Complex,12 石山街 Rock Hill Street,osm:way/71379590,22.281803,114.12911,True,0.0,yes,no,OpenStreetMap,
+S029,candidate,,community_facility,Kennedy Town Playground,科士街 Forbes Street,osm:way/178741316,22.281017,114.127038,True,0.0,yes,no,OpenStreetMap,
+S030,candidate,,community_facility,Kennedy Town Service Reservoir Playground,,osm:way/107387342,22.279121,114.127401,True,0.0,yes,no,OpenStreetMap,
+S031,candidate,,community_facility,Kennedy Town Swimming Pool,2 西祥街北 Sai Cheung Street North,osm:way/557525860,22.286222,114.131589,False,80.0,yes,no,OpenStreetMap,
+S032,candidate,,community_facility,Lui Che Woo Law Library,,osm:node/1926828720,22.283316,114.13404,False,124.0,yes,no,OpenStreetMap,
+S033,candidate,,community_facility,Saint Barnabas Society and Home,,osm:way/322839598,22.287852,114.135399,False,224.0,yes,no,OpenStreetMap,
+S034,candidate,,community_facility,Shek Tong Tsui Public Library,皇后大道西 Queen's Road West,osm:node/1928260884,22.28574,114.135979,False,168.0,yes,no,OpenStreetMap,
+S035,candidate,,community_facility,Smithfield Public Library,12K 士美菲路 Smithfield,osm:node/2935664494,22.281721,114.128484,True,0.0,yes,no,OpenStreetMap,
+S036,candidate,,community_facility,The Hong Kong Bayanihan Kennedy Town Centre,55 域多利道 Victoria Road,osm:way/312192656,22.281515,114.123007,True,0.0,yes,no,OpenStreetMap,
+S037,candidate,,supermarket,DS Groceries,卑路乍街 Belcher's Street,osm:node/4862626537,22.283852,114.130981,True,0.0,yes,no,OpenStreetMap,
+S038,candidate,,supermarket,DS Groceries,426-428B 德輔道西 Des Voeux Road West,osm:node/4870132720,22.286754,114.135271,False,148.0,yes,no,OpenStreetMap,
+S039,candidate,,supermarket,Fusion,吉席街 Catchick Street,osm:node/4870091585,22.283241,114.127268,True,0.0,yes,no,OpenStreetMap,
+S040,candidate,,supermarket,PARKnSHOP,,osm:node/5283275438,22.284069,114.130642,True,0.0,yes,no,OpenStreetMap,
+S041,candidate,,supermarket,PARKnSHOP,,osm:node/6187953341,22.281721,114.127823,True,0.0,yes,no,OpenStreetMap,
+S042,candidate,,supermarket,PRICERITE,,osm:node/11752363006,22.282192,114.127347,True,0.0,yes,no,OpenStreetMap,
+S043,candidate,,supermarket,Shun Ya,卑路乍街 Belcher's Street,osm:node/3276860389,22.284341,114.131298,True,0.0,yes,no,OpenStreetMap,
+S044,candidate,,supermarket,Slowood,,osm:node/8490943552,22.281516,114.127185,True,0.0,yes,no,OpenStreetMap,
+S045,candidate,,supermarket,Star Mart,卑路乍街 Belcher's Street,osm:node/4862580155,22.286376,114.132591,False,11.0,yes,no,OpenStreetMap,
+S046,candidate,,supermarket,Tung Tai Supermarket,428-432 皇后大道西 Queen's Road West,osm:node/4862618395,22.286406,114.138572,False,444.0,yes,no,OpenStreetMap,
+S047,candidate,,supermarket,U Select,374-378 德輔道西 Des Voeux Road West,osm:node/4862057457,22.286938,114.137406,False,349.0,yes,no,OpenStreetMap,
+S048,candidate,,supermarket,Wellcome,46A 卑路乍街 Belcher's Street,osm:node/3125709385,22.28272,114.129389,True,0.0,yes,no,OpenStreetMap,
+S049,candidate,,supermarket,Wellcome,562-566 皇后大道西 Queen's Road West,osm:node/3125709386,22.286322,114.133725,True,0.0,yes,no,OpenStreetMap,
+S050,candidate,,supermarket,Wellcome,1 域多利道 Victoria Road,osm:node/3125709388,22.282113,114.126026,True,0.0,yes,no,OpenStreetMap,
+S051,candidate,,supermarket,Wellcome,8 卑路乍街 Belcher's Street,osm:node/3125709391,22.284948,114.133293,True,0.0,yes,no,OpenStreetMap,
+S052,candidate,,supermarket,Wellcome,士美菲路 Smithfield,osm:node/4116103528,22.280817,114.128745,True,0.0,yes,no,OpenStreetMap,
+S053,candidate,,supermarket,Wellcome,皇后大道西 Queen's Road West,osm:node/4862618396,22.285864,114.135752,False,148.0,yes,no,OpenStreetMap,
+S054,candidate,,supermarket,Yata,,osm:node/9720055485,22.286884,114.135752,False,200.0,yes,no,OpenStreetMap,
+S055,candidate,,supermarket,supermarket,,osm:node/7828904220,22.26852,114.124925,False,482.0,yes,no,OpenStreetMap,
+S056,candidate,,convenience_store,7-Eleven,,osm:node/1280317651,22.286383,114.136572,False,246.0,yes,no,OpenStreetMap,
+S057,candidate,,convenience_store,7-Eleven,,osm:node/4116103533,22.280697,114.127885,True,0.0,yes,no,OpenStreetMap,
+S058,candidate,,convenience_store,7-Eleven,德輔道西 Des Voeux Road West,osm:node/4116132392,22.287291,114.138711,False,488.0,yes,no,OpenStreetMap,
+S059,candidate,,convenience_store,7-Eleven,第三街 Third Street,osm:node/4848432326,22.28578,114.138773,False,456.0,yes,no,OpenStreetMap,
+S060,candidate,,convenience_store,7-Eleven,皇后大道西 Queen's Road West,osm:node/4862580147,22.28656,114.133742,False,13.0,yes,no,OpenStreetMap,
+S061,candidate,,convenience_store,7-Eleven,卑路乍街 Belcher's Street,osm:node/4862637029,22.282664,114.128989,True,0.0,yes,no,OpenStreetMap,
+S062,candidate,,convenience_store,7-Eleven,士美菲路 Smithfield,osm:node/4862637035,22.282184,114.128393,True,0.0,yes,no,OpenStreetMap,
+S063,candidate,,convenience_store,7-Eleven,科士街 Forbes Street,osm:node/4870025962,22.281599,114.128251,True,0.0,yes,no,OpenStreetMap,
+S064,candidate,,convenience_store,7-Eleven,,osm:node/6183614044,22.281199,114.1288,True,0.0,yes,no,OpenStreetMap,
+S065,candidate,,convenience_store,7-Eleven,厚和街 Hau Wo Street,osm:node/8999689180,22.282691,114.126999,True,0.0,yes,no,OpenStreetMap,
+S066,candidate,,convenience_store,759,德輔道西 Des Voeux Road West,osm:node/4862113242,22.287242,114.137586,False,381.0,yes,no,OpenStreetMap,
+S067,candidate,,convenience_store,759 Store,,osm:node/13865049581,22.285894,114.135251,False,99.0,yes,no,OpenStreetMap,
+S068,candidate,,convenience_store,Circle K,德輔道西 Des Voeux Road West,osm:node/4862113249,22.28754,114.138625,False,491.0,yes,no,OpenStreetMap,
+S069,candidate,,convenience_store,Circle K,,osm:node/4870025963,22.2823,114.126972,True,0.0,yes,no,OpenStreetMap,
+S070,candidate,,convenience_store,Circle K,吉席街 Catchick Street,osm:node/4870058231,22.283369,114.129164,True,0.0,yes,no,OpenStreetMap,
+S071,candidate,,convenience_store,Circle K,,osm:node/5824533200,22.283406,114.130151,True,0.0,yes,no,OpenStreetMap,
+S072,candidate,,convenience_store,Free Market,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132934,22.283848,114.129905,True,0.0,yes,no,OpenStreetMap,
+S073,candidate,,convenience_store,Hing Tat Trading,"堅彌地城海旁 Praya, Kennedy Town",osm:node/4870132929,22.28489,114.131199,True,0.0,yes,no,OpenStreetMap,
+S074,candidate,,convenience_store,uSmile,,osm:way/762788090,22.281645,114.132545,False,38.0,yes,no,OpenStreetMap,
+S075,candidate,,bus_terminus,Kennedy Town,,osm:way/1193058436,22.282537,114.12357,True,0.0,yes,no,OpenStreetMap,
+S076,candidate,,bus_terminus,Kennedy Town (Belcher Bay),,osm:way/875004398,22.284551,114.128425,True,0.0,yes,no,OpenStreetMap,
+S077,candidate,,residential_building,Block 1,,demand:D003,22.283346,114.126172,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D003
+S078,candidate,,residential_building,Block 1,,demand:D019,22.281748,114.125988,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D019
+S079,candidate,,residential_building,Block 1,,demand:D028,22.280381,114.127613,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D028
+S080,candidate,,residential_building,Block 2,,demand:D039,22.282229,114.131812,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D039
+S081,candidate,,residential_building,Block 3,,demand:D007,22.282764,114.126595,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D007
+S082,candidate,,residential_building,Block A,,demand:D005,22.283808,114.128408,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D005
+S083,candidate,,residential_building,Block A,,demand:D029,22.28013,114.128536,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D029
+S084,candidate,,residential_building,Block D,,demand:D041,22.275164,114.128074,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D041
+S085,candidate,,residential_building,Caritas Jockey Club Hostel - Mount Davis,,demand:D022,22.277376,114.122197,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D022
+S086,candidate,,residential_building,Ching Lin Terrace Residence,,demand:D035,22.282716,114.13118,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D035
+S087,candidate,,residential_building,House A,,demand:D040,22.273114,114.121068,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D040
+S088,candidate,,residential_building,Imperial Kennedy,,demand:D025,22.282414,114.128589,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D025
+S089,candidate,,residential_building,Lung Fai Mansion,,demand:D034,22.283467,114.131411,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D034
+S090,candidate,,residential_building,Po Lung Court,,demand:D027,22.283394,114.130642,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D027
+S091,candidate,,residential_building,Poksmith Villa,,demand:D032,22.280608,114.129334,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D032
+S092,candidate,,residential_building,Residential cluster D001,,demand:D001,22.281297,114.120761,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D001
+S093,candidate,,residential_building,Residential cluster D002,,demand:D002,22.282504,114.12297,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D002
+S094,candidate,,residential_building,Residential cluster D006,,demand:D006,22.283935,114.129175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D006
+S095,candidate,,residential_building,Residential cluster D009,,demand:D009,22.282727,114.12748,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D009
+S096,candidate,,residential_building,Residential cluster D015,,demand:D015,22.284857,114.129063,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D015
+S097,candidate,,residential_building,Residential cluster D021,,demand:D021,22.281372,114.123841,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D021
+S098,candidate,,residential_building,Residential cluster D026,,demand:D026,22.28254,114.129849,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D026
+S099,candidate,,residential_building,Residential cluster D031,,demand:D031,22.28155,114.130928,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D031
+S100,candidate,,residential_building,Residential cluster D033,,demand:D033,22.282269,114.130751,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D033
+S101,candidate,,residential_building,South Terrace,,demand:D042,22.28094,114.125967,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D042
+S102,candidate,,residential_building,Suen Chi Sun Hall,,demand:D036,22.280094,114.130564,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D036
+S103,candidate,,residential_building,Tower 1,,demand:D017,22.284745,114.132691,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D017
+S104,candidate,,residential_building,Tower 1,,demand:D037,22.281385,114.130139,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D037
+S105,candidate,,residential_building,Tower 3,,demand:D018,22.285171,114.133467,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D018
+S106,candidate,,residential_building,Town Place,,demand:D010,22.283024,114.1286,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D010
+S107,candidate,,residential_building,Tresend Garden,,demand:D030,22.279503,114.129232,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D030
+S108,candidate,,residential_building,Wah Fai House,,demand:D038,22.278935,114.129583,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D038
