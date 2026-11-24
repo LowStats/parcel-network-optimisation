@@ -1,0 +1,4 @@
+model,new_lockers,public,estate,lp_relaxation,fractional_vars,bnb_nodes,uncoverable_nodes,uncoverable_households
+"expansion, public sites only",31,31,0,31.0,0,1,66,11208
+"expansion, public + estate lockers",97,25,72,97.0,0,1,0,0
+"greenfield, public + estate lockers",100,31,69,100.0,0,1,2,897

@@ -3,8 +3,25 @@
 Where to put parcel lockers in Hong Kong's Central & Western District (SCLP / MCLP, simulation, sensitivity).
 The research plan is in [Parcel Network Optimisation.md](Parcel%20Network%20Optimisation.md). The study started with Kennedy Town only and was widened to the whole district. To rerun the Kennedy Town-only version, set `STUDY_TPUS = ["111"]` in `pipeline/common.py`.
 
-**Status:** Section 1, *Spatial Scoping & Data Collection*, is done. The inputs for the ILP
-models (Section 2) and starting parameters for the simulation (Section 3) are ready.
+**Status:** All four sections of the research plan are done: data (§1), ILP location models (§2), stochastic simulation (§3), and sensitivity analysis and managerial insights (§4). We also added extensions from the course: a transportation LP with duals, a module-allocation MILP, goal programming and decision analysis.
+
+**📄 Full report: [`report/index.html`](report/index.html)**. It is a single self-contained page (figures embedded). Download it and open it in a browser, because GitHub shows HTML as source code.
+
+## Modelling results at a glance
+
+| Question | Answer |
+|---|---|
+| Coverage today (300 m walk) | 37.0% of households (20 public lockers) |
+| Same 20 lockers, optimally placed | 82.5% (greenfield MCLP) |
+| Best budget (MCLP elbow) | **22 new lockers → 86.7%**; 80% needs 13, 90% needs 30 |
+| 100% coverage (SCLP) | 97 new lockers (25 public + 72 in-building). 11,208 households have no public site within 300 m |
+| Capacity (transportation LP) | 80-compartment banks absorb only 23% of the ~9,337 locker parcels per day |
+| Targeted vs uniform expansion (MILP) | +104 modules: 52.6% served (targeted) vs 41.4% (uniform) |
+| Compartments for ≤2% overflow (simulation + Erlang B) | 14,080 normal · 25,920 at Double 11 (×2) |
+| Equity (goal programming) | Every area ≥70% needs 35 lockers (14 in-building) |
+| How many to build (decision analysis) | EMV → **build 35** (HK$2.42m/yr), maximin → build 22, EVPI HK$0.06m/yr |
+
+Reproduce all models and the report in about one minute: `.venv/bin/python models/run_all.py`. Outputs go to `results/` (CSV/JSON) and `figures/models/` (PNG).
 
 ![Study area map](figures/study_area_map.png)
 
@@ -61,6 +78,15 @@ Excluded from the baseline: residents-only lockers (e.g. SF's Cayman Rise and Ca
 ## Repository layout
 
 ```
+models/                      modelling stage (run_all.py runs m1..m5 then builds the report)
+  mcommon.py                 data loading, coverage sets, SCLP/MCLP solvers (SciPy HiGHS), plot style
+  m1_location_ilp.py         SCLP / MCLP, LP relaxation, radius & budget sensitivity, recommended plan
+  m2_capacity_lp.py          transportation LP + shadow prices / RHS ranging, module MILP, NW/VAM demo
+  m3_simulation.py           Monte Carlo overflow simulation, Erlang B check, sizing, Double 11
+  m4_goal_programming.py     preemptive goal programming (equity vs coverage vs budget)
+  m5_decision_analysis.py    payoff table, decision criteria, EMV / EVPI, break-even
+report/build_report.py       builds report/index.html from results/ and figures/
+results/                     model outputs (CSV / JSON)
 pipeline/                    run in order; each step reads the previous step's outputs
   common.py                  paths + ALL study & simulation parameters (study area, buffer, ...)
   01_fetch_raw.py            download raw data            -> data/raw/

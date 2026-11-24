@@ -1,0 +1,115 @@
+{
+ "equity_target": 0.7,
+ "district_target": 0.9,
+ "budget": 22,
+ "runs": [
+  {
+   "order": "equity > district > budget",
+   "new_lockers": 35,
+   "district_pct": 90.20458333239618,
+   "by_group": {
+    "Western": 96.7,
+    "Sheung Wan": 98.4,
+    "Central": 88.0,
+    "Mid-Levels": 72.5,
+    "The Peak": 71.5
+   },
+   "stages": [
+    {
+     "goal": "equity",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "district",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "budget",
+     "achieved_deviation": 13.0
+    }
+   ],
+   "estate_lockers": 14
+  },
+  {
+   "order": "budget > district > equity",
+   "new_lockers": 22,
+   "district_pct": 86.73683287188125,
+   "by_group": {
+    "Western": 96.0,
+    "Sheung Wan": 98.4,
+    "Central": 88.0,
+    "Mid-Levels": 63.0,
+    "The Peak": 0.0
+   },
+   "stages": [
+    {
+     "goal": "budget",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "district",
+     "achieved_deviation": 2901.7
+    },
+    {
+     "goal": "equity",
+     "achieved_deviation": 2134.7
+    }
+   ],
+   "estate_lockers": 3
+  },
+  {
+   "order": "equity > budget > district",
+   "new_lockers": 23,
+   "district_pct": 75.08023868055446,
+   "by_group": {
+    "Western": 75.3,
+    "Sheung Wan": 98.4,
+    "Central": 70.6,
+    "Mid-Levels": 70.4,
+    "The Peak": 71.9
+   },
+   "stages": [
+    {
+     "goal": "equity",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "budget",
+     "achieved_deviation": 1.0
+    },
+    {
+     "goal": "district",
+     "achieved_deviation": 13267.0
+    }
+   ],
+   "estate_lockers": 12
+  },
+  {
+   "order": "district > equity > budget",
+   "new_lockers": 35,
+   "district_pct": 90.20458333239618,
+   "by_group": {
+    "Western": 96.7,
+    "Sheung Wan": 98.4,
+    "Central": 88.0,
+    "Mid-Levels": 72.5,
+    "The Peak": 71.5
+   },
+   "stages": [
+    {
+     "goal": "district",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "equity",
+     "achieved_deviation": 0.0
+    },
+    {
+     "goal": "budget",
+     "achieved_deviation": 13.0
+    }
+   ],
+   "estate_lockers": 14
+  }
+ ]
+}

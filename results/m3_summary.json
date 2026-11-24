@@ -1,0 +1,532 @@
+{
+ "lockers": 52,
+ "parcels_per_day": 8098.4715,
+ "mean_dwell": 1.5,
+ "requirement": {
+  "normal": 14080,
+  "surge_x1_5": 20040,
+  "surge_x2": 25920,
+  "negbin": 19560,
+  "empirical_dwell": 11760
+ },
+ "erlang_mean_abs_err_pct": 0.6653846153846161,
+ "erlang_max_abs_err_pct": 3.5999999999999996,
+ "busiest": {
+  "name": "SF locker \u00b7 1Q Belcher's Street",
+  "lam": 481.8
+ },
+ "ch7_arrival_table": [
+  {
+   "arrivals": "426-440",
+   "representative": 435,
+   "probability": 0.024,
+   "cumulative": 0.024,
+   "rn_interval": "01-02"
+  },
+  {
+   "arrivals": "441-455",
+   "representative": 449,
+   "probability": 0.087,
+   "cumulative": 0.111,
+   "rn_interval": "03-11"
+  },
+  {
+   "arrivals": "456-469",
+   "representative": 463,
+   "probability": 0.176,
+   "cumulative": 0.288,
+   "rn_interval": "12-29"
+  },
+  {
+   "arrivals": "470-483",
+   "representative": 477,
+   "probability": 0.247,
+   "cumulative": 0.534,
+   "rn_interval": "30-53"
+  },
+  {
+   "arrivals": "484-497",
+   "representative": 490,
+   "probability": 0.232,
+   "cumulative": 0.767,
+   "rn_interval": "54-77"
+  },
+  {
+   "arrivals": "498-511",
+   "representative": 504,
+   "probability": 0.148,
+   "cumulative": 0.915,
+   "rn_interval": "78-92"
+  },
+  {
+   "arrivals": "512-525",
+   "representative": 517,
+   "probability": 0.065,
+   "cumulative": 0.98,
+   "rn_interval": "93-98"
+  },
+  {
+   "arrivals": "526-539",
+   "representative": 531,
+   "probability": 0.02,
+   "cumulative": 1.0,
+   "rn_interval": "99-00"
+  }
+ ],
+ "ch7_dwell_table": [
+  {
+   "dwell_days": 1,
+   "probability": 0.6,
+   "cumulative": 0.6,
+   "rn_interval": "01-60"
+  },
+  {
+   "dwell_days": 2,
+   "probability": 0.3,
+   "cumulative": 0.9,
+   "rn_interval": "61-90"
+  },
+  {
+   "dwell_days": 3,
+   "probability": 0.1,
+   "cumulative": 1.0,
+   "rn_interval": "91-00"
+  }
+ ],
+ "ch7_sim": [
+  {
+   "day": 1,
+   "rn_arrivals": "95",
+   "arrivals": 517,
+   "rn_dwell": "63",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 2,
+   "rn_arrivals": "69",
+   "arrivals": 490,
+   "rn_dwell": "90",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 3,
+   "rn_arrivals": "58",
+   "arrivals": 490,
+   "rn_dwell": "78",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 4,
+   "rn_arrivals": "84",
+   "arrivals": 504,
+   "rn_dwell": "23",
+   "dwell_of_typical_parcel": 1
+  },
+  {
+   "day": 5,
+   "rn_arrivals": "06",
+   "arrivals": 449,
+   "rn_dwell": "31",
+   "dwell_of_typical_parcel": 1
+  },
+  {
+   "day": 6,
+   "rn_arrivals": "29",
+   "arrivals": 463,
+   "rn_dwell": "88",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 7,
+   "rn_arrivals": "92",
+   "arrivals": 504,
+   "rn_dwell": "01",
+   "dwell_of_typical_parcel": 1
+  },
+  {
+   "day": 8,
+   "rn_arrivals": "50",
+   "arrivals": 477,
+   "rn_dwell": "83",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 9,
+   "rn_arrivals": "14",
+   "arrivals": 463,
+   "rn_dwell": "80",
+   "dwell_of_typical_parcel": 2
+  },
+  {
+   "day": 10,
+   "rn_arrivals": "12",
+   "arrivals": 463,
+   "rn_dwell": "47",
+   "dwell_of_typical_parcel": 1
+  }
+ ],
+ "d11_daily": [
+  {
+   "day": 0,
+   "arrivals": 8463,
+   "rejected": 944,
+   "occupied": 10993
+  },
+  {
+   "day": 1,
+   "arrivals": 8744,
+   "rejected": 993,
+   "occupied": 11439
+  },
+  {
+   "day": 2,
+   "arrivals": 8586,
+   "rejected": 1381,
+   "occupied": 11081
+  },
+  {
+   "day": 3,
+   "arrivals": 8003,
+   "rejected": 942,
+   "occupied": 10700
+  },
+  {
+   "day": 4,
+   "arrivals": 7357,
+   "rejected": 654,
+   "occupied": 10272
+  },
+  {
+   "day": 5,
+   "arrivals": 7695,
+   "rejected": 462,
+   "occupied": 10588
+  },
+  {
+   "day": 6,
+   "arrivals": 8559,
+   "rejected": 1112,
+   "occupied": 10993
+  },
+  {
+   "day": 7,
+   "arrivals": 6649,
+   "rejected": 587,
+   "occupied": 9699
+  },
+  {
+   "day": 8,
+   "arrivals": 7826,
+   "rejected": 550,
+   "occupied": 10385
+  },
+  {
+   "day": 9,
+   "arrivals": 8400,
+   "rejected": 620,
+   "occupied": 11225
+  },
+  {
+   "day": 10,
+   "arrivals": 7590,
+   "rejected": 707,
+   "occupied": 10654
+  },
+  {
+   "day": 11,
+   "arrivals": 7022,
+   "rejected": 594,
+   "occupied": 9929
+  },
+  {
+   "day": 12,
+   "arrivals": 8218,
+   "rejected": 585,
+   "occupied": 10918
+  },
+  {
+   "day": 13,
+   "arrivals": 8678,
+   "rejected": 1137,
+   "occupied": 11239
+  },
+  {
+   "day": 14,
+   "arrivals": 8584,
+   "rejected": 1455,
+   "occupied": 11022
+  },
+  {
+   "day": 15,
+   "arrivals": 8324,
+   "rejected": 1020,
+   "occupied": 11026
+  },
+  {
+   "day": 16,
+   "arrivals": 7642,
+   "rejected": 703,
+   "occupied": 10564
+  },
+  {
+   "day": 17,
+   "arrivals": 8496,
+   "rejected": 635,
+   "occupied": 11267
+  },
+  {
+   "day": 18,
+   "arrivals": 7742,
+   "rejected": 821,
+   "occupied": 10726
+  },
+  {
+   "day": 19,
+   "arrivals": 8412,
+   "rejected": 632,
+   "occupied": 11386
+  },
+  {
+   "day": 20,
+   "arrivals": 6453,
+   "rejected": 207,
+   "occupied": 10003
+  },
+  {
+   "day": 21,
+   "arrivals": 8574,
+   "rejected": 1168,
+   "occupied": 10588
+  },
+  {
+   "day": 22,
+   "arrivals": 7640,
+   "rejected": 607,
+   "occupied": 10543
+  },
+  {
+   "day": 23,
+   "arrivals": 8462,
+   "rejected": 972,
+   "occupied": 10941
+  },
+  {
+   "day": 24,
+   "arrivals": 6953,
+   "rejected": 319,
+   "occupied": 10302
+  },
+  {
+   "day": 25,
+   "arrivals": 14073,
+   "rejected": 4640,
+   "occupied": 12780
+  },
+  {
+   "day": 26,
+   "arrivals": 16208,
+   "rejected": 7418,
+   "occupied": 13174
+  },
+  {
+   "day": 27,
+   "arrivals": 14225,
+   "rejected": 6081,
+   "occupied": 12556
+  },
+  {
+   "day": 28,
+   "arrivals": 15543,
+   "rejected": 6882,
+   "occupied": 12781
+  },
+  {
+   "day": 29,
+   "arrivals": 17721,
+   "rejected": 8601,
+   "occupied": 13362
+  },
+  {
+   "day": 30,
+   "arrivals": 14590,
+   "rejected": 5725,
+   "occupied": 13328
+  },
+  {
+   "day": 31,
+   "arrivals": 17938,
+   "rejected": 9258,
+   "occupied": 13072
+  },
+  {
+   "day": 32,
+   "arrivals": 6719,
+   "rejected": 190,
+   "occupied": 10927
+  },
+  {
+   "day": 33,
+   "arrivals": 6908,
+   "rejected": 160,
+   "occupied": 10276
+  },
+  {
+   "day": 34,
+   "arrivals": 8540,
+   "rejected": 675,
+   "occupied": 11097
+  },
+  {
+   "day": 35,
+   "arrivals": 8328,
+   "rejected": 1043,
+   "occupied": 11026
+  },
+  {
+   "day": 36,
+   "arrivals": 8006,
+   "rejected": 991,
+   "occupied": 10687
+  },
+  {
+   "day": 37,
+   "arrivals": 7488,
+   "rejected": 233,
+   "occupied": 10869
+  },
+  {
+   "day": 38,
+   "arrivals": 6483,
+   "rejected": 191,
+   "occupied": 9985
+  },
+  {
+   "day": 39,
+   "arrivals": 7542,
+   "rejected": 460,
+   "occupied": 10328
+  },
+  {
+   "day": 40,
+   "arrivals": 8606,
+   "rejected": 1562,
+   "occupied": 10560
+  },
+  {
+   "day": 41,
+   "arrivals": 8344,
+   "rejected": 715,
+   "occupied": 11199
+  },
+  {
+   "day": 42,
+   "arrivals": 9373,
+   "rejected": 1548,
+   "occupied": 11572
+  },
+  {
+   "day": 43,
+   "arrivals": 8461,
+   "rejected": 1306,
+   "occupied": 10996
+  },
+  {
+   "day": 44,
+   "arrivals": 7815,
+   "rejected": 667,
+   "occupied": 10802
+  },
+  {
+   "day": 45,
+   "arrivals": 7157,
+   "rejected": 335,
+   "occupied": 10423
+  },
+  {
+   "day": 46,
+   "arrivals": 10175,
+   "rejected": 1737,
+   "occupied": 11880
+  },
+  {
+   "day": 47,
+   "arrivals": 7277,
+   "rejected": 366,
+   "occupied": 10969
+  },
+  {
+   "day": 48,
+   "arrivals": 9139,
+   "rejected": 1840,
+   "occupied": 10934
+  },
+  {
+   "day": 49,
+   "arrivals": 8785,
+   "rejected": 1292,
+   "occupied": 11166
+  },
+  {
+   "day": 50,
+   "arrivals": 8440,
+   "rejected": 1077,
+   "occupied": 11071
+  },
+  {
+   "day": 51,
+   "arrivals": 7958,
+   "rejected": 1105,
+   "occupied": 10514
+  },
+  {
+   "day": 52,
+   "arrivals": 7472,
+   "rejected": 322,
+   "occupied": 10572
+  },
+  {
+   "day": 53,
+   "arrivals": 7644,
+   "rejected": 623,
+   "occupied": 10534
+  },
+  {
+   "day": 54,
+   "arrivals": 6799,
+   "rejected": 304,
+   "occupied": 9999
+  },
+  {
+   "day": 55,
+   "arrivals": 7111,
+   "rejected": 342,
+   "occupied": 10032
+  },
+  {
+   "day": 56,
+   "arrivals": 5984,
+   "rejected": 323,
+   "occupied": 9011
+  },
+  {
+   "day": 57,
+   "arrivals": 7240,
+   "rejected": 400,
+   "occupied": 9730
+  },
+  {
+   "day": 58,
+   "arrivals": 7778,
+   "rejected": 527,
+   "occupied": 10525
+  },
+  {
+   "day": 59,
+   "arrivals": 7840,
+   "rejected": 1276,
+   "occupied": 10176
+  }
+ ],
+ "nb_k": 5.0,
+ "service_target": 0.02
+}

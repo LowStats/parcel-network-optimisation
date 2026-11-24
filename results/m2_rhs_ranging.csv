@@ -1,0 +1,6 @@
+site_id,name,shadow_price,capacity_now,range_lower,range_upper,extra_modules_at_this_price
+S0509,Palm Court,1000.0,53.3,0.0,63.1,0.4
+S0149,SF locker · 273 Des Voeux Road,999.0,53.3,0.0,106.9,2.0
+S0139,SF locker · Mid-Levels,996.6,53.3,0.0,55.7,0.1
+S0140,SF locker · 95 Robinson Road,995.8,53.3,0.0,54.0,0.0
+S0144,SF locker · Kennedy Town & Mount Davis,991.3,53.3,0.0,61.2,0.3

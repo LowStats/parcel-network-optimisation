@@ -230,3 +230,4 @@ data/raw/dtm/*.zip
 
 # Course material (not ours to redistribute)
 Lecture Notes/
+results/log_*.txt

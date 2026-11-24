@@ -1,0 +1,51 @@
+{
+ "alternatives": [
+  0,
+  10,
+  22,
+  35,
+  50
+ ],
+ "states": {
+  "low adoption (15%)": 0.15,
+  "base (30%)": 0.3,
+  "high adoption (45%)": 0.45
+ },
+ "probs": [
+  0.25,
+  0.5,
+  0.25
+ ],
+ "saving_per_parcel": 5.0,
+ "cost_per_bank": 60000.0,
+ "new_bank_compartments": 160,
+ "existing_compartments": 80,
+ "hurwicz_alpha": 0.7,
+ "best": {
+  "maximax": "build 35",
+  "maximin": "build 22",
+  "hurwicz_0.7": "build 35",
+  "equally_likely": "build 35",
+  "max_regret": "build 35",
+  "EMV": "build 35"
+ },
+ "EVwPI": 2479913.9763383484,
+ "EVPI": 56121.853835974354,
+ "served_per_day": {
+  "0|low adoption (15%)": 777.8063044239673,
+  "0|base (30%)": 927.8611370638874,
+  "0|high adoption (45%)": 960.6029294806474,
+  "10|low adoption (15%)": 1740.0809911415329,
+  "10|base (30%)": 1925.4080717257668,
+  "10|high adoption (45%)": 1969.6119028872092,
+  "22|low adoption (15%)": 2505.6909435253033,
+  "22|base (30%)": 2922.1974605759483,
+  "22|high adoption (45%)": 3103.805664342536,
+  "35|low adoption (15%)": 2810.0814008711122,
+  "35|base (30%)": 3437.4722786343063,
+  "35|high adoption (45%)": 3824.2663663362237,
+  "50|low adoption (15%)": 2961.6436508711126,
+  "50|base (30%)": 3740.5967786343067,
+  "50|high adoption (45%)": 4278.9531163362235
+ }
+}

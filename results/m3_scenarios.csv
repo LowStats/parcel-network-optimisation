@@ -1,0 +1,19 @@
+config,arrivals,surge,compartments,parcels_per_day,unmet_pct,mean_overflow_prob_pct,lockers_full_over_half_the_days,mean_utilisation_pct
+80 compartments each (plan 'medium'),poisson,1.0,4160,8098,75.5,96.6,33,71.5
+80 compartments each (plan 'medium'),poisson,1.5,4160,12140,83.24,99.4,37,73.4
+80 compartments each (plan 'medium'),poisson,2.0,4160,16191,87.36,99.9,38,73.7
+80 compartments each (plan 'medium'),negbin,1.0,4160,8098,76.25,94.3,30,69.3
+80 compartments each (plan 'medium'),negbin,1.5,4160,12130,83.49,97.6,36,72.2
+80 compartments each (plan 'medium'),negbin,2.0,4160,16101,87.41,98.8,38,73.1
+LP/MILP module plan (+104 modules),poisson,1.0,8320,8097,41.29,95.0,33,85.7
+LP/MILP module plan (+104 modules),poisson,1.5,8320,12143,60.41,99.4,37,86.7
+LP/MILP module plan (+104 modules),poisson,2.0,8320,16196,70.24,99.9,38,86.9
+LP/MILP module plan (+104 modules),negbin,1.0,8320,8079,44.47,77.1,28,80.9
+LP/MILP module plan (+104 modules),negbin,1.5,8320,12094,61.03,91.8,36,85.0
+LP/MILP module plan (+104 modules),negbin,2.0,8320,16102,70.3,96.7,38,86.2
+sized for <=2% rejection,poisson,1.0,14080,8097,0.17,5.5,0,86.1
+sized for <=2% rejection,poisson,1.5,14080,12149,25.96,96.9,34,95.8
+sized for <=2% rejection,poisson,2.0,14080,16194,44.24,99.8,38,96.2
+sized for <=2% rejection,negbin,1.0,14080,8064,10.56,28.4,0,76.9
+sized for <=2% rejection,negbin,1.5,14080,12101,30.65,65.8,28,89.4
+sized for <=2% rejection,negbin,2.0,14080,16194,45.81,84.0,38,93.5

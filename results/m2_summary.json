@@ -1,0 +1,339 @@
+{
+ "locker_parcels_per_day": 9336.830999999998,
+ "lockers": 52,
+ "capacity_per_locker": 53.333333333333336,
+ "total_capacity": 2773.3333333333335,
+ "served_by_lockers": 2138.078333333334,
+ "to_dummy": 7198.752666666665,
+ "share_served": 0.2289940059248512,
+ "objective": 7416756.650966669,
+ "avg_walk_m": 101.96258055715138,
+ "binding": 37,
+ "mean_dwell_days": 1.5,
+ "compartments": 80,
+ "M_penalty": 1000.0,
+ "lambda_per_hh": 0.105,
+ "reachable_parcels": 8609.16,
+ "module_allocation": [
+  {
+   "extra_modules": 0,
+   "total_compartments": 4160,
+   "served": 2138,
+   "share_served_pct": 22.9,
+   "lockers_expanded": 0,
+   "max_modules": 2,
+   "bnb_nodes": 1,
+   "mip_gap": 0.0
+  },
+  {
+   "extra_modules": 26,
+   "total_compartments": 5200,
+   "served": 2831,
+   "share_served_pct": 30.3,
+   "lockers_expanded": 10,
+   "max_modules": 11,
+   "bnb_nodes": 1,
+   "mip_gap": 0.0
+  },
+  {
+   "extra_modules": 52,
+   "total_compartments": 6240,
+   "served": 3525,
+   "share_served_pct": 37.8,
+   "lockers_expanded": 16,
+   "max_modules": 11,
+   "bnb_nodes": 1,
+   "mip_gap": 0.0
+  },
+  {
+   "extra_modules": 104,
+   "total_compartments": 8320,
+   "served": 4911,
+   "share_served_pct": 52.6,
+   "lockers_expanded": 21,
+   "max_modules": 15,
+   "bnb_nodes": 1,
+   "mip_gap": 1.7670935765151978e-06
+  },
+  {
+   "extra_modules": 156,
+   "total_compartments": 10400,
+   "served": 6298,
+   "share_served_pct": 67.5,
+   "lockers_expanded": 24,
+   "max_modules": 16,
+   "bnb_nodes": 1,
+   "mip_gap": 0.0
+  },
+  {
+   "extra_modules": 260,
+   "total_compartments": 14560,
+   "served": 8609,
+   "share_served_pct": 92.2,
+   "lockers_expanded": 34,
+   "max_modules": 19,
+   "bnb_nodes": 1,
+   "mip_gap": 0.0
+  }
+ ],
+ "ch4_demo": {
+  "nodes": [
+   "D020",
+   "D016",
+   "D026",
+   "D027",
+   "D012",
+   "D004"
+  ],
+  "sites": [
+   "S0143",
+   "S0145",
+   "S0146",
+   "S0147"
+  ],
+  "site_names": [
+   "SF locker \u00b7 Kennedy Town & Mount Davis",
+   "SF locker \u00b7 9 Davis Street",
+   "SF locker \u00b7 1Q Belcher's Street",
+   "SF locker \u00b7 45-55 Cadogan Street"
+  ],
+  "node_names": [
+   "Smithfield Court Block 1",
+   "THE WESTWOOD",
+   "Kwun Lung Lau Block 2",
+   "Smithfield Terrace Block B",
+   "Shun On Building",
+   "Hing Wong Building"
+  ],
+  "cost": [
+   [
+    385.0,
+    248.0,
+    752.0,
+    343.0
+   ],
+   [
+    964.0,
+    929.0,
+    208.0,
+    986.0
+   ],
+   [
+    304.0,
+    423.0,
+    1010.0,
+    568.0
+   ],
+   [
+    232.0,
+    601.0,
+    1177.0,
+    760.0
+   ],
+   [
+    706.0,
+    574.0,
+    419.0,
+    631.0
+   ],
+   [
+    614.0,
+    365.0,
+    787.0,
+    369.0
+   ]
+  ],
+  "supply": [
+   225.0,
+   224.0,
+   165.0,
+   139.0,
+   112.0,
+   93.0
+  ],
+  "demand": [
+   239.0,
+   239.0,
+   239.0,
+   241.0
+  ],
+  "northwest": [
+   [
+    225.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    14.0,
+    210.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    29.0,
+    136.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    103.0,
+    36.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    112.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    93.0
+   ]
+  ],
+  "vogel": [
+   [
+    0.0,
+    174.0,
+    0.0,
+    51.0
+   ],
+   [
+    0.0,
+    0.0,
+    224.0,
+    0.0
+   ],
+   [
+    100.0,
+    65.0,
+    0.0,
+    0.0
+   ],
+   [
+    139.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    15.0,
+    97.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    93.0
+   ]
+  ],
+  "optimal": [
+   [
+    0.0,
+    174.0,
+    0.0,
+    51.0
+   ],
+   [
+    0.0,
+    0.0,
+    224.0,
+    0.0
+   ],
+   [
+    100.0,
+    65.0,
+    0.0,
+    0.0
+   ],
+   [
+    139.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    15.0,
+    97.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    93.0
+   ]
+  ],
+  "cost_northwest": 698418.0,
+  "cost_vogel": 299189.0,
+  "cost_optimal": 299189.0,
+  "u_rows": [
+   0.0,
+   -77.0,
+   -175.0,
+   -103.0,
+   -288.0,
+   -26.0
+  ],
+  "v_cols": [
+   -129.0,
+   -248.0,
+   -131.0,
+   -343.0
+  ]
+ },
+ "rhs_ranging": [
+  {
+   "site_id": "S0509",
+   "name": "Palm Court",
+   "shadow_price": 1000.0,
+   "capacity_now": 53.3,
+   "range_lower": 0.0,
+   "range_upper": 63.1,
+   "extra_modules_at_this_price": 0.4
+  },
+  {
+   "site_id": "S0149",
+   "name": "SF locker \u00b7 273 Des Voeux Road",
+   "shadow_price": 999.0,
+   "capacity_now": 53.3,
+   "range_lower": 0.0,
+   "range_upper": 106.9,
+   "extra_modules_at_this_price": 2.0
+  },
+  {
+   "site_id": "S0139",
+   "name": "SF locker \u00b7 Mid-Levels",
+   "shadow_price": 996.6,
+   "capacity_now": 53.3,
+   "range_lower": 0.0,
+   "range_upper": 55.7,
+   "extra_modules_at_this_price": 0.1
+  },
+  {
+   "site_id": "S0140",
+   "name": "SF locker \u00b7 95 Robinson Road",
+   "shadow_price": 995.8,
+   "capacity_now": 53.3,
+   "range_lower": 0.0,
+   "range_upper": 54.0,
+   "extra_modules_at_this_price": 0.0
+  },
+  {
+   "site_id": "S0144",
+   "name": "SF locker \u00b7 Kennedy Town & Mount Davis",
+   "shadow_price": 991.3,
+   "capacity_now": 53.3,
+   "range_lower": 0.0,
+   "range_upper": 61.2,
+   "extra_modules_at_this_price": 0.3
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+site_id,name,name_original,category,operator,lat,lon,area,households_reached,households_only_this_site
+S0108,SF counter (OK store) · No.1 Seymour Road,OK便利店-西環,staffed_station,SF Express,22.28006,114.1508,Mid-Levels,3116,2567
+S0306,Wellcome · Sheung Wan,Wellcome,supermarket,,22.282265,114.151108,Mid-Levels,3099,2316
+S0341,7-Eleven · Sai Ying Pun / Sheung Wan W,7-Eleven,convenience_store,,22.287326,114.147104,Sai Ying Pun / Sheung Wan W,3607,2089
+S0058,JD counter (7-Eleven) · 55 Bonham Road,京東代收點-711般鹹道55號,staffed_station,JD Logistics,22.284854,114.141117,Shek Tong Tsui / Sai Ying Pun W,4816,2024
+S0310,Wellcome · Sai Ying Pun / Sheung Wan W,Wellcome,supermarket,,22.28373,114.146563,Mid-Levels West,1816,1816
+S0338,7-Eleven · Central / Soho,7-Eleven,convenience_store,,22.280246,114.153852,Central / Soho,2427,1786
+S0115,SF counter · Sai Ying Pun / Sheung Wan W,上環寶寶,staffed_station,SF Express,22.28634,114.14868,Sai Ying Pun / Sheung Wan W,3159,1641
+S0050,JD counter (7-Eleven) · Kennedy Town & Mount Dav,京東代收點-711港鐵KET,staffed_station,JD Logistics,22.281247,114.128883,Kennedy Town & Mount Davis,2742,1575
+S0120,SF counter · 144-148 Belcher's Street,富麗美沖印,staffed_station,SF Express,22.2822,114.12673,Kennedy Town & Mount Davis,1505,1505
+S0194,MTR exit · Second Street,Second Street,mtr_exit,,22.286208,114.141799,Shek Tong Tsui / Sai Ying Pun W,3706,1427
+S0346,7-Eleven · Shek Tong Tsui / Sai Ying Pun W,7-Eleven,convenience_store,,22.28578,114.138773,Shek Tong Tsui / Sai Ying Pun W,3517,1288
+S0321,Yata · Shek Tong Tsui / Sai Ying Pun W,Yata,supermarket,,22.286884,114.135752,Shek Tong Tsui / Sai Ying Pun W,3793,1128
+S0026,Cainiao counter · No. 28 Belcher's Street,西環金寶商場驛站Z56,staffed_station,Cainiao,22.28331,114.13042,Kennedy Town & Mount Davis,5873,982
+S0064,JD counter (7-Eleven) · 135-137 Caine Road,京東代收點-711金穀大廈,staffed_station,JD Logistics,22.28297,114.14977,Mid-Levels,1208,974
+S0200,MTR exit · Whitty Street,Whitty Street,mtr_exit,,22.285659,114.13682,Shek Tong Tsui / Sai Ying Pun W,4998,762
+S0279,Zetland Hall,Zetland Hall,community_facility,,22.276401,114.158158,Mid-Levels East,749,749
+S0260,Ladies' Recreation Club,Ladies' Recreation Club,community_facility,,22.274914,114.154087,Mid-Levels,666,666
+S0509,Palm Court,Palm Court,residential_building,,22.280394,114.149925,Mid-Levels,601,601
+S0044,JD counter (7-Eleven) · No. 76 Wellington Street,京東代收點-711威靈頓街76號,staffed_station,JD Logistics,22.282337,114.154974,Central / Soho,657,565
+S0364,Free Market · Kennedy Town & Mount Davis,Free Market,convenience_store,,22.283848,114.129905,Kennedy Town & Mount Davis,5366,475
+S0494,Mier,Mier,residential_building,,22.284288,114.146909,Sai Ying Pun / Sheung Wan W,472,472
+S0432,First Mansion,First Mansion,residential_building,,22.283124,114.142113,Mid-Levels West,464,464
