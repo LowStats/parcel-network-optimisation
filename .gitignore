@@ -227,3 +227,6 @@ data/raw/.osmnx_cache/
 data/raw/fetch.log
 .DS_Store
 data/raw/dtm/*.zip
+
+# Course material (not ours to redistribute)
+Lecture Notes/

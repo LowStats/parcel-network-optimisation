@@ -67,7 +67,7 @@ STEPS_TIME_FACTOR = 2.0  # edges tagged highway=steps take this many times longe
 # simulation. The ILP coverage weights h_i use households/population, not this rate.
 # Derivation (secondary sources - see README "Simulation parameters"):
 #   ~350 million e-commerce parcels delivered in HK in 2025 (Statista figure, cited second-hand)
-#   / ~2.7 million domestic households / 365 days  ~= 0.35 parcels per household per day.
+#   / 2.78 million households (C&SD THS Report No. 82, 2024) / 365 days ~= 0.345 per household per day.
 # Not every parcel goes to a locker: LOCKER_SHARE scales lambda_i in the simulation.
 PARCELS_PER_HOUSEHOLD_PER_DAY = 0.35
 PARCEL_RATE_RANGE = (0.20, 0.50)  # low / high values for sensitivity analysis

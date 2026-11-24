@@ -44,6 +44,7 @@ NON_RESIDENTIAL_NAME = re.compile(
     r"exchange square|car ?park|electricity|ventilation|telephone exchange|cathedral|mosque|"
     r"synagogue|barracks|courthouse|court of|legislative|headquarters", re.I)
 DORMITORY_NAME = re.compile(r"\bhall\b|hostel|dormitory|home for the elderly|care home|宿舍|舍堂|護理安老院|老人院", re.I)
+BD_MATCH_M = 10  # a Buildings Department record within this distance of a tower describes it
 STOREY_HEIGHT_M = 3.43  # median (TopHeight-BaseHeight)/Storeys of LandsD towers in the bbox
 NON_RESIDENTIAL_HINTS = {"school", "university", "hospital", "industrial", "warehouse", "service",
                          "roof", "commercial", "retail", "office", "church", "temple", "garage"}
@@ -81,9 +82,12 @@ def load_ssg(district: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
 
 def load_residential_buildings(ssg: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     """Residential towers from the Lands Department building layer (official footprints and
-    storeys). OSM is used only to recognise non-residential uses: a tower is dropped if it lies in
-    an OSM building tagged as a non-residential type, or if its (LandsD or OSM) name is clearly
-    non-residential. Podiums (mostly retail / car parks) are excluded."""
+    storeys). Use is decided, in order of preference, by
+      1. Buildings Department records (private buildings): a tower within BD_MATCH_M of a BD record
+         is residential if any record says 'Residential/Composite', otherwise non-residential;
+      2. otherwise (e.g. public housing, government buildings): dropped if it lies in an OSM
+         building tagged as a non-residential type or its name is clearly non-residential.
+    Podiums (mostly retail / car parks) are excluded."""
     b = gpd.read_file(RAW / "landsd_buildings.geojson").to_crs(HK1980)
     b = b[(b["BuildingBlockType"] == "Tower") & (b["Status"].fillna("Active") == "Active")].copy()
     b = b[b.geometry.type.isin(["Polygon", "MultiPolygon"])]
@@ -100,7 +104,22 @@ def load_residential_buildings(ssg: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
 
     osm_type = b["osm_building"].fillna("none")
     names = b["name:en"].fillna("") + " " + b["name"].fillna("")
-    non_res = (~osm_type.isin(RESIDENTIAL | {"none"})) | names.str.contains(NON_RESIDENTIAL_NAME)
+    rule_non_res = (~osm_type.isin(RESIDENTIAL | {"none"})) | names.str.contains(NON_RESIDENTIAL_NAME)
+
+    bd = pd.read_csv(RAW / "bd_buildings.csv")
+    bd = gpd.GeoDataFrame(bd, geometry=gpd.points_from_xy(bd["lon"], bd["lat"]), crs=WGS84) \
+        .to_crs(HK1980)
+    hit = gpd.sjoin(b[["geometry"]].set_geometry(b.buffer(BD_MATCH_M)), bd[["usage", "geometry"]],
+                    predicate="intersects", how="inner")
+    usage = hit.groupby(level=0)["usage"].agg(
+        lambda u: "Residential/Composite" if (u == "Residential/Composite").any() else u.iloc[0])
+    b["bd_usage"] = usage.reindex(b.index)
+    has_bd = b["bd_usage"].notna()
+    b["use_source"] = np.where(has_bd, "BD", "OSM+name")
+    non_res = np.where(has_bd, b["bd_usage"] != "Residential/Composite", rule_non_res)
+    disagree = (has_bd & ((b["bd_usage"] != "Residential/Composite") != rule_non_res)).sum()
+    print(f"Towers classified by BD records: {has_bd.sum()} / {len(b)}; "
+          f"BD and the OSM+name rule disagree on {disagree}")
     b = b[~non_res]
     b["footprint_m2"] = b.area
     b = b[b["footprint_m2"] >= 20]  # drop sheds / kiosks
@@ -127,7 +146,8 @@ def load_residential_buildings(ssg: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
         DORMITORY_NAME)
     b["building"] = b["osm_building"].fillna("(no OSM footprint)")
     b["id"] = b["BuildingID"]
-    keep = ["id", "name", "name:en", "building", "storeys", "storeys_source", "storeys_imputed",
+    keep = ["id", "name", "name:en", "building", "bd_usage", "use_source", "storeys",
+            "storeys_source", "storeys_imputed",
             "footprint_m2", "gfa_m2", "is_dormitory", "ssg", "geometry"]
     return b[keep].reset_index(drop=True)
 

@@ -9,6 +9,7 @@ Sources
   * OpenStreetMap pedestrian network (OSMnx, network_type="walk": includes steps, footbridges, lifts)
   * Lands Department 5 m Digital Terrain Model (clipped to the study bbox)
   * C&SD 2021 Census District Council District boundaries (study boundary + official totals)
+  * Buildings Department building records (usage: residential / office / industrial / other)
   * Operator pick-up point lists (SF / JD / Cainiao, with coordinates) and SF's store list
 
 Run:  .venv/bin/python pipeline/01_fetch_raw.py [--force]
@@ -131,6 +132,35 @@ def fetch_operator_lists() -> None:
         print(f"[ok]   operators/{name}: {len(r.content) / 1e3:.0f} kB")
 
 
+BD_URL = "https://static.csdi.gov.hk/csdi-webpage/download/0e55c533715b5da3ae0ca6e6024e90b4/csv"
+
+
+def fetch_bd_buildings() -> None:
+    """Buildings Department 'Building information and age records' (private buildings): point
+    location, Tower/Podium, usage (Residential/Composite, Office/Commercial, Industrial, Others).
+    Territory-wide zip (~3 MB); only rows inside FETCH_BBOX are kept."""
+    import io
+    import zipfile
+
+    import pandas as pd
+    out = RAW / "bd_buildings.csv"
+    if out.exists() and not FORCE:
+        print(f"[skip] {out.name}")
+        return
+    r = requests.get(BD_URL, headers=HTTP_HEADERS, timeout=300)
+    r.raise_for_status()
+    z = zipfile.ZipFile(io.BytesIO(r.content))
+    df = pd.read_csv(z.open(z.namelist()[0]), encoding="utf-8-sig", low_memory=False)
+    df = df[df["LATITUDE"].between(S, N) & df["LONGITUDE"].between(W, E)]
+    df = df.rename(columns={"ADDRESS_E": "address_en", "ADDRESS_C": "address_zh",
+                            "SEARCH1_E": "district", "NSEARCH4_E": "block_type",
+                            "NSEARCH5_E": "usage", "NSEARCH3_E": "op_date",
+                            "LATITUDE": "lat", "LONGITUDE": "lon"})
+    df[["address_en", "address_zh", "district", "block_type", "usage", "op_date", "lat", "lon"]] \
+        .to_csv(out, index=False)
+    print(f"[ok]   {out.name}: {len(df)} records in bbox")
+
+
 DTM_URL = "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip"
 
 
@@ -189,4 +219,5 @@ if __name__ == "__main__":
     })
     fetch_walk_network()
     fetch_dtm()
+    fetch_bd_buildings()
     fetch_operator_lists()

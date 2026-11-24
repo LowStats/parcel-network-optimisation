@@ -1,0 +1,95 @@
+issue,detail,osm,lat,lon,nearest_node,dist_to_home_m
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/13930567131,22.285415,114.133891,D139,67
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/1855205202,22.287481,114.15751,D117,446
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/3954544378,22.280113,114.166322,D160,213
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/4755708918,22.250759,114.136077,D253,1637
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/6563915357,22.283462,114.138492,D077,156
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/7617293455,22.287395,114.141545,D083,27
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/7625732794,22.276954,114.168277,D160,463
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/8605041792,22.247748,114.15322,D253,1387
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/8711405001,22.295042,114.173754,D160,1996
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/8748832216,22.280566,114.131375,D033,91
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/11807404497,22.284669,114.157032,D143,183
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/12784116674,22.274781,114.171308,D244,707
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/12784120421,22.275043,114.171469,D244,732
+dead_end_lift,lift attached to only one path - its other level is not connected,https://www.openstreetmap.org/node/12852902819,22.274653,114.170379,D244,612
+disconnected_fragment,"6 way(s), 376 m of footway/steps not joined to the main network",https://www.openstreetmap.org/way/534044196,22.282905,114.133749,D141,146
+disconnected_fragment,"2 way(s), 38 m of service not joined to the main network",https://www.openstreetmap.org/way/1215529184,22.28193,114.131786,D036,37
+disconnected_fragment,"5 way(s), 106 m of footway/path/steps not joined to the main network",https://www.openstreetmap.org/way/1330395299,22.281612,114.145152,D197,37
+disconnected_fragment,"1 way(s), 58 m of footway not joined to the main network",https://www.openstreetmap.org/way/1309303157,22.282509,114.143739,D178,55
+disconnected_fragment,"1 way(s), 147 m of path not joined to the main network",https://www.openstreetmap.org/way/1025720785,22.275601,114.128279,D038,87
+disconnected_fragment,"1 way(s), 73 m of footway not joined to the main network",https://www.openstreetmap.org/way/182208633,22.282944,114.139643,D163,122
+disconnected_fragment,"2 way(s), 58 m of service not joined to the main network",https://www.openstreetmap.org/way/1166277509,22.276507,114.130784,D187,30
+disconnected_fragment,"1 way(s), 39 m of footway not joined to the main network",https://www.openstreetmap.org/way/1331401484,22.280718,114.126148,D039,48
+disconnected_fragment,"1 way(s), 31 m of steps not joined to the main network",https://www.openstreetmap.org/way/1139101498,22.281104,114.138282,D162,114
+disconnected_fragment,"1 way(s), 10 m of secondary not joined to the main network",https://www.openstreetmap.org/way/88695244,22.282005,114.157783,D157,149
+disconnected_fragment,"2 way(s), 53 m of footway not joined to the main network",https://www.openstreetmap.org/way/155738203,22.286388,114.137525,D048,63
+disconnected_fragment,"2 way(s), 11 m of footway not joined to the main network",https://www.openstreetmap.org/way/450179916,22.280892,114.131278,D029,79
+disconnected_fragment,"1 way(s), 6 m of secondary not joined to the main network",https://www.openstreetmap.org/way/1001574124,22.284427,114.14261,D080,37
+disconnected_fragment,"1 way(s), 18 m of service not joined to the main network",https://www.openstreetmap.org/way/1310469010,22.281621,114.144643,D197,71
+disconnected_fragment,"1 way(s), 69 m of footway not joined to the main network",https://www.openstreetmap.org/way/1341438243,22.281678,114.123369,D017,121
+disconnected_fragment,"1 way(s), 28 m of service not joined to the main network",https://www.openstreetmap.org/way/854453649,22.287512,114.134374,D137,112
+disconnected_fragment,"1 way(s), 26 m of trunk_link not joined to the main network",https://www.openstreetmap.org/way/89141621,22.28831,114.148223,D091,76
+disconnected_fragment,"1 way(s), 28 m of service not joined to the main network",https://www.openstreetmap.org/way/854453663,22.287323,114.134467,D138,111
+disconnected_fragment,"1 way(s), 16 m of trunk_link not joined to the main network",https://www.openstreetmap.org/way/766704168,22.28845,114.14625,D133,48
+disconnected_fragment,"1 way(s), 5 m of secondary not joined to the main network",https://www.openstreetmap.org/way/1001573933,22.283525,114.147542,D113,81
+disconnected_fragment,"1 way(s), 51 m of footway not joined to the main network",https://www.openstreetmap.org/way/182203627,22.281765,114.138668,D162,50
+disconnected_fragment,"1 way(s), 6 m of footway not joined to the main network",https://www.openstreetmap.org/way/182208627,22.283804,114.139288,D077,79
+disconnected_fragment,"1 way(s), 17 m of footway not joined to the main network",https://www.openstreetmap.org/way/182208610,22.282482,114.139837,D162,109
+disconnected_fragment,"1 way(s), 7 m of footway not joined to the main network",https://www.openstreetmap.org/way/200405569,22.284503,114.138567,D076,92
+disconnected_fragment,"1 way(s), 29 m of footway not joined to the main network",https://www.openstreetmap.org/way/317637345,22.280941,114.130982,D029,66
+disconnected_fragment,"1 way(s), 5 m of service not joined to the main network",https://www.openstreetmap.org/way/450179783,22.280487,114.131288,D033,79
+disconnected_fragment,"1 way(s), 32 m of service not joined to the main network",https://www.openstreetmap.org/way/854453650,22.287525,114.134482,D137,122
+disconnected_fragment,"1 way(s), 30 m of footway not joined to the main network",https://www.openstreetmap.org/way/695925880,22.282198,114.122118,D001,48
+disconnected_fragment,"1 way(s), 8 m of footway not joined to the main network",https://www.openstreetmap.org/way/698990248,22.2837,114.139556,D077,87
+disconnected_fragment,"1 way(s), 1 m of footway not joined to the main network",https://www.openstreetmap.org/way/698990267,22.283821,114.139439,D077,74
+disconnected_fragment,"1 way(s), 6 m of footway not joined to the main network",https://www.openstreetmap.org/way/700710032,22.282599,114.139251,D162,96
+disconnected_fragment,"1 way(s), 3 m of footway not joined to the main network",https://www.openstreetmap.org/way/700710033,22.282956,114.13986,D163,101
+disconnected_fragment,"1 way(s), 7 m of tertiary not joined to the main network",https://www.openstreetmap.org/way/1000056400,22.279033,114.154513,D155,104
+disconnected_fragment,"1 way(s), 31 m of traffic_island not joined to the main network",https://www.openstreetmap.org/way/1007604763,22.279014,114.16399,D160,56
+disconnected_fragment,"1 way(s), 2 m of footway not joined to the main network",https://www.openstreetmap.org/way/1111967740,22.284094,114.147656,D113,76
+disconnected_fragment,"1 way(s), 2 m of footway not joined to the main network",https://www.openstreetmap.org/way/1111967741,22.283963,114.147824,D113,54
+disconnected_fragment,"1 way(s), 1 m of steps not joined to the main network",https://www.openstreetmap.org/way/1112227930,22.283747,114.147716,D113,60
+disconnected_fragment,"1 way(s), 9 m of steps not joined to the main network",https://www.openstreetmap.org/way/1112227931,22.283937,114.147606,D113,74
+disconnected_fragment,"1 way(s), 6 m of steps not joined to the main network",https://www.openstreetmap.org/way/1112227934,22.284443,114.14791,D108,40
+disconnected_fragment,"1 way(s), 6 m of steps not joined to the main network",https://www.openstreetmap.org/way/1112227935,22.284311,114.148078,D108,45
+disconnected_fragment,"1 way(s), 6 m of steps not joined to the main network",https://www.openstreetmap.org/way/1112227936,22.284179,114.148247,D113,47
+disconnected_fragment,"1 way(s), 9 m of footway not joined to the main network",https://www.openstreetmap.org/way/1125971183,22.280255,114.127619,D026,49
+disconnected_fragment,"1 way(s), 4 m of footway not joined to the main network",https://www.openstreetmap.org/way/1268261505,22.277941,114.16386,D159,121
+disconnected_fragment,"1 way(s), 3 m of footway not joined to the main network",https://www.openstreetmap.org/way/1292334252,22.29013,114.143948,D134,51
+disconnected_fragment,"1 way(s), 2 m of steps not joined to the main network",https://www.openstreetmap.org/way/1318912409,22.28529,114.153235,D120,85
+disconnected_fragment,"1 way(s), 2 m of steps not joined to the main network",https://www.openstreetmap.org/way/1318912408,22.285301,114.153181,D120,84
+disconnected_fragment,"1 way(s), 1 m of steps not joined to the main network",https://www.openstreetmap.org/way/1318912410,22.285239,114.153154,D120,76
+disconnected_fragment,"1 way(s), 5 m of footway not joined to the main network",https://www.openstreetmap.org/way/1328572530,22.283358,114.153807,D149,55
+disconnected_fragment,"1 way(s), 11 m of service not joined to the main network",https://www.openstreetmap.org/way/1533000206,22.282047,114.131721,D036,24
+disconnected_fragment,"1 way(s), 13 m of footway not joined to the main network",https://www.openstreetmap.org/way/1577483358,22.282693,114.149206,D193,10
+escalator_in_network,"(unnamed: mall / station escalators): 128 way(s), 1958 m - included in the main network, treated as walkable both ways",https://www.openstreetmap.org/way/295407426,22.282712,114.158067,D144,196
+escalator_in_network,"中環至半山自動扶手電梯系統 Central-Mid-Levels Escalator System: 22 way(s), 597 m - included in the main network, treated as walkable both ways",https://www.openstreetmap.org/way/817778701,22.27943,114.150915,D201,42
+escalator_in_network,"大學街 University Street: 1 way(s), 34 m - included in the main network, treated as walkable both ways",https://www.openstreetmap.org/way/534044206,22.282962,114.137603,D081,156
+escalator_in_network,"正街 Centre Street: 36 way(s), 216 m - included in the main network, treated as walkable both ways",https://www.openstreetmap.org/way/193250998,22.285479,114.142263,D069,61
+detour_outlier,3 nearest sites: 54 m straight-line but 163 m on foot (x3.0) - check for a missing stair/lift/passage; buildings: Hing Wong Building; Timley Court; Grand Fortune Mansion,https://www.openstreetmap.org/#map=19/22.283701/114.127444,22.283701,114.127444,D004,0
+detour_outlier,3 nearest sites: 41 m straight-line but 126 m on foot (x3.1) - check for a missing stair/lift/passage; buildings: Centenary Mansion Block 1; Centenary Mansion Block 2,https://www.openstreetmap.org/#map=19/22.281743/114.126029,22.281743,114.126029,D018,0
+detour_outlier,3 nearest sites: 59 m straight-line but 232 m on foot (x3.9) - check for a missing stair/lift/passage; buildings: Smithfield Terrace Block B; Smithfield Terrace Block D; Smithfield Terrace Block C,https://www.openstreetmap.org/#map=19/22.280233/114.128473,22.280233,114.128473,D027,0
+detour_outlier,3 nearest sites: 40 m straight-line but 258 m on foot (x6.5) - check for a missing stair/lift/passage; buildings: Mei Wah Mansion; MEI WAH MANSION; Wah Fai House,https://www.openstreetmap.org/#map=19/22.279022/114.129653,22.279022,114.129653,D034,0
+detour_outlier,3 nearest sites: 31 m straight-line but 93 m on foot (x3.0) - check for a missing stair/lift/passage; buildings: Tung Tat Building; Chong Yip Centre Block B; Chong Yip Centre Block C,https://www.openstreetmap.org/#map=19/22.286359/114.136868,22.286359,114.136868,D050,0
+detour_outlier,3 nearest sites: 27 m straight-line but 92 m on foot (x3.5) - check for a missing stair/lift/passage; buildings: One Eleven; Yen Shin Mansion; Lai King Court,https://www.openstreetmap.org/#map=19/22.285514/114.140065,22.285514,114.140065,D071,0
+detour_outlier,3 nearest sites: 49 m straight-line but 174 m on foot (x3.5) - check for a missing stair/lift/passage; buildings: 昌寶大樓; Good Luck Mansion; Fortune Villa,https://www.openstreetmap.org/#map=19/22.284428/114.136439,22.284428,114.136439,D075,0
+detour_outlier,3 nearest sites: 48 m straight-line but 183 m on foot (x3.8) - check for a missing stair/lift/passage; buildings: King's Hill; Lai Yin Court; Good View Court,https://www.openstreetmap.org/#map=19/22.284905/114.141302,22.284905,114.141302,D079,0
+detour_outlier,3 nearest sites: 54 m straight-line but 320 m on foot (x5.9) - check for a missing stair/lift/passage; buildings: Rose Villas; Eivissa Crest; Tsui On Court,https://www.openstreetmap.org/#map=19/22.283941/114.136518,22.283941,114.136518,D081,0
+detour_outlier,3 nearest sites: 95 m straight-line but 293 m on foot (x3.1) - check for a missing stair/lift/passage; buildings: Sun Yat Sen Memorial Park Swimming Pool; SUN YAT SEN MEMORIAL PARK,https://www.openstreetmap.org/#map=19/22.290001/114.144422,22.290001,114.144422,D134,0
+detour_outlier,3 nearest sites: 36 m straight-line but 164 m on foot (x4.6) - check for a missing stair/lift/passage; buildings: Belcher Court Block B; Belcher Court Block A; Yick Fung Garden Block B,https://www.openstreetmap.org/#map=19/22.285365/114.132002,22.285365,114.132002,D135,0
+detour_outlier,3 nearest sites: 31 m straight-line but 137 m on foot (x4.4) - check for a missing stair/lift/passage; buildings: Sun Lee Building; Conwell House; 寶安商會,https://www.openstreetmap.org/#map=19/22.282961/114.156182,22.282961,114.156182,D144,0
+detour_outlier,3 nearest sites: 44 m straight-line but 204 m on foot (x4.6) - check for a missing stair/lift/passage; buildings: Ning Yeung Terrace,https://www.openstreetmap.org/#map=19/22.284472/114.141231,22.284472,114.141231,D164,0
+detour_outlier,3 nearest sites: 76 m straight-line but 250 m on foot (x3.3) - check for a missing stair/lift/passage; buildings: Hoover Mansion Block C-D; Hoover Mansion Block A-B; Hing Wah Mansion Block M,https://www.openstreetmap.org/#map=19/22.283698/114.142514,22.283698,114.142514,D166,0
+detour_outlier,3 nearest sites: 28 m straight-line but 214 m on foot (x7.6) - check for a missing stair/lift/passage; buildings: Shing Kai Mansion; Babington Hill; Kingsford Height,https://www.openstreetmap.org/#map=19/22.282693/114.141358,22.282693,114.141358,D174,0
+detour_outlier,3 nearest sites: 88 m straight-line but 335 m on foot (x3.8) - check for a missing stair/lift/passage; buildings: University Heights Tower 2; University Heights Tower 3; Greenview Gardens Block D,https://www.openstreetmap.org/#map=19/22.281889/114.141496,22.281889,114.141496,D175,0
+detour_outlier,3 nearest sites: 102 m straight-line but 389 m on foot (x3.8) - check for a missing stair/lift/passage; buildings: Serene Court; Belmont Court; Greenview Gardens Block A,https://www.openstreetmap.org/#map=19/22.282388/114.142487,22.282388,114.142487,D176,0
+detour_outlier,3 nearest sites: 35 m straight-line but 129 m on foot (x3.7) - check for a missing stair/lift/passage; buildings: HONG KONG ZOOLOGICAL & BOTANICAL GARDENS; Villa Elegance; 2 & 3 Garden Terrace Block 2,https://www.openstreetmap.org/#map=19/22.276208/114.154537,22.276208,114.154537,D218,0
+detour_outlier,3 nearest sites: 30 m straight-line but 196 m on foot (x6.6) - check for a missing stair/lift/passage; buildings: Clovelly Court Block 1-2; Swimming Pool (Indoor),https://www.openstreetmap.org/#map=19/22.274245/114.153179,22.274245,114.153179,D220,0
+detour_outlier,3 nearest sites: 81 m straight-line but 272 m on foot (x3.4) - check for a missing stair/lift/passage; buildings: Hoover Court; Park Rise; Park Mansions,https://www.openstreetmap.org/#map=19/22.27615/114.156934,22.27615,114.156934,D223,0
+detour_outlier,3 nearest sites: 142 m straight-line but 525 m on foot (x3.7) - check for a missing stair/lift/passage; buildings: Mother's Choice; Grosvenor House; Montgomery Block,https://www.openstreetmap.org/#map=19/22.275204/114.161794,22.275204,114.161794,D227,0
+detour_outlier,3 nearest sites: 98 m straight-line but 308 m on foot (x3.2) - check for a missing stair/lift/passage; buildings: Welsby Court; Pak Fai Mansion; Estella Court,https://www.openstreetmap.org/#map=19/22.274944/114.160448,22.274944,114.160448,D231,0
+detour_outlier,3 nearest sites: 143 m straight-line but 489 m on foot (x3.4) - check for a missing stair/lift/passage; buildings: St. Louis Mansion; William Mansion; Silvercrest,https://www.openstreetmap.org/#map=19/22.275141/114.15663,22.275141,114.15663,D233,0
+detour_outlier,3 nearest sites: 82 m straight-line but 411 m on foot (x5.0) - check for a missing stair/lift/passage; buildings: Grenville House Tower C; Grenville House Block J; Grenville House Block I,https://www.openstreetmap.org/#map=19/22.274277/114.157608,22.274277,114.157608,D234,0
+detour_outlier,3 nearest sites: 92 m straight-line but 329 m on foot (x3.6) - check for a missing stair/lift/passage; buildings: BRANKSOME GRANDE; Branksome Grande,https://www.openstreetmap.org/#map=19/22.273009/114.154619,22.273009,114.154619,D238,0
+detour_outlier,3 nearest sites: 88 m straight-line but 658 m on foot (x7.5) - check for a missing stair/lift/passage; buildings: THE MAYFAIR; The Mayfair,https://www.openstreetmap.org/#map=19/22.273498/114.157453,22.273498,114.157453,D240,0

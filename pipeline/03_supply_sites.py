@@ -44,6 +44,8 @@ OPERATOR_JS = {"SF Express": "pickup-points-sf.js", "JD Logistics": "pickup-poin
 RESTRICTED = re.compile(r"只限住戶|住戶專用|僅限|只限|residents? only|only for (?:the )?residents?|tenants? only|only for tenants?", re.I)
 # Rows whose address is not a real Hong Kong location (verified by hand) - excluded
 EXCLUDE_CODES = {"6463647": "JD '智能貨架-XY-S兔喜快遞櫃': address 華志路1685號 is not a HK street"}
+# JD rows for mainland ZTO 'Tuxi' test lockers on 華志路 (not a Hong Kong street)
+EXCLUDE_ADDRESS = re.compile(r"華志路|兔喜")
 
 # (category, priority) - lower number wins when two candidates are within CANDIDATE_DEDUP_M
 CATEGORY_RULES = [
@@ -132,7 +134,8 @@ def load_operator_lists() -> gpd.GeoDataFrame:
         verified = re.search(r"last_verified:\s*(\S+)", text)
         rows = pd.DataFrame(json.loads(text[text.index("export default") + 14:].strip()
                                        .rstrip(";")))
-        rows = rows[~rows["code"].isin(EXCLUDE_CODES)]
+        rows = rows[~rows["code"].isin(EXCLUDE_CODES)
+                    & ~rows["addr_zh"].fillna("").str.contains(EXCLUDE_ADDRESS)]
         name = rows["name_zh"].fillna("")
         addr = rows["addr_en"].where(rows["addr_en"].fillna("") != "", rows["addr_zh"])
         restricted = (name + " " + rows["addr_zh"].fillna("") + " " + rows["addr_en"].fillna("")

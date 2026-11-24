@@ -1,0 +1,151 @@
+site_id,operator,category,name,als_query,als_score,als_matched,als_same_place,gap_m,verdict,flag
+S0001,Cainiao,staffed_station,(自助取件)西營盤皇后大道西驛站Z02,西營盤皇后大道西193號地舖,63.09,皇后大道西,True,0.0,ok,False
+S0002,Cainiao,staffed_station,上環威勝商業大廈驛站Z26,上環干諾道西28號威勝商業大廈810室,91.0,威勝商業大廈 干諾道西,True,0.0,ok,False
+S0003,Cainiao,staffed_station,上環聯發商業中心驛站Z35,上環皇后大道西2-12號聯發商業中心一層百匯廣場C35號舗,84.68,聯發商業中心 皇后大道西,True,0.0,ok,False
+S0004,Cainiao,staffed_station,中環摩羅廟交加街驛站Z01,中環摩羅廟交加街31號地下,88.75,摩羅廟交加街,True,0.0,ok,False
+S0005,Cainiao,staffed_station,中環擺花街嘉寶商業大廈驛站Z47,"中環擺花街18-20號嘉寶商業大廈1203室，上到擺花街見到LINLEE手打檸檬茶後，往行人天橋方向走，沿路途經皇玥與中西花店, 大廈位於粉紅色店舖benefit browbar 旁邊",85.0,嘉寶商業大廈 擺花街,True,0.0,ok,False
+S0006,Cainiao,staffed_station,中環永吉利商業大厦驛站Z27,中環永吉街永吉利商業大厦9樓E室,70.0,永吉利商業大廈 永吉街,True,0.0,ok,False
+S0007,Cainiao,staffed_station,坚尼地城卑路乍街海都樓驛站Z52,堅尼地城卑路乍街7-11 號海都樓地下17舖,80.57,海都樓 卑路乍街,True,0.0,ok,False
+S0008,Cainiao,staffed_station,堅尼地城卑路乍街驛站Z21,堅尼地城卑路乍街147號,66.0,堅尼地大廈 卑路乍街,True,35.0,ok,False
+S0009,Cainiao,staffed_station,堅尼地城吉豐大廈驛站Z31,堅尼地城吉席街46-60號吉豐大廈地下A舖,82.0,吉豐大廈 吉席街,True,0.0,ok,False
+S0010,Cainiao,staffed_station,堅尼地城均益一期驛站Z40,堅尼地城德輔道西430-440A號均益大廈一期29A號舖,82.12,均益大廈 德輔道西,True,0.0,ok,False
+S0011,Cainiao,staffed_station,堅尼地城聯興新樓驛站Z50,堅尼地城士美非路47號聯興新樓地下H舖,90.5,聯興新樓 士美菲路,True,0.0,ok,False
+S0012,Cainiao,staffed_station,灣仔偉信商業大廈驛站C20,灣仔駱克道 68-70號 偉信商業大廈 9/F,85.0,偉信商業大廈 駱克道,True,0.0,ok,False
+S0013,Cainiao,staffed_station,灣仔安興大廈驛站C05,灣仔皇后大道東156-164號安興大廈地下9B號舖,82.0,安興大廈 皇后大道東,True,0.0,ok,False
+S0014,Cainiao,locker,菜鳥智能櫃-(只限住戶)中環舊山頂道8A花園台 A451,中環舊山頂道8A花園台A451,98.0,花園台 舊山頂道,True,0.0,ok,False
+S0015,Cainiao,locker,菜鳥智能櫃-(只限住戶)聯邦花園A434,島西半山干德道41號聯邦花園設施層A434,91.0,威尼斯閣(第3座) 聯邦花園 干德道,True,0.0,ok,False
+S0016,Cainiao,staffed_station,西營盤忠正街驛站Z29,西營盤德輔道西266號忠正街地面B1號舖，10月18日搬到西營盤忠正街藝里坊李小龍壁畫倉庫地面,63.33,藝里坊．2號 忠正街,True,54.2,ok,False
+S0017,Cainiao,staffed_station,西營盤西都大廈驛站Z57,德輔道西164－170號西都大廈地下F舖,80.57,西都大廈 德輔道西,True,0.0,ok,False
+S0018,Cainiao,staffed_station,西環俊陞華庭驛站Z54,西環高陞街68號至82號俊陞華庭地下1C號舖,70.0,俊陞華庭 高陞街,True,0.0,ok,False
+S0019,Cainiao,staffed_station,西環北街驛站Z44,西環北街7號地鋪,73.72,北街,True,0.0,ok,False
+S0020,Cainiao,staffed_station,西環名店廣場驛站Z24,西環德輔道西363號名店廣場地下12號鋪,97.69,名店廣場 德輔道西,True,0.0,ok,False
+S0021,Cainiao,staffed_station,西環慧華閣驛站Z55,西環士美菲路12R慧華閣地下2號鋪,91.0,慧華閣 士美菲路,True,0.0,ok,False
+S0022,Cainiao,staffed_station,西環永多樓驛站Z41,西環水街4號永多樓地下A鋪,91.0,永多樓 水街,True,0.0,ok,False
+S0023,Cainiao,staffed_station,西環第一街驛站Z42,西環第一街77號地舖,54.17,時貿中心 美環街,False,10207.8,inconclusive (ALS matched a different place),False
+S0024,Cainiao,staffed_station,西環第三街驛站Z25,西環第三街106號真光大廈地下G鋪,66.67,真光大廈 第三街,True,0.0,ok,False
+S0025,Cainiao,staffed_station,西環西寶城驛站Z32,"西環卑路乍街3號地下3A鋪,香港大學C2",86.0,大新閣 卑路乍街,True,0.0,ok,False
+S0026,Cainiao,staffed_station,西環金寶商場驛站Z56,西環卑路乍街28號金寶商場J舖,87.67,金寶閣 卑路乍街,True,0.0,ok,False
+S0027,Cainiao,staffed_station,金鐘統一中心驛站Z45,金鐘金鐘道95號統一中心2樓2041鋪,91.0,統一中心 金鐘道,True,0.0,ok,False
+S0028,Cainiao,staffed_station,香港仔田灣街市驛站S35,仔興和街11號田灣街市MN78號,97.69,田灣街市 興和街,True,0.0,ok,False
+S0029,Cainiao,staffed_station,香港仔田灣街市驛站S41,仔興和街11號田灣街市1MN82號舖,97.69,田灣街市 興和街,True,0.0,ok,False
+S0030,Cainiao,staffed_station,香港大學驛站Z37,大學徐展堂5樓,71.43,徐展堂樓 香港大學 般咸道,False,0.0,inconclusive (ALS matched a different place),False
+S0035,JD Logistics,staffed_station,120樹熊屋自取站京東服務站,西環徳輔道西343號均益二期商場地下13號B舖,85.31,均益大廈 德輔道西,False,57.6,inconclusive (ALS matched a different place),False
+S0036,JD Logistics,staffed_station,京東代收點-711偉利大廈,上環皇后大道中 368 號偉利大廈地下 7 號舖,98.0,偉利大廈 皇后大道中,True,0.0,ok,False
+S0037,JD Logistics,staffed_station,京東代收點-711其康大廈,灣仔灣仔盧押道 20 號其康大廈地下 2 號舖-6323491,91.0,其康大廈 盧押道,True,0.0,ok,False
+S0038,JD Logistics,staffed_station,京東代收點-711冠華大廈,西環皇后大道西 420-424 號冠華大廈地下 C 舖,82.0,冠華大廈 皇后大道西,True,0.0,ok,False
+S0039,JD Logistics,staffed_station,京東代收點-711厚和大廈,西環厚和街52號厚和大廈地下5號舖,87.67,厚和樓 厚和街,True,0.0,ok,False
+S0040,JD Logistics,staffed_station,京東代收點-711國金一期,中環港鐵香港站 HOK 59 號舖 -6350499,66.67,港鐵香港站 國際金融中心 港景街,True,0.0,ok,False
+S0041,JD Logistics,staffed_station,京東代收點-711堅道27號,西環堅道 27 號地下,80.47,堅道,True,159.5,check: same street but > 100 m apart,True
+S0042,JD Logistics,staffed_station,京東代收點-711堅道89號,西環堅道 89 號地下,82.7,堅道,True,0.0,ok,False
+S0043,JD Logistics,staffed_station,京東代收點-711如意大樓,"西環卑路乍街18A, 20及20A號如意大樓地下1號舖",91.0,如意大樓 卑路乍街,True,0.0,ok,False
+S0044,JD Logistics,staffed_station,京東代收點-711威靈頓街76號,中環中環威靈頓街76號地下-6323463,80.69,威靈頓街,True,0.5,ok,False
+S0045,JD Logistics,staffed_station,京東代收點-711德中298號,上環德輔道中 298 號地下及閣樓,81.0,珍賢樓 德輔道中,True,0.0,ok,False
+S0046,JD Logistics,staffed_station,京東代收點-711德西316號,西環德輔道西 316-320 號地下部份 B 舖,81.25,標準大廈 德輔道西,True,0.0,ok,False
+S0047,JD Logistics,staffed_station,京東代收點-711愛瑪大廈,中環中環荷李活道30號愛瑪大廈地下上層B舖-6323465,91.0,愛瑪大廈 荷李活道,True,0.0,ok,False
+S0048,JD Logistics,staffed_station,京東代收點-711正街30號,西環正街30號地下,85.63,西貢正街,False,16715.5,inconclusive (ALS matched a different place),False
+S0049,JD Logistics,staffed_station,京東代收點-711港鐵HOK,中環香港站 HOK 10 號舖-6350501,64.1,港鐵香港站 國際金融中心 港景街,False,206.3,inconclusive (ALS matched a different place),False
+S0050,JD Logistics,staffed_station,京東代收點-711港鐵KET,堅尼地城堅尼地城站 KET 6 號舖-6350519,61.15,堅尼地城消防局 堅尼地城消防局 堅彌地城新海旁,False,298.8,inconclusive (ALS matched a different place),False
+S0051,JD Logistics,staffed_station,京東代收點-711港鐵SYP,西營盤西營盤站 SYP 4 號舖-6350503,55.56,西營盤電站（西座） 西營盤電站（西座） 醫院道,False,282.1,inconclusive (ALS matched a different place),False
+S0052,JD Logistics,staffed_station,京東代收點-711珀麗灣,荃灣區馬灣珀麗路 8 號珀麗灣碼頭第一層S5及S6號舖-6323411,70.0,東灣碼頭及中環二號碼頭 珀麗灣 珀麗路,True,0.0,ok,False
+S0053,JD Logistics,staffed_station,京東代收點-711登富大廈,中環中環皇后大道中 331-333 號登富商業大廈地下,90.0,登富商業大廈 皇后大道中,True,0.0,ok,False
+S0054,JD Logistics,staffed_station,京東代收點-711皇西240號,西營盤西營盤皇后大道西 240 號地下及閣樓,62.78,西營盤渣打銀行大廈 皇后大道西,True,310.5,check: same street but > 100 m apart,True
+S0055,JD Logistics,staffed_station,京東代收點-711祥興大廈,中環中環閣麟街 37 號祥興商業大廈地下-6323467,91.0,祥興商業大廈 閣麟街,True,0.0,ok,False
+S0056,JD Logistics,staffed_station,京東代收點-711聯安新樓,西環堅尼地城士美菲路45-51號聯德聯興聯發聯安新樓地下A1舖,74.17,聯發新樓/聯安新樓 士美菲路,True,0.0,ok,False
+S0057,JD Logistics,staffed_station,京東代收點-711聯業大廈,上環皇后大道中238號聯業大廈地下,98.0,聯業大廈 皇后大道中,True,0.0,ok,False
+S0058,JD Logistics,staffed_station,京東代收點-711般鹹道55號,西環般鹹道 55 號地下,82.76,般咸道,False,0.5,inconclusive (ALS matched a different place),False
+S0059,JD Logistics,staffed_station,京東代收點-711荷李活華庭,西環荷李活道123號荷李活華庭地下3號舖,91.0,荷李活華庭 荷李活道,True,0.0,ok,False
+S0060,JD Logistics,staffed_station,京東代收點-711萬和閣,上環文鹹東街125號萬和閣地下1號舖,90.5,萬和閣 文咸東街,True,0.0,ok,False
+S0061,JD Logistics,staffed_station,京東代收點-711軒尼詩道99號,灣仔灣仔軒尼詩道 99 號地下 1 及2號舖-6323479,64.67,恒生灣仔大廈 軒尼詩道,True,278.2,check: same street but > 100 m apart,True
+S0062,JD Logistics,staffed_station,京東代收點-711輝煌臺,西半山西摩道 1 號輝煌臺地下 7 號舖,97.69,輝煌臺 西摩道,True,0.0,ok,False
+S0063,JD Logistics,staffed_station,京東代收點-711金爵大廈,香港仔嘉禾街 1-3 號金爵大廈地下 C及D 舖,95.0,金爵大廈 嘉禾街,True,0.0,ok,False
+S0064,JD Logistics,staffed_station,京東代收點-711金穀大廈,西半山堅道 135A-137A 號金穀大廈地下 2 號舖,84.5,金谷大廈 堅道,True,0.0,ok,False
+S0065,JD Logistics,staffed_station,京東代收點-711長康大廈,灣仔灣仔莊士敦道25-33號長康大廈地下B舖及閣樓-6323475,85.0,長康大廈 莊士敦道,True,0.0,ok,False
+S0066,JD Logistics,staffed_station,京東代收點-711預辦登機大堂,中環香港站市區預辦登機大堂HOK 83 號舖-6350497,65.0,香港機鐵中環污水泵房 香港機鐵中環污水泵房 民輝街,False,457.5,inconclusive (ALS matched a different place),False
+S0067,JD Logistics,staffed_station,京東代收點-711駱克道64號,灣仔灣仔駱克道 64 號地下-6323493,69.28,世球大廈 駱克道,True,0.5,ok,False
+S0068,JD Logistics,staffed_station,京東代收點-711鴻德大廈,中環德輔道中106號鴻德大廈地下B部分連廁所-6323523,91.0,鴻德大廈 德輔道中,True,0.0,ok,False
+S0069,JD Logistics,staffed_station,京東代收點-港郵GLR郵局,灣仔告士打道5號稅務大樓1樓,91.0,稅務大樓 告士打道,True,0.0,ok,False
+S0070,JD Logistics,staffed_station,京東代收點-港郵GPO郵局,中環中環康樂廣場2號,97.69,郵政總局 康樂廣場,True,0.0,ok,False
+S0071,JD Logistics,staffed_station,京東代收點-港郵HEN郵局,灣仔軒尼詩道1號 One Hennessy 1樓 105號鋪,91.0,ONE HENNESSY 軒尼詩道,True,0.0,ok,False
+S0072,JD Logistics,staffed_station,京東代收點-港郵SWN郵局,中環德輔道中322至324號西區電話機樓1樓,72.98,WEST EXCHANGE TOWER 德輔道中,True,0.3,ok,False
+S0073,JD Logistics,staffed_station,偉信大廈京東服務站,灣仔灣仔駱克道 68-70號偉信商業大廈 9/F,85.0,偉信商業大廈 駱克道,True,0.0,ok,False
+S0074,JD Logistics,staffed_station,吉豐大廈A鋪京東服務站,堅尼地城吉席街40至60號吉豐大廈地下A舖,88.89,吉豐大廈 吉席街,True,0.0,ok,False
+S0075,JD Logistics,staffed_station,忠正街京東服務站,西營盤德輔道西 266 號忠正街地面 A3 號舖,71.79,SANFER COMMERCIAL BUILDING 德輔道西,True,0.0,ok,False
+S0076,JD Logistics,staffed_station,怡和31樓京東服務站,中環怡和大廈31樓京東辦公室文印間-僅限31樓下單取件,66.12,樂聲大廈 怡和街,False,2865.7,inconclusive (ALS matched a different place),False
+S0077,JD Logistics,staffed_station,永吉利大廈京東服務站,中環永吉街28-36號永吉利大廈9樓E室,82.15,永吉利商業大廈 永吉街,True,0.0,ok,False
+S0078,JD Logistics,staffed_station,永華大廈港大京東服務站,西環皇后大道西425Z永華大廈後座地下鋪,91.82,永華大廈 皇后大道西,True,0.0,ok,False
+S0079,JD Logistics,staffed_station,海豚曉暉自助京東服務站,堅尼地城曉暉大廈地下9號舖,66.33,曉暉大廈 堅彌地城海旁,True,0.0,ok,False
+S0080,JD Logistics,staffed_station,海豚洗衣厚和閣京東服務站,堅尼地城厚和閣地下C號舖,61.15,堅尼地城消防局 堅尼地城消防局 堅彌地城新海旁,False,179.4,inconclusive (ALS matched a different place),False
+S0081,JD Logistics,staffed_station,海豚輝煌豪園京東服務站,半山西摩道3號輝煌豪園地下15號鋪,91.0,輝煌豪園 西摩道,True,0.0,ok,False
+S0082,JD Logistics,staffed_station,港郵PLGPO智郵站,中環中環康樂廣場2號 地下,81.84,蝦地下,False,20628.2,inconclusive (ALS matched a different place),False
+S0083,JD Logistics,staffed_station,港郵PLHKP智郵站,西環西環幹諾道西188號香港商業中心2樓載貨升降機大堂,98.67,香港商業中心購物中心 干諾道西,False,0.0,inconclusive (ALS matched a different place),False
+S0084,JD Logistics,staffed_station,港郵PLSYP智郵站,西環西營盤薄扶林道27號,83.0,西營盤郵政局大廈 西營盤郵政局（消防員已婚宿舍） 薄扶林道,True,0.0,ok,False
+S0085,JD Logistics,staffed_station,港郵PLTAP智郵站,中環香港金鐘夏慤道添馬公園,83.33,遠東金融中心 夏慤道,True,198.0,check: same street but > 100 m apart,True
+S0086,JD Logistics,staffed_station,盈盈乾洗京東服務站,堅尼地城北街7號地下,68.64,盧氏宗祠 蝦地下 蝦地下,False,21514.0,inconclusive (ALS matched a different place),False
+S0087,JD Logistics,staffed_station,福陞閣商場京東服務站,"上環皇后大道中378號, 福陞閣商場G21",98.0,福陞閣商場 皇后大道中,True,0.0,ok,False
+S0088,JD Logistics,staffed_station,第一街77號京東服務站,西環西環第一街77號B地舖,51.19,時貿中心 美環街,False,10207.8,inconclusive (ALS matched a different place),False
+S0089,JD Logistics,staffed_station,統一中心京東服務站,金鐘金鐘道95號統一中心2樓2041舖,91.0,統一中心 金鐘道,True,0.0,ok,False
+S0090,JD Logistics,staffed_station,聯發商業中心京東服務站,上環皇后大道西8號聯發商業中心1樓A42舖,91.0,聯發商業中心 皇后大道西,True,0.0,ok,False
+S0091,JD Logistics,staffed_station,聯興新樓京東服務站,西環堅尼地城士美菲路47號聯興新樓地下H舖,91.0,聯興新樓 士美菲路,True,0.0,ok,False
+S0092,JD Logistics,staffed_station,譚臣道京東服務站,灣仔譚臣道5號,88.48,信邦商業大廈 譚臣道,True,0.0,ok,False
+S0093,JD Logistics,staffed_station,金爵大廈京東服務站,香港仔田灣嘉禾行1-3號金爵大廈地下A鋪,91.67,金爵大廈 嘉禾街,True,0.0,ok,False
+S0094,SF Express,staffed_station,OK便利店-上環,上環修打蘭街21-27號海景大廈地下D及H號舖,82.0,海景大廈 修打蘭街,True,0.0,ok,False
+S0095,SF Express,staffed_station,OK便利店-上環,皇後大道西2-12號聯發商業中心地下A1舖連店舖外牆,80.0,聯發商業中心 皇后大道西,True,0.0,ok,False
+S0096,SF Express,staffed_station,OK便利店-中環,中環閣麟街10-16號致發大廈地下1號舖,85.0,致發大廈 閣麟街,True,0.0,ok,False
+S0097,SF Express,staffed_station,OK便利店-中環,"德己立街 2, 4, 6, 8 及 10號，業豐大廈地下E舖",91.0,業豐大廈 德己立街,True,0.0,ok,False
+S0098,SF Express,staffed_station,OK便利店-堅尼地城,堅尼地城吉席街2號海怡花園2期3座地下2C鋪,84.17,海怡花園 吉席街,True,0.0,ok,False
+S0099,SF Express,staffed_station,OK便利店-堅尼地城,卑路乍街39號及山市街18號山市樓地下6號鋪,98.0,山市樓 卑路乍街,True,0.0,ok,False
+S0100,SF Express,staffed_station,OK便利店-堅尼地城,爹核士街7 & 7A號，卑路乍街136、136A、138、140及142號，聯威新樓地下A號舖,91.0,聯威新樓 爹核士街,True,0.0,ok,False
+S0101,SF Express,staffed_station,OK便利店-灣仔,灣仔軒尼詩道38號地下,79.45,新基大樓 軒尼詩道,True,0.0,ok,False
+S0102,SF Express,staffed_station,OK便利店-灣仔,軒尼詩道91號華寧大廈地下,91.0,華寧大廈 軒尼詩道,True,0.0,ok,False
+S0103,SF Express,staffed_station,OK便利店-西營盤,般鹹道13-15號金寧大廈地下A號舖連低層地下,84.33,金寧大廈 般咸道,True,0.0,ok,False
+S0104,SF Express,staffed_station,OK便利店-西營盤,德輔道西202號202中心地下,91.0,202 中心 德輔道西,True,0.0,ok,False
+S0105,SF Express,staffed_station,OK便利店-西環,西環正街64號地下A號舖,66.78,正街,True,0.0,ok,False
+S0106,SF Express,staffed_station,OK便利店-西環,西環德輔道西333及335號地下,84.21,德輔道西,True,0.0,ok,False
+S0107,SF Express,staffed_station,OK便利店-西環,德輔道西232號地下,82.34,德輔道西,True,0.0,ok,False
+S0108,SF Express,staffed_station,OK便利店-西環,西摩道1號輝煌臺地下1及2號舖,97.69,輝煌臺 西摩道,True,0.0,ok,False
+S0109,SF Express,staffed_station,OK便利店-金鐘,中環金鐘道95號統一中心1樓1002B號舖,91.0,統一中心 金鐘道,True,0.0,ok,False
+S0110,SF Express,staffed_station,OK便利店-金鐘,金鐘道93號金鐘廊1樓LabConceptF01-02號舖,91.0,金鐘廊 金鐘道,True,0.0,ok,False
+S0111,SF Express,staffed_station,OK便利店-香港仔,香港仔石排灣道81號兆輝大廈地下3及4號舖,100.0,兆暉大廈 石排灣道,True,0.0,ok,False
+S0114,SF Express,staffed_station,上環嘉安大廈順豐站,上環新街市街15-27號，干諾道西8-14號嘉安大廈地下15號舖,75.0,嘉安大廈 干諾道西,True,0.0,ok,False
+S0115,SF Express,staffed_station,上環寶寶,上環皇后大道西2 -12號百匯電腦城廣場1樓 A42鋪,73.72,大皇商業大廈 皇后大道西,True,0.0,ok,False
+S0116,SF Express,staffed_station,上環文樂商廈順豐站,中上環文咸東街91號文樂商業大廈地下A號舖,91.0,文樂商業大廈 文咸東街,True,0.0,ok,False
+S0117,SF Express,staffed_station,中環勝基中心順豐站,中環皇后大道中208號勝基中心地下D舖,98.0,勝基中心 皇后大道中,True,0.0,ok,False
+S0118,SF Express,staffed_station,中環環球大廈順豐站,中環德輔道中19號環球大廈1樓131號舖,91.0,環球大廈 德輔道中,True,0.0,ok,False
+S0119,SF Express,staffed_station,士美菲自提點,士美菲路47號聯興新樓地下H鋪,91.0,聯興新樓 士美菲路,True,0.0,ok,False
+S0120,SF Express,staffed_station,富麗美沖印,堅尼地城卑路乍街144-148號金豪閣2J鋪,85.0,金豪閣 卑路乍街,True,0.0,ok,False
+S0121,SF Express,staffed_station,揚壹物流統一中心,金鐘金鐘道95號統一中心2樓2041舖,91.0,統一中心 金鐘道,True,0.0,ok,False
+S0122,SF Express,staffed_station,樹熊屋自取站,西營盤德輔道西343號均益大厦2期13號B鋪,89.23,均益大廈 德輔道西,True,57.6,ok,False
+S0123,SF Express,staffed_station,港大自提點,石塘咀皇后大道西425Z永華大廈後座地舖,91.82,永華大廈 皇后大道西,True,0.0,ok,False
+S0124,SF Express,staffed_station,灣仔莊士敦大樓順豐站,"灣仔聯發街9, 11-13號莊士敦大樓地下D舖",78.34,莊士頓大樓 聯發街,True,0.0,ok,False
+S0125,SF Express,staffed_station,田園坊,堅尼地城吉席街30號吉豐大廈地下A舖,66.89,順興大廈 吉席街,True,0.0,ok,False
+S0126,SF Express,staffed_station,盈盈乾洗,堅尼地城北街7號地舖,65.11,澤安閣 堅彌地城海旁,False,445.2,inconclusive (ALS matched a different place),False
+S0127,SF Express,staffed_station,第一街自提點,西營盤第一街77B號地下,56.67,鮑思高慈幼會 - 西營盤 第三街,False,513.1,inconclusive (ALS matched a different place),False
+S0128,SF Express,staffed_station,花膠雜貨小店,西營盤正街18號啟正中心20樓05室,84.17,啟正中心 正街,True,0.0,ok,False
+S0129,SF Express,staffed_station,西營盤兆祥坊順豐站,西營盤朝光街4A號兆祥坊A2地下,91.33,兆祥大廈 朝光街,True,0.0,ok,False
+S0130,SF Express,staffed_station,西環恒裕大廈順豐站,西環堅尼地城加多近街45-55號恒裕大廈地下3及4號舖,85.0,恒裕大廈 加多近街,True,0.0,ok,False
+S0131,SF Express,staffed_station,西環曉暉大廈順豐站,西環卑路乍街1L-1Q號曉暉大廈地下1號,82.0,曉暉大廈 卑路乍街,True,0.0,ok,False
+S0132,SF Express,staffed_station,阿婆自提點,香港仔興和街11號田灣街市1MN82號舖,100.0,田灣街市 興和街,True,0.0,ok,False
+S0133,SF Express,locker,順豐自助櫃-上環,上環士丹頓街72號尚賢居1樓平臺順豐自助櫃,98.0,尚賢居 士丹頓街,True,0.0,ok,False
+S0134,SF Express,locker,順豐自助櫃-上環,上環東街25號地下順豐自助櫃,56.25,富薈上環酒店 文咸東街,False,583.3,inconclusive (ALS matched a different place),False
+S0135,SF Express,locker,順豐自助櫃-上環,上環急庇利街8號金豐大廈地下F2舖順豐自助櫃,89.31,金豐大廈 急庇利街,True,0.0,ok,False
+S0136,SF Express,locker,順豐自助櫃-中環,中環2號碼頭地下順豐自助櫃,53.41,貨櫃碼頭路,False,7201.6,inconclusive (ALS matched a different place),False
+S0137,SF Express,locker,順豐自助櫃-中環,中環永和街3-5號誠利商業大廈地下15號舖順豐自助櫃,82.0,誠利商業大廈 永和街,True,0.0,ok,False
+S0138,SF Express,locker,順豐自助櫃-半山區,半山區巴丙頓山B1層停車場順豐自助櫃,50.0,巴丙頓山 巴丙頓道,True,0.8,ok,False
+S0139,SF Express,locker,順豐自助櫃-半山區,半山區地利根德閣第3座L1層順豐自助櫃,70.83,地利根德閣 地利根德里,True,0.0,ok,False
+S0140,SF Express,locker,順豐自助櫃-半山區,半山區羅便臣道95號殷樺花園一期平臺順豐自助櫃,95.0,殷樺花園 羅便臣道,True,0.0,ok,False
+S0141,SF Express,locker,順豐自助櫃-半山區,半山區英輝臺3號蔚晴軒一樓會所順豐自助櫃,98.0,蔚晴軒 英輝臺,True,0.0,ok,False
+S0142,SF Express,locker,順豐自助櫃-半山區,半山區舊山頂道8A號花園臺3座地下順豐自助櫃,96.57,花園台 舊山頂道,True,0.0,ok,False
+S0143,SF Express,locker,順豐自助櫃-堅尼地城,堅尼地城士美菲路71-77號2A號鋪順豐自助櫃+,72.0,嘉輝花園 士美菲路,True,0.0,ok,False
+S0144,SF Express,locker,順豐自助櫃-堅尼地城,堅尼地城加惠民道29號加惠臺5樓停車場順豐自助櫃,98.0,加惠臺 加惠民道,True,0.0,ok,False
+S0145,SF Express,locker,順豐自助櫃-堅尼地城,堅尼地城卑路乍街聯基新樓地下順豐自助櫃,78.57,聯基新樓 卑路乍街,True,0.0,ok,False
+S0146,SF Express,locker,順豐自助櫃-堅尼地城,堅尼地城卑路乍街1L-1Q號曉暉大廈地下1號鋪順豐自助櫃,80.73,曉暉大廈 卑路乍街,True,0.0,ok,False
+S0147,SF Express,locker,順豐自助櫃-堅尼地城,堅尼地城加多近街45-55號恒裕大廈地下3及4號鋪二號順豐自助櫃,85.0,恒裕大廈 加多近街,True,0.0,ok,False
+S0148,SF Express,locker,順豐自助櫃-灣仔,灣仔皇後大道東200號囍匯地庫3樓電梯大堂順豐自助櫃,97.47,囍滙 皇后大道東,False,47.7,inconclusive (ALS matched a different place),False
+S0149,SF Express,locker,順豐自助櫃-西營盤,西營盤德輔道西273號均益大廈三期地下32A鋪順豐自助櫃+,91.79,均益大廈 德輔道西,True,0.0,ok,False
+S0150,SF Express,locker,順豐自助櫃-西營盤,西營盤維港峰地下3號鋪順豐自助櫃,60.42,維港峰 干諾道西,True,0.0,ok,False
+S0151,SF Express,locker,順豐自助櫃-西營盤,西營盤東邊街11號地下順豐自助櫃+,61.66,伯惠酒店 東邊街,True,0.0,ok,False
+S0152,SF Express,locker,順豐自助櫃-西營盤,西營盤第1街8號縉城峰地庫穿梭升降機大堂順豐自助櫃,76.19,縉城峰 第一街,True,0.0,ok,False
+S0153,SF Express,locker,順豐自助櫃-西環,西環高樂花園1座4樓平臺順豐自助櫃,78.13,高樂花園 干諾道西,True,0.0,ok,False
+S0154,SF Express,locker,順豐自助櫃-香港仔,香港仔田灣街15號田灣商場地下停車場順豐自助櫃,97.67,多層停車場 田灣邨 田灣街,True,0.0,ok,False
+S0155,SF Express,locker,順豐自助櫃-香港仔,香港仔田灣街15號田灣商場地下停車場二號順豐自助櫃,97.67,多層停車場 田灣邨 田灣街,True,0.0,ok,False
+S0156,SF Express,locker,順豐自助櫃-馬灣,新界荃灣區馬灣珀麗路8號珀麗灣碼頭順豐自助櫃,100.0,東灣碼頭及中環二號碼頭 珀麗灣 珀麗路,True,0.0,ok,False
