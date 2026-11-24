@@ -51,10 +51,27 @@ CANDIDATE_DEDUP_M = 25
 WALK_SPEED_M_PER_MIN = 75.0
 STEPS_TIME_FACTOR = 2.0  # edges tagged highway=steps take this many times longer to walk
 
-# ASSUMPTION - replace with a sourced figure before final results. Average parcels delivered per
-# household per day; used only to convert households -> expected daily parcels (lambda_i) for the
+# Average e-commerce parcels per household per day -> expected daily parcels (lambda_i) for the
 # simulation. The ILP coverage weights h_i use households/population, not this rate.
-PARCELS_PER_HOUSEHOLD_PER_DAY = 0.30
+# Derivation (secondary sources - see README "Simulation parameters"):
+#   ~350 million e-commerce parcels delivered in HK in 2025 (Statista figure, cited second-hand)
+#   / ~2.7 million domestic households / 365 days  ~= 0.35 parcels per household per day.
+# Not every parcel goes to a locker: LOCKER_SHARE scales lambda_i in the simulation.
+PARCELS_PER_HOUSEHOLD_PER_DAY = 0.35
+PARCEL_RATE_RANGE = (0.20, 0.50)  # low / high values for sensitivity analysis
+
+# ---------------------------------------------------------------------------------------------
+# Simulation (Section 3) starting values - all documented in README; tune in the simulation code
+# ---------------------------------------------------------------------------------------------
+LOCKER_SHARE = 0.30  # ASSUMPTION: share of parcels routed to a locker / pick-up point (vs door)
+# Plan's dwell-time distribution (share of parcels collected within 1 / 2 / 3 days)
+DWELL_PLAN = {24: 0.60, 48: 0.30, 72: 0.10}
+# Empirical benchmark (Urban Freight Lab, Seattle residential lockers): median 4.2 h, mean 12.5 h,
+# 84% collected within 24 h, 99% within one week. Use as an alternative / validation scenario.
+DWELL_EMPIRICAL = {"median_h": 4.2, "mean_h": 12.5, "share_within_24h": 0.84,
+                   "share_within_7d": 0.99}
+LOCKER_SIZES = {"small": 40, "medium": 80, "large": 120}  # compartments per bank (plan)
+PEAK_MULTIPLIERS = (1.0, 1.5, 2.0)  # baseline, +50 %, +100 % surge (plan, Section 4)
 
 # CSDI WFS endpoints (official HKSAR open data)
 CSDI_WFS = "https://portal.csdi.gov.hk/server/services/common/{id}/MapServer/WFSServer"

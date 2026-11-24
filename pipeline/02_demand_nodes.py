@@ -11,7 +11,8 @@ Method
      nearest cluster of the same SSG. Each cluster becomes one demand node, located on the
      building nearest the GFA-weighted centroid of the cluster.
   4. The SSG's official 2021 Census households (dh) and population (t_pop) are split across its
-     clusters in proportion to GFA. Totals therefore match the Census exactly.
+     clusters in proportion to GFA. Totals therefore match the Census exactly. Student halls /
+     hostels / dormitories receive population but not (domestic) households.
 
 Outputs (data/processed/)
   study_area.gpkg          layers: boundary, supply_buffer, ssg
@@ -37,6 +38,7 @@ NON_RESIDENTIAL_NAME = re.compile(
     r"office|complex|depot|station|school|college|market|reservoir|social centre|community|church|"
     r"temple|clinic|hospital|library|police|fire|ambulance|sports|pumping|substation|toilet|"
     r"government|services building|museum|kindergarten", re.I)
+DORMITORY_NAME = re.compile(r"\bhall\b|hostel|dormitory|宿舍|舍堂", re.I)
 NON_RESIDENTIAL_HINTS = {"school", "university", "hospital", "industrial", "warehouse", "service",
                          "roof", "commercial", "retail", "office", "church", "temple", "garage"}
 
@@ -71,8 +73,10 @@ def load_residential_buildings(ssg: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     med_ssg = b.groupby("ssg")["storeys"].transform("median")
     b["storeys"] = b["storeys"].fillna(med_ssg).fillna(b["storeys"].median())
     b["gfa_m2"] = b["footprint_m2"] * b["storeys"]
+    names = b["name:en"].fillna("") + " " + b["name"].fillna("")
+    b["is_dormitory"] = (b["building"] == "dormitory") | names.str.contains(DORMITORY_NAME)
     keep = ["id", "name", "name:en", "building", "storeys", "storeys_imputed", "footprint_m2",
-            "gfa_m2", "ssg", "geometry"]
+            "gfa_m2", "is_dormitory", "ssg", "geometry"]
     return b[[c for c in keep if c in b.columns]].reset_index(drop=True)
 
 
@@ -111,7 +115,11 @@ def build_nodes(ssg: gpd.GeoDataFrame, bld: gpd.GeoDataFrame):
             continue
         sb["cluster"] = cluster_ssg(sb)
         sb["share"] = sb["gfa_m2"] / sb["gfa_m2"].sum()
-        sb["households"] = sb["share"] * s["households"]
+        # Census 'households' are DOMESTIC households only: student halls / hostels / dormitories
+        # get population (residents) but no households, unless an SSG has nothing else.
+        hh_w = sb["gfa_m2"].where(~sb["is_dormitory"], 0)
+        hh_w = hh_w if hh_w.sum() > 0 else sb["gfa_m2"]
+        sb["households"] = hh_w / hh_w.sum() * s["households"]
         sb["cluster"] = merge_small_clusters(sb)
         sb["population"] = sb["share"] * s["population"]
         bld_parts.append(sb)

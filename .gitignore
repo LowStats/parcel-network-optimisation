@@ -226,3 +226,4 @@ __marimo__/
 data/raw/.osmnx_cache/
 data/raw/fetch.log
 .DS_Store
+data/raw/dtm/*.zip

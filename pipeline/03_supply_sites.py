@@ -67,6 +67,19 @@ def als_lookup(query: str, cache: dict) -> dict | None:
                 score=hits[0]["ValidationInformation"]["Score"], matched=matched.strip())
 
 
+GENERIC_WORDS = {"KENNEDY", "TOWN", "SAI", "WAN", "YING", "PUN", "SHEK", "TONG", "TSUI", "STREET",
+                 "ROAD", "BUILDING", "PHASE", "HONG", "KONG", "G/F", "SHOP"}
+
+
+def street_agrees(query: str, matched: str) -> bool:
+    """ALS sometimes returns a high-score match on the wrong street (e.g. '7 North Street Kennedy
+    Town' -> '7 Praya, Kennedy Town'). Require at least one distinctive query word in the match."""
+    words = {w.strip(".,'") for w in query.upper().replace("'S", "").split()}
+    words = {w for w in words if w and not w.replace("-", "").isdigit() and w not in GENERIC_WORDS}
+    m = matched.upper().replace("'S", "")
+    return not words or any(w in m for w in words)
+
+
 def load_manual_sites() -> gpd.GeoDataFrame:
     df = pd.read_csv(MANUAL / "existing_lockers.csv", dtype=str)
     df = df[df["site_code"].fillna("") != "TODO"].copy()
@@ -84,8 +97,13 @@ def load_manual_sites() -> gpd.GeoDataFrame:
             continue
         df.loc[i, ["lat", "lon"]] = [g["lat"], g["lon"]]
         report.append(dict(name=r["name"], query=r["geocode_query"], score=g["score"],
-                           matched=g["matched"], check=g["score"] < MIN_ALS_SCORE))
+                           matched=g["matched"],
+                           check=g["score"] < MIN_ALS_SCORE or not street_agrees(r["geocode_query"],
+                                                                                g["matched"])))
     save_json(cache, ALS_CACHE)
+    bad = [x["name"] for x in report if x.get("check")]
+    if bad:
+        print("   !! geocodes to check (low score or street mismatch):", bad)
     pd.DataFrame(report).to_csv(PROCESSED / "geocode_report.csv", index=False)
     df = df.dropna(subset=["lat", "lon"])
     df["lat"], df["lon"] = df["lat"].astype(float), df["lon"].astype(float)

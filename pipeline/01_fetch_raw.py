@@ -6,6 +6,7 @@ Sources
   * OpenStreetMap buildings (footprints, names, levels, building type)
   * OpenStreetMap POIs that can host a locker (MTR exits, markets, malls, convenience stores, ...)
   * OpenStreetMap pedestrian network (OSMnx, network_type="walk": includes steps, footbridges, lifts)
+  * Lands Department 5 m Digital Terrain Model (clipped to the study bbox)
 
 Run:  .venv/bin/python pipeline/01_fetch_raw.py [--force]
 """
@@ -17,7 +18,8 @@ import geopandas as gpd
 import osmnx as ox
 import requests
 
-from common import (CSDI_DATASETS, CSDI_WFS, FETCH_BBOX, HTTP_HEADERS, OVERPASS_ENDPOINTS, RAW, WGS84)
+from common import (CSDI_DATASETS, CSDI_WFS, FETCH_BBOX, HK1980, HTTP_HEADERS, OVERPASS_ENDPOINTS,
+                    RAW, WGS84)
 
 FORCE = "--force" in sys.argv
 KEEP_TAGS = {
@@ -89,6 +91,41 @@ def fetch_walk_network() -> None:
     print(f"[ok]   {out.name}: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 
+DTM_URL = "https://www.landsd.gov.hk/landsd_psi_data/SMO/data/Whole_HK_DTM_5m.zip"
+
+
+def fetch_dtm() -> None:
+    """LandsD 5 m Digital Terrain Model (whole HK, ESRI ASCII grid in HK1980, ~29 MB zip).
+    Only a clip covering FETCH_BBOX is kept (the zip itself is git-ignored)."""
+    import rasterio
+    from pyproj import Transformer
+    from rasterio.windows import from_bounds
+
+    out = RAW / "dtm" / "dtm_5m_kennedy_town.tif"
+    if out.exists() and not FORCE:
+        print(f"[skip] {out.name}")
+        return
+    z = RAW / "dtm" / "Whole_HK_DTM_5m.zip"
+    z.parent.mkdir(exist_ok=True)
+    if not z.exists():
+        r = requests.get(DTM_URL, headers=HTTP_HEADERS, timeout=600)
+        r.raise_for_status()
+        z.write_bytes(r.content)
+    t = Transformer.from_crs(WGS84, HK1980, always_xy=True)
+    x0, y0 = t.transform(W, S)
+    x1, y1 = t.transform(E, N)
+    with rasterio.open(f"/vsizip/{z}/Whole_HK_DTM_5m.asc") as src:
+        win = from_bounds(x0, y0, x1, y1, src.transform).round_offsets().round_lengths()
+        arr = src.read(1, window=win)
+        prof = src.profile | dict(driver="GTiff", crs=HK1980, height=arr.shape[0],
+                                  width=arr.shape[1], transform=src.window_transform(win),
+                                  compress="deflate")
+    with rasterio.open(out, "w", **prof) as dst:
+        dst.write(arr, 1)
+    print(f"[ok]   {out.name}: {arr.shape}, elevation {arr[arr > -100].min():.0f}-"
+          f"{arr.max():.0f} m")
+
+
 if __name__ == "__main__":
     ox.settings.use_cache = True
     ox.settings.cache_folder = str(RAW / ".osmnx_cache")
@@ -109,3 +146,4 @@ if __name__ == "__main__":
         "building": ["retail", "commercial"],
     })
     fetch_walk_network()
+    fetch_dtm()

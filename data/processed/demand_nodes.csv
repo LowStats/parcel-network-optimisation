@@ -1,43 +1,42 @@
 node_id,ssg,cluster,lat,lon,households,population,daily_parcels,n_buildings,gfa_m2,location_method,example_buildings
-D001,111/01-02 and 111/37-38,1,22.281297,114.120761,383.0,1160.9,114.89,6,45428.0,building_nearest_gfa_centroid,
-D002,111/01-02 and 111/37-38,2,22.282504,114.12297,130.0,394.1,39.01,12,15424.0,building_nearest_gfa_centroid,
-D003,111/03,1,22.283346,114.126172,682.0,1531.0,204.6,4,80418.0,building_nearest_gfa_centroid,Block 1; Block 2
-D004,111/04,1,22.283446,114.127368,884.0,2009.0,265.2,12,85057.0,building_nearest_gfa_centroid,Block B; Block A; Manhattan Heights
-D005,111/05,1,22.283808,114.128408,475.0,1348.0,142.5,5,31581.0,building_nearest_gfa_centroid,Block A; Block B
-D006,111/06,1,22.283935,114.129175,416.0,867.0,124.8,10,20977.0,building_nearest_gfa_centroid,
-D007,111/07,1,22.282764,114.126595,678.0,1829.0,203.4,5,50093.0,building_nearest_gfa_centroid,Block 3
-D008,111/08,1,22.283079,114.127393,331.0,712.0,99.3,14,17526.0,building_nearest_gfa_centroid,
-D009,111/09,1,22.282727,114.12748,415.0,840.0,124.5,19,28311.0,building_nearest_gfa_centroid,
-D010,111/10,1,22.283024,114.1286,493.0,1218.0,147.9,13,36105.0,building_nearest_gfa_centroid,Town Place
-D011,111/11,1,22.283369,114.129326,772.0,2063.0,231.6,11,52050.0,building_nearest_gfa_centroid,Tower 1; Tower 2; Tower 3
-D012,111/12,1,22.283967,114.13028,1065.0,2754.0,319.5,12,69781.0,building_nearest_gfa_centroid,Block A; Block B; Kennedy Town Centre Shopping Centre
-D013,111/13 and 111/15,1,22.284397,114.131165,359.0,867.0,107.7,3,21648.0,building_nearest_gfa_centroid,Block A; Block B
-D014,111/14 and 111/40-42,1,22.284868,114.131381,589.6,1463.1,176.87,6,40293.0,building_nearest_gfa_centroid,
-D015,111/14 and 111/40-42,2,22.284857,114.129063,87.4,216.9,26.23,7,5974.0,building_nearest_gfa_centroid,
-D016,111/16-17,1,22.285829,114.133295,670.3,2261.6,201.08,14,152915.0,building_nearest_gfa_centroid,Tower 6; Tower 8
-D017,111/16-17,2,22.284745,114.132691,488.0,1646.6,146.4,3,111330.0,building_nearest_gfa_centroid,Tower 1; Tower 2
-D018,111/16-17,3,22.285171,114.133467,1455.7,4911.8,436.72,3,332105.0,building_nearest_gfa_centroid,Tower 3; Tower 5
-D019,111/18-20,1,22.281748,114.125988,440.4,1125.3,132.11,5,53538.0,building_nearest_gfa_centroid,Block 1; Block 2
-D020,111/18-20,2,22.281646,114.12468,424.8,1085.5,127.43,3,51642.0,building_nearest_gfa_centroid,Block 1; Block 2
-D021,111/18-20,3,22.281372,114.123841,149.6,382.3,44.88,5,18189.0,building_nearest_gfa_centroid,
-D022,111/18-20,4,22.277376,114.122197,56.3,143.8,16.89,8,6843.0,building_nearest_gfa_centroid,Caritas Jockey Club Hostel - Mount Davis
-D023,111/21,1,22.281878,114.126542,641.0,1575.0,192.3,11,109846.0,building_nearest_gfa_centroid,Cadogan; Concord Hotel
-D024,111/22,1,22.281936,114.127305,2145.0,5404.0,643.5,12,132846.0,building_nearest_gfa_centroid,Block 1; Block 2; Luen Fat Apartments
-D025,111/23,1,22.282414,114.128589,444.0,1063.0,133.2,8,83959.0,building_nearest_gfa_centroid,Imperial Kennedy
-D026,111/24,1,22.28254,114.129849,395.0,1067.0,118.5,19,70875.0,building_nearest_gfa_centroid,
-D027,111/25,1,22.283394,114.130642,635.0,1555.0,190.5,14,57523.0,building_nearest_gfa_centroid,Po Lung Court; Tai Pak Court; To Li Court
-D028,111/26,1,22.280381,114.127613,1582.2,4097.9,474.65,7,98754.0,building_nearest_gfa_centroid,Block 1; Block 2; Block C
-D029,111/26,2,22.28013,114.128536,1010.3,2616.8,303.09,7,63060.0,building_nearest_gfa_centroid,Block A; Block B; Block C
-D030,111/26,3,22.279503,114.129232,766.5,1985.3,229.95,8,47843.0,building_nearest_gfa_centroid,Tresend Garden; Smith Court; Jockey Club Student Village III
-D031,111/27,1,22.28155,114.130928,77.9,186.8,23.38,4,14068.0,building_nearest_gfa_centroid,
-D032,111/27,2,22.280608,114.129334,250.1,599.2,75.02,8,45131.0,building_nearest_gfa_centroid,Poksmith Villa; Pokfield Garden
-D033,111/28,1,22.282269,114.130751,358.0,1017.0,107.4,0,,ssg_interior_point,
-D034,111/29-30,1,22.283467,114.131411,398.0,1010.0,119.4,9,37047.0,building_nearest_gfa_centroid,Lung Fai Mansion; Chin Hom Court
-D035,111/31-32,1,22.282716,114.13118,315.0,588.0,94.5,14,12583.0,building_nearest_gfa_centroid,Ching Lin Terrace Residence; Block 9; Block 12
-D036,111/35 and 111/43,1,22.280094,114.130564,253.0,642.8,75.9,3,50848.0,building_nearest_gfa_centroid,Suen Chi Sun Hall; Lee Shau Kee Hall; Morrison Hall
-D037,111/35 and 111/43,2,22.281385,114.130139,251.8,639.6,75.53,3,50595.0,building_nearest_gfa_centroid,Tower 1; Tower 2
-D038,111/35 and 111/43,3,22.278935,114.129583,72.2,183.5,21.67,2,14516.0,building_nearest_gfa_centroid,Wah Fai House; Mei Wah Mansion
-D039,111/39,1,22.282229,114.131812,667.0,2063.0,200.1,5,78746.0,building_nearest_gfa_centroid,Block 2; Block 3; Block 1
-D040,111/44 and 111/46-49,1,22.273114,114.121068,185.0,629.0,55.5,13,130315.0,building_nearest_gfa_centroid,House A; House B; House C
-D041,111/45,1,22.275164,114.128074,155.0,603.0,46.5,14,26295.0,building_nearest_gfa_centroid,Block D; Four Winds Apartments; Block A
-D042,111/50,1,22.28094,114.125967,621.0,2010.0,186.3,5,48104.0,building_nearest_gfa_centroid,South Terrace; Sai Wan Estate; East Terrace
+D001,111/01-02 and 111/37-38,1,22.281297,114.120761,383.0,1160.9,134.04,6,45428.0,building_nearest_gfa_centroid,
+D002,111/01-02 and 111/37-38,2,22.282504,114.12297,130.0,394.1,45.51,12,15424.0,building_nearest_gfa_centroid,
+D003,111/03,1,22.283346,114.126172,682.0,1531.0,238.7,4,80418.0,building_nearest_gfa_centroid,Block 1; Block 2
+D004,111/04,1,22.283446,114.127368,884.0,2009.0,309.4,12,85057.0,building_nearest_gfa_centroid,Block B; Block A; Manhattan Heights
+D005,111/05,1,22.283808,114.128408,475.0,1348.0,166.25,5,31581.0,building_nearest_gfa_centroid,Block A; Block B
+D006,111/06,1,22.283935,114.129175,416.0,867.0,145.6,10,20977.0,building_nearest_gfa_centroid,
+D007,111/07,1,22.282764,114.126595,678.0,1829.0,237.3,5,50093.0,building_nearest_gfa_centroid,Block 3
+D008,111/08,1,22.283079,114.127393,331.0,712.0,115.85,14,17526.0,building_nearest_gfa_centroid,
+D009,111/09,1,22.282727,114.12748,415.0,840.0,145.25,19,28311.0,building_nearest_gfa_centroid,
+D010,111/10,1,22.283024,114.1286,493.0,1218.0,172.55,13,36105.0,building_nearest_gfa_centroid,Town Place
+D011,111/11,1,22.283369,114.129326,772.0,2063.0,270.2,11,52050.0,building_nearest_gfa_centroid,Tower 1; Tower 2; Tower 3
+D012,111/12,1,22.283967,114.13028,1065.0,2754.0,372.75,12,69781.0,building_nearest_gfa_centroid,Block A; Block B; Kennedy Town Centre Shopping Centre
+D013,111/13 and 111/15,1,22.284397,114.131165,359.0,867.0,125.65,3,21648.0,building_nearest_gfa_centroid,Block A; Block B
+D014,111/14 and 111/40-42,1,22.284868,114.131381,589.6,1463.1,206.35,6,40293.0,building_nearest_gfa_centroid,
+D015,111/14 and 111/40-42,2,22.284857,114.129063,87.4,216.9,30.6,7,5974.0,building_nearest_gfa_centroid,
+D016,111/16-17,1,22.285829,114.133295,670.3,2261.6,234.6,14,152915.0,building_nearest_gfa_centroid,Tower 6; Tower 8
+D017,111/16-17,2,22.284745,114.132691,488.0,1646.6,170.8,3,111330.0,building_nearest_gfa_centroid,Tower 1; Tower 2
+D018,111/16-17,3,22.285171,114.133467,1455.7,4911.8,509.5,3,332105.0,building_nearest_gfa_centroid,Tower 3; Tower 5
+D019,111/18-20,1,22.281748,114.125988,441.0,1125.3,154.34,5,53538.0,building_nearest_gfa_centroid,Block 1; Block 2
+D020,111/18-20,2,22.281646,114.12468,425.4,1085.5,148.87,3,51642.0,building_nearest_gfa_centroid,Block 1; Block 2
+D021,111/18-20,3,22.281372,114.123841,149.8,382.3,52.44,5,18189.0,building_nearest_gfa_centroid,
+D022,111/18-20,4,22.277376,114.122197,54.9,143.8,19.2,8,6843.0,building_nearest_gfa_centroid,Caritas Jockey Club Hostel - Mount Davis
+D023,111/21,1,22.281878,114.126542,641.0,1575.0,224.35,11,109846.0,building_nearest_gfa_centroid,Cadogan; Concord Hotel
+D024,111/22,1,22.281936,114.127305,2145.0,5404.0,750.75,12,132846.0,building_nearest_gfa_centroid,Block 1; Block 2; Luen Fat Apartments
+D025,111/23,1,22.282414,114.128589,444.0,1063.0,155.4,8,83959.0,building_nearest_gfa_centroid,Imperial Kennedy
+D026,111/24,1,22.28254,114.129849,395.0,1067.0,138.25,19,70875.0,building_nearest_gfa_centroid,
+D027,111/25,1,22.283394,114.130642,635.0,1555.0,222.25,14,57523.0,building_nearest_gfa_centroid,Po Lung Court; Tai Pak Court; To Li Court
+D028,111/26,1,22.280381,114.127613,1582.2,4097.9,553.76,7,98754.0,building_nearest_gfa_centroid,Block 1; Block 2; Block C
+D029,111/26,2,22.28013,114.128536,1010.3,2616.8,353.61,7,63060.0,building_nearest_gfa_centroid,Block A; Block B; Block C
+D030,111/26,3,22.279503,114.129232,766.5,1985.3,268.28,8,47843.0,building_nearest_gfa_centroid,Tresend Garden; Smith Court; Jockey Club Student Village III
+D031,111/27,1,22.28155,114.130928,77.9,186.8,27.28,4,14068.0,building_nearest_gfa_centroid,
+D032,111/27,2,22.280608,114.129334,250.1,599.2,87.52,8,45131.0,building_nearest_gfa_centroid,Poksmith Villa; Pokfield Garden
+D033,111/28,1,22.282269,114.130751,358.0,1017.0,125.3,0,,ssg_interior_point,
+D034,111/29-30,1,22.283467,114.131411,398.0,1010.0,139.3,9,37047.0,building_nearest_gfa_centroid,Lung Fai Mansion; Chin Hom Court
+D035,111/31-32,1,22.282716,114.13118,315.0,588.0,110.25,14,12583.0,building_nearest_gfa_centroid,Ching Lin Terrace Residence; Block 9; Block 12
+D036,111/35 and 111/43,1,22.280379,114.130581,448.4,1282.5,156.93,6,101443.0,building_nearest_gfa_centroid,Suen Chi Sun Hall; Lee Shau Kee Hall; Morrison Hall
+D037,111/35 and 111/43,2,22.278935,114.129583,128.6,183.5,45.02,2,14516.0,building_nearest_gfa_centroid,Wah Fai House; Mei Wah Mansion
+D038,111/39,1,22.282229,114.131812,667.0,2063.0,233.45,5,78746.0,building_nearest_gfa_centroid,Block 2; Block 3; Block 1
+D039,111/44 and 111/46-49,1,22.273114,114.121068,185.0,629.0,64.75,13,130315.0,building_nearest_gfa_centroid,House A; House B; House C
+D040,111/45,1,22.275164,114.128074,155.0,603.0,54.25,14,26295.0,building_nearest_gfa_centroid,Block D; Four Winds Apartments; Block A
+D041,111/50,1,22.28094,114.125967,621.0,2010.0,217.35,5,48104.0,building_nearest_gfa_centroid,South Terrace; Sai Wan Estate; East Terrace

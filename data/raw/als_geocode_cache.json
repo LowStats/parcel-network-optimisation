@@ -408,5 +408,441 @@
     }
    }
   ]
+ },
+ "51 Smithfield Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "51 Smithfield Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "KENNEDY TOWN FIRE STATION",
+       "EngEstate": {
+        "EstateName": "KENNEDY TOWN FIRE STATION"
+       },
+       "EngStreet": {
+        "StreetName": "NEW PRAYA, KENNEDY TOWN",
+        "BuildingNoFrom": "6"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3123916107T20050430",
+      "GeospatialInformation": {
+       "Northing": "816107",
+       "Easting": "831239",
+       "Latitude": "22.28384",
+       "Longitude": "114.12808"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 50.0
+    }
+   }
+  ]
+ },
+ "Kwan Yick Building Phase 1 430 Des Voeux Road West": {
+  "RequestAddress": {
+   "AddressLine": [
+    "Kwan Yick Building Phase 1 430 Des Voeux Road West"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngEstate": {
+        "EstateName": "KWAN YICK BUILDING",
+        "EngPhase": {
+         "PhaseName": "PHASE I"
+        }
+       },
+       "EngStreet": {
+        "StreetName": "DES VOEUX ROAD WEST",
+        "BuildingNoFrom": "430"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3189416428P20060312",
+      "GeospatialInformation": {
+       "Northing": "816428",
+       "Easting": "831894",
+       "Latitude": "22.28674",
+       "Longitude": "114.13443"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 87.28
+    }
+   }
+  ]
+ },
+ "28 Belcher's Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "28 Belcher's Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "BRILLIANT COURT",
+       "EngStreet": {
+        "StreetName": "PRAYA KENNEDY TOWN",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3155716215T20050430",
+      "GeospatialInformation": {
+       "Northing": "816215",
+       "Easting": "831557",
+       "Latitude": "22.28482",
+       "Longitude": "114.13116"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 66.99
+    }
+   }
+  ]
+ },
+ "7 North Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "7 North Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "CHESTER COURT",
+       "EngStreet": {
+        "StreetName": "PRAYA KENNEDY TOWN",
+        "BuildingNoFrom": "7"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3168616378P20060312",
+      "GeospatialInformation": {
+       "Northing": "816378",
+       "Easting": "831686",
+       "Latitude": "22.28629",
+       "Longitude": "114.13241"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 83.75
+    }
+   }
+  ]
+ },
+ "133 Belcher's Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "133 Belcher's Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngStreet": {
+        "StreetName": "BELCHER'S STREET",
+        "BuildingNoFrom": "133"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3119015968T20050430",
+      "GeospatialInformation": {
+       "Northing": "815968",
+       "Easting": "831190",
+       "Latitude": "22.28258",
+       "Longitude": "114.1276"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 67.24
+    }
+   }
+  ]
+ },
+ "77 First Street Sai Ying Pun": {
+  "RequestAddress": {
+   "AddressLine": [
+    "77 First Street Sai Ying Pun"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngStreet": {
+        "StreetName": "FIRST STREET",
+        "BuildingNoFrom": "77"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3266616411T20050430",
+      "GeospatialInformation": {
+       "Northing": "816411",
+       "Easting": "832666",
+       "Latitude": "22.28659",
+       "Longitude": "114.14192"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 75.58
+    }
+   }
+  ]
+ },
+ "193 Queen's Road West": {
+  "RequestAddress": {
+   "AddressLine": [
+    "193 Queen's Road West"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngStreet": {
+        "StreetName": "QUEEN'S ROAD WEST",
+        "BuildingNoFrom": "193"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3295416479T20050430",
+      "GeospatialInformation": {
+       "Northing": "816479",
+       "Easting": "832954",
+       "Latitude": "22.2872",
+       "Longitude": "114.14472"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 85.87
+    }
+   }
+  ]
+ },
+ "28 Hau Wo Street Kennedy Town": {
+  "RequestAddress": {
+   "AddressLine": [
+    "28 Hau Wo Street Kennedy Town"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "BRILLIANT COURT",
+       "EngStreet": {
+        "StreetName": "PRAYA KENNEDY TOWN",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3155716215T20050430",
+      "GeospatialInformation": {
+       "Northing": "816215",
+       "Easting": "831557",
+       "Latitude": "22.28482",
+       "Longitude": "114.13116"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 83.75
+    }
+   }
+  ]
+ },
+ "51 Smithfield Road": {
+  "RequestAddress": {
+   "AddressLine": [
+    "51 Smithfield Road"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "LUEN ON APARTMENTS",
+       "EngStreet": {
+        "StreetName": "SMITHFIELD",
+        "BuildingNoFrom": "51"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3116915857T20051215",
+      "GeospatialInformation": {
+       "Northing": "815857",
+       "Easting": "831169",
+       "Latitude": "22.28158",
+       "Longitude": "114.1274"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 88.75
+    }
+   }
+  ]
+ },
+ "28 Belcher's Street": {
+  "RequestAddress": {
+   "AddressLine": [
+    "28 Belcher's Street"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "TREASURE COURT",
+       "EngStreet": {
+        "StreetName": "BELCHER'S STREET",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3148116048T20050430",
+      "GeospatialInformation": {
+       "Northing": "816048",
+       "Easting": "831481",
+       "Latitude": "22.28331",
+       "Longitude": "114.13042"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 88.75
+    }
+   }
+  ]
+ },
+ "7 North Street": {
+  "RequestAddress": {
+   "AddressLine": [
+    "7 North Street"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "EngStreet": {
+        "StreetName": "NORTH STREET",
+        "BuildingNoFrom": "7"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3132616116T20050430",
+      "GeospatialInformation": {
+       "Northing": "816116",
+       "Easting": "831326",
+       "Latitude": "22.28392",
+       "Longitude": "114.12892"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 88.75
+    }
+   }
+  ]
+ },
+ "28 Hau Wo Street": {
+  "RequestAddress": {
+   "AddressLine": [
+    "28 Hau Wo Street"
+   ]
+  },
+  "SuggestedAddress": [
+   {
+    "Address": {
+     "PremisesAddress": {
+      "EngPremisesAddress": {
+       "BuildingName": "SHUN CHEONG BUILDING",
+       "EngStreet": {
+        "StreetName": "HAU WO STREET",
+        "BuildingNoFrom": "28"
+       },
+       "EngDistrict": {
+        "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+       },
+       "Region": "HK"
+      },
+      "GeoAddress": "3117615983T20050430",
+      "GeospatialInformation": {
+       "Northing": "815983",
+       "Easting": "831176",
+       "Latitude": "22.28272",
+       "Longitude": "114.12746"
+      }
+     }
+    },
+    "ValidationInformation": {
+     "Score": 88.75
+    }
+   }
+  ]
  }
 }
