@@ -1,0 +1,9 @@
+osm_type,osm_id,feature,issue,lat,lon,osm_url
+node,8748832216,highway=elevator,lift attached to only one footway - other level not connected (dead-end lift),22.2805662,114.1313747,https://www.openstreetmap.org/node/8748832216
+way,312192960,?,not in cached walk query (tags excluded by OSMnx walk filter),,,https://www.openstreetmap.org/way/312192960
+way,317637345,highway=footway,footway fragment disconnected from the main pedestrian network (dropped by OSMnx),22.280941,114.130982,https://www.openstreetmap.org/way/317637345
+way,450179895,?,not in cached walk query (tags excluded by OSMnx walk filter),,,https://www.openstreetmap.org/way/450179895
+way,450179916,highway=footway,footway fragment disconnected from the main pedestrian network (dropped by OSMnx),22.280872,114.13127,https://www.openstreetmap.org/way/450179916
+way,450179917,highway=footway,footway fragment disconnected from the main pedestrian network (dropped by OSMnx),22.280916,114.131287,https://www.openstreetmap.org/way/450179917
+way,1125971183,highway=footway,footway fragment disconnected from the main pedestrian network (dropped by OSMnx),22.280255,114.127619,https://www.openstreetmap.org/way/1125971183
+way,1331401484,highway=footway,footway fragment disconnected from the main pedestrian network (dropped by OSMnx),22.280718,114.126148,https://www.openstreetmap.org/way/1331401484

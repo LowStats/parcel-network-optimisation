@@ -3,16 +3,18 @@
 Method
   1. Study boundary = dissolve of 2021 Census Small Subunit Groups (SSGs) in STUDY_TPUS
      (mainland part only - offshore islets dropped).
-  2. Residential buildings (OSM footprints) are assigned to the SSG containing them.
-     Gross floor area (GFA) proxy = footprint area x storeys (missing storeys imputed with the
-     median of residential buildings in the same SSG, else the study-area median).
+  2. Residential towers (Lands Department building layer: official footprints and storeys; OSM
+     used only to exclude non-residential uses) are assigned to the SSG containing them.
+     Gross floor area (GFA) proxy = footprint area x storeys. Missing storeys are estimated from
+     building height / 3.43 m, else the SSG median.
   3. Within each SSG, buildings are grouped by complete-linkage clustering so that no cluster is
      wider than CLUSTER_MAX_DIAMETER_M; clusters with < MIN_NODE_HOUSEHOLDS are merged into the
      nearest cluster of the same SSG. Each cluster becomes one demand node, located on the
      building nearest the GFA-weighted centroid of the cluster.
   4. The SSG's official 2021 Census households (dh) and population (t_pop) are split across its
-     clusters in proportion to GFA. Totals therefore match the Census exactly. Student halls /
-     hostels / dormitories receive population but not (domestic) households.
+     clusters in proportion to GFA. Totals therefore match the Census exactly. Institutional
+     quarters (student halls, hostels, elderly homes)
+     receive population but not (domestic) households.
 
 Outputs (data/processed/)
   study_area.gpkg          layers: boundary, supply_buffer, ssg
@@ -38,7 +40,8 @@ NON_RESIDENTIAL_NAME = re.compile(
     r"office|complex|depot|station|school|college|market|reservoir|social centre|community|church|"
     r"temple|clinic|hospital|library|police|fire|ambulance|sports|pumping|substation|toilet|"
     r"government|services building|museum|kindergarten", re.I)
-DORMITORY_NAME = re.compile(r"\bhall\b|hostel|dormitory|宿舍|舍堂", re.I)
+DORMITORY_NAME = re.compile(r"\bhall\b|hostel|dormitory|home for the elderly|care home|宿舍|舍堂|護理安老院|老人院", re.I)
+STOREY_HEIGHT_M = 3.43  # median (TopHeight-BaseHeight)/Storeys of LandsD towers in the bbox
 NON_RESIDENTIAL_HINTS = {"school", "university", "hospital", "industrial", "warehouse", "service",
                          "roof", "commercial", "retail", "office", "church", "temple", "garage"}
 
@@ -54,30 +57,56 @@ def load_ssg() -> gpd.GeoDataFrame:
 
 
 def load_residential_buildings(ssg: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    b = gpd.read_file(RAW / "osm_buildings.gpkg").to_crs(HK1980)
-    b = b[b.geometry.type.isin(["Polygon", "MultiPolygon"])].copy()
-    b = b[b["building"].isin(RESIDENTIAL)]
-    hint = b.get("building:use", pd.Series(index=b.index, dtype=object)).fillna("")
-    b = b[~((b["building"] == "yes") & (b.get("amenity", "").fillna("").isin(NON_RESIDENTIAL_HINTS)
-                                         | hint.isin(NON_RESIDENTIAL_HINTS)))]
+    """Residential towers from the Lands Department building layer (official footprints and
+    storeys). OSM is used only to recognise non-residential uses: a tower is dropped if it lies in
+    an OSM building tagged as a non-residential type, or if its (LandsD or OSM) name is clearly
+    non-residential. Podiums (mostly retail / car parks) are excluded."""
+    b = gpd.read_file(RAW / "landsd_buildings.geojson").to_crs(HK1980)
+    b = b[(b["BuildingBlockType"] == "Tower") & (b["Status"].fillna("Active") == "Active")].copy()
+    b = b[b.geometry.type.isin(["Polygon", "MultiPolygon"])]
+
+    o = gpd.read_file(RAW / "osm_buildings.gpkg").to_crs(HK1980)
+    o = o[o.geometry.type.isin(["Polygon", "MultiPolygon"])]
+    pts = b.set_geometry(b.representative_point())
+    j = gpd.sjoin(pts[["geometry"]], o[["building", "name", "name:en", "geometry"]],
+                  predicate="within", how="left")
+    j = j[~j.index.duplicated(keep="first")]
+    b["osm_building"] = j["building"].reindex(b.index)
+    b["name:en"] = b["BuildingNameEN"].fillna(j["name:en"].reindex(b.index))
+    b["name"] = b["BuildingNameTC"].fillna(j["name"].reindex(b.index))
+
+    osm_type = b["osm_building"].fillna("none")
     names = b["name:en"].fillna("") + " " + b["name"].fillna("")
-    b = b[~names.str.contains(NON_RESIDENTIAL_NAME)]
+    non_res = (~osm_type.isin(RESIDENTIAL | {"none"})) | names.str.contains(NON_RESIDENTIAL_NAME)
+    b = b[~non_res]
     b["footprint_m2"] = b.area
     b = b[b["footprint_m2"] >= 20]  # drop sheds / kiosks
-    b["storeys"] = pd.to_numeric(b["building:levels"], errors="coerce")
-    b["storeys_imputed"] = b["storeys"].isna()
+
+    # Storeys: official count; else building height / median storey height (3.43 m, derived from
+    # LandsD towers that have both); else SSG median.
+    b["storeys"] = pd.to_numeric(b["Storeys"], errors="coerce")
+    b["storeys_source"] = np.where(b["storeys"].notna(), "landsd_storeys", None)
+    est = ((b["TopHeight"] - b["BaseHeight"]) / STOREY_HEIGHT_M).round().clip(lower=1)
+    use_h = b["storeys"].isna() & est.notna()
+    b.loc[use_h, "storeys"] = est[use_h]
+    b.loc[use_h, "storeys_source"] = "landsd_height"
 
     pts = b.set_geometry(b.representative_point())
     j = gpd.sjoin(pts[["geometry"]], ssg[["ssg", "geometry"]], predicate="within", how="inner")
     b = b.loc[j.index].assign(ssg=j["ssg"].values)
     med_ssg = b.groupby("ssg")["storeys"].transform("median")
+    miss = b["storeys"].isna()
+    b.loc[miss, "storeys_source"] = "ssg_median"
     b["storeys"] = b["storeys"].fillna(med_ssg).fillna(b["storeys"].median())
+    b["storeys_imputed"] = b["storeys_source"] != "landsd_storeys"
     b["gfa_m2"] = b["footprint_m2"] * b["storeys"]
-    names = b["name:en"].fillna("") + " " + b["name"].fillna("")
-    b["is_dormitory"] = (b["building"] == "dormitory") | names.str.contains(DORMITORY_NAME)
-    keep = ["id", "name", "name:en", "building", "storeys", "storeys_imputed", "footprint_m2",
-            "gfa_m2", "is_dormitory", "ssg", "geometry"]
-    return b[[c for c in keep if c in b.columns]].reset_index(drop=True)
+    b["is_dormitory"] = (b["osm_building"] == "dormitory") | names.reindex(b.index).str.contains(
+        DORMITORY_NAME)
+    b["building"] = b["osm_building"].fillna("(no OSM footprint)")
+    b["id"] = b["BuildingID"]
+    keep = ["id", "name", "name:en", "building", "storeys", "storeys_source", "storeys_imputed",
+            "footprint_m2", "gfa_m2", "is_dormitory", "ssg", "geometry"]
+    return b[keep].reset_index(drop=True)
 
 
 def cluster_ssg(bld: gpd.GeoDataFrame) -> np.ndarray:
@@ -179,7 +208,7 @@ if __name__ == "__main__":
     print(f"Study area: TPU {STUDY_TPUS}, {len(ssg)} SSGs, "
           f"{boundary.area.iloc[0] / 1e6:.2f} km2")
     print(f"Residential buildings used: {len(bld_alloc)} "
-          f"({bld_alloc['storeys_imputed'].mean():.0%} with imputed storeys)")
+          f"(storeys source: {bld_alloc['storeys_source'].value_counts().to_dict()})")
     print(f"Demand nodes: {len(nodes)} | households {nodes.households.sum():,.0f} "
           f"(census {ssg.households.sum():,.0f}) | population {nodes.population.sum():,.0f} "
           f"(census {ssg.population.sum():,.0f})")

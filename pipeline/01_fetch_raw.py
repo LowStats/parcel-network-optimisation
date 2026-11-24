@@ -3,6 +3,7 @@
 Sources
   * C&SD 2021 Population Census, Small Subunit Group (SSG) boundaries + population/households (CSDI WFS)
   * Hongkong Post iPostal Station locations (CSDI WFS)
+  * Lands Department building footprints with official storeys / heights (CSDI WFS)
   * OpenStreetMap buildings (footprints, names, levels, building type)
   * OpenStreetMap POIs that can host a locker (MTR exits, markets, malls, convenience stores, ...)
   * OpenStreetMap pedestrian network (OSMnx, network_type="walk": includes steps, footbridges, lifts)
@@ -18,7 +19,7 @@ import geopandas as gpd
 import osmnx as ox
 import requests
 
-from common import (CSDI_DATASETS, CSDI_WFS, FETCH_BBOX, HK1980, HTTP_HEADERS, OVERPASS_ENDPOINTS,
+from common import (CSDI_DATASETS, save_json, CSDI_WFS, FETCH_BBOX, HK1980, HTTP_HEADERS, OVERPASS_ENDPOINTS,
                     RAW, WGS84)
 
 FORCE = "--force" in sys.argv
@@ -31,22 +32,31 @@ KEEP_TAGS = {
 S, W, N, E = FETCH_BBOX
 
 
-def fetch_csdi(name: str, bbox: bool) -> None:
+def fetch_csdi(name: str, bbox: bool, page_size: int = 1000) -> None:
     out = RAW / f"{name}.geojson"
     if out.exists() and not FORCE:
         print(f"[skip] {out.name}")
         return
     ds_id, layer = CSDI_DATASETS[name]
-    params = {
-        "service": "wfs", "version": "2.0.0", "request": "GetFeature",
-        "typeNames": layer, "outputFormat": "GEOJSON", "srsName": WGS84,
-    }
-    if bbox:
-        params["bbox"] = f"{S},{W},{N},{E},{WGS84}"
-    r = requests.get(CSDI_WFS.format(id=ds_id), params=params, headers=HTTP_HEADERS, timeout=300)
-    r.raise_for_status()
-    out.write_bytes(r.content)
-    print(f"[ok]   {out.name}: {len(gpd.read_file(out))} features")
+    features, start = [], 0
+    while True:  # WFS 2.0 paging (the ArcGIS server caps features per request)
+        params = {
+            "service": "wfs", "version": "2.0.0", "request": "GetFeature",
+            "typeNames": layer, "outputFormat": "GEOJSON", "srsName": WGS84,
+            "count": page_size, "startIndex": start,
+        }
+        if bbox:
+            params["bbox"] = f"{S},{W},{N},{E},{WGS84}"
+        r = requests.get(CSDI_WFS.format(id=ds_id), params=params, headers=HTTP_HEADERS,
+                         timeout=300)
+        r.raise_for_status()
+        page = r.json().get("features", [])
+        features += page
+        if len(page) < page_size:
+            break
+        start += page_size
+    save_json({"type": "FeatureCollection", "features": features}, out)
+    print(f"[ok]   {out.name}: {len(features)} features")
 
 
 def with_overpass_fallback(fn, *args, **kwargs):
@@ -134,6 +144,7 @@ if __name__ == "__main__":
 
     fetch_csdi("census2021_ssg", bbox=True)
     fetch_csdi("ipostal_stations", bbox=False)  # territory-wide; filtered spatially later
+    fetch_csdi("landsd_buildings", bbox=True)
 
     fetch_osm_features("osm_buildings", {"building": True})
     fetch_osm_features("osm_pois", {

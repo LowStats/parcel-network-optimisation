@@ -80,6 +80,8 @@ CSDI_DATASETS = {
     "census2021_ssg": ("censtatd_rcd_1635933365202_19171", "csdi:SSUG_21C"),
     # iPostal Station information (Hongkong Post)
     "ipostal_stations": ("hkpo_rcd_1639010988627_23643", "csdi:IPOST"),
+    # Lands Department building footprints (official): names, storeys, base/top height
+    "landsd_buildings": ("landsd_rcd_1637211194312_35158", "csdi:Building"),
 }
 
 OVERPASS_ENDPOINTS = [

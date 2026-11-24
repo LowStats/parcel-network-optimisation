@@ -80,32 +80,35 @@ S078,candidate,,convenience_store,Hing Tat Trading,"堅彌地城海旁 Praya, Ke
 S079,candidate,,convenience_store,uSmile,,osm:way/762788090,22.281645,114.132545,False,38.0,yes,no,OpenStreetMap,
 S080,candidate,,bus_terminus,Kennedy Town,,osm:way/1193058436,22.282537,114.12357,True,0.0,yes,no,OpenStreetMap,
 S081,candidate,,bus_terminus,Kennedy Town (Belcher Bay),,osm:way/875004398,22.284551,114.128425,True,0.0,yes,no,OpenStreetMap,
-S082,candidate,,residential_building,Block 1,,demand:D003,22.283346,114.126172,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D003
-S083,candidate,,residential_building,Block 1,,demand:D019,22.281748,114.125988,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D019
-S084,candidate,,residential_building,Block 1,,demand:D028,22.280381,114.127613,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D028
-S085,candidate,,residential_building,Block 2,,demand:D038,22.282229,114.131812,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D038
-S086,candidate,,residential_building,Block 3,,demand:D007,22.282764,114.126595,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D007
-S087,candidate,,residential_building,Block A,,demand:D005,22.283808,114.128408,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D005
-S088,candidate,,residential_building,Block A,,demand:D029,22.28013,114.128536,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D029
-S089,candidate,,residential_building,Block D,,demand:D040,22.275164,114.128074,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D040
-S090,candidate,,residential_building,Caritas Jockey Club Hostel - Mount Davis,,demand:D022,22.277376,114.122197,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D022
-S091,candidate,,residential_building,Ching Lin Terrace Residence,,demand:D035,22.282716,114.13118,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D035
-S092,candidate,,residential_building,House A,,demand:D039,22.273114,114.121068,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D039
-S093,candidate,,residential_building,Imperial Kennedy,,demand:D025,22.282414,114.128589,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D025
-S094,candidate,,residential_building,Lung Fai Mansion,,demand:D034,22.283467,114.131411,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D034
-S095,candidate,,residential_building,Poksmith Villa,,demand:D032,22.280608,114.129334,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D032
-S096,candidate,,residential_building,Residential cluster D001,,demand:D001,22.281297,114.120761,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D001
-S097,candidate,,residential_building,Residential cluster D002,,demand:D002,22.282504,114.12297,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D002
-S098,candidate,,residential_building,Residential cluster D006,,demand:D006,22.283935,114.129175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D006
-S099,candidate,,residential_building,Residential cluster D015,,demand:D015,22.284857,114.129063,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D015
-S100,candidate,,residential_building,Residential cluster D021,,demand:D021,22.281372,114.123841,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D021
-S101,candidate,,residential_building,Residential cluster D026,,demand:D026,22.28254,114.129849,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D026
-S102,candidate,,residential_building,Residential cluster D031,,demand:D031,22.28155,114.130928,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D031
-S103,candidate,,residential_building,Residential cluster D033,,demand:D033,22.282269,114.130751,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D033
-S104,candidate,,residential_building,South Terrace,,demand:D041,22.28094,114.125967,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D041
-S105,candidate,,residential_building,Suen Chi Sun Hall,,demand:D036,22.280379,114.130581,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D036
-S106,candidate,,residential_building,Tower 1,,demand:D017,22.284745,114.132691,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D017
-S107,candidate,,residential_building,Tower 3,,demand:D018,22.285171,114.133467,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D018
-S108,candidate,,residential_building,Town Place,,demand:D010,22.283024,114.1286,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D010
-S109,candidate,,residential_building,Tresend Garden,,demand:D030,22.279503,114.129232,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D030
-S110,candidate,,residential_building,Wah Fai House,,demand:D037,22.278935,114.129583,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D037
+S082,candidate,,residential_building,Axeford Villa,,demand:D031,22.282285,114.130688,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D031
+S083,candidate,,residential_building,Bayanihan Kennedytown Centre,,demand:D018,22.281231,114.122868,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D018
+S084,candidate,,residential_building,Blessing House,,demand:D006,22.283763,114.12916,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D006
+S085,candidate,,residential_building,Cheong Kat Building,,demand:D007,22.282833,114.126536,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D007
+S086,candidate,,residential_building,East Terrace,,demand:D040,22.281079,114.125896,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D040
+S087,candidate,,residential_building,Four Winds,,demand:D039,22.27485,114.128024,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D039
+S088,candidate,,residential_building,Hing Wong Building,,demand:D004,22.283701,114.127444,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D004
+S089,candidate,,residential_building,Hung Lee Building,,demand:D024,22.282527,114.129822,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D024
+S090,candidate,,residential_building,Jade Lotus Garden,,demand:D033,22.282817,114.131304,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D033
+S091,candidate,,residential_building,Ko Leung Mansion,,demand:D015,22.286294,114.133417,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D015
+S092,candidate,,residential_building,Kwun Lung Lau Block 2,,demand:D028,22.280418,114.127583,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D028
+S093,candidate,,residential_building,Man Kwong Court,,demand:D023,22.282532,114.128625,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D023
+S094,candidate,,residential_building,Mei Wah Mansion,,demand:D035,22.279022,114.129653,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D035
+S095,candidate,,residential_building,New Fortune House Block B,,demand:D005,22.283612,114.12849,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D005
+S096,candidate,,residential_building,On Lee Block C-E,,demand:D038,22.27312,114.121073,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D038
+S097,candidate,,residential_building,Pearl Court Block A,,demand:D013,22.284627,114.130962,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D013
+S098,candidate,,residential_building,Po Leung Kuk Chan Au Big Yan Home For The Elderly,,demand:D016,22.284743,114.132687,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D016
+S099,candidate,,residential_building,Poksmith Villa,,demand:D029,22.280641,114.129285,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D029
+S100,candidate,,residential_building,Residential cluster D030,,demand:D030,22.281534,114.130941,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D030
+S101,candidate,,residential_building,Shun Hing Building,,demand:D010,22.283197,114.128542,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D010
+S102,candidate,,residential_building,Smithfield Court Block 1,,demand:D022,22.282088,114.12777,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D022
+S103,candidate,,residential_building,Smithfield Garden Block C,,demand:D027,22.279014,114.12927,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D027
+S104,candidate,,residential_building,Suen Chi Sun Hall,,demand:D034,22.279973,114.130757,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D034
+S105,candidate,,residential_building,THE WESTWOOD,,demand:D017,22.285481,114.133461,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D017
+S106,candidate,,residential_building,Tai Pak Mansion,,demand:D032,22.283289,114.13131,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D032
+S107,candidate,,residential_building,The Merton Block 1,,demand:D003,22.283429,114.126155,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D003
+S108,candidate,,residential_building,The Sail at Victoria,,demand:D002,22.281298,114.120756,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D002
+S109,candidate,,residential_building,To Li Garden,,demand:D037,22.282262,114.131758,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D037
+S110,candidate,,residential_building,Tung Hing Mansion,,demand:D011,22.283135,114.129496,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D011
+S111,candidate,,residential_building,University Heights Tower 1,,demand:D036,22.281424,114.130175,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D036
+S112,candidate,,residential_building,Victoria Public Mortuary,,demand:D001,22.281809,114.122246,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D001
+S113,candidate,,residential_building,何莊,,demand:D020,22.281743,114.126029,True,0.0,residents,no,demand node (step 2),in-building locker at demand node D020
