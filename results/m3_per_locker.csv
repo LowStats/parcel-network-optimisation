@@ -1,17 +1,17 @@
 site_id,name,lambda_per_day,offered_load_a,sim_unmet_pct_80,erlangB_pct_80,sim_overflow_prob_pct_80,sim_utilisation_pct_80,modules_needed_normal,modules_needed_x1.5,modules_needed_x2,modules_needed_negbin,modules_needed_empirical_dwell
-S0146,SF locker · 1Q Belcher's Street,481.8,722.8,88.9,88.9,100.0,100.0,19,28,37,25,16
-S0050,JD counter (7-Eleven) · Kennedy Town & Mount Dav,437.2,655.8,87.8,87.8,100.0,100.0,17,25,33,23,14
-S0120,SF counter · 144-148 Belcher's Street,430.5,645.7,87.6,87.6,100.0,100.0,17,25,33,23,14
+S0146,SF locker · 1Q Belcher's Street,481.8,722.8,88.9,88.9,100.0,100.0,19,28,37,29,16
+S0050,JD counter (7-Eleven) · Kennedy Town & Mount Dav,437.2,655.8,87.8,87.8,100.0,100.0,17,25,33,25,14
+S0120,SF counter · 144-148 Belcher's Street,430.5,645.7,87.6,87.6,100.0,100.0,17,25,33,26,14
 S0200,MTR exit · Whitty Street,421.3,631.9,87.3,87.4,100.0,100.0,17,24,32,23,14
-S0346,7-Eleven · Shek Tong Tsui / Sai Ying Pun W,420.0,630.0,87.3,87.3,100.0,100.0,17,24,32,23,14
-S0321,Yata · Shek Tong Tsui / Sai Ying Pun W,388.9,583.3,86.3,86.3,100.0,100.0,15,23,30,21,13
-S0026,Cainiao counter · No. 28 Belcher's Street,371.7,557.6,85.6,85.7,100.0,100.0,15,22,29,21,12
-S0194,MTR exit · Second Street,370.6,556.0,85.6,85.6,100.0,100.0,15,22,28,21,12
-S0306,Wellcome · Sheung Wan,340.8,511.2,84.3,84.4,100.0,100.0,14,20,26,19,11
-S0341,7-Eleven · Sai Ying Pun / Sheung Wan W,339.7,509.5,84.3,84.3,100.0,100.0,14,20,26,19,11
+S0346,7-Eleven · Shek Tong Tsui / Sai Ying Pun W,420.0,630.0,87.3,87.3,100.0,100.0,17,24,32,25,14
+S0321,Yata · Shek Tong Tsui / Sai Ying Pun W,388.9,583.3,86.3,86.3,100.0,100.0,15,23,30,22,13
+S0026,Cainiao counter · No. 28 Belcher's Street,371.7,557.6,85.6,85.7,100.0,100.0,15,22,29,24,12
+S0194,MTR exit · Second Street,370.6,556.0,85.6,85.6,100.0,100.0,15,22,28,23,12
+S0306,Wellcome · Sheung Wan,340.8,511.2,84.3,84.4,100.0,100.0,14,20,26,20,11
+S0341,7-Eleven · Sai Ying Pun / Sheung Wan W,339.7,509.5,84.3,84.3,100.0,100.0,14,20,26,20,11
 S0108,SF counter (OK store) · No.1 Seymour Road,327.2,490.8,83.7,83.7,100.0,100.0,13,19,25,19,11
-S0058,JD counter (7-Eleven) · 55 Bonham Road,316.3,474.5,83.1,83.2,100.0,100.0,13,19,24,18,11
-S0115,SF counter · Sai Ying Pun / Sheung Wan W,313.7,470.5,83.0,83.0,100.0,100.0,13,18,24,18,10
+S0058,JD counter (7-Eleven) · 55 Bonham Road,316.3,474.5,83.1,83.2,100.0,100.0,13,19,24,19,11
+S0115,SF counter · Sai Ying Pun / Sheung Wan W,313.7,470.5,83.0,83.0,100.0,100.0,13,18,24,19,10
 S0364,Free Market · Kennedy Town & Mount Davis,294.8,442.3,81.9,82.0,100.0,100.0,12,17,23,17,10
 S0149,SF locker · 273 Des Voeux Road,276.2,414.2,80.7,80.7,100.0,100.0,11,16,21,16,9
 S0134,SF locker · 25 Tung Street,237.7,356.5,77.5,77.6,100.0,100.0,10,14,19,15,8

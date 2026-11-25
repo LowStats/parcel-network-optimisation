@@ -1,0 +1,8 @@
+arrivals,cv_at_100_per_day,requirement,rejection_sized_pct
+Poisson,0.1,14080,0.18
+NB k = 50,0.17,14680,1.93
+NB k = 20,0.24,15840,4.01
+NB k = 10,0.33,17480,6.7
+NB k = 5,0.46,20400,10.83
+NB k = 2,0.71,28520,18.84
+NB k = 1,1.0,38720,27.81

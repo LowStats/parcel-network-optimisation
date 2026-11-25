@@ -3,7 +3,7 @@
 Where to put parcel lockers in Hong Kong's Central & Western District (SCLP / MCLP, simulation, sensitivity).
 The research plan is in [Parcel Network Optimisation.md](Parcel%20Network%20Optimisation.md). The study started with Kennedy Town only and was widened to the whole district. To rerun the Kennedy Town-only version, set `STUDY_TPUS = ["111"]` in `pipeline/common.py`.
 
-**Status:** All four sections of the research plan are done: data (§1), ILP location models (§2), stochastic simulation (§3), and sensitivity analysis and managerial insights (§4). We also added extensions from the course: a transportation LP with duals, a module-allocation MILP, goal programming and decision analysis.
+**Status:** All four sections of the research plan are done: data (§1), ILP location models (§2), stochastic simulation (§3), and sensitivity analysis and managerial insights (§4). We also added extensions from the course: a transportation LP with duals, a module-allocation MILP, goal programming, decision analysis (incl. two-way break-even), and a demand & capacity sensitivity study (demand–performance curves, marginal value of capacity, tornado, risk analysis, operating policies).
 
 **📄 Full report: [`report/index.html`](report/index.html)**. It is a single self-contained page (figures embedded). Download it and open it in a browser, because GitHub shows HTML as source code.
 
@@ -19,9 +19,14 @@ The research plan is in [Parcel Network Optimisation.md](Parcel%20Network%20Opti
 | Targeted vs uniform expansion (MILP) | +104 modules: 52.6% served (targeted) vs 41.4% (uniform) |
 | Compartments for ≤2% overflow (simulation + Erlang B) | 14,080 normal · 25,920 at Double 11 (×2) |
 | Equity (goal programming) | Every area ≥70% needs 35 lockers (14 in-building) |
+| Distance vs slope-aware time (same standard, D/75 min) | Time standard needs 18–26 more lockers for 100%; distance-optimal 22-locker plan reaches 69.0% within 4 min vs 79.0% for the time-optimal plan |
+| Sensitivity to demand (banks sized for ≤2%) | +10% demand → 4.3% rejected, +25% → 13.2%; headroom to 2% only +5% |
+| Marginal value of capacity | A module at a saturated bank serves ~27 parcels/day; economic optimum 14,000 compartments (1.6% rejected) at HK$5/parcel, HK$15k/module-yr |
+| Risk (all inputs uncertain) | Base sizing misses 2% in 60% of scenarios; robust P90 sizing 20,360 compartments → 15% |
+| Operating policies (+50% surge) | Pick-up reminders cut rejection 25.9% → 10.3%; redirecting overflow → 25.6% |
 | How many to build (decision analysis) | EMV → **build 35** (HK$2.42m/yr), maximin → build 22, EVPI HK$0.06m/yr |
 
-Reproduce all models and the report in about one minute: `.venv/bin/python models/run_all.py`. Outputs go to `results/` (CSV/JSON) and `figures/models/` (PNG).
+Reproduce all models and the report in about two minutes: `.venv/bin/python models/run_all.py`. Outputs go to `results/` (CSV/JSON) and `figures/models/` (PNG).
 
 ![Study area map](figures/study_area_map.png)
 
@@ -78,13 +83,15 @@ Excluded from the baseline: residents-only lockers (e.g. SF's Cayman Rise and Ca
 ## Repository layout
 
 ```
-models/                      modelling stage (run_all.py runs m1..m5 then builds the report)
+models/                      modelling stage (run_all.py runs m1..m6 then builds the report)
   mcommon.py                 data loading, coverage sets, SCLP/MCLP solvers (SciPy HiGHS), plot style
   m1_location_ilp.py         SCLP / MCLP, LP relaxation, radius & budget sensitivity, recommended plan
   m2_capacity_lp.py          transportation LP + shadow prices / RHS ranging, module MILP, NW/VAM demo
   m3_simulation.py           Monte Carlo overflow simulation, Erlang B check, sizing, Double 11
   m4_goal_programming.py     preemptive goal programming (equity vs coverage vs budget)
-  m5_decision_analysis.py    payoff table, decision criteria, EMV / EVPI, break-even
+  m5_decision_analysis.py    payoff table, decision criteria, EMV / EVPI, one- & two-way break-even
+  m6_demand_capacity.py      demand-performance curves, marginal value of capacity, tornado, risk analysis,
+                             operating policies, replication confidence intervals
 report/build_report.py       builds report/index.html from results/ and figures/
 results/                     model outputs (CSV / JSON)
 pipeline/                    run in order; each step reads the previous step's outputs
@@ -163,6 +170,7 @@ Useful filters for the models:
 - **Elevation:** each network node takes its height from the Lands Department 5 m DTM.
 - **Speed:** each edge's speed follows Tobler's hiking function, *v = v₀·e^(−3.5|s+0.05|)*, rescaled so that flat ground = 4.5 km/h (75 m/min, so 300 m ≈ 4 min).
 - **Direction:** residents walk to the locker and back, so each edge's time is the mean of its uphill and downhill times (half the round trip). Tunnel edges are treated as flat, and grades are capped at ±50%.
+- **How this connects to the 200–500 m standards:** `walk_m` (metres) never depends on slope, and every radius-D coverage model uses it (a_ij = 1 if walk_m ≤ D). Slope enters only through `walk_min`. Each distance standard D has a *time twin* T = D / 75 min (200 m = 2.7, 300 m = 4.0, 400 m = 5.3, 500 m = 6.7 min). On flat ground the two tests agree; on a hill the same distance takes longer. `m1` re-solves the SCLP and MCLP for every standard on both matrices (`results/m1_time_sweep.csv`, `m1_cross_evaluation.csv`).
 
 ## Simulation parameters (Section 3), starting values in `pipeline/common.py`
 

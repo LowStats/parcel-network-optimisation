@@ -1,0 +1,19 @@
+config,arrivals,surge,replications,unmet_mean,unmet_sd,ci95_half_width,single_run_m3
+80 compartments each (plan 'medium'),poisson,1.0,10,75.523,0.014,0.01,75.5
+80 compartments each (plan 'medium'),poisson,1.5,10,83.255,0.008,0.005,83.24
+80 compartments each (plan 'medium'),poisson,2.0,10,87.379,0.007,0.005,87.36
+80 compartments each (plan 'medium'),negbin,1.0,10,76.244,0.084,0.06,76.25
+80 compartments each (plan 'medium'),negbin,1.5,10,83.528,0.044,0.032,83.49
+80 compartments each (plan 'medium'),negbin,2.0,10,87.48,0.035,0.025,87.41
+LP/MILP module plan (+104 modules),poisson,1.0,10,41.341,0.021,0.015,41.29
+LP/MILP module plan (+104 modules),poisson,1.5,10,60.428,0.018,0.013,60.41
+LP/MILP module plan (+104 modules),poisson,2.0,10,70.258,0.012,0.009,70.24
+LP/MILP module plan (+104 modules),negbin,1.0,10,44.595,0.178,0.127,44.47
+LP/MILP module plan (+104 modules),negbin,1.5,10,61.181,0.1,0.072,61.03
+LP/MILP module plan (+104 modules),negbin,2.0,10,70.485,0.096,0.068,70.3
+sized for <=2% rejection,poisson,1.0,10,0.181,0.004,0.003,0.17
+sized for <=2% rejection,poisson,1.5,10,25.961,0.032,0.023,25.96
+sized for <=2% rejection,poisson,2.0,10,44.243,0.018,0.013,44.24
+sized for <=2% rejection,negbin,1.0,10,10.848,0.128,0.092,10.56
+sized for <=2% rejection,negbin,1.5,10,30.933,0.245,0.175,30.65
+sized for <=2% rejection,negbin,2.0,10,45.806,0.158,0.113,45.81

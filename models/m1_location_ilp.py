@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 
 from mcommon import (D_BASE, D_SWEEP, FIG, INK, INK2, MUTED, RESULTS, SEQ, SERIES, STATUS, T_BASE,
-                     Data, dump, mclp, save, sclp, style)
+                     T_SWEEP, Data, dump, mclp, save, sclp, style)
 
 P_MAX = 60
 ELBOW_SHARE = 0.005   # stop when the next locker adds < 0.5% of district households
@@ -175,6 +175,45 @@ if __name__ == "__main__":
     tm.to_csv(RESULTS / "m1_time_vs_distance.csv", index=False)
     print(tm.to_string(index=False))
 
+    # ---------------------------------------------------------------- 4b. time-standard sweep
+    # Each distance standard D is re-expressed as the flat-ground walking time T = D / 75 m/min
+    # and the models are re-solved on the slope-aware time matrix (walk_min).
+    tsw = []
+    for R, T in zip(D_SWEEP, T_SWEEP):
+        rt = sclp(D, allc, T, ex, metric="walk_min")
+        ch = rt["chosen"] or []
+        rp = sclp(D, pub, T, ex, metric="walk_min")
+        row = dict(radius_m=R, time_min=round(T, 2),
+                   baseline_pct_distance=D.pct(D.covered_nodes(ex, R)),
+                   baseline_pct_time=D.pct(D.covered_nodes(ex, T, "walk_min")),
+                   sclp_distance=int(rad.loc[rad.radius_m == R, "sclp_new_lockers"].iloc[0]),
+                   sclp_time=len(ch), sclp_time_estate=sum(c in set(res) for c in ch),
+                   public_only_uncoverable_hh_time=round(float(
+                       D.h.reindex(rp["uncoverable"]).sum())))
+        for P in (10, 20, 30):
+            row[f"mclp_P{P}_pct_distance"] = float(rad.loc[rad.radius_m == R,
+                                                           f"mclp_P{P}_pct"].iloc[0])
+            row[f"mclp_P{P}_pct_time"] = round(mclp(D, allc, P, T, ex, metric="walk_min")["pct"],
+                                               1)
+        tsw.append(row)
+    tsw = pd.DataFrame(tsw).round(1)
+    tsw.to_csv(RESULTS / "m1_time_sweep.csv", index=False)
+    print(tsw.to_string(index=False))
+
+    # cross-evaluation: plan chosen under one metric, scored under the other (P = P*)
+    rd = mclp(D, allc, P_star, D_BASE, ex)
+    rt = mclp(D, allc, P_star, T_BASE, ex, metric="walk_min")
+    xe = []
+    for lab, ch in (("distance-optimal plan (300 m)", rd["chosen"]),
+                    ("time-optimal plan (4 min)", rt["chosen"])):
+        xe.append(dict(plan=lab, scored_by_distance_300m=D.pct(D.covered_nodes(ex + ch, D_BASE)),
+                       scored_by_time_4min=D.pct(D.covered_nodes(ex + ch, T_BASE, "walk_min")),
+                       **{f"{g} (time %)": v for g, v in coverage_by_group(
+                           D, D.covered_nodes(ex + ch, T_BASE, "walk_min")).items()}))
+    xe = pd.DataFrame(xe).round(1)
+    xe.to_csv(RESULTS / "m1_cross_evaluation.csv", index=False)
+    print(xe.to_string(index=False))
+
     # ---------------------------------------------------------------- 5. recommended plan
     plan_ids = chosen_by_P[P_star]
     sites = D.sites.set_index("site_id")
@@ -277,6 +316,38 @@ if __name__ == "__main__":
     ax.set_ylabel("Households covered (%)")
     ax.set_title("Coverage curves for walking radii 200-500 m")
     save(fig, "m1_radius_curves")
+
+    # (d2) distance vs time standards
+    fig, axs = plt.subplots(1, 2, figsize=(10.5, 4.2))
+    xl = [f"{R} m\n{T:.1f} min" for R, T in zip(tsw.radius_m, tsw.time_min)]
+    x = np.arange(len(tsw))
+    ax = axs[0]
+    ax.plot(x, tsw.sclp_distance, color=SERIES[0], marker="o", ms=5, label="distance standard")
+    ax.plot(x, tsw.sclp_time, color=SERIES[1], marker="o", ms=5, label="time standard")
+    for xi, a, b in zip(x, tsw.sclp_distance, tsw.sclp_time):
+        ax.text(xi, b + 4, f"{int(b)}", ha="center", fontsize=8, color=SERIES[1])
+        ax.text(xi, a - 9, f"{int(a)}", ha="center", fontsize=8, color=SERIES[0])
+    ax.set_xticks(x, xl, fontsize=8)
+    ax.set_ylabel("New lockers for 100% coverage (SCLP)")
+    ax.set_ylim(40, 172)
+    ax.set_title("Lockers needed")
+    ax.legend(loc="upper right")
+    ax = axs[1]
+    ax.plot(x, tsw.mclp_P20_pct_distance, color=SERIES[0], marker="o", ms=5,
+            label="distance, P = 20")
+    ax.plot(x, tsw.mclp_P20_pct_time, color=SERIES[1], marker="o", ms=5, label="time, P = 20")
+    ax.plot(x, tsw.baseline_pct_distance, color=SERIES[0], ls="--", lw=1.4,
+            label="distance, today")
+    ax.plot(x, tsw.baseline_pct_time, color=SERIES[1], ls="--", lw=1.4, label="time, today")
+    ax.set_xticks(x, xl, fontsize=8)
+    ax.set_ylim(0, 102)
+    ax.set_ylabel("Households covered (%)")
+    ax.set_title("Coverage today and with 20 new lockers")
+    ax.legend(loc="lower right", fontsize=8)
+    fig.suptitle("The same standard measured as distance or as slope-aware walking time",
+                 x=.01, ha="left", fontweight="bold", fontsize=12)
+    fig.tight_layout()
+    save(fig, "m1_time_sweep")
 
     # (e) coverage by area
     fig, ax = plt.subplots(figsize=(8.4, 3.8))

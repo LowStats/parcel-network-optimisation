@@ -1,0 +1,4 @@
+case,sizing,compartments,rejection_p5,rejection_median,rejection_p95,prob_rejection_over_2,prob_rejection_over_5,prob_rejection_over_10,requirement_median,requirement_p90,requirement_p95
+all inputs uncertain,base sizing,14080,0.0,4.29,31.67,60.5,46.95,34.35,14200.0,19564.0,21240.0
+no building-level variation,base sizing,14080,0.0,0.99,30.66,45.9,38.8,30.4,14240.0,19520.0,21040.0
+all inputs uncertain,robust (P90 per bank),20360,0.0,0.01,7.19,15.25,7.1,2.8,,,

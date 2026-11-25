@@ -20,7 +20,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from mcommon import INK, INK2, MUTED, RESULTS, SERIES, C, Data, dump, end_labels, save, style
+from mcommon import INK, INK2, MUTED, RESULTS, SEQ, SERIES, C, Data, dump, end_labels, save, style
 from m3_simulation import assign_lambda, erlang_b
 
 ALTS = [0, 10, 22, 35, 50]
@@ -42,19 +42,29 @@ def served_per_day(D: Data, open_ids, new_ids, share: float) -> float:
     return tot
 
 
-def payoff_table(D: Data, chosen_by_P, saving=SAVING_PER_PARCEL, cost=COST_PER_BANK):
+def served_table(D: Data, chosen_by_P) -> dict:
+    """Parcels/day served for every (alternative, state) - independent of the money inputs."""
     ex = list(D.ex_lock.site_id) + list(D.ex_lock_res.site_id)
     served = {}
     for P in ALTS:
         new = chosen_by_P[str(P)] if P else []
         for st, s in STATES.items():
             served[(P, st)] = served_per_day(D, ex + new, set(new), s)
+    return served
+
+
+def payoff_from_served(served, saving=SAVING_PER_PARCEL, cost=COST_PER_BANK) -> pd.DataFrame:
     tab = pd.DataFrame(index=[f"build {P}" for P in ALTS], columns=list(STATES), dtype=float)
     for P in ALTS:
         for st in STATES:
             tab.loc[f"build {P}", st] = 365 * saving * (served[(P, st)] - served[(0, st)]) \
                 - cost * P
-    return tab, served
+    return tab
+
+
+def payoff_table(D: Data, chosen_by_P, saving=SAVING_PER_PARCEL, cost=COST_PER_BANK):
+    served = served_table(D, chosen_by_P)
+    return payoff_from_served(served, saving, cost), served
 
 
 def criteria(tab: pd.DataFrame):
@@ -88,7 +98,7 @@ if __name__ == "__main__":
     # break-even: EMV-optimal alternative as the saving per parcel varies
     be = []
     for sv in np.arange(1, 12.5, 0.5):
-        t, _ = payoff_table(D, cbp, saving=sv)
+        t = payoff_from_served(served, saving=sv)
         e = t.to_numpy() @ PROBS
         be.append(dict(saving_per_parcel=sv, **{f"EMV build {P}": e[k] for k, P in
                                                 enumerate(ALTS)},
@@ -105,6 +115,19 @@ if __name__ == "__main__":
         ph.append(dict(p_high=p, **{f"build {P}": e[k] for k, P in enumerate(ALTS)}))
     ph = pd.DataFrame(ph)
     ph.to_csv(RESULTS / "m5_prob_sensitivity.csv", index=False)
+
+    # two-way sensitivity: EMV-optimal alternative over saving per parcel x cost per bank
+    tw = []
+    for sv in np.arange(1, 12.5, 1.0):
+        for cb in np.arange(20_000, 120_001, 10_000):
+            e = payoff_from_served(served, sv, cb).to_numpy() @ PROBS
+            k = int(np.argmax(e))
+            tw.append(dict(saving_per_parcel=sv, cost_per_bank=cb, best=f"build {ALTS[k]}",
+                           best_P=ALTS[k], best_emv=e[k]))
+    tw = pd.DataFrame(tw)
+    tw.to_csv(RESULTS / "m5_two_way.csv", index=False)
+    print(tw.pivot(index="cost_per_bank", columns="saving_per_parcel", values="best_P")
+          .to_string())
 
     dump(dict(alternatives=ALTS, states=STATES, probs=PROBS.tolist(),
               saving_per_parcel=SAVING_PER_PARCEL, cost_per_bank=COST_PER_BANK,
@@ -126,6 +149,28 @@ if __name__ == "__main__":
     ax.set_ylabel("Expected annual net benefit, EMV (HK$ m)")
     ax.set_title("Break-even: which expansion size maximises EMV")
     save(fig, "m5_breakeven")
+
+    from matplotlib.colors import ListedColormap
+    piv = tw.pivot(index="cost_per_bank", columns="saving_per_parcel", values="best_P")
+    idx = piv.map(ALTS.index).to_numpy()
+    fig, ax = plt.subplots(figsize=(8.4, 4.6))
+    ramp = [SEQ[0], SEQ[2], SEQ[3], SEQ[5], SEQ[6]]
+    ax.imshow(idx, cmap=ListedColormap(ramp), vmin=-.5, vmax=len(ALTS) - .5,
+              aspect="auto", origin="lower")
+    for (r, c), v in np.ndenumerate(piv.to_numpy()):
+        ax.text(c, r, f"{int(v)}", ha="center", va="center", fontsize=8,
+                color=INK if ALTS.index(int(v)) < 2 else "white", fontweight="bold")
+    ax.set_xticks(range(piv.shape[1]), [f"{x:.0f}" for x in piv.columns])
+    ax.set_yticks(range(piv.shape[0]), [f"{y / 1000:.0f}k" for y in piv.index])
+    bx = list(piv.columns).index(SAVING_PER_PARCEL)
+    by = list(piv.index).index(COST_PER_BANK)
+    ax.add_patch(__import__("matplotlib").patches.Rectangle((bx - .5, by - .5), 1, 1, fill=False,
+                                                             ec=INK, lw=2))
+    ax.grid(False)
+    ax.set_xlabel("Saving per parcel collected from a locker (HK$)")
+    ax.set_ylabel("Annual cost per locker bank (HK$)")
+    ax.set_title("EMV-optimal number of new lockers (outlined cell = base case)")
+    save(fig, "m5_two_way")
 
     fig, ax = plt.subplots(figsize=(8.4, 4.2))
     for k, P in enumerate(ALTS):

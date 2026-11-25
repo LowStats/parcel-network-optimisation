@@ -28,7 +28,13 @@ def csv(name, **kw):
     return pd.read_csv(RES / f"{name}.csv", **kw)
 
 
-def img(path: str, alt: str, caption: str, num: str):
+_N = {"fig": 0, "tab": 0}
+
+
+def img(path: str, alt: str, caption: str, num: str = ""):
+    """Figures and tables are numbered automatically in document order (num is ignored)."""
+    _N["fig"] += 1
+    num = str(_N["fig"])
     p = FIG / path
     b64 = base64.b64encode(p.read_bytes()).decode()
     return (f'<figure><img src="data:image/png;base64,{b64}" alt="{html.escape(alt)}" '
@@ -38,7 +44,9 @@ def img(path: str, alt: str, caption: str, num: str):
 def table(df: pd.DataFrame, caption: str = "", num: str = "", index=False, cls=""):
     t = df.to_html(index=index, escape=True, border=0, classes=f"tbl {cls}".strip(),
                    na_rep="–")
-    cap = f'<p class="tcap"><b>Table {num}.</b> {caption}</p>' if caption else ""
+    if caption:
+        _N["tab"] += 1
+    cap = f'<p class="tcap"><b>Table {_N["tab"]}.</b> {caption}</p>' if caption else ""
     return f'<div class="tblwrap">{cap}{t}</div>'
 
 
@@ -84,6 +92,22 @@ gp = csv("m4_goal_programming")
 pay = csv("m5_payoff_table", index_col=0)
 crit = csv("m5_criteria", index_col=0)
 be = csv("m5_breakeven")
+tsw = csv("m1_time_sweep")
+xev = csv("m1_cross_evaluation")
+tw = csv("m5_two_way")
+m6 = j("m6_summary")
+dcur = csv("m6_demand_curves")
+hroom = csv("m6_headroom").set_index("config")
+mcap = csv("m6_marginal_capacity")
+econ = csv("m6_economic_capacity")
+mvg = csv("m6_milp_vs_greedy")
+mval = csv("m6_module_value_by_locker")
+tor = csv("m6_tornado")
+disp = csv("m6_dispersion")
+risk = csv("m6_risk")
+rdrv = csv("m6_risk_drivers")
+pol = csv("m6_policies")
+reps = csv("m6_replications")
 stats_sites = pd.read_csv(ROOT / "data" / "processed" / "supply_sites.csv")
 stats_nodes = pd.read_csv(ROOT / "data" / "processed" / "demand_nodes.csv")
 qa_coord = pd.read_csv(ROOT / "data" / "processed" / "qa_operator_coordinates.csv")
@@ -126,6 +150,49 @@ qa_same = qa_coord[qa_coord.als_same_place]
 n_ex = int((stats_sites.site_class == "existing").sum())
 n_base = int(((stats_sites.site_class == "existing") & (stats_sites.include_baseline == "yes")).sum())
 n_cand = int((stats_sites.site_class == "candidate").sum())
+
+# --- time sweep / cross-evaluation
+ts300 = tsw[tsw.radius_m == 300].iloc[0]
+ts_gap = (tsw.sclp_time - tsw.sclp_distance)
+xd = xev.iloc[0]
+xt = xev.iloc[1]
+# --- section 8 headline numbers
+CFG_S, CFG_80 = "sized for ≤2% at base demand", "80 compartments each"
+CFG_M, CFG_2 = "module MILP plan (+104 modules)", "sized for ≤2% at double demand"
+hr_s, hr_80, hr_m, hr_2 = (hroom.loc[c] for c in (CFG_S, CFG_80, CFG_M, CFG_2))
+
+
+def dc(cfg, mult, dist="poisson", col="unmet_pct"):
+    r = dcur[(dcur.config == cfg) & (dcur.multiplier == mult) & (dcur.arrivals == dist)]
+    return float(r[col].iloc[0])
+
+
+def hr_txt(m):
+    return f"exceeded already (≤{m:.2f}× demand)" if m < 1 else f"+{(m - 1) * 100:.0f}%"
+
+
+eo = m6["econ_opt"]
+g2 = m6["greedy_for_2pct"]
+fluid_c = m6["fluid_compartments_to_serve_all"]
+rej_at_fluid = float(mcap[mcap.compartments >= fluid_c].unmet_pct.iloc[0])
+rk_b, rk_nv, rk_r = risk.iloc[0], risk.iloc[1], risk.iloc[2]
+polp = pol.pivot(index="policy", columns="context", values="unmet_pct")
+POL_CTX = list(dict.fromkeys(pol.context))
+POL_ORDER = list(dict.fromkeys(pol.policy))
+polp = polp.reindex(index=POL_ORDER, columns=POL_CTX)
+p_base, p_48, p_rem, p_red, p_both = POL_ORDER
+tor_i = tor.set_index("parameter")
+sw_b = tor_i.loc["Day-to-day burstiness", "requirement_swing"]
+sw_d = tor_i.loc["Mean dwell time", "requirement_swing"]
+sw_small = tor_i.loc[["Module size", "Service target (max rejection)"], "requirement_swing"]
+_e15 = econ[econ.module_cost == m6["module_cost"]].set_index("saving_per_parcel")
+lo_std = f"{_e15.loc[3.0, 'unmet_pct']:.0f}–{_e15.loc[2.0, 'unmet_pct']:.0f}%"
+_twr = tw.assign(ratio=tw.cost_per_bank / tw.saving_per_parcel)
+ratio_22 = _twr[_twr.best_P >= 22].ratio.max()
+ratio_10 = _twr[_twr.best_P < 22].ratio.min()
+disp_i = disp.set_index("arrivals")
+tw_base = tw[(tw.saving_per_parcel == m5["saving_per_parcel"]) & (tw.cost_per_bank ==
+                                                                  m5["cost_per_bank"])].iloc[0]
 
 # ------------------------------------------------------------------------------- tables
 t_base = base.rename(columns={"radius_m": "Walk radius (m)",
@@ -234,6 +301,80 @@ t_ch7d = pd.DataFrame(m3["ch7_dwell_table"]).rename(columns={
 t_ch7s = pd.DataFrame(m3["ch7_sim"]).rename(columns={
     "day": "Day", "rn_arrivals": "RN (arrivals)", "arrivals": "Simulated arrivals",
     "rn_dwell": "RN (dwell)", "dwell_of_typical_parcel": "Dwell of a sampled parcel (days)"})
+t_tsw = tsw[["radius_m", "time_min", "baseline_pct_distance", "baseline_pct_time",
+             "sclp_distance", "sclp_time", "sclp_time_estate", "mclp_P20_pct_distance",
+             "mclp_P20_pct_time"]].rename(columns={
+    "radius_m": "Distance standard (m)", "time_min": "Time twin D/75 (min)",
+    "baseline_pct_distance": "Today, by distance (%)", "baseline_pct_time": "Today, by time (%)",
+    "sclp_distance": "SCLP lockers, distance", "sclp_time": "SCLP lockers, time",
+    "sclp_time_estate": "of which estate (time)", "mclp_P20_pct_distance":
+    "MCLP P=20, distance (%)", "mclp_P20_pct_time": "MCLP P=20, time (%)"})
+t_xev = xev.rename(columns={"plan": f"Plan ({P_star} new lockers)",
+                            "scored_by_distance_300m": "Scored by distance ≤300 m (%)",
+                            "scored_by_time_4min": "Scored by time ≤4 min (%)"})
+_dsel = dcur[dcur.multiplier.isin([0.5, 0.75, 1.0, 1.25, 1.5, 2.0])].copy()
+_dsel["v"] = _dsel.apply(lambda r: f"{r.unmet_pct:.1f} ± {r.unmet_ci95:.1f}", axis=1)
+t_dcur = _dsel.pivot_table(index=["config", "arrivals"], columns="multiplier", values="v",
+                           aggfunc="first", sort=False).reset_index()
+t_dcur.columns = ["Capacity", "Arrivals"] + [f"×{c:g}" for c in t_dcur.columns[2:]]
+t_dcur["Capacity"] = t_dcur["Capacity"] + t_dcur["Capacity"].map(
+    lambda c: f" ({int(hroom.loc[c, 'compartments']):,})")
+t_hr = hroom.reset_index()[["config", "compartments", "unmet_pct_base", "unmet_pct_at_plus10",
+                            "unmet_pct_at_plus25", "headroom_2pct", "headroom_5pct",
+                            "elasticity_rejected"]].copy()
+for c in ("headroom_2pct", "headroom_5pct"):
+    t_hr[c] = t_hr[c].map(hr_txt)
+t_hr = t_hr.round(2).rename(columns={
+    "config": "Capacity", "compartments": "Compartments", "unmet_pct_base": "Rejected now (%)",
+    "unmet_pct_at_plus10": "Rejected at +10% demand (%)",
+    "unmet_pct_at_plus25": "Rejected at +25% demand (%)",
+    "headroom_2pct": "Demand headroom to 2%", "headroom_5pct": "Demand headroom to 5%",
+    "elasticity_rejected": "Elasticity of rejected parcels"})
+t_econ = econ.assign(cell=econ.apply(lambda r: f"{int(r.compartments):,} ({r.unmet_pct:.1f}%)",
+                                     axis=1)).pivot(index="saving_per_parcel",
+                                                    columns="module_cost", values="cell")
+t_econ.columns = [f"module HK${c:,.0f}/yr" for c in t_econ.columns]
+t_econ = t_econ.reset_index().rename(columns={"saving_per_parcel": "Saving per parcel (HK$)"})
+t_mvg = mvg.rename(columns={"extra_modules": "Extra modules",
+                            "milp_plan_unmet_pct": "MILP plan (§6.3), rejected (%)",
+                            "greedy_plan_unmet_pct": "Greedy marginal plan, rejected (%)"})
+t_mval = mval.head(10)[["name", "lambda_per_day", "next_module_at_80",
+                        "value_next_module_at_80_hkd", "modules_sized", "next_module_at_sized",
+                        "lp_shadow_price"]].rename(columns={
+    "name": "Locker", "lambda_per_day": "λ (parcels/day)",
+    "next_module_at_80": "Next module at 80 cells (parcels/day)",
+    "value_next_module_at_80_hkd": "Worth (HK$/yr)", "modules_sized": "Modules when sized",
+    "next_module_at_sized": "Next module once sized (parcels/day)",
+    "lp_shadow_price": "LP shadow price (m)"}).round(1)
+t_mval["Worth (HK$/yr)"] = t_mval["Worth (HK$/yr)"].map(lambda v: f"{v:,.0f}")
+t_tor = tor[["parameter", "low", "high", "requirement_low", "requirement_high",
+             "rejection_low", "rejection_high"]].rename(columns={
+    "parameter": "Input", "low": "Low value", "high": "High value",
+    "requirement_low": "Compartments (low)", "requirement_high": "Compartments (high)",
+    "rejection_low": "Rejected %, sized banks (low)",
+    "rejection_high": "Rejected %, sized banks (high)"})
+t_disp = disp.rename(columns={"arrivals": "Daily arrivals", "cv_at_100_per_day":
+                              "Coefficient of variation at 100/day", "requirement":
+                              "Compartments for ≤2%", "rejection_sized_pct":
+                              "Rejected with base-sized banks (%)"})
+t_risk = risk[["case", "sizing", "compartments", "rejection_median", "rejection_p95",
+               "prob_rejection_over_2", "prob_rejection_over_5", "prob_rejection_over_10",
+               "requirement_median", "requirement_p90"]].rename(columns={
+    "case": "Uncertainty", "sizing": "Sizing", "compartments": "Compartments",
+    "rejection_median": "Median rejected (%)", "rejection_p95": "95th pct rejected (%)",
+    "prob_rejection_over_2": "P(>2%) (%)", "prob_rejection_over_5": "P(>5%) (%)",
+    "prob_rejection_over_10": "P(>10%) (%)", "requirement_median": "Median requirement",
+    "requirement_p90": "P90 requirement"})
+t_rdrv = rdrv.rename(columns={"input": "Uncertain input", "spearman_with_rejection":
+                              "Rank correlation with rejection", "spearman_with_requirement":
+                              "Rank correlation with requirement"})
+t_pol = polp.reset_index().rename(columns={"policy": "Policy"})
+t_pol.columns = ["Policy"] + [f"Rejected (%): {c}" for c in POL_CTX]
+t_reps = reps[["config", "arrivals", "surge", "unmet_mean", "ci95_half_width",
+               "single_run_m3"]].rename(columns={
+    "config": "Capacity", "arrivals": "Arrivals", "surge": "Demand ×",
+    "unmet_mean": "Mean rejected, 10 runs (%)", "ci95_half_width": "95% CI ±",
+    "single_run_m3": "Single run in §7.4 (%)"}).round(2)
 t_qanet = qa_net.issue.value_counts().rename_axis("Issue").reset_index(name="Count")
 
 # ------------------------------------------------------------------------------- text
@@ -249,6 +390,8 @@ kpis = [
     (f0(req["normal"]), "compartments needed for ≤2% overflow on normal days"),
     (f"{int(gp_eq.new_lockers)}", "lockers to give every area ≥70% coverage (EMV-optimal "
      "size too)"),
+    (hr_txt(hr_s.headroom_2pct), "more locker demand pushes banks sized for ≤2% overflow past "
+     "2% rejection: plan headroom"),
 ]
 kpi_html = "".join(f'<div class="kpi"><div class="kv">{v}</div><div class="kl">{l}</div></div>'
                    for v, l in kpis)
@@ -259,15 +402,20 @@ course_map = pd.DataFrame([
     ["Ch3.1–3.2 Integer / mixed-integer programming, branch & bound",
      "SCLP, MCLP (0-1 ILP), LP relaxation; module-allocation MILP (§4, §6)",
      "How many lockers, where, and how big"],
-    ["Ch3.3 Goal programming", "Preemptive equity / coverage / budget goals (§8)",
+    ["Ch3.3 Goal programming", "Preemptive equity / coverage / budget goals (§9)",
      "Cost of serving the Mid-Levels and The Peak"],
     ["Ch4 Transportation problem (NW corner, VAM, dummy, MODI)",
      "Parcel allocation with a dummy destination; Kennedy Town worked example (§6)",
      "Capacity-feasible assignment of demand"],
     ["Ch6 Decision theory", "Payoff table, maximax / maximin / Hurwicz / Laplace / "
-     "minimax regret, EMV, EVPI, break-even (§9)", "How big an investment under uncertainty"],
+     "minimax regret, EMV, EVPI, one- and two-way break-even (§10)",
+     "How big an investment under uncertainty"],
     ["Ch7 Queuing theory & Monte Carlo simulation", "Birth–death loss model (Erlang B), "
      "1,000-day Monte Carlo with random-number intervals (§7)", "Overflow, sizing, Double 11"],
+    ["Ch7 Monte Carlo + sensitivity and marginal analysis",
+     "Demand–performance curves with confidence intervals, marginal value of capacity, tornado, "
+     "risk analysis over uncertain inputs, operating policies (§8)",
+     "How robust the network is when demand changes, and what extra capacity is worth"],
 ], columns=["Course topic", "Where it is used", "Question it answers"])
 
 # --------------------------------------------------------------------------------- HTML
@@ -326,8 +474,9 @@ TOC = [("summary", "Executive summary"), ("intro", "1. Problem and approach"),
        ("data", "2. Study area and data"), ("baseline", "3. Today's network"),
        ("ilp", "4. Location models (ILP)"), ("sens", "5. Sensitivity analysis"),
        ("capacity", "6. Capacity: transportation LP"), ("sim", "7. Stochastic simulation"),
-       ("goal", "8. Goal programming"), ("decision", "9. Decision analysis"),
-       ("insights", "10. Managerial insights"), ("limits", "11. Assumptions & limitations"),
+       ("demand", "8. Demand & capacity sensitivity"),
+       ("goal", "9. Goal programming"), ("decision", "10. Decision analysis"),
+       ("insights", "11. Managerial insights"), ("limits", "12. Assumptions & limitations"),
        ("appendix", "Appendix")]
 toc_html = "".join(f'<a href="#{a}">{t}</a>' for a, t in TOC)
 
@@ -357,6 +506,12 @@ would reach {pc(cur['optimal_same_n_pct'])} (greenfield MCLP).</li>
 mostly in the Mid-Levels and The Peak, have <i>no</i> shop, MTR exit or community facility within
 300 m on foot. Public sites therefore cap coverage at {pc(pub_max)}. Full coverage needs
 {int(sc_all.new_lockers)} new lockers, {int(sc_all.estate)} of them in-building (estate) lockers.</li>
+<li><b>Hills change the answer.</b> Re-measured as slope-aware walking time (4 min, the time
+twin of 300 m), the {P_star}-locker plan chosen by distance reaches only {pc(xd.scored_by_time_4min)}
+of households, not {pc(xd.scored_by_distance_300m)}. A plan chosen by time reaches
+{pc(xt.scored_by_time_4min)} and still scores {pc(xt.scored_by_distance_300m)} by distance. At every
+standard from 200 to 500 m, a time standard needs {int(ts_gap.min())}–{int(ts_gap.max())} more
+lockers for full coverage.</li>
 <li><b>Coverage is not capacity.</b> At an assumed 30% locker share, about {f0(m2['locker_parcels_per_day'])}
 locker parcels a day are generated. Standard 80-compartment banks can absorb only
 {pc(m2['share_served'] * 100, 0)} of them. Monte Carlo simulation (checked against the Erlang loss
@@ -365,6 +520,24 @@ normal days and <b>{f0(req['surge_x2'])}</b> for a Double 11 doubling.</li>
 <li><b>Targeted expansion beats uniform expansion.</b> Placing 104 extra modules with a MILP
 serves {pc(mod104.share_served_pct)} of locker parcels. Spreading the same 104 modules evenly
 (160 compartments each) serves {pc(uni160.share_served_pct)}.</li>
+<li><b>Performance is very sensitive to demand near capacity.</b> Banks sized for ≤2% overflow
+at today's demand reject {pc(hr_s.unmet_pct_at_plus10)} of parcels if locker demand is 10% higher
+and {pc(hr_s.unmet_pct_at_plus25)} if it is 25% higher. Rejected parcels grow about
+{hr_s.elasticity_rejected:.0f}× faster than demand. If the uncertain inputs (parcel rate, locker
+share, dwell time, building-level demand) are drawn at random, base sizing misses the 2% target
+in {pc(rk_b.prob_rejection_over_2, 0)} of scenarios. Sizing each bank to its 90th-percentile need
+takes {f0(rk_r.compartments)} compartments and cuts that risk to
+{pc(rk_r.prob_rejection_over_2, 0)}.</li>
+<li><b>Extra capacity pays until about {f0(eo['compartments'])} compartments.</b> A 40-compartment
+module added to a saturated bank serves about {mval.next_module_at_80.max():.0f} more parcels a day.
+Its value falls steeply once a bank nears its demand. At HK${m6['saving_per_parcel']:.0f} per parcel
+and HK${f0(m6['module_cost'])} a year per module, modules pay for themselves up to
+{f0(eo['compartments'])} compartments ({pc(eo['unmet_pct_erlang'])} rejected). That is almost exactly
+the ≤2% service standard.</li>
+<li><b>Faster pick-up beats more steel.</b> Pick-up reminders (84% collected within 24 hours) cut
+rejections from {pc(polp.loc[p_base, POL_CTX[1]])} to {pc(polp.loc[p_rem, POL_CTX[1]])} in a +50%
+surge with no new hardware. Redirecting overflow to the next-nearest locker barely helps, because
+neighbouring lockers fill on the same days.</li>
 <li><b>Equity has a price.</b> Coverage-only optimisation leaves The Peak at 0% and the Mid-Levels at
 {pc(gp_ref['Mid-Levels %'])}. Giving every area at least 70% coverage takes
 {int(gp_eq.new_lockers)} lockers ({int(gp_eq['of which estate'] if 'of which estate' in gp_eq else gp_eq.estate_lockers)} in-building).
@@ -564,11 +737,49 @@ falls from {pc(tv0.loc['District','by_distance_300m'])} to
 <li><b>Hilly districts should be planned in time.</b> A distance-based plan systematically
 over-serves the hillside on paper.</li>
 </ul>
+<h4>How the distance and time matrices relate to the 200–500 m standards</h4>
+<p>Both matrices come from the same shortest paths on the pedestrian network.</p>
+<ul><li><b>Distance</b> (<code>walk_m</code>) is the path length in metres, including the short
+hops from a building or a locker onto the network. Slope never changes it. Every radius-\\(D\\) model
+in §4 and §5.1 uses it: \\(a_{{ij}}=1\\) if \\(d_{{ij}}\\le D\\).</li>
+<li><b>Time</b> (<code>walk_min</code>) uses the same network. Each segment's walking speed comes from
+Tobler's hiking function on the 5 m terrain model, scaled so flat ground is 75 m/min (4.5 km/h).
+Stairs take twice as long. Each segment's time is the average of walking it uphill and downhill,
+because a resident walks to the locker and back.</li>
+<li>A distance standard \\(D\\) therefore has a <b>time twin</b> \\(T = D/75\\) minutes. On flat ground
+they are identical (300 m = 4.0 min). On a hill the same 300 m takes longer, so it can pass the
+distance test and fail the time test.</li></ul>
+<p>Below, every model is re-solved with each standard expressed both ways.</p>
+{table(t_tsw, "The 200–500 m standards and their walking-time twins (expansion models, public + estate candidates)")}
+{img('models/m1_time_sweep.png', 'Distance vs time standards', 'Left: new lockers needed for 100% coverage (SCLP). Right: coverage today (dashed) and with 20 new lockers (solid), for each standard measured by distance or by slope-aware time.')}
+<ul>
+<li><b>The time version of every standard is harder to meet.</b> Full coverage needs
+{int(ts_gap.min())}–{int(ts_gap.max())} more lockers under the time standard. At 300 m / 4 min it
+is {int(ts300.sclp_time)} instead of {int(ts300.sclp_distance)}. Planning to 4 minutes costs about
+as much as planning to 250 m by distance.</li>
+<li><b>Today's coverage is lower by time at every level:</b> for example
+{pc(tsw.iloc[4].baseline_pct_time)} against {pc(tsw.iloc[4].baseline_pct_distance)} at
+400 m / 5.3 min.</li>
+<li><b>New lockers narrow the gap but do not close it.</b> With 20 new lockers, coverage by time
+trails coverage by distance by
+{(tsw.mclp_P20_pct_distance - tsw.mclp_P20_pct_time).min():.0f}–{(tsw.mclp_P20_pct_distance - tsw.mclp_P20_pct_time).max():.0f}
+points.</li>
+</ul>
+{table(t_xev, f"Cross-evaluation: each {P_star}-locker plan scored under both measures (area columns use the time measure)")}
+<p>The plan chosen by distance looks best on paper ({pc(xd.scored_by_distance_300m)}) but reaches
+only {pc(xd.scored_by_time_4min)} of households within 4 minutes. The plan chosen by time gives up
+{xd.scored_by_distance_300m - xt.scored_by_distance_300m:.1f} points on the distance measure and
+gains {xt.scored_by_time_4min - xd.scored_by_time_4min:.1f} points of real walking-time coverage,
+mostly in the Western area and Sheung Wan. In a hilly district, the time-based plan is the
+better choice.</p>
 
-<h3>5.3 Demand, surge and economics</h3>
-<p>Demand surges (+50%, +100%), parcel rates (0.20–0.50 per household per day) and locker shares
-(15–45%) are tested in the simulation (§7.5). The cost and saving assumptions are tested in the
-decision analysis (§9).</p>
+<h3>5.3 Demand, capacity and economics</h3>
+<p>How the network responds when locker demand changes is the subject of §8. It covers:</p>
+<ul><li>demand–performance curves;</li><li>the marginal value of extra capacity;</li>
+<li>a tornado diagram of every simulation input;</li>
+<li>a risk analysis with all inputs uncertain at once;</li><li>operating policies.</li></ul>
+<p>Peak surges are in §7.5. The cost and saving assumptions are tested in the decision analysis
+(§10), including a two-way break-even.</p>
 </section>
 """)
 
@@ -722,8 +933,180 @@ and similar sales.</li>
 </section>
 """)
 
+S.append(f"""
+<section id="demand"><h2>8. Demand and capacity sensitivity</h2>
+<p>Sections 6 and 7 size the network for one demand forecast: 0.35 parcels per household per day,
+30% collected from lockers. Here we ask:</p>
+<ul><li>how much the network's performance changes when that demand changes;</li>
+<li>what an extra unit of capacity is worth;</li>
+<li>which inputs matter most;</li>
+<li>how much risk the forecast carries.</li></ul>
+<p>All results use the recommended network ({m6['lockers']} lockers) and the simulation of §7.
+As in §7, locker demand comes from the households within 300 m of an open locker:
+{f0(m6['locker_parcels_per_day'])} parcels a day at base. §6 counts all households, which gives
+{f0(m2['locker_parcels_per_day'])}.</p>
+
+<h3>8.1 How performance responds to demand</h3>
+<p>We hold capacity fixed and scale locker demand from 0.25× to 3× the base. A multiplier of 2 is
+the same as a 60% locker share, or a Double 11 day. Each point is 5 independent replications of
+1,000 days, with 95% confidence intervals. Four capacity levels are compared:</p>
+<ul><li>80 compartments everywhere;</li><li>the module MILP plan from §6.3;</li>
+<li>banks sized for ≤2% at base demand;</li><li>banks sized for ≤2% at double demand.</li></ul>
+{img('models/m6_demand_performance.png', 'Demand-performance curves', 'Rejection rate (left) and parcels served (right) as locker demand changes, for four capacity levels. Shaded bands are 95% confidence intervals (narrower than the lines in most places).')}
+{table(t_dcur, "Parcels rejected (%) by demand multiplier, mean ± 95% CI half-width over 5 replications")}
+{table(t_hr, "Sensitivity to demand at the base point (Erlang B): rejection after a demand rise, demand headroom before rejection passes 2% or 5%, and the elasticity of rejected parcels")}
+<ul>
+<li><b>Each capacity level has a knee.</b> Below it almost nothing is rejected. Above it the network
+is saturated, served parcels stay flat, and every extra parcel is turned away. The 80-compartment
+network is past its knee even at a quarter of base demand.</li>
+<li><b>Sizing to the forecast leaves almost no headroom.</b> Banks sized for ≤2% at base demand
+can absorb only {hr_txt(hr_s.headroom_2pct)} more demand before network rejection passes 2%, and
+{hr_txt(hr_s.headroom_5pct)} before 5%. A 10% demand rise multiplies rejection from
+{pc(hr_s.unmet_pct_base)} to {pc(hr_s.unmet_pct_at_plus10)}. A 25% rise gives
+{pc(hr_s.unmet_pct_at_plus25)}.</li>
+<li><b>Rejected parcels are highly elastic.</b> Their elasticity is {hr_s.elasticity_rejected:.0f}:
+a 1% rise in demand raises rejected parcels by about {hr_s.elasticity_rejected:.0f}%. This is the
+convexity of the Erlang loss function. Near capacity, small forecast errors have large effects.</li>
+<li><b>Burstiness adds to the problem.</b> With negative-binomial arrivals, the same base-sized network
+already rejects {pc(dc(CFG_S, 1.0, 'negbin'))} at base demand, and {pc(dc(CFG_S, 1.25, 'negbin'))}
+at +25%.</li>
+<li><b>Peak sizing buys headroom.</b> Banks sized for double demand absorb up to
+{hr_txt(hr_2.headroom_2pct)} before passing 2%, at {f0(hr_2.compartments)} compartments.</li>
+</ul>
+
+<h3>8.2 Marginal benefit of extra capacity</h3>
+<p>A bank of \\(K\\) compartments with arrival rate \\(\\lambda\\) serves, on average,
+\\(\\lambda\\,[1-B(K,a)]\\) parcels a day, where \\(B\\) is Erlang B and
+\\(a=\\lambda \\bar T\\). Erlang B is convex in \\(K\\), so the marginal benefit of each
+extra 40-compartment module falls as a bank grows. Adding modules one at a time to the bank with
+the largest marginal gain (<b>marginal analysis</b>) is therefore optimal. The resulting curve is
+the network's marginal-benefit schedule. We compare it with the deterministic view behind the LP
+of §6, where a module adds \\(40/\\bar T\\) = {40 / m6['mean_dwell']:.1f} parcels a day until
+the bank's demand is met, and nothing after.</p>
+{img('models/m6_marginal_capacity.png', 'Marginal value of capacity', 'Left: extra parcels served per day by each additional module (best location first), stochastic vs deterministic, with the economic break-even. Right: network rejection as compartments are added in that order.')}
+<ul>
+<li><b>The first ~200 modules are worth almost the maximum.</b> Each serves about
+{mval.next_module_at_80.max():.1f} parcels a day, because the busy banks are saturated.
+At HK${m6['saving_per_parcel']:.0f} per parcel, that is about
+HK${f0(mval.value_next_module_at_80_hkd.max())} a year per module.</li>
+<li><b>The deterministic view is too optimistic about "enough".</b> The LP view says
+{f0(fluid_c)} compartments serve every parcel. With random arrivals and dwell times, the same
+capacity still rejects {pc(rej_at_fluid)}. The stochastic schedule keeps paying for buffer
+capacity beyond the point where the deterministic one drops to zero.</li>
+<li><b>The economic optimum is close to the ≤2% standard.</b> A module costing an assumed
+HK${f0(m6['module_cost'])} a year (a quarter of a 160-compartment bank) breaks even at
+{eo['breakeven_parcels_per_module']:.1f} extra parcels a day. Modules pay until
+{f0(eo['compartments'])} compartments, where {pc(eo['unmet_pct_erlang'])} of parcels are rejected
+({pc(eo['unmet_pct_simulated'])} in simulation). Reaching exactly 2% network-wide needs
+{f0(g2['compartments'])} compartments. That is fewer than the {f0(req['normal'])} from sizing every
+bank to 2% separately, because some banks can sit slightly above 2% when others are below.</li>
+<li><b>Cheap savings justify a lower standard.</b> With a saving of HK$2–3 per parcel, the optimum
+accepts {lo_std} rejection. With a higher saving or cheaper modules, it pushes rejection below 1%
+(table below).</li>
+</ul>
+{table(t_econ, "Economically optimal network size: total compartments (rejection %) where the next module no longer pays")}
+{table(t_mvg, "The deterministic module MILP of §6.3 vs the stochastic greedy plan, both scored with Erlang B at the same module budgets")}
+<p>The deterministic MILP places modules almost as well as the stochastic greedy rule at small
+budgets. At large budgets it leaves too little buffer at the busiest banks:
+{pc(mvg.iloc[-1].milp_plan_unmet_pct)} rejected against {pc(mvg.iloc[-1].greedy_plan_unmet_pct)} with
+{int(mvg.iloc[-1].extra_modules)} extra modules.</p>
+<p><b>Shadow price vs queueing marginal value.</b> The LP shadow prices of §6.2 say that capacity is
+worth about the same ({m6['lp_shadow_price_binding'][0]:.0f}–{m6['lp_shadow_price_binding'][1]:.0f}
+walking-metre equivalents per parcel) at every binding locker. The queueing marginal value tells
+them apart once banks approach their demand (last column below).</p>
+{table(t_mval, "Value of the next module at the ten busiest lockers")}
+
+<h3>8.3 Which inputs matter most? A tornado analysis</h3>
+<p>Each input is moved to a low and a high value while the others stay at base. We record two
+outputs: the total compartments needed for ≤2% rejection (planning), and the rejection rate of
+the base-sized network (operations). The rejection runs use common random numbers, so differences
+reflect the input rather than simulation noise.</p>
+{img('models/m6_tornado.png', 'Tornado diagram', 'One-at-a-time sensitivity. Left: compartments needed for ≤2% rejection (base ' + f0(m6['base_requirement']) + '). Right: rejection with the base-sized banks (base ' + pc(m6['base_rejection_sized']) + ').')}
+{table(t_tor, "Tornado inputs and results")}
+<ul>
+<li><b>Demand volume dominates.</b> Locker share and parcels per household move the requirement
+from {f0(tor_i.loc['Locker share of parcels', 'requirement_low'])} to
+{f0(tor_i.loc['Locker share of parcels', 'requirement_high'])} compartments. Pinning down the real
+locker share (pilot data, operator statistics) is the most valuable forecasting work.</li>
+<li><b>Behaviour matters almost as much.</b> Burstiness and dwell time move the requirement
+by {f0(sw_b)} and {f0(sw_d)} compartments. Slow pick-up (2-day mean) alone raises rejection on the base-sized
+network to {pc(tor_i.loc['Mean dwell time', 'rejection_high'])}.</li>
+<li><b>Design choices matter little.</b> Module size and the exact service target (1% vs 5%) change
+the requirement by only {f0(sw_small.min())}–{f0(sw_small.max())} compartments. The catchment radius matters more for coverage
+(§5) than for capacity.</li>
+</ul>
+{table(t_disp, "Burstiness: negative-binomial dispersion k (variance = mean + mean²/k)")}
+<p>Real daily parcel counts are burstier than Poisson (promotions, weekends). Each step from Poisson
+towards NB k = 2 raises the requirement sharply. Operators should estimate k from their own daily
+data before ordering hardware.</p>
+
+<h3>8.4 Risk analysis: all inputs uncertain at once</h3>
+<p>A tornado moves one input at a time. Here we run a Monte Carlo over the inputs themselves, with
+{f0(m6['risk_draws'])} draws:</p>
+<ul><li>parcels per household per day: triangular(0.20, 0.35, 0.50);</li>
+<li>locker share: triangular(15%, 30%, 45%);</li>
+<li>mean dwell: triangular(1.22, 1.5, 2.0 days);</li>
+<li>each building's online-shopping propensity: an independent lognormal multiplier with mean 1
+and σ = {m6['sigma_node']}.</li></ul>
+<p>Each draw gives every locker a new arrival rate. Erlang B then gives the rejection of the
+base-sized network and the compartments that draw would need.</p>
+{img('models/m6_risk.png', 'Risk analysis', 'Left: chance that network rejection exceeds x, with base sizing and with robust (90th-percentile) sizing. Right: distribution of the compartments needed for ≤2% rejection.')}
+{table(t_risk, "Risk analysis results")}
+{table(t_rdrv, "Which uncertain input drives the risk (Spearman rank correlation)")}
+<ul>
+<li><b>The point forecast is not a safe design basis.</b> Base sizing ({f0(rk_b.compartments)}
+compartments) misses the 2% target in {pc(rk_b.prob_rejection_over_2, 0)} of scenarios and
+exceeds 10% rejection in {pc(rk_b.prob_rejection_over_10, 0)}. The median scenario rejects
+{pc(rk_b.rejection_median)}. This is higher than at base, because rejection is convex in demand and
+the dwell range is skewed upward.</li>
+<li><b>Building-level variation matters.</b> Without it, median rejection is
+{pc(rk_nv.rejection_median)}. Demand that varies from building to building piles up unevenly on
+lockers, and the fuller banks lose more than the emptier ones gain.</li>
+<li><b>Robust sizing.</b> Giving each bank its 90th-percentile need takes {f0(rk_r.compartments)}
+compartments (+{100 * (rk_r.compartments / rk_b.compartments - 1):.0f}%). Median rejection falls
+to {pc(rk_r.rejection_median, 2)}, and the chance of exceeding 2% falls to
+{pc(rk_r.prob_rejection_over_2, 0)}. A staged rollout, starting at base size with space and power
+for extra modules, gets most of this protection at lower cost.</li>
+</ul>
+
+<h3>8.5 Operating policies: same hardware, different rules</h3>
+<p>A node-level simulation tracks which households a full locker turns away, so we can test rules
+that a per-locker model cannot:</p>
+<ul><li>a <b>48-hour hold limit</b>: parcels left for a third day go to a staffed counter;</li>
+<li><b>pick-up reminders</b>: the empirical pattern of 84% collected within 24 hours;</li>
+<li><b>redirecting overflow</b> to the household's second-nearest locker within 300 m. That is
+available to {pc(m6['share_with_second_choice'], 0)} of households, for a median extra walk of
+{m6['extra_walk_second_choice_m']:.0f} m.</li></ul>
+<p>Two tight situations are tested: the §6.3 MILP network at normal demand, and the sized
+network in a +50% surge.</p>
+{img('models/m6_policies.png', 'Operating policies', 'Share of parcels rejected under each operating rule (3 replications × 1,000 days each).')}
+{table(t_pol, "Operating policies")}
+<ul>
+<li><b>Reminders are the strongest lever.</b> In the surge, reminders cut rejection from
+{pc(polp.loc[p_base, POL_CTX[1]])} to {pc(polp.loc[p_rem, POL_CTX[1]])}. Reminders need no new hardware, only
+an SMS. At normal demand they cut the requirement for ≤2% from {f0(req['normal'])} to
+{f0(req['empirical_dwell'])} compartments (§7.5). A 48-hour hold limit gets part of the way
+({pc(polp.loc[p_48, POL_CTX[1]])}).</li>
+<li><b>Redirecting overflow helps little.</b> It brings {pc(polp.loc[p_base, POL_CTX[1]])} only to
+{pc(polp.loc[p_red, POL_CTX[1]])}. Neighbouring lockers serve the same streets, see the same demand
+peaks and are full on the same days. Pooling works only when nearby capacity is idle.</li>
+</ul>
+
+<h3>8.6 Precision of the simulation estimates</h3>
+<p>Every scenario in §7.4 was re-run 10 times with independent random numbers.</p>
+{table(t_reps, "Replication precision of the §7.4 scenarios")}
+<p>The 95% confidence half-widths are at most {m6['max_ci95_half_width']:.2f} percentage points.
+1,000-day runs are long enough that the single-run results in §7.4 can be read at face value.
+Differences between scenarios are many times larger than the simulation noise. The simulation
+uses a daily time step (all deliveries in the morning, collections on later mornings). It
+therefore rejects slightly fewer parcels than the continuous-time Erlang formula (for example
+{pc(dc(CFG_S, 1.0))} against {pc(dc(CFG_S, 1.0, col='erlang_unmet_pct'))} for the base-sized
+network), so Erlang-based sizing is on the safe side.</p>
+</section>
+""")
+
 S.append(r"""
-<section id="goal"><h2>8. Goal programming: efficiency vs equity (Ch3.3)</h2>
+<section id="goal"><h2>9. Goal programming: efficiency vs equity (Ch3.3)</h2>
 <p>The MCLP maximises total coverage, which favours the dense, flat west. A planner may also want a
 minimum service level in every area. We add deviational variables and solve with preemptive
 priorities (P1 first; its optimum is then fixed while P2 is minimised, and so on):</p>
@@ -751,7 +1134,7 @@ it costs.</li>
 """)
 
 S.append(f"""
-<section id="decision"><h2>9. Decision analysis: how much to build (Ch6)</h2>
+<section id="decision"><h2>10. Decision analysis: how much to build (Ch6)</h2>
 <p><b>Alternatives:</b> build 0, 10, {P_star}, 35 or 50 new 160-compartment banks (MCLP sites).
 <b>States of nature:</b> locker adoption is low (15% of parcels), base (30%) or high (45%), with
 probabilities 0.25 / 0.50 / 0.25.</p>
@@ -781,13 +1164,27 @@ the true adoption rate, and it is small because the same decision is near-optima
 <ul>{''.join(f"<li>{b} is EMV-optimal for savings of " + (f"about HK${r['min']:.1f}" if r['min'] == r['max'] else f"HK${r['min']:.1f}–{r['max']:.1f}") + " per parcel</li>" for b, r in be_ranges.iterrows())}</ul>
 <p>Below about HK$2 per parcel, no expansion pays.</p>
 {img('models/m5_prob_sensitivity.png', 'Probability sensitivity', 'EMV of each alternative as the probability of high adoption changes (Ch6-style EMV lines).', '15')}
+<h3>Two-way sensitivity: saving per parcel × cost per bank</h3>
+{img('models/m5_two_way.png', 'Two-way sensitivity', 'EMV-optimal number of new lockers for each combination of saving per parcel and annual cost per bank. The outlined cell is the base case.')}
+<ul>
+<li><b>The decision depends on the ratio of the two inputs.</b> Cells with the same cost-to-saving
+ratio give the same answer. At base, a bank must add HK${f0(m5['cost_per_bank'])} ÷
+HK${m5['saving_per_parcel']:.0f} = {f0(m5['cost_per_bank'] / m5['saving_per_parcel'])} locker
+parcels a year (about {m5['cost_per_bank'] / m5['saving_per_parcel'] / 365:.0f} a day) to pay
+for itself.</li>
+<li><b>The base answer ({tw_base.best}) holds across a broad band.</b> Building 22 or more stays
+optimal as long as the annual bank cost is at most about {f0(ratio_22)} times the saving per parcel.
+From {f0(ratio_10)} times upward the answer drops to 10 or none. Building nothing
+is optimal only when the saving is HK$1–3 and banks are expensive.</li>
+<li><b>The two numbers to negotiate are rent and the courier's real saving per parcel.</b></li>
+</ul>
 </section>
 """)
 
 top_sites = "; ".join(f"{r['name']} (λ ≈ {r['lambda_per_day']:.0f}/day)" for _, r in
                       top_hot.iterrows())
 S.append(f"""
-<section id="insights"><h2>10. Managerial insights and recommendations</h2>
+<section id="insights"><h2>11. Managerial insights and recommendations</h2>
 <ol class="rec">
 <li><b>Expand in phases, following the MCLP curve.</b>
 <ul><li><i>Phase 1:</i> {pt['80']} new lockers take coverage to 80%. These are the steep part of the
@@ -814,24 +1211,45 @@ over-sizing. Shorter dwell times (the empirical 84%-within-24-hours pattern) cut
 {f0(req['empirical_dwell'])} compartments.</li>
 <li><b>Plan hilly districts in walking time, not distance.</b> On slopes, a 300 m distance standard
 overstates service. Only {m1['time_vs_distance_overlap']} of {P_star} sites survive a switch to a
-time standard, and the Mid-Levels look much worse.</li>
+time standard. The time-optimal plan reaches {pc(xt.scored_by_time_4min)} of households within
+4 minutes against {pc(xd.scored_by_time_4min)} for the distance plan, and gives up only
+{xd.scored_by_distance_300m - xt.scored_by_distance_300m:.1f} points on paper.</li>
+<li><b>Design for demand uncertainty, not the point forecast.</b> Rejection is strongly convex in
+demand. Banks sized exactly to the forecast pass 2% rejection after only
+{hr_txt(hr_s.headroom_2pct)} more demand, and miss the target in
+{pc(rk_b.prob_rejection_over_2, 0)} of plausible scenarios. Build at base size, but reserve space,
+power and permits for about {100 * (rk_r.compartments / rk_b.compartments - 1):.0f}% more modules
+(the 90th-percentile requirement). Add them as real locker share and dwell data come in.</li>
+<li><b>Use pick-up behaviour as capacity.</b> Reminders that get 84% of parcels collected within
+24 hours cut surge rejection from {pc(polp.loc[p_base, POL_CTX[1]])} to
+{pc(polp.loc[p_rem, POL_CTX[1]])}. A 48-hour hold limit also helps. Redirecting overflow to the next
+locker does not, because neighbouring lockers fill together.</li>
+<li><b>The ≤2% service standard is economically sound.</b> Marginal analysis of 40-compartment
+modules puts the economic optimum at {f0(eo['compartments'])} compartments
+({pc(eo['unmet_pct_erlang'])} rejected) under base costs. If the real saving per parcel is only
+HK$2–3, a {lo_std} standard is cheaper overall.</li>
 <li><b>The investment decision is robust.</b> Most criteria agree on {best['EMV']}, and EVPI is small.
-The key number to pin down is the operator's real saving per locker parcel, because that drives
-the break-even.</li>
+The two-way analysis shows the answer depends on the ratio of bank cost to saving per parcel.
+Pin down the operator's real saving per locker parcel and the site rent.</li>
 </ol>
 </section>
 """)
 
 S.append(f"""
-<section id="limits"><h2>11. Assumptions and limitations</h2>
+<section id="limits"><h2>12. Assumptions and limitations</h2>
 <ul>
 <li><b>Demand.</b> 0.35 parcels per household per day is about 350 M parcels a year ÷ 2.78 M households
 ÷ 365. The volume is a secondary source, while the household count is official (THS Report 82).
-The 30% locker share is an assumption (industry estimates 25–35%). Both are varied in Table 20 and
-§9. Parcel demand is allocated by floor area within census areas, and propensity to shop online is
+The 30% locker share is an assumption (industry estimates 25–35%). Both are varied in §7.5, §8 and
+§10. Parcel demand is allocated by floor area within census areas, and propensity to shop online is
 assumed equal across areas.</li>
 <li><b>Capacity.</b> Existing lockers are assumed to have 80 compartments (sizes are not published).
-Compartment size mix (S/M/L) is not modelled.</li>
+Compartment size mix (S/M/L) is not modelled. The module cost of HK${f0(m6['module_cost'])} a year
+in §8.2 is an assumption (a quarter of a bank) and is varied.</li>
+<li><b>Simulation.</b> The simulation uses a daily time step. It is slightly optimistic compared
+with continuous-time Erlang B, so sizing uses Erlang. Building-level variation in online shopping
+(σ = {m6['sigma_node']}) and the triangular input ranges in §8.4 are assumptions. Households turned
+away are assumed not to retry the same locker the next day.</li>
 <li><b>Behaviour.</b> Residents use the nearest locker within the radius, and coverage is binary at the
 radius. A gravity or choice model with distance decay would be a natural extension.</li>
 <li><b>Network.</b> OpenStreetMap may miss some lifts, stairs and passages, which would make walking

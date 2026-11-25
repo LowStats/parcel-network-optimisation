@@ -47,21 +47,26 @@ def erlang_b(K: int, a: float) -> float:
     return b
 
 
-def assign_lambda(D: Data, open_ids, radius=D_BASE) -> pd.Series:
+def ranked_choices(D: Data, open_ids, radius=D_BASE) -> pd.DataFrame:
+    """Every (node, open locker) pair within the radius, ranked by preference: a residents-only
+    locker first for its own estate, then public lockers by walking distance (rank 0 = first)."""
     pairs = D.L[D.L.site_id.isin(open_ids) & (D.L.walk_m <= radius)]
     ro = pairs.site_id.isin(D.resonly)
     pairs = pairs[~ro | (pairs.euclid_m <= 25)]
-    # residents-only lockers first for their own estate, else the nearest public locker
     pairs = pairs.assign(pr=np.where(pairs.site_id.isin(D.resonly), 0, 1)) \
         .sort_values(["node_id", "pr", "walk_m"])
-    best = pairs.groupby("node_id").head(1)
+    return pairs.assign(rank=pairs.groupby("node_id").cumcount())
+
+
+def assign_lambda(D: Data, open_ids, radius=D_BASE) -> pd.Series:
+    best = ranked_choices(D, open_ids, radius).query("rank == 0")
     lam = (D.h * LAMBDA_PER_HH).reindex(best.node_id).to_numpy()
     return pd.Series(lam, index=best.site_id.to_numpy()).groupby(level=0).sum() \
         .reindex(open_ids).fillna(0.0)
 
 
 def simulate(lam: np.ndarray, K: np.ndarray, dwell: dict, surge=1.0, dist="poisson",
-             days=DAYS, warmup=WARMUP, seed=SEED, peak_days=None):
+             days=DAYS, warmup=WARMUP, seed=SEED, peak_days=None, nb_k=NB_K):
     """Vectorised daily Monte Carlo over all lockers. peak_days: (start, length, multiplier)
     applies a temporary surge (e.g. Double 11) on top of `surge`."""
     rng = np.random.default_rng(seed)
@@ -86,16 +91,15 @@ def simulate(lam: np.ndarray, K: np.ndarray, dwell: dict, surge=1.0, dist="poiss
         if dist == "poisson":
             A = rng.poisson(m)
         else:
-            p = NB_K / (NB_K + np.maximum(m, 1e-9))
-            A = rng.negative_binomial(NB_K, p)
+            p = nb_k / (nb_k + np.maximum(m, 1e-9))
+            A = rng.negative_binomial(nb_k, p)
         acc = np.minimum(A, K - occ)
         rej = A - acc
         occ += acc
         # dwell of accepted parcels: multinomial split over 1/2/3 days
-        for j in np.flatnonzero(acc):
-            split = rng.multinomial(acc[j], dprob)
-            for d, n in zip(dvals, split):
-                release[(t + d) % (maxd + 1), j] += n
+        split = rng.multinomial(acc, dprob)                  # (J, number of dwell values)
+        for k, d in enumerate(dvals):
+            release[(t + d) % (maxd + 1)] += split[:, k]
         if t >= warmup:
             arr_tot += A
             rej_tot += rej
@@ -109,15 +113,16 @@ def simulate(lam: np.ndarray, K: np.ndarray, dwell: dict, surge=1.0, dist="poiss
                 daily=pd.DataFrame(daily, columns=["day", "arrivals", "rejected", "occupied"]))
 
 
-def size_banks(lam, dwell, target=SERVICE_TARGET, surge=1.0, dist="poisson", max_mod=80):
-    """Smallest number of 40-compartment modules per bank meeting the rejection target
+def size_banks(lam, dwell, target=SERVICE_TARGET, surge=1.0, dist="poisson", max_mod=200,
+               module=MODULE, nb_k=NB_K):
+    """Smallest number of `module`-compartment modules per bank meeting the rejection target
     (Erlang B start, confirmed by simulation)."""
     mean_d = sum(d * p for d, p in dwell.items())
     mods = np.array([next(m for m in range(1, max_mod + 1)
-                          if erlang_b(m * MODULE, l * surge * mean_d) <= target) if l > 0 else 1
+                          if erlang_b(m * module, l * surge * mean_d) <= target) if l > 0 else 1
                      for l in lam])
-    for _ in range(6):   # simulation check; bump banks that miss the target
-        s = simulate(lam, mods * MODULE, dwell, surge, dist, days=400, seed=SEED + 7)
+    for _ in range(60):  # simulation check; bump banks that miss the target
+        s = simulate(lam, mods * module, dwell, surge, dist, days=400, seed=SEED + 7, nb_k=nb_k)
         bad = s["unmet_rate"] > target
         if not bad.any():
             break

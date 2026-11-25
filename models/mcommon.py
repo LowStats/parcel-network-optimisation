@@ -28,6 +28,8 @@ for d in (RESULTS, FIG):
 D_BASE = 300          # coverage radius, metres of walking (plan: 300 m ~ 4-5 min)
 T_BASE = 4.0          # equivalent slope-aware walking-time radius, minutes
 D_SWEEP = [200, 250, 300, 350, 400, 450, 500]
+# the same standards expressed as flat-ground walking time (D / 75 m per min): 2.7 ... 6.7 min
+T_SWEEP = [R / C.WALK_SPEED_M_PER_MIN for R in D_SWEEP]
 ESTATE_M = 25         # a residents-only locker serves demand nodes within this distance
 D_MAX_ALLOC = 500     # furthest a resident will walk to a locker in the allocation LP
 LAMBDA_PER_HH = C.PARCELS_PER_HOUSEHOLD_PER_DAY * C.LOCKER_SHARE  # locker parcels / hh / day

@@ -6,7 +6,7 @@
   "normal": 14080,
   "surge_x1_5": 20040,
   "surge_x2": 25920,
-  "negbin": 19560,
+  "negbin": 20400,
   "empirical_dwell": 11760
  },
  "erlang_mean_abs_err_pct": 0.6653846153846161,

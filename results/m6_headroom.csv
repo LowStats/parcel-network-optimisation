@@ -1,0 +1,5 @@
+config,compartments,unmet_pct_base,elasticity_served,elasticity_rejected,unmet_pct_at_plus10,unmet_pct_at_plus25,headroom_2pct,headroom_5pct,headroom_10pct
+80 compartments each,4160,75.804,0.119,1.282,77.784,80.254,0.117,0.134,0.156
+module MILP plan (+104 modules),8320,41.915,0.086,2.272,46.86,52.979,0.19,0.372,0.468
+sized for ≤2% at base demand,14080,0.508,0.814,34.645,4.281,13.222,1.052,1.113,1.197
+sized for ≤2% at double demand,25920,0.0,1.0,27.34,0.0,0.0,2.04,2.14,2.284

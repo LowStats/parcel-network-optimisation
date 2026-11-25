@@ -1,0 +1,8 @@
+parameter,low,high,requirement_low,requirement_high,rejection_low,rejection_high,requirement_swing,rejection_swing
+Locker share of parcels,15%,45%,7920,20040,0.0,25.95,12120,25.95
+Parcels per household per day,0.20,0.50,8720,19200,0.0,22.42,10480,22.42
+Day-to-day burstiness,Poisson,Neg. binomial k=5,14080,20400,0.18,10.83,6320,10.65
+Mean dwell time,1.22 d (reminders),2.0 d (slow pick-up),11760,18040,0.0,17.24,6280,17.24
+Catchment radius for locker users,250 m,400 m,11040,14520,0.01,2.06,3480,2.05
+Module size,20 cells,60 cells,13300,14580,,,1280,
+Service target (max rejection),5%,1%,13200,14280,,,1080,

@@ -1,0 +1,35 @@
+{
+ "lockers": 52,
+ "locker_parcels_per_day": 8098.4715,
+ "mean_dwell": 1.5,
+ "module_cost": 15000.0,
+ "saving_per_parcel": 5.0,
+ "fluid_modules_to_serve_all": 245,
+ "fluid_compartments_to_serve_all": 13960,
+ "econ_opt": {
+  "extra_modules": 246,
+  "compartments": 14000,
+  "unmet_pct_erlang": 1.6292803713829462,
+  "unmet_pct_simulated": 0.8263667889624156,
+  "breakeven_parcels_per_module": 8.219178082191782
+ },
+ "greedy_for_2pct": {
+  "compartments": 13880,
+  "last_marginal": 8.887707858746126
+ },
+ "lp_shadow_price_spread": [
+  0.0,
+  1000.0
+ ],
+ "lp_shadow_price_binding": [
+  705.8,
+  1000.0
+ ],
+ "base_requirement": 14080,
+ "base_rejection_sized": 0.1819823147714348,
+ "risk_draws": 2000,
+ "sigma_node": 0.3,
+ "share_with_second_choice": 48.05136376660708,
+ "extra_walk_second_choice_m": 69.40000000000003,
+ "max_ci95_half_width": 0.175
+}

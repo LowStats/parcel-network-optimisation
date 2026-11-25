@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 STEPS = ["m1_location_ilp.py", "m2_capacity_lp.py", "m3_simulation.py",
-         "m4_goal_programming.py", "m5_decision_analysis.py",
+         "m4_goal_programming.py", "m5_decision_analysis.py", "m6_demand_capacity.py",
          str(HERE.parent / "report" / "build_report.py")]
 
 if __name__ == "__main__":

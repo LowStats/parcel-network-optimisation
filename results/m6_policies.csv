@@ -1,0 +1,11 @@
+context,policy,unmet_pct,redirected_per_day,parcels_per_day
+"MILP plan (+104 modules), normal demand",as planned (dwell 1/2/3 d = 60/30/10%),41.35,0.0,8100.51
+"MILP plan (+104 modules), normal demand",48-hour hold limit,37.56,0.0,8100.18
+"MILP plan (+104 modules), normal demand",pick-up reminders (84% within 24 h),30.04,0.0,8097.88
+"MILP plan (+104 modules), normal demand",redirect overflow to 2nd-nearest locker,40.42,74.5,8100.56
+"MILP plan (+104 modules), normal demand",reminders + redirect,28.73,110.45,8099.52
+"sized for ≤2%, +50% surge",as planned (dwell 1/2/3 d = 60/30/10%),25.95,0.0,12149.7
+"sized for ≤2%, +50% surge",48-hour hold limit,20.89,0.0,12147.65
+"sized for ≤2%, +50% surge",pick-up reminders (84% within 24 h),10.28,0.0,12150.5
+"sized for ≤2%, +50% surge",redirect overflow to 2nd-nearest locker,25.59,42.28,12146.37
+"sized for ≤2%, +50% surge",reminders + redirect,9.8,58.23,12147.71
